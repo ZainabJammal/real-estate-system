@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # real-estate-dashboard-system
 
 The is an ongoing real estate dashboard project
@@ -23,12 +24,17 @@ Currently, two official plugins are available:
 - # [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 >>>>>>> 5c31bd2 (Added README.md)
+=======
+>>>>>>> e81344e (Update README.md)
 # real-estate-dashboard-system
 
 The is an ongoing real estate dashboard project
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b477767 (Initial commit)
 =======
 
 > > > > > > > b477767939fb5d4e30d3a422908bec9530cbd72c
 >>>>>>> 5c31bd2 (Added README.md)
+=======
+>>>>>>> e81344e (Update README.md)
