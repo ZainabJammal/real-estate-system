@@ -21,8 +21,13 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.4.0",
+<<<<<<< HEAD
     "react-router-dom": "^7.1.1"
 >>>>>>> df94a0d (1 - Created Dashboard layout and Components (Sidebar, NameCard, MenuCard))
+=======
+    "react-router-dom": "^7.1.1",
+    "recharts": "^2.15.0"
+>>>>>>> 6bb4543 (2 - Added and Stylized New Components (Sidebar, Menu, Charts, etc..))
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",

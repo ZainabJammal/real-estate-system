@@ -4,6 +4,7 @@
   align-items: center;
   gap: 10px;
 <<<<<<< HEAD
+<<<<<<< HEAD
   padding: 28px 10px;
   margin: 0;
   white-space: nowrap;
@@ -25,16 +26,30 @@
     height: 32px;
 =======
   padding: 24px;
+=======
+  padding: 28px 10px;
+>>>>>>> 6bb4543 (2 - Added and Stylized New Components (Sidebar, Menu, Charts, etc..))
   margin: 0;
 
   h1 {
     font-size: 1.5rem;
+    color: var(--background-light-gray-f);
+    transition: color 0.5s ease;
+    &:hover {
+      cursor: pointer;
+      color: var(--secondary-amber-gold);
+    }
   }
 
   img {
+<<<<<<< HEAD
     width: 30px;
     height: 30px;
 >>>>>>> df94a0d (1 - Created Dashboard layout and Components (Sidebar, NameCard, MenuCard))
+=======
+    width: 40px;
+    height: 40px;
+>>>>>>> 6bb4543 (2 - Added and Stylized New Components (Sidebar, Menu, Charts, etc..))
     border-radius: 100%;
     box-sizing: border-box;
   }

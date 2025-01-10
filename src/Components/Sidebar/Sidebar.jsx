@@ -31,9 +31,16 @@ function Sidebar() {
         <Name />
         <Menu />
       </div>
+<<<<<<< HEAD
       <div className="logout">
         <FaArrowAltCircleLeft />
 >>>>>>> df94a0d (1 - Created Dashboard layout and Components (Sidebar, NameCard, MenuCard))
+=======
+      <div className="logout-container">
+        <div className="logout">
+          <FaArrowAltCircleLeft />
+        </div>
+>>>>>>> 6bb4543 (2 - Added and Stylized New Components (Sidebar, Menu, Charts, etc..))
       </div>
     </div>
   );

@@ -39,15 +39,21 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  background-color: var(--primary-cool-gray);
+  /* background-color: var(--primary-deep-blue); */
+  background-image: linear-gradient(
+    to bottom,
+    var(--primary-deep-blue),
+    var(--primary-deep-blue-p)
+  );
   margin: 0;
   justify-content: space-between;
   box-sizing: border-box;
-  box-shadow: 1px 0px 3px gray;
+  box-shadow: 1px 0px 20px 1px rgba(128, 128, 128, 0.696);
   z-index: 10;
 >>>>>>> df94a0d (1 - Created Dashboard layout and Components (Sidebar, NameCard, MenuCard))
 }
 
+<<<<<<< HEAD
 .logout {
   width: 100%;
 <<<<<<< HEAD
@@ -80,11 +86,34 @@
   margin-bottom: 50px;
   font-size: 2rem;
   color: var(--primary-deep-blue);
+=======
+.navmenu {
+  flex: 3;
+}
+
+.logout-container {
+  flex: 1;
+>>>>>>> 6bb4543 (2 - Added and Stylized New Components (Sidebar, Menu, Charts, etc..))
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 10px;
+}
+
+.logout {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: var(--background-light-gray-f);
   &:hover {
     cursor: pointer;
+<<<<<<< HEAD
 >>>>>>> df94a0d (1 - Created Dashboard layout and Components (Sidebar, NameCard, MenuCard))
+=======
+    color: var(--secondary-amber-gold);
+>>>>>>> 6bb4543 (2 - Added and Stylized New Components (Sidebar, Menu, Charts, etc..))
   }
+  transition: 0.3s all;
 }

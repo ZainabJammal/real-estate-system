@@ -1,4 +1,5 @@
 .piechart-content {
+<<<<<<< HEAD
   margin: 0 auto;
   width: 550px;
   height: 400px;
@@ -10,4 +11,8 @@
     width: 350px;
     height: 233px;
   }
+=======
+  margin: 0;
+  padding: 10px;
+>>>>>>> 6bb4543 (2 - Added and Stylized New Components (Sidebar, Menu, Charts, etc..))
 }

@@ -2,6 +2,7 @@
   /* Primary Colors */
   --primary-deep-blue: #2c3e50;
 <<<<<<< HEAD
+<<<<<<< HEAD
   --primary-deep-blue-p: #1d364ef0;
   --primary-cool-gray: #95a5a6;
 
@@ -16,16 +17,25 @@
   --background-light-gray-p: #bdc3c765;
   --background-light-white-p: #eaeef6de;
 =======
+=======
+  --primary-deep-blue-p: #1d364ef0;
+>>>>>>> 6bb4543 (2 - Added and Stylized New Components (Sidebar, Menu, Charts, etc..))
   --primary-cool-gray: #95a5a6;
 
   /* Secondary Colors */
-  --secondary-emerald-green: #2ecc71;
-  --secondary-amber-gold: #f1c40f;
+  --secondary-emerald-green: #358f5a78;
+  --secondary-amber-gold: #c4aa44df;
 
   /* Background Colors */
   --background-soft-white: #ecf0f1;
+<<<<<<< HEAD
   --background-light-gray: #bdc3c7;
 >>>>>>> df94a0d (1 - Created Dashboard layout and Components (Sidebar, NameCard, MenuCard))
+=======
+  --background-light-gray-f: #ccced0;
+  --background-light-gray-p: #bdc3c765;
+  --background-light-white-p: #eaeef6de;
+>>>>>>> 6bb4543 (2 - Added and Stylized New Components (Sidebar, Menu, Charts, etc..))
 
   /* Action Colors */
   --action-cyan-blue: #1abc9c;
@@ -41,10 +51,15 @@ html {
   padding: 0;
   color: var(--primary-deep-blue);
 <<<<<<< HEAD
+<<<<<<< HEAD
   font-family: Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 =======
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 >>>>>>> df94a0d (1 - Created Dashboard layout and Components (Sidebar, NameCard, MenuCard))
+=======
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+>>>>>>> 6bb4543 (2 - Added and Stylized New Components (Sidebar, Menu, Charts, etc..))
 }
 
 #root {

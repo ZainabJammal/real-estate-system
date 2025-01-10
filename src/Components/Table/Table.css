@@ -1,6 +1,9 @@
 .table-card {
   max-height: 360px;
+<<<<<<< HEAD
   width: 100%;
+=======
+>>>>>>> 6bb4543 (2 - Added and Stylized New Components (Sidebar, Menu, Charts, etc..))
   overflow-y: auto;
   border: 1px solid;
   margin: 5px 0;
@@ -22,9 +25,12 @@ table {
     border-bottom: 1px solid var(--primary-deep-blue);
   }
 }
+<<<<<<< HEAD
 
 @media (max-width: 650px) {
   .table-card {
     width: 96%;
   }
 }
+=======
+>>>>>>> 6bb4543 (2 - Added and Stylized New Components (Sidebar, Menu, Charts, etc..))

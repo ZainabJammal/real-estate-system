@@ -13,6 +13,7 @@ ul {
   margin: 0;
   box-sizing: border-box;
 <<<<<<< HEAD
+<<<<<<< HEAD
   white-space: nowrap;
   color: var(--background-light-gray-f);
   flex: 2;
@@ -82,17 +83,27 @@ ul {
   width: 4px;
   background-color: #2a67a4;
 =======
+=======
+  color: var(--background-light-gray-f);
+  flex: 2;
+>>>>>>> 6bb4543 (2 - Added and Stylized New Components (Sidebar, Menu, Charts, etc..))
 }
 
 .item {
-  border-bottom: 1px solid var(--background-light-gray);
+  border-bottom: 1px solid var(--background-light-gray-p);
   padding: 15px;
   font-size: 0.9rem;
   text-align: center;
   &:hover {
     cursor: pointer;
-    background-color: var(--background-light-gray);
-    transition: 0.3s all;
+    background-color: var(--background-light-gray-f);
+    color: var(--primary-deep-blue);
+    transform: translateX(0.35rem);
+    border-right: 5px solid var(--secondary-amber-gold);
   }
+<<<<<<< HEAD
 >>>>>>> df94a0d (1 - Created Dashboard layout and Components (Sidebar, NameCard, MenuCard))
+=======
+  transition: transform 0.155s ease-in-out;
+>>>>>>> 6bb4543 (2 - Added and Stylized New Components (Sidebar, Menu, Charts, etc..))
 }
