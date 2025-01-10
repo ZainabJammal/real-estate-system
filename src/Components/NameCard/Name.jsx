@@ -4,8 +4,10 @@ import "./Name.css";
 function Name() {
   return (
     <div className="name">
-      <img src="../src/images/1.png" alt="avatar.png" />
-      <h1>Mostafa Dawi!</h1>
+      <img src="../src/images/1.jpg" alt="avatar.png" />
+      <h1>
+        <i>Real Estate</i>
+      </h1>
     </div>
   );
 }

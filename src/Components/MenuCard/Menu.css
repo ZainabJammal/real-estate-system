@@ -3,16 +3,21 @@
   flex-direction: column;
   margin: 0;
   box-sizing: border-box;
+  color: var(--background-light-gray-f);
+  flex: 2;
 }
 
 .item {
-  border-bottom: 1px solid var(--background-light-gray);
+  border-bottom: 1px solid var(--background-light-gray-p);
   padding: 15px;
   font-size: 0.9rem;
   text-align: center;
   &:hover {
     cursor: pointer;
-    background-color: var(--background-light-gray);
-    transition: 0.3s all;
+    background-color: var(--background-light-gray-f);
+    color: var(--primary-deep-blue);
+    transform: translateX(0.35rem);
+    border-right: 5px solid var(--secondary-amber-gold);
   }
+  transition: transform 0.155s ease-in-out;
 }

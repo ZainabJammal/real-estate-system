@@ -11,8 +11,10 @@ function Sidebar() {
         <Name />
         <Menu />
       </div>
-      <div className="logout">
-        <FaArrowAltCircleLeft />
+      <div className="logout-container">
+        <div className="logout">
+          <FaArrowAltCircleLeft />
+        </div>
       </div>
     </div>
   );

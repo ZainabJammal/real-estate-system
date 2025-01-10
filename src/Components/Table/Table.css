@@ -1,0 +1,23 @@
+.table-card {
+  max-height: 360px;
+  overflow-y: auto;
+  border: 1px solid;
+  margin: 5px 0;
+}
+
+table {
+  width: 100%;
+  padding: 20px 0;
+  border-collapse: collapse;
+  th {
+    background-color: var(--primary-deep-blue);
+    color: var(--background-light-white-p);
+    padding: 5px;
+  }
+
+  td {
+    padding: 10px 30px;
+    text-align: center;
+    border-bottom: 1px solid var(--primary-deep-blue);
+  }
+}
