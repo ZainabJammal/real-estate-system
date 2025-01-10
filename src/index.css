@@ -1,0 +1,33 @@
+:root {
+  /* Primary Colors */
+  --primary-deep-blue: #2c3e50;
+  --primary-cool-gray: #95a5a6;
+
+  /* Secondary Colors */
+  --secondary-emerald-green: #2ecc71;
+  --secondary-amber-gold: #f1c40f;
+
+  /* Background Colors */
+  --background-soft-white: #ecf0f1;
+  --background-light-gray: #bdc3c7;
+
+  /* Action Colors */
+  --action-cyan-blue: #1abc9c;
+  --action-crimson-red: #e74c3c;
+}
+
+body,
+html {
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: var(--primary-deep-blue);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+#root {
+  height: 100%;
+  box-sizing: border-box;
+}
