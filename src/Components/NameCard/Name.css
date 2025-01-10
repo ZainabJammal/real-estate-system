@@ -3,6 +3,7 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
+<<<<<<< HEAD
   padding: 28px 10px;
   margin: 0;
   white-space: nowrap;
@@ -22,6 +23,18 @@
   img {
     width: 32px;
     height: 32px;
+=======
+  padding: 24px;
+  margin: 0;
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  img {
+    width: 30px;
+    height: 30px;
+>>>>>>> df94a0d (1 - Created Dashboard layout and Components (Sidebar, NameCard, MenuCard))
     border-radius: 100%;
     box-sizing: border-box;
   }

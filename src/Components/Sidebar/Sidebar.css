@@ -1,4 +1,5 @@
 .sidebar {
+<<<<<<< HEAD
   flex: 0 0 200px;
   display: flex;
   flex-direction: column;
@@ -33,10 +34,23 @@
   justify-content: center;
   align-items: center;
   padding: 10px;
+=======
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--primary-cool-gray);
+  margin: 0;
+  justify-content: space-between;
+  box-sizing: border-box;
+  box-shadow: 1px 0px 3px gray;
+  z-index: 10;
+>>>>>>> df94a0d (1 - Created Dashboard layout and Components (Sidebar, NameCard, MenuCard))
 }
 
 .logout {
   width: 100%;
+<<<<<<< HEAD
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,5 +76,15 @@
 
   .sidebar.expanded {
     transform: translateX(0);
+=======
+  margin-bottom: 50px;
+  font-size: 2rem;
+  color: var(--primary-deep-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    cursor: pointer;
+>>>>>>> df94a0d (1 - Created Dashboard layout and Components (Sidebar, NameCard, MenuCard))
   }
 }

@@ -1,4 +1,5 @@
 import { useState } from "react";
+<<<<<<< HEAD
 import { BrowserRouter as BR, Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Sidebar from "./Components/Sidebar/Sidebar";
@@ -26,6 +27,19 @@ function App() {
         </div>
       </BR>
     </QueryClientProvider>
+=======
+import { BrowserRouter as BR, Router, Route } from "react-router-dom";
+import "./App.css";
+import Sidebar from "./Components/Sidebar/Sidebar";
+import Dashboard from "./Pages/Dashboard/Dashboard";
+
+function App() {
+  return (
+    <div className="app">
+      <Sidebar />
+      <Dashboard />
+    </div>
+>>>>>>> df94a0d (1 - Created Dashboard layout and Components (Sidebar, NameCard, MenuCard))
   );
 }
 

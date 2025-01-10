@@ -1,9 +1,14 @@
 import React from "react";
+<<<<<<< HEAD
 import "./Page_Layout.css";
 import Custom from "../../Components/CustomCard/Custom";
 import Table from "../../Components/Table/Table";
 import PieChart from "../../Components/PieChart/PieChartComponent";
 import LineChartComponent from "../../Components/LineChart/LineChartComponent";
+=======
+import "./Dashboard.css";
+import Name from "../../Components/NameCard/Name";
+>>>>>>> df94a0d (1 - Created Dashboard layout and Components (Sidebar, NameCard, MenuCard))
 
 function Dashboard() {
   return (
@@ -12,6 +17,7 @@ function Dashboard() {
         <div className="title">
           <h1>Dashboard</h1>
         </div>
+<<<<<<< HEAD
         <div className="dashboard-components">
           <Custom
             title="Sales per Month"
@@ -58,6 +64,9 @@ function Dashboard() {
             no_inflate
           />
         </div>
+=======
+        <div className="dashboard-components"></div>
+>>>>>>> df94a0d (1 - Created Dashboard layout and Components (Sidebar, NameCard, MenuCard))
       </div>
     </div>
   );

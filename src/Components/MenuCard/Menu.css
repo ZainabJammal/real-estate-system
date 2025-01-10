@@ -1,14 +1,18 @@
+<<<<<<< HEAD
 ul {
   list-style-type: none;
   padding: 0;
   position: relative;
 }
 
+=======
+>>>>>>> df94a0d (1 - Created Dashboard layout and Components (Sidebar, NameCard, MenuCard))
 .item-list {
   display: flex;
   flex-direction: column;
   margin: 0;
   box-sizing: border-box;
+<<<<<<< HEAD
   white-space: nowrap;
   color: var(--background-light-gray-f);
   flex: 2;
@@ -77,4 +81,18 @@ ul {
   bottom: 0;
   width: 4px;
   background-color: #2a67a4;
+=======
+}
+
+.item {
+  border-bottom: 1px solid var(--background-light-gray);
+  padding: 15px;
+  font-size: 0.9rem;
+  text-align: center;
+  &:hover {
+    cursor: pointer;
+    background-color: var(--background-light-gray);
+    transition: 0.3s all;
+  }
+>>>>>>> df94a0d (1 - Created Dashboard layout and Components (Sidebar, NameCard, MenuCard))
 }

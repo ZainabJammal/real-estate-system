@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from "react";
 import "./Menu.css";
 import {
@@ -48,6 +49,19 @@ function Menu({ isMinimized = false }) {
         </Link>
       ))}
     </ul>
+=======
+import React from "react";
+import "./Menu.css";
+
+function Menu() {
+  return (
+    <div className="item-list">
+      <div className="item">Home</div>
+      <div className="item">Explore Estates</div>
+      <div className="item">Ask AI</div>
+      <div className="item">Contact Agent</div>
+    </div>
+>>>>>>> df94a0d (1 - Created Dashboard layout and Components (Sidebar, NameCard, MenuCard))
   );
 }
 

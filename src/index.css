@@ -1,6 +1,7 @@
 :root {
   /* Primary Colors */
   --primary-deep-blue: #2c3e50;
+<<<<<<< HEAD
   --primary-deep-blue-p: #1d364ef0;
   --primary-cool-gray: #95a5a6;
 
@@ -14,6 +15,17 @@
   --background-light-gray-f: #ccced0;
   --background-light-gray-p: #bdc3c765;
   --background-light-white-p: #eaeef6de;
+=======
+  --primary-cool-gray: #95a5a6;
+
+  /* Secondary Colors */
+  --secondary-emerald-green: #2ecc71;
+  --secondary-amber-gold: #f1c40f;
+
+  /* Background Colors */
+  --background-soft-white: #ecf0f1;
+  --background-light-gray: #bdc3c7;
+>>>>>>> df94a0d (1 - Created Dashboard layout and Components (Sidebar, NameCard, MenuCard))
 
   /* Action Colors */
   --action-cyan-blue: #1abc9c;
@@ -28,7 +40,11 @@ html {
   margin: 0;
   padding: 0;
   color: var(--primary-deep-blue);
+<<<<<<< HEAD
   font-family: Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+=======
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+>>>>>>> df94a0d (1 - Created Dashboard layout and Components (Sidebar, NameCard, MenuCard))
 }
 
 #root {
