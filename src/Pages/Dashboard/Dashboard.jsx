@@ -1,9 +1,9 @@
 import React from "react";
 import "./Dashboard.css";
 import Custom from "../../Components/CustomCard/Custom";
-import CustomL from "../../Components/CustomCard/CustomL";
 import Table from "../../Components/Table/Table";
 import PieChart from "../../Components/PieChart/PieChartComponent";
+import LineChartComponent from "../../Components/LineChart/LineChartComponent";
 
 function Dashboard() {
   return (
@@ -13,9 +13,10 @@ function Dashboard() {
           <h1>Dashboard</h1>
         </div>
         <div className="dashboard-components">
-          <CustomL
+          <Custom
             title="Sales per Month"
             desc="This line chart shows the increasing amount of sales (in $) per each month"
+            Component={LineChartComponent}
           />
 
           <Custom
