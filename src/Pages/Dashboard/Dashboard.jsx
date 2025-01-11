@@ -12,10 +12,13 @@ import Name from "../../Components/NameCard/Name";
 >>>>>>> df94a0d (1 - Created Dashboard layout and Components (Sidebar, NameCard, MenuCard))
 =======
 import Custom from "../../Components/CustomCard/Custom";
-import CustomL from "../../Components/CustomCard/CustomL";
 import Table from "../../Components/Table/Table";
 import PieChart from "../../Components/PieChart/PieChartComponent";
+<<<<<<< HEAD
 >>>>>>> 6bb4543 (2 - Added and Stylized New Components (Sidebar, Menu, Charts, etc..))
+=======
+import LineChartComponent from "../../Components/LineChart/LineChartComponent";
+>>>>>>> b815288 (3 - Removed Component CustomL and Created LineChartComponent instead and passed it as prop into Custom)
 
 function Dashboard() {
   return (
@@ -33,10 +36,14 @@ function Dashboard() {
             Component={LineChartComponent}
 =======
         <div className="dashboard-components">
-          <CustomL
+          <Custom
             title="Sales per Month"
             desc="This line chart shows the increasing amount of sales (in $) per each month"
+<<<<<<< HEAD
 >>>>>>> 6bb4543 (2 - Added and Stylized New Components (Sidebar, Menu, Charts, etc..))
+=======
+            Component={LineChartComponent}
+>>>>>>> b815288 (3 - Removed Component CustomL and Created LineChartComponent instead and passed it as prop into Custom)
           />
 
           <Custom
