@@ -1,5 +1,6 @@
 .table-card {
   max-height: 360px;
+  width: 600px;
   overflow-y: auto;
   border: 1px solid;
   margin: 5px 0;
@@ -19,5 +20,11 @@ table {
     padding: 10px 30px;
     text-align: center;
     border-bottom: 1px solid var(--primary-deep-blue);
+  }
+}
+
+@media (max-width: 650px) {
+  .table-card {
+    width: 96%;
   }
 }

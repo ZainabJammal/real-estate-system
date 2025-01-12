@@ -20,11 +20,11 @@ function LineChartComponent() {
     { months: "Jun", Agent1: 35, Agent2: 27 },
   ];
   return (
-    <div>
-      <ResponsiveContainer width={500} height={400}>
+    <div className="component-layout">
+      <ResponsiveContainer width={"100%"} height={"100%"}>
         <LineChart
           data={data}
-          margin={{ top: 20, right: 20, left: 20, bottom: 20 }}
+          margin={{ top: 20, right: 30, left: 10, bottom: 20 }}
         >
           <CartesianGrid strokeDasharray="1 1" />
           <XAxis dataKey="months" />

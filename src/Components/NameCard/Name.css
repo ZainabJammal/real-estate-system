@@ -14,6 +14,7 @@
       cursor: pointer;
       color: var(--secondary-amber-gold);
     }
+    transition: h1 0.3s ease-in-out;
   }
 
   img {

@@ -1,0 +1,12 @@
+.component-layout {
+  width: 550px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+@media (max-width: 550px) {
+  .component-layout {
+    width: 350px;
+    height: 250px;
+  }
+}

@@ -1,13 +1,17 @@
 import React from "react";
 import "./Name.css";
 
-function Name() {
+function Name({ isMinimized = false }) {
   return (
-    <div className="name">
+    <div className={`name ${isMinimized ? "minimized" : ""}`}>
       <img src="../src/images/1.jpg" alt="avatar.png" />
-      <h1>
-        <i>Real Estate</i>
-      </h1>
+      {isMinimized ? (
+        ""
+      ) : (
+        <h1>
+          <i>Real Estate</i>
+        </h1>
+      )}
     </div>
   );
 }
