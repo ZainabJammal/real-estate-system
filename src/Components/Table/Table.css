@@ -1,9 +1,13 @@
 .table-card {
   max-height: 360px;
 <<<<<<< HEAD
+<<<<<<< HEAD
   width: 100%;
 =======
 >>>>>>> 6bb4543 (2 - Added and Stylized New Components (Sidebar, Menu, Charts, etc..))
+=======
+  width: 600px;
+>>>>>>> 85ec564 (4 - Modified and stylized PieCharts and LineCharts to fit correctly on the dashboard (with different screens))
   overflow-y: auto;
   border: 1px solid;
   margin: 5px 0;
@@ -26,11 +30,17 @@ table {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 85ec564 (4 - Modified and stylized PieCharts and LineCharts to fit correctly on the dashboard (with different screens))
 
 @media (max-width: 650px) {
   .table-card {
     width: 96%;
   }
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 6bb4543 (2 - Added and Stylized New Components (Sidebar, Menu, Charts, etc..))
+=======
+>>>>>>> 85ec564 (4 - Modified and stylized PieCharts and LineCharts to fit correctly on the dashboard (with different screens))

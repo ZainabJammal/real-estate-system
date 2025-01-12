@@ -21,6 +21,7 @@ function LineChartComponent() {
   ];
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="component-layout">
       <ResponsiveContainer width={"100%"} height={"100%"}>
         <LineChart
@@ -33,6 +34,13 @@ function LineChartComponent() {
           data={data}
           margin={{ top: 20, right: 20, left: 20, bottom: 20 }}
 >>>>>>> b815288 (3 - Removed Component CustomL and Created LineChartComponent instead and passed it as prop into Custom)
+=======
+    <div className="component-layout">
+      <ResponsiveContainer width={"100%"} height={"100%"}>
+        <LineChart
+          data={data}
+          margin={{ top: 20, right: 30, left: 10, bottom: 20 }}
+>>>>>>> 85ec564 (4 - Modified and stylized PieCharts and LineCharts to fit correctly on the dashboard (with different screens))
         >
           <CartesianGrid strokeDasharray="1 1" />
           <XAxis dataKey="months" />

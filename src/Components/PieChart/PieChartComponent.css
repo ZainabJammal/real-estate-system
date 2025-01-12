@@ -1,5 +1,8 @@
 .piechart-content {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 85ec564 (4 - Modified and stylized PieCharts and LineCharts to fit correctly on the dashboard (with different screens))
   margin: 0 auto;
   width: 550px;
   height: 400px;
@@ -11,8 +14,11 @@
     width: 350px;
     height: 233px;
   }
+<<<<<<< HEAD
 =======
   margin: 0;
   padding: 10px;
 >>>>>>> 6bb4543 (2 - Added and Stylized New Components (Sidebar, Menu, Charts, etc..))
+=======
+>>>>>>> 85ec564 (4 - Modified and stylized PieCharts and LineCharts to fit correctly on the dashboard (with different screens))
 }

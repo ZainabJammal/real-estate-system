@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 85ec564 (4 - Modified and stylized PieCharts and LineCharts to fit correctly on the dashboard (with different screens))
 import React, { useEffect, useState } from "react";
 import { CgAlignCenter } from "react-icons/cg";
 import { PieChart, Pie, ResponsiveContainer } from "recharts";
 import "./PieChartComponent.css";
+<<<<<<< HEAD
 
 function PieChartComponent() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -22,6 +26,21 @@ import { PieChart, Pie } from "recharts";
 
 function PieChartComponent() {
 >>>>>>> 6bb4543 (2 - Added and Stylized New Components (Sidebar, Menu, Charts, etc..))
+=======
+
+function PieChartComponent() {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+>>>>>>> 85ec564 (4 - Modified and stylized PieCharts and LineCharts to fit correctly on the dashboard (with different screens))
   const data = [
     { name: "Coast", value: 60 },
     { name: "Countryside", value: 10 },
@@ -35,6 +54,9 @@ function PieChartComponent() {
   return (
     <div className="piechart-content">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 85ec564 (4 - Modified and stylized PieCharts and LineCharts to fit correctly on the dashboard (with different screens))
       <ResponsiveContainer
         // width={windowWidth < 650 ? 350 : 600}
         // height={windowWidth < 650 ? 233 : 400}
@@ -64,6 +86,7 @@ function PieChartComponent() {
           />
         </PieChart>
       </ResponsiveContainer>
+<<<<<<< HEAD
 =======
       <PieChart width={550} height={350}>
         <Pie
@@ -88,6 +111,8 @@ function PieChartComponent() {
         />
       </PieChart>
 >>>>>>> 6bb4543 (2 - Added and Stylized New Components (Sidebar, Menu, Charts, etc..))
+=======
+>>>>>>> 85ec564 (4 - Modified and stylized PieCharts and LineCharts to fit correctly on the dashboard (with different screens))
     </div>
   );
 }

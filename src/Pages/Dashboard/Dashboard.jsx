@@ -52,15 +52,21 @@ function Dashboard() {
             Component={PieChart}
           />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 85ec564 (4 - Modified and stylized PieCharts and LineCharts to fit correctly on the dashboard (with different screens))
           <Custom
             title="Percentage of Highly Demanded Estates"
             desc="This chart represents the number of highly demanded estates according to locations"
             Component={PieChart}
           />
+<<<<<<< HEAD
 =======
           <Custom />
 
 >>>>>>> 6bb4543 (2 - Added and Stylized New Components (Sidebar, Menu, Charts, etc..))
+=======
+>>>>>>> 85ec564 (4 - Modified and stylized PieCharts and LineCharts to fit correctly on the dashboard (with different screens))
           <Custom />
           <Custom />
         </div>
@@ -74,6 +80,9 @@ function Dashboard() {
             Component={Table}
           />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 85ec564 (4 - Modified and stylized PieCharts and LineCharts to fit correctly on the dashboard (with different screens))
           <Custom />
           <Custom />
           <Custom
@@ -83,14 +92,20 @@ function Dashboard() {
           />
           <Custom />
           <Custom />
+<<<<<<< HEAD
 =======
 >>>>>>> 6bb4543 (2 - Added and Stylized New Components (Sidebar, Menu, Charts, etc..))
+=======
+>>>>>>> 85ec564 (4 - Modified and stylized PieCharts and LineCharts to fit correctly on the dashboard (with different screens))
 
           <Custom
             type="table"
             title="Table of availabe estates"
             Component={Table}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 85ec564 (4 - Modified and stylized PieCharts and LineCharts to fit correctly on the dashboard (with different screens))
             no_inflate
           />
         </div>
