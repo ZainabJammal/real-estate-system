@@ -1,6 +1,9 @@
 .sidebar {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 45d5ffb (Did some CSS modifications in the Sidebar.css)
   flex: 0 0 200px;
   display: flex;
   flex-direction: column;
@@ -18,6 +21,7 @@
   z-index: 10;
   transform: translateX(100);
   transition: flex-basis 0.3s ease, transform 0.3s ease, minimized 0.3s ease;
+<<<<<<< HEAD
 }
 
 .sidebar.minimized {
@@ -63,6 +67,12 @@
 .sidebar.minimized {
   flex: 0 0 50px;
 >>>>>>> 85ec564 (4 - Modified and stylized PieCharts and LineCharts to fit correctly on the dashboard (with different screens))
+=======
+}
+
+.sidebar.minimized {
+  flex: 0 0 30px;
+>>>>>>> 45d5ffb (Did some CSS modifications in the Sidebar.css)
 }
 
 <<<<<<< HEAD
@@ -101,6 +111,7 @@
 =======
 .navmenu {
   flex: 3;
+  overflow: hidden;
 }
 
 .logout-container {
@@ -138,5 +149,10 @@
   .sidebar {
     transform: translateX(-100%);
     position: absolute;
+    transition: transform 0.3s ease;
+  }
+
+  .sidebar.expanded {
+    transform: translateX(0);
   }
 }

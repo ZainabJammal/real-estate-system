@@ -52,10 +52,22 @@ function Menu({ isMinimized = false }) {
 =======
 import React from "react";
 import "./Menu.css";
-import { FaHome } from "react-icons/fa";
+import {
+  FaChartArea,
+  FaCloud,
+  FaFileContract,
+  FaHome,
+  FaLightbulb,
+  FaList,
+  FaPage4,
+  FaPaperPlane,
+  FaPhoneAlt,
+} from "react-icons/fa";
+import { FaPhone } from "react-icons/fa6";
 
 function Menu({ isMinimized = false }) {
   return (
+<<<<<<< HEAD
     <div className={`item-list ${isMinimized ? "minimized" : ""}`}>
       <div className="item">
         {isMinimized ? <FaHome size={"50%"} /> : "Home"}
@@ -65,6 +77,38 @@ function Menu({ isMinimized = false }) {
       <div className="item">Contact Agent</div>
     </div>
 >>>>>>> df94a0d (1 - Created Dashboard layout and Components (Sidebar, NameCard, MenuCard))
+=======
+    <ul className={`item-list ${isMinimized ? "minimized" : ""}`}>
+      <li
+        className={`item ${isMinimized ? "minimized" : ""}`}
+        aria-label="Home"
+      >
+        <FaHome size={"20px"} className="menu-icon" />
+        {!isMinimized && <span className="menu-text">Home</span>}
+      </li>
+      <li
+        className={`item ${isMinimized ? "minimized" : ""}`}
+        aria-label="Explore Estates"
+      >
+        <FaList size={"20px"} className="menu-icon" />
+        {!isMinimized && <span className="menu-text">Explore Estates</span>}
+      </li>
+      <li
+        className={`item ${isMinimized ? "minimized" : ""}`}
+        aria-label="Ask AI"
+      >
+        <FaCloud size={"20px"} className="menu-icon" />
+        {!isMinimized && <span className="menu-text">Ask AI</span>}
+      </li>
+      <li
+        className={`item ${isMinimized ? "minimized" : ""}`}
+        aria-label="Contact Agent"
+      >
+        <FaPhoneAlt size={"20px"} className="menu-icon" />
+        {!isMinimized && <span className="menu-text">Contact Agent</span>}
+      </li>
+    </ul>
+>>>>>>> 45d5ffb (Did some CSS modifications in the Sidebar.css)
   );
 }
 

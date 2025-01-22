@@ -9,6 +9,7 @@
   margin: 0;
   white-space: nowrap;
   overflow: hidden;
+<<<<<<< HEAD
 
   h1 {
     font-size: 1.5rem;
@@ -30,6 +31,8 @@
   padding: 28px 10px;
 >>>>>>> 6bb4543 (2 - Added and Stylized New Components (Sidebar, Menu, Charts, etc..))
   margin: 0;
+=======
+>>>>>>> 45d5ffb (Did some CSS modifications in the Sidebar.css)
 
   h1 {
     font-size: 1.5rem;
@@ -39,10 +42,11 @@
       cursor: pointer;
       color: var(--secondary-amber-gold);
     }
-    transition: h1 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
 
   img {
+<<<<<<< HEAD
 <<<<<<< HEAD
     width: 30px;
     height: 30px;
@@ -51,6 +55,10 @@
     width: 40px;
     height: 40px;
 >>>>>>> 6bb4543 (2 - Added and Stylized New Components (Sidebar, Menu, Charts, etc..))
+=======
+    width: 32px;
+    height: 32px;
+>>>>>>> 45d5ffb (Did some CSS modifications in the Sidebar.css)
     border-radius: 100%;
     box-sizing: border-box;
   }

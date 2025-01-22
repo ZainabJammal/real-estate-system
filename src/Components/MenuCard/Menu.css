@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ul {
   list-style-type: none;
   padding: 0;
@@ -7,11 +8,19 @@ ul {
 
 =======
 >>>>>>> df94a0d (1 - Created Dashboard layout and Components (Sidebar, NameCard, MenuCard))
+=======
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+>>>>>>> 45d5ffb (Did some CSS modifications in the Sidebar.css)
 .item-list {
   display: flex;
   flex-direction: column;
   margin: 0;
   box-sizing: border-box;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   white-space: nowrap;
@@ -95,18 +104,33 @@ ul {
 .item-list.minimzed {
   transform: translateX(-100);
 >>>>>>> 85ec564 (4 - Modified and stylized PieCharts and LineCharts to fit correctly on the dashboard (with different screens))
+=======
+  white-space: nowrap;
+  color: var(--background-light-gray-f);
+  flex: 2;
+  transition: all 0.8s ease;
+  position: relative;
+}
+
+.item-list.minimzed {
+  white-space: nowrap;
+  overflow: hidden;
+>>>>>>> 45d5ffb (Did some CSS modifications in the Sidebar.css)
 }
 
 .item {
   border-bottom: 1px solid var(--background-light-gray-p);
-  padding: 10px;
-  font-size: 1.1rem;
-  text-align: center;
+  padding: 10px 20px;
+  font-size: 0.8rem;
+  text-align: left;
+  display: flex;
+  gap: 10px;
   &:hover {
     cursor: pointer;
     background-color: var(--background-light-gray-f);
     color: var(--primary-deep-blue);
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> df94a0d (1 - Created Dashboard layout and Components (Sidebar, NameCard, MenuCard))
@@ -115,4 +139,32 @@ ul {
 >>>>>>> 6bb4543 (2 - Added and Stylized New Components (Sidebar, Menu, Charts, etc..))
 =======
 >>>>>>> 85ec564 (4 - Modified and stylized PieCharts and LineCharts to fit correctly on the dashboard (with different screens))
+=======
+  transition: transform 0.3s ease;
+}
+
+.item.minimized {
+  justify-content: center;
+}
+
+.menu-icon {
+  position: relative;
+  transition: transform 0.3s ease; /* Optional: Smooth icon scaling */
+}
+
+.menu-text {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.item.minimized .menu-text {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.item.minimized .menu-icon {
+  position: relative;
+  padding: px 0px;
+>>>>>>> 45d5ffb (Did some CSS modifications in the Sidebar.css)
 }
