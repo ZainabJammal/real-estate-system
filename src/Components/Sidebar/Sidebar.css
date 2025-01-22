@@ -1,5 +1,5 @@
 .sidebar {
-  flex: 0 0 220px;
+  flex: 0 0 200px;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -14,15 +14,17 @@
   box-sizing: border-box;
   box-shadow: 1px 0px 25px 5px rgba(128, 128, 128, 0.803);
   z-index: 10;
-  transition: flex-basis 0.3s ease-in-out;
+  transform: translateX(100);
+  transition: flex-basis 0.3s ease, transform 0.3s ease, minimized 0.3s ease;
 }
 
 .sidebar.minimized {
-  flex: 0 0 50px;
+  flex: 0 0 30px;
 }
 
 .navmenu {
   flex: 3;
+  overflow: hidden;
 }
 
 .logout-container {
@@ -55,5 +57,10 @@
   .sidebar {
     transform: translateX(-100%);
     position: absolute;
+    transition: transform 0.3s ease;
+  }
+
+  .sidebar.expanded {
+    transform: translateX(0);
   }
 }
