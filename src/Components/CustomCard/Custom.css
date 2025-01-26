@@ -12,6 +12,7 @@
   &:hover {
     cursor: pointer;
     transform: scale(1.01);
+<<<<<<< HEAD
 =======
   box-shadow: 0px 2px 10px 5px var(--background-light-gray-p);
 =======
@@ -24,6 +25,8 @@
     cursor: pointer;
     transform: scale(1.03);
 >>>>>>> 6bb4543 (2 - Added and Stylized New Components (Sidebar, Menu, Charts, etc..))
+=======
+>>>>>>> 0ec06ac (5 - Added New Pages (Explore Estates, Ask AI, Contact Agent) and added their corresponding styles)
   }
   transition: transform 0.225s ease-in-out;
 }

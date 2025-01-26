@@ -1,5 +1,8 @@
 import React from "react";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0ec06ac (5 - Added New Pages (Explore Estates, Ask AI, Contact Agent) and added their corresponding styles)
 import "./Page_Layout.css";
 import Custom from "../../Components/CustomCard/Custom";
 import Table from "../../Components/Table/Table";

@@ -24,7 +24,6 @@ for page_number in range(1, total_pages + 1):
     if response.status_code == 200:
         soup = BeautifulSoup(response.text, 'html.parser')
 
-        
         main_section = soup.find('section', class_='max-w-[1366px] mx-auto')
         if main_section:
             for listing in main_section.find_all('div', class_='flex my-7 mx-2.5 flex-col min-[1090px]:flex-row'):

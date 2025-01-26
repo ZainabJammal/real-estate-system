@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from "react";
 import "./Page_Layout.css";
 import { useQuery } from "@tanstack/react-query";
@@ -27,12 +28,19 @@ export const Explore_Estate = () => {
     queryFn: fetchData,
   });
 
+=======
+import React from "react";
+import "./Page_Layout.css";
+
+export const Explore_Estate = () => {
+>>>>>>> 0ec06ac (5 - Added New Pages (Explore Estates, Ask AI, Contact Agent) and added their corresponding styles)
   return (
     <div className="dashboard-layout">
       <div className="dashboard-content">
         <div className="title">
           <h1>Explore Estate</h1>
         </div>
+<<<<<<< HEAD
         <div className="dashboard-components">
           {isLoading && <p>Loading data...</p>}
           {error && <p>{error.message}</p>}
@@ -45,6 +53,9 @@ export const Explore_Estate = () => {
               </div>
             ))}
         </div>
+=======
+        <div className="dashboard-components"></div>
+>>>>>>> 0ec06ac (5 - Added New Pages (Explore Estates, Ask AI, Contact Agent) and added their corresponding styles)
       </div>
     </div>
   );

@@ -133,10 +133,14 @@
   &:hover {
     cursor: pointer;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> df94a0d (1 - Created Dashboard layout and Components (Sidebar, NameCard, MenuCard))
 =======
     color: var(--secondary-amber-gold);
 >>>>>>> 6bb4543 (2 - Added and Stylized New Components (Sidebar, Menu, Charts, etc..))
+=======
+    color: var(--background-soft-white);
+>>>>>>> 0ec06ac (5 - Added New Pages (Explore Estates, Ask AI, Contact Agent) and added their corresponding styles)
   }
   transition: transform 0.3s ease-in-out;
 }
