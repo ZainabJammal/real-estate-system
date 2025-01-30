@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useState } from "react";
 import "./Menu.css";
 import {
@@ -55,6 +56,9 @@ import React from "react";
 =======
 import React, { useState } from "react";
 >>>>>>> 0ec06ac (5 - Added New Pages (Explore Estates, Ask AI, Contact Agent) and added their corresponding styles)
+=======
+import React, { useEffect, useState } from "react";
+>>>>>>> b2365ee ((Add): added getPages.js and organized the menu component on the front-end)
 import "./Menu.css";
 import {
   FaChartArea,
@@ -68,35 +72,20 @@ import {
   FaPhoneAlt,
 } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { menu_paths } from "../../Functions/getPages";
 
 function Menu({ isMinimized = false }) {
+  const path = useLocation();
   const [activePage, setActivePage] = useState(null);
-  function handleClick(idx) {
-    setActivePage(idx);
+
+  function handleClick(path) {
+    setActivePage(path);
   }
-  const menu_paths = [
-    {
-      name: "Dashboard",
-      path: "/",
-      icon: <FaHome size={"20px"} className="menu-icon" />,
-    },
-    {
-      name: "Explore Estates",
-      path: "/explore_estates",
-      icon: <FaList size={"20px"} className="menu-icon" />,
-    },
-    {
-      name: "Ask AI",
-      path: "/ask_ai",
-      icon: <FaCloud size={"20px"} className="menu-icon" />,
-    },
-    {
-      name: "Contact Agent",
-      path: "/contact_agent",
-      icon: <FaPhoneAlt size={"20px"} className="menu-icon" />,
-    },
-  ];
+
+  useEffect(() => {
+    setActivePage(path.pathname);
+  }, [path]);
 
   return (
 <<<<<<< HEAD
@@ -119,10 +108,10 @@ function Menu({ isMinimized = false }) {
         >
           <li
             className={`item ${isMinimized ? "minimized" : ""} ${
-              activePage === _idx ? "clicked" : ""
+              activePage === path.path ? "clicked" : ""
             }`}
             aria-label={path.name}
-            onClick={() => handleClick(_idx)}
+            onClick={() => handleClick(path.path)}
           >
             {path.icon}
             {!isMinimized && <span className="menu-text">{path.name}</span>}

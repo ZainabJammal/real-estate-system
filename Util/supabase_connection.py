@@ -68,10 +68,3 @@ property = {
     "negotiable":True,
     "price":300000,
     }
-
-def main():
-    
-    asyncio.run(supabase.table("properties").eq("id", 5).execute())
-
-if __name__ == "__main__":
-    main()

@@ -1,5 +1,6 @@
 import requests
 import json
+import pandas as pd
 
 # ========================================================== REALESTATE.COM.LB ====================================================================
 # cookies = {
@@ -98,11 +99,19 @@ result = response.json()
 # Test: Printing title and prices of properties scraped from dubizzle backend API
 i = 1
 count = 0
+
+properties_names = []
+properties_price = []
+
 while(i < len(result["responses"])):
     properties = result["responses"][i]["hits"]["hits"]
     j = 0
     while j < len(properties):
-        print("{\n\tTitle: "+ properties[j]["_source"]["title"] + "\n\t Price: " + str(properties[j]["_source"]["formattedExtraFields"][1]["formattedValue"]) + "\n}")
+        # print("{\n\tTitle: "+ properties[j]["_source"]["title"] + "\n\t Price: " + str(properties[j]["_source"]["formattedExtraFields"][1]["formattedValue"]) + "\n}")
+
+        properties_names.append(properties[j]["_source"]["title"])
+        properties_price.append(properties[j]["_source"]["formattedExtraFields"][1]["formattedValue"])
+
         j += 1
         count += 1
 
@@ -110,3 +119,7 @@ while(i < len(result["responses"])):
     i += 1
 
 print(count)
+
+df = pd.DataFrame({"Title": properties_names, "Price": properties_price})
+df.to_csv("./extracted_data/dubizzle.csv")
+
