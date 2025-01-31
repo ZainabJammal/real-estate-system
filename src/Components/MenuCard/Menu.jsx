@@ -46,6 +46,7 @@ function Menu({ isMinimized = false }) {
             onClick={() => handleClick(path.path)}
           >
             <path.icon size={"20px"} className="menu-icon" />
+<<<<<<< HEAD
             {!isMinimized && <span className="menu-text">{path.name}</span>}
           </li>
         </Link>
@@ -114,6 +115,8 @@ function Menu({ isMinimized = false }) {
             onClick={() => handleClick(path.path)}
           >
             {path.icon}
+=======
+>>>>>>> ffe7405 ((create): created backend in Quart and Hypercorn to handle server-side logic and API database queries)
             {!isMinimized && <span className="menu-text">{path.name}</span>}
           </li>
         </Link>

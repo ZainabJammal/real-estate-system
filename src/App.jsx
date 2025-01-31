@@ -11,6 +11,7 @@ import Ask_AI from "./Pages/Dashboard/Ask_AI";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const queryClient = new QueryClient();
+<<<<<<< HEAD
 
 function App() {
   return (
@@ -62,6 +63,25 @@ function App() {
       </div>
     </BR>
 >>>>>>> 0ec06ac (5 - Added New Pages (Explore Estates, Ask AI, Contact Agent) and added their corresponding styles)
+=======
+
+function App() {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <BR>
+        <div className="app">
+          <Sidebar />
+
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/explore_estates" element={<Explore_Estate />} />
+            <Route path="/ask_ai" element={<Ask_AI />} />
+            <Route path="/contact_agent" element={<Contact_Agent />} />
+          </Routes>
+        </div>
+      </BR>
+    </QueryClientProvider>
+>>>>>>> ffe7405 ((create): created backend in Quart and Hypercorn to handle server-side logic and API database queries)
   );
 }
 
