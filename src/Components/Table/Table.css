@@ -1,6 +1,21 @@
 .table-card {
   max-height: 360px;
+<<<<<<< HEAD
   width: 600px;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  width: 100%;
+=======
+>>>>>>> 6bb4543 (2 - Added and Stylized New Components (Sidebar, Menu, Charts, etc..))
+=======
+  width: 600px;
+>>>>>>> 85ec564 (4 - Modified and stylized PieCharts and LineCharts to fit correctly on the dashboard (with different screens))
+=======
+  width: 100%;
+>>>>>>> 0ec06ac (5 - Added New Pages (Explore Estates, Ask AI, Contact Agent) and added their corresponding styles)
+>>>>>>> 04ff9eb4cf35246afaacefd2a6e8b94cf9ac1c30
   overflow-y: auto;
   border: 1px solid;
   margin: 5px 0;
@@ -22,9 +37,24 @@ table {
     border-bottom: 1px solid var(--primary-deep-blue);
   }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 85ec564 (4 - Modified and stylized PieCharts and LineCharts to fit correctly on the dashboard (with different screens))
+>>>>>>> 04ff9eb4cf35246afaacefd2a6e8b94cf9ac1c30
 
 @media (max-width: 650px) {
   .table-card {
     width: 96%;
   }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 6bb4543 (2 - Added and Stylized New Components (Sidebar, Menu, Charts, etc..))
+=======
+>>>>>>> 85ec564 (4 - Modified and stylized PieCharts and LineCharts to fit correctly on the dashboard (with different screens))
+>>>>>>> 04ff9eb4cf35246afaacefd2a6e8b94cf9ac1c30

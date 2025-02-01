@@ -1,18 +1,59 @@
 :root {
   /* Primary Colors */
   --primary-deep-blue: #2c3e50;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 04ff9eb4cf35246afaacefd2a6e8b94cf9ac1c30
   --primary-deep-blue-p: #1d364ef0;
   --primary-cool-gray: #95a5a6;
 
   /* Secondary Colors */
   --secondary-emerald-green: #358f5a78;
   --secondary-amber-gold: #f1c71e;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0ec06ac (5 - Added New Pages (Explore Estates, Ask AI, Contact Agent) and added their corresponding styles)
+  --secondary-light-navy: #2a67a4;
+>>>>>>> 04ff9eb4cf35246afaacefd2a6e8b94cf9ac1c30
 
   /* Background Colors */
   --background-soft-white: #dde3e3;
   --background-light-gray-f: #ccced0;
   --background-light-gray-p: #bdc3c765;
   --background-light-white-p: #eaeef6de;
+<<<<<<< HEAD
+=======
+=======
+=======
+  --primary-deep-blue-p: #1d364ef0;
+>>>>>>> 6bb4543 (2 - Added and Stylized New Components (Sidebar, Menu, Charts, etc..))
+  --primary-cool-gray: #95a5a6;
+
+  /* Secondary Colors */
+  --secondary-emerald-green: #358f5a78;
+  --secondary-amber-gold: #c4aa44df;
+
+  /* Background Colors */
+  --background-soft-white: #ecf0f1;
+<<<<<<< HEAD
+  --background-light-gray: #bdc3c7;
+>>>>>>> df94a0d (1 - Created Dashboard layout and Components (Sidebar, NameCard, MenuCard))
+=======
+=======
+
+  /* Background Colors */
+  --background-soft-white: #dde3e3;
+>>>>>>> 85ec564 (4 - Modified and stylized PieCharts and LineCharts to fit correctly on the dashboard (with different screens))
+  --background-light-gray-f: #ccced0;
+  --background-light-gray-p: #bdc3c765;
+  --background-light-white-p: #eaeef6de;
+>>>>>>> 6bb4543 (2 - Added and Stylized New Components (Sidebar, Menu, Charts, etc..))
+>>>>>>> 04ff9eb4cf35246afaacefd2a6e8b94cf9ac1c30
 
   /* Action Colors */
   --action-cyan-blue: #1abc9c;
@@ -27,7 +68,24 @@ html {
   margin: 0;
   padding: 0;
   color: var(--primary-deep-blue);
+<<<<<<< HEAD
   font-family: Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  font-family: Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+=======
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+>>>>>>> df94a0d (1 - Created Dashboard layout and Components (Sidebar, NameCard, MenuCard))
+=======
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+>>>>>>> 6bb4543 (2 - Added and Stylized New Components (Sidebar, Menu, Charts, etc..))
+=======
+  font-family: Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+>>>>>>> 85ec564 (4 - Modified and stylized PieCharts and LineCharts to fit correctly on the dashboard (with different screens))
+>>>>>>> 04ff9eb4cf35246afaacefd2a6e8b94cf9ac1c30
 }
 
 #root {

@@ -3,10 +3,19 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 04ff9eb4cf35246afaacefd2a6e8b94cf9ac1c30
   padding: 28px 10px;
   margin: 0;
   white-space: nowrap;
   overflow: hidden;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 04ff9eb4cf35246afaacefd2a6e8b94cf9ac1c30
 
   h1 {
     font-size: 1.5rem;
@@ -22,6 +31,43 @@
   img {
     width: 32px;
     height: 32px;
+<<<<<<< HEAD
+=======
+=======
+  padding: 24px;
+=======
+  padding: 28px 10px;
+>>>>>>> 6bb4543 (2 - Added and Stylized New Components (Sidebar, Menu, Charts, etc..))
+  margin: 0;
+=======
+>>>>>>> 45d5ffb (Did some CSS modifications in the Sidebar.css)
+
+  h1 {
+    font-size: 1.5rem;
+    color: var(--background-light-gray-f);
+    transition: color 0.5s ease;
+    &:hover {
+      cursor: pointer;
+      color: var(--secondary-amber-gold);
+    }
+    transition: all 0.3s ease-in-out;
+  }
+
+  img {
+<<<<<<< HEAD
+<<<<<<< HEAD
+    width: 30px;
+    height: 30px;
+>>>>>>> df94a0d (1 - Created Dashboard layout and Components (Sidebar, NameCard, MenuCard))
+=======
+    width: 40px;
+    height: 40px;
+>>>>>>> 6bb4543 (2 - Added and Stylized New Components (Sidebar, Menu, Charts, etc..))
+=======
+    width: 32px;
+    height: 32px;
+>>>>>>> 45d5ffb (Did some CSS modifications in the Sidebar.css)
+>>>>>>> 04ff9eb4cf35246afaacefd2a6e8b94cf9ac1c30
     border-radius: 100%;
     box-sizing: border-box;
   }

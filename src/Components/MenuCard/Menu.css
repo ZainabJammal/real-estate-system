@@ -1,16 +1,47 @@
+<<<<<<< HEAD
 ul {
   list-style-type: none;
   padding: 0;
 }
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+ul {
+  list-style-type: none;
+  padding: 0;
+  position: relative;
+}
+
+=======
+>>>>>>> df94a0d (1 - Created Dashboard layout and Components (Sidebar, NameCard, MenuCard))
+=======
+ul {
+  list-style-type: none;
+  padding: 0;
+  position: relative;
+}
+
+>>>>>>> 45d5ffb (Did some CSS modifications in the Sidebar.css)
+>>>>>>> 04ff9eb4cf35246afaacefd2a6e8b94cf9ac1c30
 .item-list {
   display: flex;
   flex-direction: column;
   margin: 0;
   box-sizing: border-box;
+<<<<<<< HEAD
   white-space: nowrap;
   color: var(--background-light-gray-f);
   flex: 2;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  white-space: nowrap;
+  color: var(--background-light-gray-f);
+  flex: 2;
+<<<<<<< HEAD
+>>>>>>> 04ff9eb4cf35246afaacefd2a6e8b94cf9ac1c30
   transition: all 0.8s ease;
   position: relative;
 }
@@ -18,9 +49,17 @@ ul {
 .item-list.minimzed {
   white-space: nowrap;
   overflow: hidden;
+<<<<<<< HEAD
 }
 
 .item {
+=======
+  position: relative;
+}
+
+.item {
+  position: relative;
+>>>>>>> 04ff9eb4cf35246afaacefd2a6e8b94cf9ac1c30
   border-bottom: 1px solid var(--background-light-gray-p);
   padding: 10px 20px;
   font-size: 0.8rem;
@@ -32,7 +71,11 @@ ul {
     background-color: var(--background-light-gray-f);
     color: var(--primary-deep-blue);
   }
+<<<<<<< HEAD
   transition: transform 0.3s ease;
+=======
+  transition: all 0.1s ease;
+>>>>>>> 04ff9eb4cf35246afaacefd2a6e8b94cf9ac1c30
 }
 
 .item.minimized {
@@ -40,8 +83,12 @@ ul {
 }
 
 .menu-icon {
+<<<<<<< HEAD
   position: relative;
   transition: transform 0.3s ease; /* Optional: Smooth icon scaling */
+=======
+  transition: transform 0.3s ease;
+>>>>>>> 04ff9eb4cf35246afaacefd2a6e8b94cf9ac1c30
 }
 
 .menu-text {
@@ -57,5 +104,130 @@ ul {
 
 .item.minimized .menu-icon {
   position: relative;
+<<<<<<< HEAD
   padding: px 0px;
+=======
+}
+
+.item.clicked {
+  background-color: #162738d7;
+  &:hover {
+    color: white;
+  }
+  transition: all 0.3s ease;
+}
+
+.item.clicked::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #2a67a4;
+=======
+=======
+  color: var(--background-light-gray-f);
+  flex: 2;
+>>>>>>> 6bb4543 (2 - Added and Stylized New Components (Sidebar, Menu, Charts, etc..))
+=======
+  transition: transform 0.5s ease-in-out;
+}
+
+.item-list.minimzed {
+  transform: translateX(-100);
+>>>>>>> 85ec564 (4 - Modified and stylized PieCharts and LineCharts to fit correctly on the dashboard (with different screens))
+=======
+  white-space: nowrap;
+  color: var(--background-light-gray-f);
+  flex: 2;
+  transition: all 0.8s ease;
+  position: relative;
+}
+
+.item-list.minimzed {
+  white-space: nowrap;
+  overflow: hidden;
+<<<<<<< HEAD
+>>>>>>> 45d5ffb (Did some CSS modifications in the Sidebar.css)
+=======
+  position: relative;
+>>>>>>> 0ec06ac (5 - Added New Pages (Explore Estates, Ask AI, Contact Agent) and added their corresponding styles)
+}
+
+.item {
+  position: relative;
+  border-bottom: 1px solid var(--background-light-gray-p);
+  padding: 10px 20px;
+  font-size: 0.8rem;
+  text-align: left;
+  display: flex;
+  gap: 10px;
+  &:hover {
+    cursor: pointer;
+    background-color: var(--background-light-gray-f);
+    color: var(--primary-deep-blue);
+  }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> df94a0d (1 - Created Dashboard layout and Components (Sidebar, NameCard, MenuCard))
+=======
+  transition: transform 0.155s ease-in-out;
+>>>>>>> 6bb4543 (2 - Added and Stylized New Components (Sidebar, Menu, Charts, etc..))
+=======
+>>>>>>> 85ec564 (4 - Modified and stylized PieCharts and LineCharts to fit correctly on the dashboard (with different screens))
+=======
+  transition: transform 0.3s ease;
+=======
+  transition: all 0.1s ease;
+>>>>>>> 0ec06ac (5 - Added New Pages (Explore Estates, Ask AI, Contact Agent) and added their corresponding styles)
+}
+
+.item.minimized {
+  justify-content: center;
+}
+
+.menu-icon {
+  transition: transform 0.3s ease;
+}
+
+.menu-text {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.item.minimized .menu-text {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.item.minimized .menu-icon {
+  position: relative;
+<<<<<<< HEAD
+  padding: px 0px;
+>>>>>>> 45d5ffb (Did some CSS modifications in the Sidebar.css)
+=======
+}
+
+.item.clicked {
+  background-color: #162738d7;
+  &:hover {
+    color: white;
+  }
+  transition: all 0.3s ease;
+}
+
+.item.clicked::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #2a67a4;
+>>>>>>> 0ec06ac (5 - Added New Pages (Explore Estates, Ask AI, Contact Agent) and added their corresponding styles)
+>>>>>>> 04ff9eb4cf35246afaacefd2a6e8b94cf9ac1c30
 }
