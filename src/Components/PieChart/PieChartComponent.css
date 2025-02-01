@@ -1,0 +1,13 @@
+.piechart-content {
+  margin: 0 auto;
+  width: 550px;
+  height: 400px;
+  display: block;
+}
+
+@media (max-width: 500px) {
+  .piechart-content {
+    width: 350px;
+    height: 233px;
+  }
+}

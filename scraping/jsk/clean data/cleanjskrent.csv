@@ -1,0 +1,1422 @@
+Address,Rent $/year,Type,Size m²,Bedrooms,Bathrooms
+"Zalka, El Metn, Mount Lebanon",12000                        ,Apartment,170,3,3
+"Qannabet Broumana, El Metn, Mount Lebanon",8700                        ,Apartment,160,3,2
+"Ghazir, Kesrouane, Mount Lebanon",7200                        ,Office,150,2,N/A
+"Jbeil, Jbeil, Mount Lebanon",7200                        ,Apartment,130,2,2
+"Achrafieh, Beirut, Beirut",24000                        ,Shop,150,1,N/A
+"Kaslik, Kesrouane, Mount Lebanon",42000                        ,Shop,400,N/A,N/A
+"Kfarzebian, Kesrouane, Mount Lebanon",15000                        ,Apartment,110,2,2
+"Jounieh, Kesrouane, Mount Lebanon",72000                        ,Shop,275,2,N/A
+"Jounieh, Kesrouane, Mount Lebanon",75000                        ,Shop,350,2,N/A
+"Achrafieh, Beirut, Beirut",24000                        ,Office,200,2,N/A
+"Dbayeh, El Metn, Mount Lebanon",24000                        ,Apartment,180,2,3
+"Dbayeh, El Metn, Mount Lebanon",45000                        ,Apartment,222,3,4
+"Sahel Alma, Kesrouane, Mount Lebanon",18000                        ,Apartment,190,3,3
+"Achrafieh, Beirut, Beirut",14400                        ,Shop,45,1,N/A
+"Badaro, Beirut, Beirut",15600                        ,Office,70,1,N/A
+"kfarhbeib, Kesrouane, Mount Lebanon",24000                        ,Apartment,245,3,5
+"Jbeil, Jbeil, Mount Lebanon",12000                        ,House/Villa,310,3,3
+"Zaarour, El Metn, Mount Lebanon",5400                        ,Apartment,35,1,1
+"Zaarour, El Metn, Mount Lebanon",12000                        ,Apartment,100,3,2
+"Zaarour, El Metn, Mount Lebanon",10800                        ,Apartment,50,2,1
+"Zaarour, El Metn, Mount Lebanon",8400                        ,Apartment,45,1,1
+"Achrafieh, Beirut, Beirut",18000                        ,Office,160,2,2
+"Tabarja, Kesrouane, Mount Lebanon",15000                        ,Chalet,70,1,1
+"Batroun, Batroun, North",6000                        ,Apartment,60,1,N/A
+"Batroun, Batroun, North",7200                        ,Apartment,130,2,2
+"Achrafieh, Beirut, Beirut",8400                        ,Apartment,60,1,1
+"Achrafieh, Beirut, Beirut",7200                        ,Apartment,40,1,N/A
+"Achrafieh, Beirut, Beirut",6000                        ,Apartment,25,1,1
+"kfarhbeib, Kesrouane, Mount Lebanon",14400                        ,Apartment,210,3,3
+"Jal el Dib, El Metn, Mount Lebanon",6000                        ,Office,85,1,N/A
+"Mkalles, El Metn, Mount Lebanon",24000                        ,Shop,480,N/A,N/A
+"Achrafieh, Beirut, Beirut",7200                        ,Apartment,151,2,2
+"Achrafieh, Beirut, Beirut",7200                        ,Apartment,151,2,2
+"Achrafieh, Beirut, Beirut",10800                        ,Apartment,90,2,1
+"Achrafieh, Beirut, Beirut",7800                        ,Apartment,45,1,1
+"Achrafieh, Beirut, Beirut",9600                        ,Apartment,90,2,1
+"Tabarja, Kesrouane, Mount Lebanon",8000                        ,Apartment,50,1,N/A
+"kfarhbeib, Kesrouane, Mount Lebanon",14400                        ,Apartment,220,4,4
+"Down Town, Beirut, Beirut",50000                        ,Apartment,270,3,3
+"Dekweneh, El Metn, Mount Lebanon",21000                        ,Office,127,3,N/A
+"Achrafieh, Beirut, Beirut",9600                        ,Apartment,200,3,2
+"Mansourieh, El Metn, Mount Lebanon",6300                        ,Apartment,135,1,4
+"Monteverde, El Metn, Mount Lebanon",30000                        ,Apartment,275,3,4
+"Rabieh, El Metn, Mount Lebanon",42000                        ,Apartment,500,4,4
+"Badaro, Beirut, Beirut",26400                        ,Apartment,280,3,4
+"kfarhbeib, Kesrouane, Mount Lebanon",7200                        ,Apartment,60,1,1
+"Jbeil, Jbeil, Mount Lebanon",120000                        ,Shop,1200,N/A,N/A
+"Sahel Alma, Kesrouane, Mount Lebanon",15600                        ,Apartment,250,4,4
+"Achrafieh, Beirut, Beirut",120000                        ,Commercial Building,350,2,N/A
+"Hboub, Jbeil, Mount Lebanon",12000                        ,Apartment,357,4,4
+"Jal el Dib, El Metn, Mount Lebanon",8400                        ,Office,70,1,N/A
+"Jal el Dib, El Metn, Mount Lebanon",30000                        ,Office,240,2,N/A
+"Jal el Dib, El Metn, Mount Lebanon",60000                        ,Office,500,4,N/A
+"Qartaboun, Jbeil, Mount Lebanon",4800                        ,Shop,75,1,N/A
+"Dbayeh, El Metn, Mount Lebanon",24000                        ,Apartment,248,3,4
+"Zalka, El Metn, Mount Lebanon",18000                        ,Office,75,2,N/A
+"Jbeil, Jbeil, Mount Lebanon",5200                        ,Apartment,220,3,3
+"Jbeil, Jbeil, Mount Lebanon",9000                        ,Apartment,65,2,2
+"Mazraat Yachouh, El Metn, Mount Lebanon",12000                        ,Apartment,200,3,3
+"Achrafieh, Beirut, Beirut",25000                        ,Apartment,190,3,3
+"Tabarja, Kesrouane, Mount Lebanon",11000                        ,Chalet,68,2,2
+"Tabarja, Kesrouane, Mount Lebanon",7500                        ,Chalet,38,1,1
+"Tabarja, Kesrouane, Mount Lebanon",6600                        ,Chalet,38,1,N/A
+"Tabarja, Kesrouane, Mount Lebanon",7400                        ,Chalet,54,1,N/A
+"Tabarja, Kesrouane, Mount Lebanon",8200                        ,Chalet,49,1,1
+"Tabarja, Kesrouane, Mount Lebanon",7400                        ,Chalet,37,1,N/A
+"Jbeil, Jbeil, Mount Lebanon",6000                        ,Apartment,120,2,2
+"Batroun, Batroun, North",20000                        ,Apartment,80,2,2
+"Jbeil, Jbeil, Mount Lebanon",15000                        ,Shop,170,2,N/A
+"Louaize, Baabda, Mount Lebanon",12000                        ,Office,120,1,N/A
+"Achrafieh, Beirut, Beirut",26400                        ,Apartment,385,4,4
+"Mansourieh, El Metn, Mount Lebanon",15600                        ,Apartment,240,2,4
+"Mansourieh, El Metn, Mount Lebanon",14400                        ,Apartment,250,3,4
+"Adma, Kesrouane, Mount Lebanon",12000                        ,Apartment,300,4,4
+"Adma, Kesrouane, Mount Lebanon",14000                        ,Apartment,300,4,4
+"Kaslik, Kesrouane, Mount Lebanon",16000                        ,Apartment,85,2,2
+"Kaslik, Kesrouane, Mount Lebanon",13000                        ,Chalet,70,1,1
+"Achrafieh, Beirut, Beirut",24000                        ,Apartment,240,3,3
+"Achrafieh, Beirut, Beirut",30000                        ,Apartment,178,3,3
+"Badaro, Beirut, Beirut",6000                        ,Office,50,1,N/A
+"Achrafieh, Beirut, Beirut",12000                        ,Apartment,120,2,2
+"Achrafieh, Beirut, Beirut",14400                        ,Apartment,150,3,2
+"Jbeil, Jbeil, Mount Lebanon",4800                        ,Apartment,140,2,1
+"Kornet Chehwan, El Metn, Mount Lebanon",24000                        ,Apartment,540,4,5
+"Fiyadiye, Baabda, Mount Lebanon",12000                        ,Apartment,130,2,3
+"Achrafieh, Beirut, Beirut",15600                        ,Apartment,115,2,2
+"Achrafieh, Beirut, Beirut",24000                        ,Office,95,1,N/A
+"Halat, Jbeil, Mount Lebanon",6600                        ,Apartment,140,3,3
+"Aoukar, El Metn, Mount Lebanon",8400                        ,Apartment,170,3,2
+"Aoukar, El Metn, Mount Lebanon",9600                        ,Apartment,110,2,2
+"Nahr Ibrahim, Jbeil, Mount Lebanon",7200                        ,Apartment,160,2,2
+"Jbeil, Jbeil, Mount Lebanon",6000                        ,Office,100,1,N/A
+"Zalka, El Metn, Mount Lebanon",8400                        ,Office,100,1,N/A
+"Jounieh, Kesrouane, Mount Lebanon",15000                        ,Shop,140,1,N/A
+"Sahel Alma, Kesrouane, Mount Lebanon",15000                        ,Apartment,200,3,3
+"Achrafieh, Beirut, Beirut",14400                        ,Apartment,135,2,2
+"Jal el Dib, El Metn, Mount Lebanon",5400                        ,Shop,50,3,N/A
+"Zalka, El Metn, Mount Lebanon",8400                        ,Office,100,1,N/A
+"Achrafieh, Beirut, Beirut",10800                        ,Apartment,138,2,1
+"Achrafieh, Beirut, Beirut",14400                        ,Apartment,160,2,4
+"Ain Al Remmane, Baabda, Mount Lebanon",13200                        ,Apartment,300,3,3
+"Achrafieh, Beirut, Beirut",12000                        ,Apartment,55,1,1
+"Achrafieh, Beirut, Beirut",15000                        ,Apartment,145,3,2
+"Jbeil, Jbeil, Mount Lebanon",18000                        ,Shop,150,1,N/A
+"Kaslik, Kesrouane, Mount Lebanon",5000                        ,Chalet,25,1,N/A
+"Badaro, Beirut, Beirut",24000                        ,Apartment,200,3,2
+"Jounieh, Kesrouane, Mount Lebanon",3600                        ,Office,45,1,N/A
+"Antelias, El Metn, Mount Lebanon",22000                        ,Office,160,2,N/A
+"Ouyoun Al Simen, Kesrouane, Mount Lebanon",19200                        ,Chalet,140,3,2
+"Jbeil, Jbeil, Mount Lebanon",6600                        ,Apartment,90,2,2
+"Jbeil, Jbeil, Mount Lebanon",4200                        ,Apartment,130,2,2
+"Fidar, Jbeil, Mount Lebanon",24000                        ,Land,5000,N/A,N/A
+"Ras Beirut, Beirut, Beirut",14400                        ,Apartment,120,3,2
+"Ras Beirut, Beirut, Beirut",15600                        ,Apartment,165,3,3
+"Down Town, Beirut, Beirut",40000                        ,Apartment,275,3,3
+"Jal el Dib, El Metn, Mount Lebanon",7200                        ,Office,80,1,N/A
+"Yarzeh, Baabda, Mount Lebanon",50000                        ,Apartment,500,5,6
+"Rabieh, El Metn, Mount Lebanon",30000                        ,Apartment,300,4,5
+"Jouret Al Ballout, El Metn, Mount Lebanon",30000                        ,House/Villa,400,4,5
+"Ras Beirut, Beirut, Beirut",15600                        ,Apartment,190,3,2
+"Jal el Dib, El Metn, Mount Lebanon",8400                        ,Office,100,1,N/A
+"Ouyoun Al Simen, Kesrouane, Mount Lebanon",12000                        ,Chalet,80,2,2
+"Monteverde, El Metn, Mount Lebanon",12000                        ,Apartment,180,3,3
+"Achrafieh, Beirut, Beirut",20400                        ,Apartment,120,2,2
+"Edde, Jbeil, Mount Lebanon",8400                        ,Apartment,120,3,2
+"Hboub, Jbeil, Mount Lebanon",5400                        ,Apartment,125,2,2
+"Jbeil, Jbeil, Mount Lebanon",10800                        ,Apartment,220,3,4
+"Achrafieh, Beirut, Beirut",13200                        ,Apartment,100,2,3
+"Jbeil, Jbeil, Mount Lebanon",15000                        ,Office,250,2,N/A
+"Dbayeh, El Metn, Mount Lebanon",270000                        ,Land,4500,N/A,N/A
+"Naccache, El Metn, Mount Lebanon",70000                        ,Land,2070,N/A,N/A
+"Kfarzebian, Kesrouane, Mount Lebanon",60000                        ,Chalet,400,4,6
+"Mansourieh, El Metn, Mount Lebanon",8400                        ,Apartment,120,2,2
+"Achrafieh, Beirut, Beirut",13200                        ,Apartment,80,1,1
+"Ajaltoun, Kesrouane, Mount Lebanon",6000                        ,Apartment,90,2,1
+"kfarhbeib, Kesrouane, Mount Lebanon",7200                        ,Apartment,200,3,4
+"Achrafieh, Beirut, Beirut",24000                        ,Office,80,1,N/A
+"Kaslik, Kesrouane, Mount Lebanon",4800                        ,Chalet,25,1,N/A
+"Batroun, Batroun, North",12000                        ,Apartment,90,2,2
+"Bouchrieh, El Metn, Mount Lebanon",200000                        ,Shop,800,3,N/A
+"Naccache, El Metn, Mount Lebanon",9600                        ,Apartment,190,2,2
+"Dbayeh, El Metn, Mount Lebanon",54000                        ,Office,325,2,N/A
+"Dbayeh, El Metn, Mount Lebanon",30000                        ,Office,135,1,N/A
+"Achrafieh, Beirut, Beirut",15600                        ,Apartment,220,3,3
+"Achkout, Kesrouane, Mount Lebanon",9000                        ,Apartment,140,2,2
+"Kaslik, Kesrouane, Mount Lebanon",7200                        ,Apartment,210,3,3
+"Kaslik, Kesrouane, Mount Lebanon",7200                        ,Apartment,100,2,3
+"Baabdat, El Metn, Mount Lebanon",8400                        ,Apartment,130,2,2
+"Dik El Mehdi, El Metn, Mount Lebanon",300000                        ,Commercial Building,5000,N/A,N/A
+"Achrafieh, Beirut, Beirut",9600                        ,Apartment,150,2,2
+"Fakra, Kesrouane, Mount Lebanon",24000                        ,Chalet,123,2,2
+"Bouchrieh, El Metn, Mount Lebanon",42000                        ,Office,360,2,N/A
+"Jbeil, Jbeil, Mount Lebanon",10800                        ,Warehouse,375,1,N/A
+"Dik El Mehdi, El Metn, Mount Lebanon",30000                        ,Apartment,350,4,5
+"Edde, Jbeil, Mount Lebanon",70000                        ,Commercial Building,1000,4,N/A
+"Dekweneh, El Metn, Mount Lebanon",18000                        ,Office,95,1,N/A
+"Dora, El Metn, Mount Lebanon",8400                        ,Office,75,1,N/A
+"Koura, Koura, North",110000                        ,Land,15121,N/A,N/A
+"Dik El Mehdi, El Metn, Mount Lebanon",20400                        ,Apartment,345,4,5
+"Kornet Chehwan, El Metn, Mount Lebanon",4800                        ,Office,60,1,N/A
+"Achrafieh, Beirut, Beirut",36000                        ,Apartment,180,3,3
+"Jbeil, Jbeil, Mount Lebanon",7200                        ,Apartment,100,2,2
+"Hboub, Jbeil, Mount Lebanon",8400                        ,Apartment,270,3,4
+"Dbayeh, El Metn, Mount Lebanon",90000                        ,Shop,300,2,N/A
+"Kaslik, Kesrouane, Mount Lebanon",36000                        ,Shop,226,2,N/A
+"Zouk Mosbeh, Kesrouane, Mount Lebanon",33000                        ,Shop,850,2,N/A
+"Zouk Mosbeh, Kesrouane, Mount Lebanon",42000                        ,Shop,850,2,N/A
+"Zouk Mosbeh, Kesrouane, Mount Lebanon",30000                        ,Warehouse,1350,2,N/A
+"Kfarzebian, Kesrouane, Mount Lebanon",13000                        ,Chalet,100,2,1
+"Zouk Mikael, Kesrouane, Mount Lebanon",8400                        ,Apartment,140,3,3
+"Zouk Mikael, Kesrouane, Mount Lebanon",12000                        ,Land,400,N/A,N/A
+"Kaslik, Kesrouane, Mount Lebanon",60000                        ,Shop,400,2,N/A
+"kfarhbeib, Kesrouane, Mount Lebanon",9600                        ,Apartment,220,3,3
+"Batroun, Batroun, North",42000                        ,House/Villa,500,5,5
+"Dekweneh, El Metn, Mount Lebanon",24000                        ,Shop,220,2,N/A
+"Jbeil, Jbeil, Mount Lebanon",12000                        ,Warehouse,600,1,N/A
+"Mazraat Yachouh, El Metn, Mount Lebanon",9000                        ,Apartment,150,3,3
+"Horsh Tabet, El Metn, Mount Lebanon",25000                        ,Office,140,3,N/A
+"Dbayeh, El Metn, Mount Lebanon",18000                        ,Shop,120,1,N/A
+"Zalka, El Metn, Mount Lebanon",6000                        ,Office,75,1,N/A
+"Dora, El Metn, Mount Lebanon",19200                        ,Shop,250,1,N/A
+"Kfaryassine, Kesrouane, Mount Lebanon",6000                        ,Apartment,130,2,2
+"Adma, Kesrouane, Mount Lebanon",6000                        ,Office,100,1,N/A
+"Dbayeh, El Metn, Mount Lebanon",450000                        ,Land,3200,6,N/A
+"Dik El Mehdi, El Metn, Mount Lebanon",6600                        ,Apartment,70,1,1
+"Elissar, El Metn, Mount Lebanon",9600                        ,Apartment,300,4,4
+"Achrafieh, Beirut, Beirut",12000                        ,Apartment,160,3,2
+"Halat, Jbeil, Mount Lebanon",9600                        ,Chalet,37,1,1
+"Jal el Dib, El Metn, Mount Lebanon",9600                        ,Apartment,170,2,2
+"Achrafieh, Beirut, Beirut",8400                        ,Apartment,140,3,1
+"Achrafieh, Beirut, Beirut",6600                        ,Apartment,100,2,1
+"Achrafieh, Beirut, Beirut",12000                        ,Apartment,150,2,1
+"Achrafieh, Beirut, Beirut",60000                        ,Residential Building,1100,6,6
+"Shayle, Kesrouane, Mount Lebanon",7800                        ,Apartment,200,3,3
+"Jbeil, Jbeil, Mount Lebanon",6000                        ,Apartment,100,2,2
+"Jbeil, Jbeil, Mount Lebanon",3600                        ,Office,45,1,N/A
+"Rabieh, El Metn, Mount Lebanon",84000                        ,House/Villa,1000,7,N/A
+"Nahr Ibrahim, Jbeil, Mount Lebanon",275000                        ,Commercial Building,3000,3,N/A
+"Nahr Ibrahim, Jbeil, Mount Lebanon",225000                        ,Shop,2000,1,N/A
+"Achrafieh, Beirut, Beirut",9600                        ,Office,300,3,N/A
+"Jounieh, Kesrouane, Mount Lebanon",9600                        ,Apartment,155,3,2
+"Ghazir, Kesrouane, Mount Lebanon",4800                        ,Shop,80,1,N/A
+"kfarhbeib, Kesrouane, Mount Lebanon",4800                        ,Office,50,1,N/A
+"Jbeil, Jbeil, Mount Lebanon",12000                        ,House/Villa,310,4,4
+"Achrafieh, Beirut, Beirut",15600                        ,Apartment,160,3,2
+"Achrafieh, Beirut, Beirut",36000                        ,Shop,300,2,N/A
+"Jbeil, Jbeil, Mount Lebanon",36000                        ,Factory,500,2,N/A
+"Jal el Dib, El Metn, Mount Lebanon",6000                        ,Office,70,1,N/A
+"Jbeil, Jbeil, Mount Lebanon",12000                        ,House/Villa,310,4,4
+"Dbayeh, El Metn, Mount Lebanon",27000                        ,Land,1100,N/A,N/A
+"Down Town, Beirut, Beirut",156000                        ,Apartment,740,4,4
+"Ghazir, Kesrouane, Mount Lebanon",7200                        ,Shop,100,1,N/A
+"Zouk Mosbeh, Kesrouane, Mount Lebanon",9600                        ,Shop,110,1,N/A
+"Badaro, Beirut, Beirut",20400                        ,Apartment,220,3,3
+"Achrafieh, Beirut, Beirut",12000                        ,Apartment,100,2,2
+"Jbeil, Jbeil, Mount Lebanon",120000                        ,Warehouse,3150,4,N/A
+"Kaslik, Kesrouane, Mount Lebanon",4500                         /Season,Chalet,50,1,N/A
+"Gherfine, Jbeil, Mount Lebanon",7200                        ,Apartment,150,2,2
+"Achrafieh, Beirut, Beirut",18000                        ,Apartment,75,1,2
+"Zouk Mosbeh, Kesrouane, Mount Lebanon",6000                        ,Warehouse,200,1,N/A
+"Adma, Kesrouane, Mount Lebanon",8000                        ,Apartment,160,1,N/A
+"Qannabet Broumana, El Metn, Mount Lebanon",6600                        ,Apartment,145,3,3
+"Ouyoun Al Simen, Kesrouane, Mount Lebanon",18000                        ,Apartment,140,3,2
+"Halat, Jbeil, Mount Lebanon",15600                        ,Warehouse,550,1,N/A
+"Adma, Kesrouane, Mount Lebanon",12000                        ,Apartment,300,3,4
+"Adma, Kesrouane, Mount Lebanon",7200                        ,Office,100,1,N/A
+"Sahel Alma, Kesrouane, Mount Lebanon",36000                        ,Shop,750,4,N/A
+"Nahr Ibrahim, Jbeil, Mount Lebanon",9600                        ,Apartment,250,3,3
+"Biyada, El Metn, Mount Lebanon",24000                        ,Apartment,280,3,3
+"Dik El Mehdi, El Metn, Mount Lebanon",14400                        ,Apartment,250,3,4
+"Ballouneh, Kesrouane, Mount Lebanon",7800                        ,Apartment,180,3,4
+"Down Town, Beirut, Beirut",26250                        ,Shop,26,1,N/A
+"Achrafieh, Beirut, Beirut",15600                        ,Apartment,135,2,3
+"Ghazir, Kesrouane, Mount Lebanon",15600                        ,Office,140,3,N/A
+"Halat, Jbeil, Mount Lebanon",18000                        ,Land,1700,N/A,N/A
+"Achrafieh, Beirut, Beirut",10800                        ,Apartment,120,2,2
+"Jbeil, Jbeil, Mount Lebanon",13000                        ,Shop,125,1,N/A
+"Ras Beirut, Beirut, Beirut",18000                        ,Shop,100,N/A,N/A
+"Achrafieh, Beirut, Beirut",48000                        ,Land,1000,N/A,N/A
+"Zouk Mikael, Kesrouane, Mount Lebanon",7200                        ,Shop,130,1,N/A
+"Zouk Mikael, Kesrouane, Mount Lebanon",6000                        ,Office,120,1,N/A
+"Tabarja, Kesrouane, Mount Lebanon",18000                        ,Chalet,125,2,2
+"Kfarzebian, Kesrouane, Mount Lebanon",18000                        ,Chalet,130,2,2
+"Dekweneh, El Metn, Mount Lebanon",16800                        ,Apartment,200,3,3
+"Ajaltoun, Kesrouane, Mount Lebanon",18000                        ,House/Villa,220,3,3
+"Nahr Ibrahim, Jbeil, Mount Lebanon",6000                        ,Shop,50,1,N/A
+"Jounieh, Kesrouane, Mount Lebanon",7200                        ,Office,70,1,N/A
+"Biyada, El Metn, Mount Lebanon",36000                        ,Apartment,300,3,4
+"Batroun, Batroun, North",8000                        ,Chalet,50,1,N/A
+"Hboub, Jbeil, Mount Lebanon",7200                        ,Apartment,205,3,4
+"Haret Sakher, Kesrouane, Mount Lebanon",8400                        ,Apartment,160,3,3
+"Ras Beirut, Beirut, Beirut",24000                        ,Apartment,130,2,3
+"Zalka, El Metn, Mount Lebanon",4200                        ,Shop,40,1,N/A
+"Jisr El Bacha, El Metn, Mount Lebanon",4200                        ,Shop,40,1,N/A
+"Elissar, El Metn, Mount Lebanon",15600                        ,Apartment,350,4,5
+"Bouchrieh, El Metn, Mount Lebanon",9600                        ,Factory,300,1,N/A
+"Naccache, El Metn, Mount Lebanon",18000                        ,Apartment,200,3,3
+"Naccache, El Metn, Mount Lebanon",5400                        ,Shop,25,1,N/A
+"Achrafieh, Beirut, Beirut",14400                        ,Apartment,295,3,3
+"Jbeil, Jbeil, Mount Lebanon",8400                        ,Office,83,2,N/A
+"Halat, Jbeil, Mount Lebanon",18000                        ,Apartment,125,3,3
+"Bouchrieh, El Metn, Mount Lebanon",7200                        ,Apartment,160,2,2
+"Batroun, Batroun, North",19200                        ,Apartment,70,1,1
+"Fidar, Jbeil, Mount Lebanon",12000                        ,Apartment,200,3,3
+"Ras Beirut, Beirut, Beirut",19200                        ,Apartment,164,3,4
+"Blat, Jbeil, Mount Lebanon",12000                        ,Land,850,N/A,N/A
+"Batroun, Batroun, North",8400                        ,Apartment,113,1,2
+"Nahr Ibrahim, Jbeil, Mount Lebanon",12000                        ,Apartment,300,5,4
+"Adma, Kesrouane, Mount Lebanon",4500                        ,Apartment,50,1,1
+"Batroun, Batroun, North",12000                        ,Office,165,2,2
+"Blat, Jbeil, Mount Lebanon",8400                        ,Apartment,120,1,2
+"Fiyadiye, Baabda, Mount Lebanon",21000                        ,Office,120,1,N/A
+"Fiyadiye, Baabda, Mount Lebanon",13000                        ,Shop,97,1,N/A
+"Fiyadiye, Baabda, Mount Lebanon",18000                        ,Office,127,1,N/A
+"Fiyadiye, Baabda, Mount Lebanon",20000                        ,Office,102,1,N/A
+"Fiyadiye, Baabda, Mount Lebanon",90000                        ,Shop,550,N/A,N/A
+"Bouchrieh, El Metn, Mount Lebanon",30000                        ,Warehouse,1200,1,N/A
+"Jal el Dib, El Metn, Mount Lebanon",6600                        ,Office,70,1,N/A
+"Antelias, El Metn, Mount Lebanon",10000                        ,Warehouse,400,1,N/A
+"Mansourieh, El Metn, Mount Lebanon",14400                        ,Apartment,203,3,4
+"Ras Beirut, Beirut, Beirut",24000                        ,Apartment,300,3,4
+"Mtayleb, El Metn, Mount Lebanon",18000                        ,Shop,60,1,N/A
+"Nahr Ibrahim, Jbeil, Mount Lebanon",7200                        ,Apartment,240,3,3
+"Mansourieh, El Metn, Mount Lebanon",130000                        ,Land,3300,N/A,N/A
+"New Rawda, El Metn, Mount Lebanon",11000                        ,Apartment,220,3,3
+"Jbeil, Jbeil, Mount Lebanon",12000                        ,Shop,125,1,N/A
+"Achrafieh, Beirut, Beirut",30000                        ,Shop,40,1,N/A
+"Achrafieh, Beirut, Beirut",70000                        ,Shop,700,3,N/A
+"Safra, Kesrouane, Mount Lebanon",30000                        ,Office,600,4,N/A
+"chnaniir, Kesrouane, Mount Lebanon",72000                        ,House/Villa,1500,7,N/A
+"Achrafieh, Beirut, Beirut",50000                        ,Office,300,3,N/A
+"Down Town, Beirut, Beirut",50000                        ,Office,300,3,N/A
+"Fatqa, Kesrouane, Mount Lebanon",12000                        ,Apartment,350,3,4
+"Batroun, Batroun, North",6000                        ,Land,711,N/A,N/A
+"Batroun, Batroun, North",6000                        ,Land,610,N/A,N/A
+"Batroun, Batroun, North",6000                        ,Land,720,N/A,N/A
+"Batroun, Batroun, North",6000                        ,Land,743,N/A,N/A
+"Batroun, Batroun, North",6000                        ,Land,590,N/A,N/A
+"Batroun, Batroun, North",6000                        ,Land,690,N/A,N/A
+"Batroun, Batroun, North",6000                        ,Land,703,N/A,N/A
+"Batroun, Batroun, North",6000                        ,Land,741,N/A,N/A
+"Achrafieh, Beirut, Beirut",120000                        ,Land,2023,N/A,N/A
+"Achrafieh, Beirut, Beirut",36000                        ,Apartment,230,2,3
+"Sin El Fil, El Metn, Mount Lebanon",48000                        ,Land,2172,N/A,N/A
+"Achrafieh, Beirut, Beirut",24000                        ,Apartment,170,3,3
+"Zouk Mosbeh, Kesrouane, Mount Lebanon",24000                        ,Warehouse,500,1,N/A
+"Monteverde, El Metn, Mount Lebanon",20400                        ,Apartment,220,3,4
+"Rabieh, El Metn, Mount Lebanon",14400                        ,Apartment,280,4,4
+"Dekweneh, El Metn, Mount Lebanon",20000                        ,Office,160,2,N/A
+"Achrafieh, Beirut, Beirut",24000                        ,Apartment,215,2,3
+"Achrafieh, Beirut, Beirut",24000                        ,Office,120,2,N/A
+"Monteverde, El Metn, Mount Lebanon",26400                        ,Apartment,340,4,6
+"Achrafieh, Beirut, Beirut",24000                        ,Shop,70,1,N/A
+"Achrafieh, Beirut, Beirut",42000                        ,Apartment,170,3,3
+"Jbeil, Jbeil, Mount Lebanon",36000                        ,Warehouse,800,3,N/A
+"Blat, Jbeil, Mount Lebanon",4200                        ,Apartment,110,2,2
+"Haret Sakher, Kesrouane, Mount Lebanon",9600                        ,Warehouse,300,2,N/A
+"Jounieh, Kesrouane, Mount Lebanon",9600                        ,Office,80,1,N/A
+"Bouchrieh, El Metn, Mount Lebanon",6000                        ,Office,100,1,N/A
+"Jbeil, Jbeil, Mount Lebanon",12000                        ,Apartment,80,2,2
+"Batroun, Batroun, North",130000                        ,Commercial Building,1773,N/A,N/A
+"Batroun, Batroun, North",10000                        ,Shop,72,N/A,N/A
+"Batroun, Batroun, North",36000                        ,Shop,255,N/A,N/A
+"Batroun, Batroun, North",16000                        ,Warehouse,195,N/A,N/A
+"Batroun, Batroun, North",10000                        ,Warehouse,125,N/A,N/A
+"Batroun, Batroun, North",6200                        ,Office,75,N/A,N/A
+"Batroun, Batroun, North",37000                        ,Office,83,N/A,N/A
+"Batroun, Batroun, North",7300                        ,Office,88,N/A,N/A
+"Batroun, Batroun, North",4800                        ,Office,58,N/A,N/A
+"Batroun, Batroun, North",5000                        ,Office,60,N/A,N/A
+"Achrafieh, Beirut, Beirut",13200                        ,Apartment,160,3,3
+"Fakra, Kesrouane, Mount Lebanon",18000                        ,Chalet,75,2,2
+"Kornet Chehwan, El Metn, Mount Lebanon",10200                        ,Apartment,230,3,3
+"Achrafieh, Beirut, Beirut",18000                        ,Apartment,240,3,3
+"Adma, Kesrouane, Mount Lebanon",24000                        ,Apartment,200,4,4
+"Dora, El Metn, Mount Lebanon",8400                        ,Office,56,1,N/A
+"Dora, El Metn, Mount Lebanon",54000                        ,Shop,495,2,N/A
+"Dora, El Metn, Mount Lebanon",7800                        ,Office,117,1,N/A
+"Achrafieh, Beirut, Beirut",24000                        ,Apartment,45,1,1
+"Achrafieh, Beirut, Beirut",30000                        ,Apartment,65,1,1
+"Zalka, El Metn, Mount Lebanon",10800                        ,Apartment,150,3,4
+"Broumana, El Metn, Mount Lebanon",12000                        ,Apartment,275,3,4
+"Broumana, El Metn, Mount Lebanon",16800                        ,Apartment,355,3,4
+"Achrafieh, Beirut, Beirut",18000                        ,Apartment,176,3,3
+"Achrafieh, Beirut, Beirut",21600                        ,Apartment,330,2,4
+"Sahel Alma, Kesrouane, Mount Lebanon",12000                        ,Apartment,150,3,3
+"Achrafieh, Beirut, Beirut",15600                        ,Apartment,110,2,2
+"Achrafieh, Beirut, Beirut",70000                        ,Office,235,3,N/A
+"Dekweneh, El Metn, Mount Lebanon",13000                        ,Office,115,2,N/A
+"Jbeil, Jbeil, Mount Lebanon",36000                        ,Shop,600,N/A,N/A
+"Jbeil, Jbeil, Mount Lebanon",6000                        ,Apartment,40,1,1
+"Sahel Alma, Kesrouane, Mount Lebanon",13200                        ,Apartment,170,3,4
+"Zouk Mosbeh, Kesrouane, Mount Lebanon",12000                        ,Office,80,1,N/A
+"Achrafieh, Beirut, Beirut",7200                        ,Office,60,1,N/A
+"Achrafieh, Beirut, Beirut",25000                        ,Apartment,300,3,4
+"Kfarzebian, Kesrouane, Mount Lebanon",36000                        ,Chalet,130,2,3
+"Ouyoun Al Simen, Kesrouane, Mount Lebanon",20000                        ,Chalet,150,3,3
+"Bouar, Kesrouane, Mount Lebanon",7200                        ,Warehouse,1000,1,N/A
+"Batroun, Batroun, North",3000                        ,Shop,75,1,N/A
+"Jal el Dib, El Metn, Mount Lebanon",18000                        ,Office,170,2,N/A
+"Barbara, Jbeil, Mount Lebanon",48000                        ,Land,1200,N/A,N/A
+"Barbara, Jbeil, Mount Lebanon",12000                        ,Land,1000,N/A,N/A
+"Jeita, Kesrouane, Mount Lebanon",12000                        ,Apartment,165,3,3
+"Achrafieh, Beirut, Beirut",30000                        ,Apartment,180,2,3
+"Zouk Mikael, Kesrouane, Mount Lebanon",6600                        ,Apartment,180,3,3
+"Batroun, Batroun, North",21600                        ,Apartment,115,2,2
+"Jounieh, Kesrouane, Mount Lebanon",72000                        ,Land,2500,N/A,N/A
+"Achrafieh, Beirut, Beirut",12000                        ,Apartment,117,2,2
+"Achrafieh, Beirut, Beirut",10800                        ,Office,60,1,N/A
+"Achrafieh, Beirut, Beirut",18000                        ,Shop,45,1,N/A
+"Batroun, Batroun, North",12000                        ,Shop,70,1,N/A
+"Ouyoun Al Simen, Kesrouane, Mount Lebanon",30000                        ,Chalet,200,3,4
+"Shayle, Kesrouane, Mount Lebanon",8400                        ,Apartment,110,2,2
+"Achrafieh, Beirut, Beirut",24000                        ,Apartment,232,3,3
+"Achrafieh, Beirut, Beirut",20000                        ,Apartment,268,3,4
+"Achrafieh, Beirut, Beirut",12000                        ,Apartment,150,3,2
+"Badaro, Beirut, Beirut",24000                        ,Apartment,310,4,4
+"Badaro, Beirut, Beirut",14400                        ,Shop,80,1,N/A
+"Jounieh, Kesrouane, Mount Lebanon",6000                        ,Office,60,1,N/A
+"Kaslik, Kesrouane, Mount Lebanon",16000                        ,Chalet,100,2,1
+"Achrafieh, Beirut, Beirut",30000                        ,Shop,120,2,N/A
+"Halat, Jbeil, Mount Lebanon",4800                        ,Apartment,100,2,3
+"Jbeil, Jbeil, Mount Lebanon",12000                        ,Warehouse,400,5,N/A
+"Jbeil, Jbeil, Mount Lebanon",25000                        ,Shop,300,5,N/A
+"Jbeil, Jbeil, Mount Lebanon",36000                        ,Shop,700,5,N/A
+"Jounieh, Kesrouane, Mount Lebanon",7200                        ,Shop,50,1,N/A
+"Jbeil, Jbeil, Mount Lebanon",18000                        ,House/Villa,450,5,4
+"Kaslik, Kesrouane, Mount Lebanon",7200                        ,Office,200,1,N/A
+"Batroun, Batroun, North",33600                        ,House/Villa,160,3,1
+"Halat, Jbeil, Mount Lebanon",5000                        ,Chalet,25,1,1
+"Achrafieh, Beirut, Beirut",30000                        ,Shop,400,3,N/A
+"Achrafieh, Beirut, Beirut",9600                        ,Apartment,45,1,1
+"Bouchrieh, El Metn, Mount Lebanon",48000                        ,Warehouse,500,3,3
+"Achrafieh, Beirut, Beirut",24000                        ,Office,150,2,N/A
+"Achrafieh, Beirut, Beirut",24000                        ,Apartment,270,3,3
+"Dbayeh, El Metn, Mount Lebanon",36000                        ,Apartment,300,3,4
+"Batroun, Batroun, North",6600                        ,Chalet,47,1,1
+"Yarzeh, Baabda, Mount Lebanon",100000                        ,House/Villa,2000,9,7
+"Achrafieh, Beirut, Beirut",80000                        ,Apartment,700,4,5
+"Tabarja, Kesrouane, Mount Lebanon",90000                        ,Shop,900,2,N/A
+"Achrafieh, Beirut, Beirut",390000                        ,Commercial Building,2616,N/A,N/A
+"Achrafieh, Beirut, Beirut",24000                        ,Office,180,N/A,N/A
+"Achrafieh, Beirut, Beirut",15000                        ,Office,100,2,N/A
+"Naccache, El Metn, Mount Lebanon",30000                        ,Apartment,400,3,3
+"Achrafieh, Beirut, Beirut",30000                        ,Office,240,2,N/A
+"Achrafieh, Beirut, Beirut",18000                        ,Office,100,2,N/A
+"Aamchit, Jbeil, Mount Lebanon",6000                        ,Chalet,25,1,N/A
+"Achrafieh, Beirut, Beirut",175000                        ,Shop,882,4,1
+"Faytroun, Kesrouane, Mount Lebanon",4400                         /Season,Chalet,120,2,1
+"Mansourieh, El Metn, Mount Lebanon",14400                        ,Apartment,200,3,4
+"Biyada, El Metn, Mount Lebanon",15000                        ,Apartment,400,3,2
+"Zalka, El Metn, Mount Lebanon",15600                        ,Warehouse,376,N/A,N/A
+"Jbeil, Jbeil, Mount Lebanon",4800                        ,Apartment,120,2,2
+"Bouar, Kesrouane, Mount Lebanon",4800                        ,Office,35,1,N/A
+"Mtayleb, El Metn, Mount Lebanon",30000                        ,Shop,500,1,N/A
+"Kfar Aabida, Batroun, North",36000                        ,Land,6000,N/A,N/A
+"Jounieh, Kesrouane, Mount Lebanon",60000                        ,Commercial Building,600,N/A,N/A
+"Sabtieh, El Metn, Mount Lebanon",16000                        ,Office,650,N/A,N/A
+"Kaslik, Kesrouane, Mount Lebanon",120000                        ,Shop,1500,2,N/A
+"Beit Chabeb, El Metn, Mount Lebanon",72000                        ,House/Villa,1200,4,6
+"Achrafieh, Beirut, Beirut",18000                        ,Apartment,220,3,2
+"Jbeil, Jbeil, Mount Lebanon",3600                        ,Office,50,1,N/A
+"Achrafieh, Beirut, Beirut",66000                        ,Apartment,555,3,4
+"Haret Sakher, Kesrouane, Mount Lebanon",4800                        ,Apartment,120,2,2
+"Mkalles, El Metn, Mount Lebanon",68500                        ,Office,750,1,N/A
+"Mkalles, El Metn, Mount Lebanon",8000                        ,Office,100,1,N/A
+"Ain Saadeh, El Metn, Mount Lebanon",15000                        ,Apartment,250,4,3
+"Batroun, Batroun, North",25000                        ,Shop,200,4,N/A
+"Mtayleb, El Metn, Mount Lebanon",21600                        ,Apartment,300,4,2
+"Chekka, Batroun, North",60000                        ,Warehouse,700,4,N/A
+"Achrafieh, Beirut, Beirut",21600                        ,Apartment,100,1,2
+"Achrafieh, Beirut, Beirut",24000                        ,Apartment,129,1,2
+"Mtayleb, El Metn, Mount Lebanon",19200                        ,Apartment,300,4,2
+"Mtayleb, El Metn, Mount Lebanon",24000                        ,Apartment,220,3,3
+"Jbeil, Jbeil, Mount Lebanon",12000                        ,House/Villa,310,4,4
+"Batroun, Batroun, North",30000                        ,Shop,129,N/A,N/A
+"Batroun, Batroun, North",30000                        ,Shop,124,N/A,N/A
+"Batroun, Batroun, North",30000                        ,Shop,176,N/A,N/A
+"Aoukar, El Metn, Mount Lebanon",72000                        ,Residential Building,703,N/A,N/A
+"Jounieh, Kesrouane, Mount Lebanon",100000                        ,Commercial Building,2000,N/A,N/A
+"Bouchrieh, El Metn, Mount Lebanon",12000                        ,Office,250,3,N/A
+"Chiyah, Baabda, Mount Lebanon",280000                        ,Commercial Building,2100,N/A,N/A
+"Jounieh, Kesrouane, Mount Lebanon",50000                        ,Shop,200,2,N/A
+"Ajaltoun, Kesrouane, Mount Lebanon",9600                        ,Apartment,250,3,2
+"Down Town, Beirut, Beirut",85000                        ,Apartment,580,4,4
+"Monteverde, El Metn, Mount Lebanon",27600                        ,Apartment,225,3,4
+"Tabarja, Kesrouane, Mount Lebanon",100000                        ,Shop,1800,4,N/A
+"Down Town, Beirut, Beirut",102000                        ,Office,408,3,N/A
+"Down Town, Beirut, Beirut",140500                        ,Shop,400,N/A,N/A
+"Down Town, Beirut, Beirut",89000                        ,Shop,255,N/A,N/A
+"Down Town, Beirut, Beirut",48000                        ,Shop,104,N/A,N/A
+"Horsh Tabet, El Metn, Mount Lebanon",125000                        ,Shop,500,2,N/A
+"Kaslik, Kesrouane, Mount Lebanon",15000                        ,Office,145,2,N/A
+"kfarhbeib, Kesrouane, Mount Lebanon",21600                        ,Apartment,370,3,4
+"Zalka, El Metn, Mount Lebanon",30000                        ,Office,327,2,N/A
+"Zouk Mosbeh, Kesrouane, Mount Lebanon",7200                        ,Apartment,130,2,2
+"Achrafieh, Beirut, Beirut",20400                        ,Apartment,300,3,3
+"Achrafieh, Beirut, Beirut",9000                        ,Shop,25,N/A,N/A
+"Badaro, Beirut, Beirut",30000                        ,Shop,60,1,N/A
+"Horsh Tabet, El Metn, Mount Lebanon",95000                        ,Office,500,2,N/A
+"Aamchit, Jbeil, Mount Lebanon",8000                        ,Chalet,60,1,1
+"Tabarja, Kesrouane, Mount Lebanon",6500                         /Season,Chalet,62,1,1
+"Rabweh, El Metn, Mount Lebanon",8400                        ,Apartment,220,3,3
+"Sin El Fil, El Metn, Mount Lebanon",75000                        ,Office,370,4,N/A
+"Achrafieh, Beirut, Beirut",10800                        ,Apartment,135,3,3
+"Zouk Mosbeh, Kesrouane, Mount Lebanon",14400                        ,Warehouse,400,1,N/A
+"Adma, Kesrouane, Mount Lebanon",14400                        ,Apartment,160,3,3
+"Furn El Chebbak, Baabda, Mount Lebanon",15000                        ,Land,540,N/A,N/A
+"Dekweneh, El Metn, Mount Lebanon",70000                        ,Shop,700,1,N/A
+"Mansourieh, El Metn, Mount Lebanon",10000                        ,Shop,170,1,N/A
+"Mansourieh, El Metn, Mount Lebanon",13000                        ,Shop,207,1,N/A
+"Jbeil, Jbeil, Mount Lebanon",6000                        ,Shop,90,2,N/A
+"Achrafieh, Beirut, Beirut",10800                        ,Apartment,96,2,3
+"Roumie, El Metn, Mount Lebanon",8400                        ,Shop,147,1,N/A
+"Sarba, Kesrouane, Mount Lebanon",7200                        ,Apartment,180,3,3
+"Haret Sakher, Kesrouane, Mount Lebanon",6600                        ,Apartment,190,3,3
+"Aamchit, Jbeil, Mount Lebanon",4800                        ,Shop,125,1,N/A
+"Kfour, Kesrouane, Mount Lebanon",24000                        ,Apartment,800,4,5
+"Mayrouba, Kesrouane, Mount Lebanon",30000                        ,House/Villa,400,4,4
+"Antelias, El Metn, Mount Lebanon",350000                        ,Land,6000,N/A,N/A
+"Halat, Jbeil, Mount Lebanon",33000                        ,Warehouse,551,N/A,N/A
+"Halat, Jbeil, Mount Lebanon",53000                        ,Shop,647,N/A,N/A
+"Jdeideh, El Metn, Mount Lebanon",6600                        ,Office,50,1,N/A
+"Ras Beirut, Beirut, Beirut",54000                        ,Shop,340,2,N/A
+"Ras Beirut, Beirut, Beirut",35000                        ,Shop,220,2,N/A
+"Ras Beirut, Beirut, Beirut",84000                        ,Shop,235,2,N/A
+"Ras Beirut, Beirut, Beirut",63000                        ,Shop,395,2,N/A
+"Achrafieh, Beirut, Beirut",17400                        ,Apartment,80,1,2
+"Zouk Mosbeh, Kesrouane, Mount Lebanon",150000                        ,Warehouse,2000,2,N/A
+"Adonis, Kesrouane, Mount Lebanon",9600                        ,Apartment,220,2,4
+"Ras Beirut, Beirut, Beirut",260000                        ,Office,2160,8,N/A
+"Ras Beirut, Beirut, Beirut",19200                        ,Office,160,2,N/A
+"Ras Beirut, Beirut, Beirut",19200                        ,Office,160,1,N/A
+"Ras Beirut, Beirut, Beirut",8400                        ,Office,70,1,N/A
+"Ras Beirut, Beirut, Beirut",10800                        ,Office,90,1,N/A
+"Mkalles, El Metn, Mount Lebanon",27000                        ,Shop,339,1,N/A
+"Mkalles, El Metn, Mount Lebanon",41000                        ,Shop,331,1,N/A
+"Mkalles, El Metn, Mount Lebanon",12000                        ,Office,150,1,N/A
+"Baabda, Baabda, Mount Lebanon",18000                        ,Apartment,320,3,2
+"Batroun, Batroun, North",4800                        ,Apartment,40,1,1
+"Jbeil, Jbeil, Mount Lebanon",12000                        ,Office,103,1,N/A
+"Dekweneh, El Metn, Mount Lebanon",5400                        ,Office,65,N/A,N/A
+"Achrafieh, Beirut, Beirut",30000                        ,Apartment,300,3,3
+"Achrafieh, Beirut, Beirut",30000                        ,Apartment,300,3,3
+"Ras Beirut, Beirut, Beirut",35000                        ,Office,250,3,N/A
+"Ras Beirut, Beirut, Beirut",54000                        ,Office,450,4,N/A
+"Jbeil, Jbeil, Mount Lebanon",18000                        ,Shop,225,3,N/A
+"Kaslik, Kesrouane, Mount Lebanon",36000                        ,Shop,350,2,N/A
+"Zalka, El Metn, Mount Lebanon",18000                        ,Land,1700,N/A,N/A
+"Jdeideh, El Metn, Mount Lebanon",72000                        ,Shop,1900,N/A,N/A
+"Batroun, Batroun, North",12000                        ,Shop,75,1,N/A
+"Zouk Mosbeh, Kesrouane, Mount Lebanon",12000                        ,Shop,200,1,N/A
+"Kaslik, Kesrouane, Mount Lebanon",60000                        ,Shop,400,1,N/A
+"Kaslik, Kesrouane, Mount Lebanon",36000                        ,Shop,200,1,N/A
+"Kaslik, Kesrouane, Mount Lebanon",30000                        ,Warehouse,200,1,N/A
+"Jbeil, Jbeil, Mount Lebanon",4800                        ,Apartment,170,2,1
+"Tabarja, Kesrouane, Mount Lebanon",14400                        ,House/Villa,75,1,1
+"Blat, Jbeil, Mount Lebanon",12000                        ,Shop,108,2,N/A
+"Adma, Kesrouane, Mount Lebanon",12000                        ,Apartment,350,4,4
+"Zalka, El Metn, Mount Lebanon",12000                        ,Office,120,1,N/A
+"Adma, Kesrouane, Mount Lebanon",18000                        ,Apartment,250,3,5
+"Mar Takla, Baabda, Mount Lebanon",40000                        ,Apartment,380,4,6
+"Zouk Mikael, Kesrouane, Mount Lebanon",12000                        ,Warehouse,300,1,N/A
+"Down Town, Beirut, Beirut",35000                        ,Apartment,228,3,4
+"Down Town, Beirut, Beirut",200000                        ,Office,935,3,N/A
+"Naccache, El Metn, Mount Lebanon",15000                        ,Warehouse,500,1,N/A
+"Dbayeh, El Metn, Mount Lebanon",12000                        ,Office,97,1,N/A
+"Achrafieh, Beirut, Beirut",24000                        ,Office,150,2,N/A
+"Kaslik, Kesrouane, Mount Lebanon",44000                        ,Office,320,3,N/A
+"Tabarja, Kesrouane, Mount Lebanon",18000                        ,Chalet,80,2,1
+"Batroun, Batroun, North",12000                        ,Shop,46,1,N/A
+"Ghazir, Kesrouane, Mount Lebanon",4200                        ,Shop,20,1,N/A
+"Ghazir, Kesrouane, Mount Lebanon",4800                        ,Shop,20,1,N/A
+"Ghazir, Kesrouane, Mount Lebanon",6000                        ,Shop,20,1,N/A
+"Jounieh, Kesrouane, Mount Lebanon",21000                        ,Apartment,300,3,4
+"Mazraat Yachouh, El Metn, Mount Lebanon",8400                        ,Office,90,1,N/A
+"Zalka, El Metn, Mount Lebanon",1800                        ,Office,50,1,N/A
+"Mar Takla, Baabda, Mount Lebanon",21600                        ,Apartment,350,3,3
+"Zalka, El Metn, Mount Lebanon",12000                        ,Office,150,1,N/A
+"Ras Beirut, Beirut, Beirut",18000                        ,Apartment,170,3,3
+"Tilal Ain Saade, El Metn, Mount Lebanon",10800                        ,Apartment,240,3,5
+"Bouchrieh, El Metn, Mount Lebanon",3600                        ,Office,55,1,N/A
+"Bouchrieh, El Metn, Mount Lebanon",4200                        ,Office,88,1,N/A
+"Jbeil, Jbeil, Mount Lebanon",18000                        ,Apartment,180,3,4
+"Ras Beirut, Beirut, Beirut",24000                        ,Apartment,280,3,3
+"Achrafieh, Beirut, Beirut",16000                        ,Office,160,2,N/A
+"Achrafieh, Beirut, Beirut",30000                        ,Apartment,180,3,3
+"Sin El Fil, El Metn, Mount Lebanon",10560                        ,Apartment,88,1,2
+"Badaro, Beirut, Beirut",26400                        ,Apartment,350,3,6
+"Antelias, El Metn, Mount Lebanon",8000                        ,Office,75,1,N/A
+"Mansourieh, El Metn, Mount Lebanon",7500                        ,Apartment,130,2,2
+"Achrafieh, Beirut, Beirut",20000                        ,Office,170,2,N/A
+"kfarhbeib, Kesrouane, Mount Lebanon",24000                        ,Land,2200,N/A,N/A
+"Achrafieh, Beirut, Beirut",8400                        ,Office,50,1,N/A
+"Dbayeh, El Metn, Mount Lebanon",9600                        ,Office,85,1,N/A
+"Berj Hammoud, El Metn, Mount Lebanon",9000                        ,Office,140,1,N/A
+"Down Town, Beirut, Beirut",15000                        ,Office,100,1,N/A
+"Mkalles, El Metn, Mount Lebanon",24000                        ,Shop,150,1,N/A
+"Dbayeh, El Metn, Mount Lebanon",35000                        ,Office,270,N/A,N/A
+"Mansourieh, El Metn, Mount Lebanon",19200                        ,Shop,166,1,N/A
+"Aamchit, Jbeil, Mount Lebanon",15000                        ,Land,500,N/A,N/A
+"Faraya, Kesrouane, Mount Lebanon",9000                        ,Chalet,90,2,1
+"Dbayeh, El Metn, Mount Lebanon",32000                        ,Office,270,2,N/A
+"Dbayeh, El Metn, Mount Lebanon",18000                        ,Shop,120,1,N/A
+"Ras Beirut, Beirut, Beirut",75000                        ,Shop,255,1,N/A
+"Bouchrieh, El Metn, Mount Lebanon",6000                        ,Office,90,1,N/A
+"Thoum, Batroun, North",18000                        ,Apartment,300,3,3
+"Sahel Alma, Kesrouane, Mount Lebanon",10800                        ,Apartment,150,2,2
+"Achrafieh, Beirut, Beirut",70000                        ,Office,550,4,N/A
+"Ras Beirut, Beirut, Beirut",15600                        ,Apartment,170,3,3
+"Zouk Mikael, Kesrouane, Mount Lebanon",5400                        ,Shop,80,1,N/A
+"Sahel Alma, Kesrouane, Mount Lebanon",9600                        ,Apartment,230,3,3
+"Fatqa, Kesrouane, Mount Lebanon",13000                        ,Apartment,245,4,4
+"Achrafieh, Beirut, Beirut",66000                        ,Warehouse,750,8,N/A
+"Achrafieh, Beirut, Beirut",24000                        ,Warehouse,180,3,N/A
+"Kaslik, Kesrouane, Mount Lebanon",18000                        ,Shop,100,2,N/A
+"Ghadir, Kesrouane, Mount Lebanon",12000                        ,Office,600,4,N/A
+"Jbeil, Jbeil, Mount Lebanon",7200                        ,Office,110,1,N/A
+"Adma, Kesrouane, Mount Lebanon",9000                        ,Apartment,155,2,2
+"Ras Beirut, Beirut, Beirut",12000                        ,Shop,52,1,N/A
+"Mansourieh, El Metn, Mount Lebanon",6600                        ,Shop,96,1,N/A
+"Batroun, Batroun, North",8400                        ,House/Villa,150,2,2
+"Down Town, Beirut, Beirut",13200                        ,Office,130,3,N/A
+"Ras Beirut, Beirut, Beirut",120000                        ,Shop,550,2,N/A
+"Mansourieh, El Metn, Mount Lebanon",21000                        ,Shop,178,1,N/A
+"Antelias, El Metn, Mount Lebanon",15600                        ,Office,170,2,N/A
+"Down Town, Beirut, Beirut",5400                        ,Office,53,2,N/A
+"Down Town, Beirut, Beirut",24000                        ,Apartment,160,2,3
+"Achrafieh, Beirut, Beirut",24000                        ,Warehouse,450,1,N/A
+"Achrafieh, Beirut, Beirut",18000                        ,Apartment,170,2,3
+"Mansourieh, El Metn, Mount Lebanon",7800                        ,Apartment,162,3,2
+"Dbayeh, El Metn, Mount Lebanon",18000                        ,Land,1156,N/A,N/A
+"Dekweneh, El Metn, Mount Lebanon",6500                        ,Office,65,1,N/A
+"Halat, Jbeil, Mount Lebanon",6000                        ,Chalet,45,1,N/A
+"Antelias, El Metn, Mount Lebanon",15600                        ,Office,80,1,N/A
+"Batroun, Batroun, North",24000                        ,Land,3227,N/A,N/A
+"Laqlouq, Jbeil, Mount Lebanon",15000                        ,Chalet,220,3,5
+"Jbeil, Jbeil, Mount Lebanon",24000                        ,House/Villa,250,3,2
+"Ras Beirut, Beirut, Beirut",45000                        ,Land,939,N/A,N/A
+"Dbayeh, El Metn, Mount Lebanon",10200                        ,Office,56,N/A,N/A
+"Dik El Mehdi, El Metn, Mount Lebanon",6000                        ,Apartment,55,1,1
+"Dik El Mehdi, El Metn, Mount Lebanon",13200                        ,Apartment,250,3,4
+"Mansourieh, El Metn, Mount Lebanon",48000                        ,Land,4000,N/A,N/A
+"Down Town, Beirut, Beirut",20000                        ,Apartment,80,1,1
+"Dbayeh, El Metn, Mount Lebanon",26400                        ,Office,220,N/A,N/A
+"Dbayeh, El Metn, Mount Lebanon",48000                        ,Office,340,4,N/A
+"Dbayeh, El Metn, Mount Lebanon",40800                        ,Office,340,4,N/A
+"Sahel Alma, Kesrouane, Mount Lebanon",11000                        ,Apartment,192,3,3
+"Down Town, Beirut, Beirut",440000                        ,Shop,650,N/A,N/A
+"Faraya, Kesrouane, Mount Lebanon",9000                        ,Chalet,90,2,1
+"Ras Beirut, Beirut, Beirut",38000                        ,Apartment,420,3,4
+"Ras Beirut, Beirut, Beirut",45000                        ,Apartment,468,3,4
+"Chekka, Batroun, North",150000                        ,Shop,4000,N/A,N/A
+"Kfarzebian, Kesrouane, Mount Lebanon",18000                        ,Chalet,110,2,2
+"kfarhbeib, Kesrouane, Mount Lebanon",9600                        ,Apartment,185,3,2
+"Sin El Fil, El Metn, Mount Lebanon",36000                        ,Office,200,2,N/A
+"Zalka, El Metn, Mount Lebanon",10800                        ,Office,87,2,N/A
+"kfarhbeib, Kesrouane, Mount Lebanon",12000                        ,Apartment,200,3,3
+"Achrafieh, Beirut, Beirut",22000                        ,Apartment,285,3,4
+"Zouk Mikael, Kesrouane, Mount Lebanon",8400                        ,Shop,85,1,N/A
+"Down Town, Beirut, Beirut",75000                        ,Commercial Building,440,N/A,N/A
+"Down Town, Beirut, Beirut",72000                        ,Office,389,6,2
+"Down Town, Beirut, Beirut",36000                        ,Office,200,2,N/A
+"Down Town, Beirut, Beirut",160000                        ,Shop,867,4,1
+"Down Town, Beirut, Beirut",285000                        ,Shop,972,1,N/A
+"Bouchrieh, El Metn, Mount Lebanon",18000                        ,Office,250,3,N/A
+"Monteverde, El Metn, Mount Lebanon",48000                        ,Apartment,270,4,3
+"Down Town, Beirut, Beirut",45000                        ,Apartment,200,2,3
+"Down Town, Beirut, Beirut",174000                        ,Office,1200,2,N/A
+"Nahr El Mot, El Metn, Mount Lebanon",90000                        ,Land,2042,3,N/A
+"Nahr El Mot, El Metn, Mount Lebanon",36000                        ,Office,350,3,N/A
+"Monsef, Jbeil, Mount Lebanon",18000                        ,Land,3100,N/A,N/A
+"Mezher, El Metn, Mount Lebanon",8400                        ,Apartment,145,2,3
+"Jbeil, Jbeil, Mount Lebanon",14400                        ,Apartment,185,3,3
+"Jbeil, Jbeil, Mount Lebanon",4800                        ,Land,980,N/A,N/A
+"Jbeil, Jbeil, Mount Lebanon",36000                        ,Land,4000,N/A,N/A
+"Aamchit, Jbeil, Mount Lebanon",26500                        ,Land,1800,N/A,N/A
+"Horsh Tabet, El Metn, Mount Lebanon",5400                        ,Office,50,1,N/A
+"Hazmieh, Baabda, Mount Lebanon",12000                        ,Apartment,120,2,3
+"Batroun, Batroun, North",20400                        ,Apartment,200,2,2
+"Batroun, Batroun, North",5400                        ,Office,40,1,N/A
+"Achrafieh, Beirut, Beirut",6000                        ,Office,50,1,N/A
+"Down Town, Beirut, Beirut",100000                        ,Shop,502,1,N/A
+"Faraya, Kesrouane, Mount Lebanon",24000                        ,House/Villa,320,5,5
+"Jal el Dib, El Metn, Mount Lebanon",120000                        ,Shop,1600,N/A,N/A
+"Ras Beirut, Beirut, Beirut",14400                        ,Office,49,1,N/A
+"Achrafieh, Beirut, Beirut",45000                        ,Apartment,420,3,4
+"Ras Beirut, Beirut, Beirut",60000                        ,Office,600,4,N/A
+"Jbeil, Jbeil, Mount Lebanon",4200                        ,Office,65,1,N/A
+"Jal el Dib, El Metn, Mount Lebanon",8400                        ,Apartment,120,3,3
+"Safra, Kesrouane, Mount Lebanon",13200                        ,Apartment,130,2,3
+"Fatqa, Kesrouane, Mount Lebanon",3600                        ,Office,60,1,N/A
+"Yarzeh, Baabda, Mount Lebanon",33000                        ,Apartment,230,3,5
+"Achrafieh, Beirut, Beirut",18000                        ,Apartment,190,2,3
+"Jbeil, Jbeil, Mount Lebanon",60000                        ,Commercial Building,2300,N/A,N/A
+"Achrafieh, Beirut, Beirut",18000                        ,Apartment,150,2,3
+"Jal el Dib, El Metn, Mount Lebanon",9600                        ,Office,150,2,N/A
+"Mtayleb, El Metn, Mount Lebanon",15000                        ,Warehouse,500,1,N/A
+"Sahel Alma, Kesrouane, Mount Lebanon",24000                        ,Apartment,300,3,5
+"Down Town, Beirut, Beirut",24000                        ,Apartment,115,1,2
+"Ras Beirut, Beirut, Beirut",15600                        ,Apartment,160,3,3
+"Rabieh, El Metn, Mount Lebanon",36000                        ,Apartment,350,4,5
+"Laqlouq, Jbeil, Mount Lebanon",7000                        ,Chalet,240,3,4
+"Kfarzebian, Kesrouane, Mount Lebanon",15000                        ,Chalet,100,2,2
+"Fakra, Kesrouane, Mount Lebanon",6000                        ,Chalet,45,1,1
+"Fakra, Kesrouane, Mount Lebanon",10000                        ,Chalet,90,2,3
+"Ouyoun Al Simen, Kesrouane, Mount Lebanon",12000                        ,Chalet,130,3,3
+"Baabdat, El Metn, Mount Lebanon",72000                        ,House/Villa,650,4,5
+"Ras Beirut, Beirut, Beirut",24000                        ,Apartment,160,2,3
+"Ghazir, Kesrouane, Mount Lebanon",150000                        ,Shop,670,N/A,N/A
+"Qartaboun, Jbeil, Mount Lebanon",6000                        ,Warehouse,100,N/A,N/A
+"Achrafieh, Beirut, Beirut",8400                        ,Apartment,90,2,1
+"Kfaryassine, Kesrouane, Mount Lebanon",12000                        ,Apartment,260,3,3
+"Jnah, Beirut, Beirut",31000                        ,Apartment,250,3,4
+"Jeita, Kesrouane, Mount Lebanon",15000                        ,House/Villa,1100,5,5
+"Kfaryassine, Kesrouane, Mount Lebanon",12000                        ,Apartment,250,3,4
+"Mtayleb, El Metn, Mount Lebanon",36000                        ,Shop,1400,9,N/A
+"Achrafieh, Beirut, Beirut",7200                        ,Apartment,90,2,1
+"Achrafieh, Beirut, Beirut",36000                        ,Apartment,350,3,4
+"Achrafieh, Beirut, Beirut",24000                        ,Apartment,200,3,3
+"Zouk Mosbeh, Kesrouane, Mount Lebanon",24000                        ,Land,1021,N/A,N/A
+"Sahel Alma, Kesrouane, Mount Lebanon",18000                        ,Apartment,270,3,3
+"Sin El Fil, El Metn, Mount Lebanon",500000                        ,Commercial Building,3000,9,N/A
+"Down Town, Beirut, Beirut",50000                        ,Apartment,450,3,3
+"Aatchane, El Metn, Mount Lebanon",13000                        ,Apartment,160,2,3
+"Achrafieh, Beirut, Beirut",15600                        ,Apartment,230,3,3
+"Achrafieh, Beirut, Beirut",18000                        ,Office,103,2,N/A
+"Down Town, Beirut, Beirut",30000                        ,Office,100,1,N/A
+"Ras Beirut, Beirut, Beirut",18000                        ,Shop,75,N/A,N/A
+"Ras Beirut, Beirut, Beirut",22800                        ,Apartment,280,4,4
+"Kaslik, Kesrouane, Mount Lebanon",9600                        ,Shop,100,1,N/A
+"Antelias, El Metn, Mount Lebanon",6000                        ,Apartment,100,2,2
+"Ras Beirut, Beirut, Beirut",16800                        ,Office,90,1,N/A
+"Bouchrieh, El Metn, Mount Lebanon",60000                        ,Shop,340,N/A,N/A
+"Bouchrieh, El Metn, Mount Lebanon",19000                        ,Office,125,1,N/A
+"Bouchrieh, El Metn, Mount Lebanon",14000                        ,Office,105,1,N/A
+"kfarhbeib, Kesrouane, Mount Lebanon",20000                        ,Apartment,300,3,4
+"Antelias, El Metn, Mount Lebanon",8400                        ,Shop,100,2,N/A
+"Antelias, El Metn, Mount Lebanon",6600                        ,Shop,80,2,N/A
+"Baabda, Baabda, Mount Lebanon",44400                        ,Apartment,400,3,4
+"Baabda, Baabda, Mount Lebanon",22000                        ,Apartment,300,3,4
+"Dekweneh, El Metn, Mount Lebanon",9600                        ,Apartment,300,3,3
+"Halat, Jbeil, Mount Lebanon",7200                        ,Apartment,300,4,4
+"Achrafieh, Beirut, Beirut",19200                        ,Apartment,160,3,2
+"Achrafieh, Beirut, Beirut",24000                        ,Office,400,3,N/A
+"Halat, Jbeil, Mount Lebanon",6000                        ,Apartment,52,1,1
+"Biyada, El Metn, Mount Lebanon",15000                        ,Apartment,350,4,4
+"Achrafieh, Beirut, Beirut",12000                        ,Shop,64,1,N/A
+"Dekweneh, El Metn, Mount Lebanon",8400                        ,Office,65,1,N/A
+"Ras Beirut, Beirut, Beirut",24000                        ,Apartment,290,3,3
+"Jounieh, Kesrouane, Mount Lebanon",36000                        ,Shop,260,2,N/A
+"Achrafieh, Beirut, Beirut",18000                        ,Office,200,3,N/A
+"Yarzeh, Baabda, Mount Lebanon",18000                        ,Apartment,168,2,3
+"Adma, Kesrouane, Mount Lebanon",12000                        ,Apartment,160,3,3
+"Fidar, Jbeil, Mount Lebanon",29000                        ,Land,2370,N/A,N/A
+"Bsalim, El Metn, Mount Lebanon",18000                        ,Office,240,3,N/A
+"Mtayleb, El Metn, Mount Lebanon",30000                        ,Apartment,235,3,3
+"Mtayleb, El Metn, Mount Lebanon",18000                        ,Apartment,200,3,5
+"Achrafieh, Beirut, Beirut",60000                        ,Apartment,300,3,4
+"Mazraat Yachouh, El Metn, Mount Lebanon",10800                        ,Apartment,205,3,4
+"Achrafieh, Beirut, Beirut",25500                        ,Apartment,180,2,3
+"Jbeil, Jbeil, Mount Lebanon",8400                        ,Apartment,185,3,3
+"Baabda, Baabda, Mount Lebanon",24000                        ,Apartment,185,3,4
+"Antelias, El Metn, Mount Lebanon",18000                        ,Shop,220,1,N/A
+"Achrafieh, Beirut, Beirut",15000                        ,Apartment,234,3,2
+"Achrafieh, Beirut, Beirut",32000                        ,Shop,150,1,N/A
+"Antelias, El Metn, Mount Lebanon",30000                        ,Office,100,1,N/A
+"Ouyoun Al Simen, Kesrouane, Mount Lebanon",9000                        ,Chalet,100,2,2
+"Kaslik, Kesrouane, Mount Lebanon",14400                        ,Apartment,300,4,3
+"Rabweh, El Metn, Mount Lebanon",10200                        ,Apartment,225,3,2
+"Jounieh, Kesrouane, Mount Lebanon",10000                        ,Chalet,85,1,2
+"Jounieh, Kesrouane, Mount Lebanon",24000                        ,Shop,120,1,N/A
+"Jbeil, Jbeil, Mount Lebanon",7200                        ,Apartment,170,2,2
+"Adma, Kesrouane, Mount Lebanon",18000                        ,Apartment,200,3,5
+"Kaslik, Kesrouane, Mount Lebanon",6000                        ,Office,74,1,N/A
+"Batroun, Batroun, North",3000                        ,Shop,60,1,N/A
+"Down Town, Beirut, Beirut",34000                        ,Office,170,1,N/A
+"Ras Beirut, Beirut, Beirut",30000                        ,Apartment,340,4,4
+"Achrafieh, Beirut, Beirut",12000                        ,Office,130,1,N/A
+"Batroun, Batroun, North",10200,Apartment,145,2,2
+"Fatqa, Kesrouane, Mount Lebanon",6000                        ,Apartment,140,3,2
+"Antelias, El Metn, Mount Lebanon",16800                        ,Office,110,1,N/A
+"Down Town, Beirut, Beirut",42000                        ,Office,285,3,N/A
+"Down Town, Beirut, Beirut",38000                        ,Office,285,3,N/A
+"Down Town, Beirut, Beirut",24000                        ,Office,240,3,N/A
+"Dekweneh, El Metn, Mount Lebanon",8400                        ,Office,120,1,N/A
+"Achrafieh, Beirut, Beirut",18000,Apartment,185,3,3
+"Adonis, Kesrouane, Mount Lebanon",5400                        ,Apartment,180,3,3
+"Antelias, El Metn, Mount Lebanon",200000                        ,Shop,770,N/A,N/A
+"Antelias, El Metn, Mount Lebanon",160000                        ,Shop,600,N/A,N/A
+"Antelias, El Metn, Mount Lebanon",150000                        ,Office,600,N/A,N/A
+"Aoukar, El Metn, Mount Lebanon",4800                        ,Office,75,1,N/A
+"Ras Beirut, Beirut, Beirut",13200                        ,Apartment,43,1,1
+"Achrafieh, Beirut, Beirut",8400                        ,Office,100,2,N/A
+"Louaize, Baabda, Mount Lebanon",160000                        ,Apartment,1080,5,8
+"Jal el Dib, El Metn, Mount Lebanon",8400                        ,Shop,50,1,N/A
+"Mazraat Yachouh, El Metn, Mount Lebanon",9000                        ,Apartment,150,3,3
+"Dbayeh, El Metn, Mount Lebanon",9600                        ,Office,110,1,N/A
+"Ghazir, Kesrouane, Mount Lebanon",120000                        ,Commercial Building,3000,N/A,N/A
+"Antelias, El Metn, Mount Lebanon",4200                        ,Office,35,1,N/A
+"Badaro, Beirut, Beirut",30000                        ,Shop,120,2,N/A
+"Jounieh, Kesrouane, Mount Lebanon",300000                        ,Warehouse,1400,N/A,N/A
+"Sarba, Kesrouane, Mount Lebanon",10800                        ,Apartment,175,3,4
+"Bouchrieh, El Metn, Mount Lebanon",27000                        ,Office,300,3,N/A
+"Down Town, Beirut, Beirut",9000                        ,Office,112,1,N/A
+"Down Town, Beirut, Beirut",25000                        ,Warehouse,465,N/A,N/A
+"Ajaltoun, Kesrouane, Mount Lebanon",6000                        ,Apartment,250,3,3
+"Badaro, Beirut, Beirut",30000                        ,Apartment,300,3,2
+"Jounieh, Kesrouane, Mount Lebanon",12000                        ,Apartment,250,3,4
+"Achrafieh, Beirut, Beirut",30000                        ,Apartment,300,3,3
+"Badaro, Beirut, Beirut",30000                        ,Shop,120,1,N/A
+"Achrafieh, Beirut, Beirut",80000                        ,Shop,386,2,N/A
+"Fatqa, Kesrouane, Mount Lebanon",36000                        ,House/Villa,800,4,6
+"Dekweneh, El Metn, Mount Lebanon",120000                        ,Office,500,2,N/A
+"Dekweneh, El Metn, Mount Lebanon",100000                        ,Office,500,N/A,N/A
+"Hsoun, Jbeil, Mount Lebanon",120000                        ,Land,14000,N/A,N/A
+"kfarhbeib, Kesrouane, Mount Lebanon",15600                        ,Apartment,300,4,5
+"Achrafieh, Beirut, Beirut",12000                        ,Apartment,150,2,2
+"Beit el Chaar, El Metn, Mount Lebanon",7200                        ,Apartment,150,3,2
+"Beit el Chaar, El Metn, Mount Lebanon",7800                        ,Apartment,120,2,2
+"Badaro, Beirut, Beirut",15000                        ,Shop,25,N/A,N/A
+"Jbeil, Jbeil, Mount Lebanon",2400                        ,Office,36,1,N/A
+"Adma, Kesrouane, Mount Lebanon",36000                        ,Apartment,215,3,4
+"Ouyoun Al Simen, Kesrouane, Mount Lebanon",30000                        ,Apartment,200,3,3
+"Kaslik, Kesrouane, Mount Lebanon",45000                        ,Shop,150,1,N/A
+"Hamat, Batroun, North",6000                        ,House/Villa,105,2,1
+"Mazraat Yachouh, El Metn, Mount Lebanon",14400                        ,Warehouse,210,1,N/A
+"Beit el Chaar, El Metn, Mount Lebanon",24000                        ,Apartment,300,3,4
+"Ras Beirut, Beirut, Beirut",30000                        ,Apartment,250,3,3
+"Ras Beirut, Beirut, Beirut",40000                        ,Apartment,250,2,3
+"Antelias, El Metn, Mount Lebanon",60000                        ,Shop,400,2,N/A
+"Dbayeh, El Metn, Mount Lebanon",6600                        ,Office,60,1,N/A
+"Down Town, Beirut, Beirut",150000                        ,Shop,525,5,N/A
+"Achrafieh, Beirut, Beirut",36000                        ,Shop,55,N/A,N/A
+"Achrafieh, Beirut, Beirut",18000                        ,Office,120,1,N/A
+"Achrafieh, Beirut, Beirut",12000                        ,Office,80,1,N/A
+"Achrafieh, Beirut, Beirut",40000                        ,Shop,350,2,N/A
+"Fakra, Kesrouane, Mount Lebanon",18000                        ,Chalet,250,3,4
+"Beit el Chaar, El Metn, Mount Lebanon",12000                        ,Shop,140,1,N/A
+"Down Town, Beirut, Beirut",36000                        ,Apartment,320,4,3
+"Down Town, Beirut, Beirut",48000                        ,Apartment,400,4,4
+"Horsh Tabet, El Metn, Mount Lebanon",48000                        ,Shop,500,N/A,N/A
+"Halat, Jbeil, Mount Lebanon",12000                        ,Land,1500,N/A,N/A
+"Zouk Mosbeh, Kesrouane, Mount Lebanon",24000                        ,Office,220,2,N/A
+"Kaslik, Kesrouane, Mount Lebanon",9600                        ,Shop,58,1,N/A
+"Dekweneh, El Metn, Mount Lebanon",10800                        ,Office,72,1,N/A
+"Dora, El Metn, Mount Lebanon",7200                        ,Office,80,N/A,N/A
+"Berj Hammoud, El Metn, Mount Lebanon",3600                        ,Office,55,1,N/A
+"Ras Beirut, Beirut, Beirut",16200                        ,Apartment,210,2,2
+"Faraya, Kesrouane, Mount Lebanon",12000                        ,Land,1000,N/A,N/A
+"Bouchrieh, El Metn, Mount Lebanon",24000                        ,Office,180,1,N/A
+"Horsh Tabet, El Metn, Mount Lebanon",29000                        ,Apartment,240,3,2
+"Zaroun, El Metn, Mount Lebanon",15000                        ,Land,2000,N/A,N/A
+"Jdeideh, El Metn, Mount Lebanon",6000                        ,Office,120,1,N/A
+"Zalka, El Metn, Mount Lebanon",16500                        ,Office,240,2,N/A
+"Zalka, El Metn, Mount Lebanon",33000                        ,Office,480,1,N/A
+"Achrafieh, Beirut, Beirut",40000                        ,Shop,360,2,N/A
+"Zalka, El Metn, Mount Lebanon",31000                        ,Office,450,2,N/A
+"Tabarja, Kesrouane, Mount Lebanon",24000                        ,Apartment,300,3,4
+"Down Town, Beirut, Beirut",6000                        ,Office,30,N/A,N/A
+"Kaslik, Kesrouane, Mount Lebanon",12000                        ,Apartment,312,3,3
+"Hazmieh, Baabda, Mount Lebanon",75000                        ,Office,500,N/A,N/A
+"Zalka, El Metn, Mount Lebanon",9600                        ,Shop,65,2,N/A
+"Kaslik, Kesrouane, Mount Lebanon",12000                        ,Chalet,85,1,1
+"Zouk Mosbeh, Kesrouane, Mount Lebanon",8000                        ,Chalet,45,1,1
+"Jounieh, Kesrouane, Mount Lebanon",14400                        ,Apartment,200,3,3
+"Faytroun, Kesrouane, Mount Lebanon",18000                        ,Apartment,145,3,3
+"Zouk Mosbeh, Kesrouane, Mount Lebanon",7200                        ,Apartment,185,2,3
+"Adma, Kesrouane, Mount Lebanon",9000                        ,Apartment,160,3,4
+"Badaro, Beirut, Beirut",36000                        ,Shop,90,2,N/A
+"Achrafieh, Beirut, Beirut",10800                        ,Office,90,1,N/A
+"Dbayeh, El Metn, Mount Lebanon",60000                        ,Office,700,4,N/A
+"Blat, Jbeil, Mount Lebanon",18000                        ,Land,1200,N/A,N/A
+"Dbayeh, El Metn, Mount Lebanon",40000                        ,Land,1334,N/A,N/A
+"Jounieh, Kesrouane, Mount Lebanon",6000                        ,Office,200,2,N/A
+"Berj Hammoud, El Metn, Mount Lebanon",90000                        ,Shop,600,2,N/A
+"Batroun, Batroun, North",24000                        ,Apartment,95,2,2
+"Down Town, Beirut, Beirut",24000                        ,Office,132,1,N/A
+"Down Town, Beirut, Beirut",18000                        ,Office,100,1,N/A
+"Achrafieh, Beirut, Beirut",9600                        ,Apartment,240,3,3
+"Mtayleb, El Metn, Mount Lebanon",17000                        ,Apartment,220,2,4
+"Ras Beirut, Beirut, Beirut",36000                        ,Office,250,1,N/A
+"Jounieh, Kesrouane, Mount Lebanon",12000                        ,Chalet,237,4,4
+"Down Town, Beirut, Beirut",8000                        ,Office,80,1,N/A
+"Down Town, Beirut, Beirut",40000                        ,Office,400,2,N/A
+"Down Town, Beirut, Beirut",12000                        ,Office,120,1,N/A
+"Mazraat Yachouh, El Metn, Mount Lebanon",14400                        ,Shop,300,1,N/A
+"Aamchit, Jbeil, Mount Lebanon",7500                        ,Chalet,60,1,1
+"Bikfaya, El Metn, Mount Lebanon",5400                        ,Apartment,75,1,2
+"Mtayleb, El Metn, Mount Lebanon",27000                        ,Apartment,340,3,4
+"Dik El Mehdi, El Metn, Mount Lebanon",9600                        ,Apartment,184,3,5
+"Yarzeh, Baabda, Mount Lebanon",45000                        ,Apartment,450,4,5
+"Badaro, Beirut, Beirut",15000                        ,Apartment,272,3,3
+"Zalka, El Metn, Mount Lebanon",15000                        ,Land,2126,N/A,N/A
+"Barbara, Jbeil, Mount Lebanon",24000                        ,Land,3000,N/A,N/A
+"Achrafieh, Beirut, Beirut",13200                        ,Apartment,180,3,3
+"Ras Beirut, Beirut, Beirut",24000                        ,Apartment,164,3,4
+"Achrafieh, Beirut, Beirut",30000                        ,Apartment,420,4,5
+"Achrafieh, Beirut, Beirut",10000                        ,Apartment,170,3,3
+"Achrafieh, Beirut, Beirut",10000                        ,Shop,60,1,N/A
+"Aatchane, El Metn, Mount Lebanon",18000                        ,Apartment,213,3,3
+"Achrafieh, Beirut, Beirut",80000                        ,Shop,600,1,N/A
+"Down Town, Beirut, Beirut",10000                        ,Shop,48,1,N/A
+"Achrafieh, Beirut, Beirut",36000                        ,Apartment,166,2,3
+"Badaro, Beirut, Beirut",19200                        ,Office,150,3,N/A
+"Badaro, Beirut, Beirut",7200                        ,Office,75,1,N/A
+"Badaro, Beirut, Beirut",17000                        ,Office,140,2,N/A
+"Louaize, Baabda, Mount Lebanon",40000                        ,Warehouse,1200,1,N/A
+"Badaro, Beirut, Beirut",24000                        ,Apartment,300,3,4
+"Batroun, Batroun, North",30000                        ,Apartment,200,3,4
+"Dekweneh, El Metn, Mount Lebanon",12000                        ,Shop,120,2,1
+"Ras Beirut, Beirut, Beirut",32400                        ,Apartment,190,3,3
+"Mansourieh, El Metn, Mount Lebanon",18000                        ,Office,240,1,N/A
+"Ain Saadeh, El Metn, Mount Lebanon",72000                        ,House/Villa,850,4,5
+"Fanar, El Metn, Mount Lebanon",18000                        ,Apartment,350,5,5
+"Dora, El Metn, Mount Lebanon",6500                        ,Office,88,N/A,N/A
+"Tabarja, Kesrouane, Mount Lebanon",24000                        ,Apartment,227,2,3
+"Ras Beirut, Beirut, Beirut",30000                        ,Apartment,500,3,3
+"Tabarja, Kesrouane, Mount Lebanon",10000                        ,Chalet,70,1,2
+"Achrafieh, Beirut, Beirut",7200                        ,Office,70,1,N/A
+"Sahel Alma, Kesrouane, Mount Lebanon",9000                        ,Apartment,180,3,3
+"Batroun, Batroun, North",8100                        ,Chalet,56,1,1
+"Halat, Jbeil, Mount Lebanon",3000                         /Season,Chalet,38,1,1
+"Down Town, Beirut, Beirut",80000                        ,Apartment,300,3,3
+"Sahel Alma, Kesrouane, Mount Lebanon",9000                        ,Apartment,180,3,3
+"Sahel Alma, Kesrouane, Mount Lebanon",7500                        ,Apartment,180,3,3
+"Jounieh, Kesrouane, Mount Lebanon",36000                        ,Shop,300,1,N/A
+"Achrafieh, Beirut, Beirut",22800                        ,Apartment,155,1,2
+"Achrafieh, Beirut, Beirut",12000                        ,Office,100,1,N/A
+"Achrafieh, Beirut, Beirut",24000                        ,Office,200,2,N/A
+"Sahel Alma, Kesrouane, Mount Lebanon",9600                        ,Apartment,390,4,4
+"Ras Beirut, Beirut, Beirut",250000                        ,Office,1000,6,N/A
+"Down Town, Beirut, Beirut",130000                        ,Office,350,2,N/A
+"Achrafieh, Beirut, Beirut",30000                        ,Office,240,N/A,N/A
+"Achrafieh, Beirut, Beirut",18000                        ,Apartment,300,3,2
+"Achrafieh, Beirut, Beirut",7000                        ,Office,70,1,N/A
+"Down Town, Beirut, Beirut",700000                        ,Office,1745,N/A,N/A
+"Achrafieh, Beirut, Beirut",24000                        ,Apartment,250,3,3
+"Dbayeh, El Metn, Mount Lebanon",18000                        ,Office,270,4,N/A
+"Achrafieh, Beirut, Beirut",12000                        ,Office,100,2,N/A
+"Dekweneh, El Metn, Mount Lebanon",15600                        ,Apartment,170,3,3
+"Ras Beirut, Beirut, Beirut",60000                        ,Office,440,5,N/A
+"Achrafieh, Beirut, Beirut",24000                        ,Warehouse,530,7,N/A
+"Aamchit, Jbeil, Mount Lebanon",50000                        ,Commercial Building,1000,N/A,N/A
+"Mkalles, El Metn, Mount Lebanon",21000                        ,Warehouse,700,1,N/A
+"Jbeil, Jbeil, Mount Lebanon",18000                        ,Shop,360,1,N/A
+"Mkalles, El Metn, Mount Lebanon",66000                        ,Warehouse,2200,1,N/A
+"Achrafieh, Beirut, Beirut",18000                        ,Apartment,275,3,3
+"Blat, Jbeil, Mount Lebanon",144000                        ,Residential Building,1000,52,N/A
+"Halat, Jbeil, Mount Lebanon",150000                        ,Warehouse,1100,1,N/A
+"Down Town, Beirut, Beirut",40000                        ,Apartment,280,3,4
+"Koura, Koura, North",48000                        ,Shop,1000,1,N/A
+"Batroun, Batroun, North",36000                        ,House/Villa,200,5,5
+"Batroun, Batroun, North",4800                        ,Shop,72,2,N/A
+"Kaslik, Kesrouane, Mount Lebanon",12000                        ,Apartment,300,3,4
+"Achrafieh, Beirut, Beirut",21600                        ,Apartment,177,3,3
+"Achrafieh, Beirut, Beirut",50000                        ,Office,400,1,N/A
+"Nahr Ibrahim, Jbeil, Mount Lebanon",36000                        ,Shop,400,1,N/A
+"Monsef, Jbeil, Mount Lebanon",14400                        ,Land,1200,N/A,N/A
+"Monsef, Jbeil, Mount Lebanon",72000                        ,Land,5060,N/A,N/A
+"Furn El Chebbak, Baabda, Mount Lebanon",14000                        ,Shop,130,1,N/A
+"Furn El Chebbak, Baabda, Mount Lebanon",6000                        ,Shop,50,N/A,N/A
+"Adma, Kesrouane, Mount Lebanon",10800                        ,Apartment,250,3,4
+"Adma, Kesrouane, Mount Lebanon",9600                        ,Apartment,250,3,4
+"Aamchit, Jbeil, Mount Lebanon",5200                        ,Apartment,105,2,2
+"Kfar Aabida, Batroun, North",400000                        ,Land,7420,N/A,N/A
+"Aoukar, El Metn, Mount Lebanon",7200                        ,Apartment,190,3,2
+"Dekweneh, El Metn, Mount Lebanon",7200                        ,Office,75,1,N/A
+"Ras Beirut, Beirut, Beirut",8400                        ,Office,50,1,N/A
+"Halat, Jbeil, Mount Lebanon",6500                         /Season,Chalet,60,1,1
+"Fakra, Kesrouane, Mount Lebanon",6500                        ,Chalet,55,1,1
+"Ras Beirut, Beirut, Beirut",22200                        ,Apartment,400,4,4
+"Down Town, Beirut, Beirut",80000                        ,Shop,270,1,N/A
+"Down Town, Beirut, Beirut",30000                        ,Apartment,100,1,1
+"Down Town, Beirut, Beirut",24000                        ,Apartment,90,1,1
+"Faraya, Kesrouane, Mount Lebanon",12000                        ,Chalet,90,2,2
+"Zalka, El Metn, Mount Lebanon",24000                        ,Shop,600,N/A,N/A
+"Ras Beirut, Beirut, Beirut",36000                        ,Apartment,250,3,3
+"Achrafieh, Beirut, Beirut",7200                        ,Apartment,120,2,2
+"Dekweneh, El Metn, Mount Lebanon",6600                        ,Office,60,1,N/A
+"Jounieh, Kesrouane, Mount Lebanon",6000                        ,Office,100,2,N/A
+"Aoukar, El Metn, Mount Lebanon",24000                        ,Office,450,2,N/A
+"Aoukar, El Metn, Mount Lebanon",30000                        ,Office,450,2,N/A
+"Aoukar, El Metn, Mount Lebanon",36000                        ,Office,450,7,N/A
+"Down Town, Beirut, Beirut",37000                        ,Office,293,1,N/A
+"Down Town, Beirut, Beirut",35250                        ,Office,282,1,N/A
+"Down Town, Beirut, Beirut",7000                        ,Office,53,1,N/A
+"Down Town, Beirut, Beirut",37000                        ,Office,293,1,N/A
+"Down Town, Beirut, Beirut",35250                        ,Office,282,1,N/A
+"Ras Beirut, Beirut, Beirut",30000                        ,Office,160,2,N/A
+"Ras Beirut, Beirut, Beirut",30000                        ,Office,160,2,N/A
+"Ras Beirut, Beirut, Beirut",15000                        ,Office,80,1,N/A
+"Aoukar, El Metn, Mount Lebanon",60000                        ,Commercial Building,450,3,N/A
+"Ras Beirut, Beirut, Beirut",28000                        ,Apartment,160,3,3
+"Ras Beirut, Beirut, Beirut",19200                        ,Apartment,218,2,3
+"Jal el Dib, El Metn, Mount Lebanon",10800                        ,Shop,170,N/A,N/A
+"Laqlouq, Jbeil, Mount Lebanon",15000                        ,House/Villa,220,4,4
+"Dekweneh, El Metn, Mount Lebanon",6600                        ,Office,75,N/A,N/A
+"Down Town, Beirut, Beirut",15000                        ,Office,106,1,N/A
+"Jbeil, Jbeil, Mount Lebanon",9600                        ,Office,150,1,N/A
+"Zalka, El Metn, Mount Lebanon",24000                        ,Shop,600,N/A,N/A
+"Zalka, El Metn, Mount Lebanon",28000                        ,Land,930,N/A,N/A
+"Jounieh, Kesrouane, Mount Lebanon",5400                        ,Shop,35,1,N/A
+"Jbeil, Jbeil, Mount Lebanon",36000                        ,Shop,500,2,N/A
+"Down Town, Beirut, Beirut",25000                        ,Shop,105,1,N/A
+"Jbeil, Jbeil, Mount Lebanon",9600                        ,Shop,100,1,N/A
+"Dekweneh, El Metn, Mount Lebanon",7200                        ,Office,75,N/A,N/A
+"Achrafieh, Beirut, Beirut",14400                        ,Apartment,147,2,2
+"Jbeil, Jbeil, Mount Lebanon",6000                        ,Apartment,60,1,1
+"Faraya, Kesrouane, Mount Lebanon",12000                        ,Chalet,120,3,3
+"Jbeil, Jbeil, Mount Lebanon",7200                        ,Apartment,85,2,1
+"Achrafieh, Beirut, Beirut",24000                        ,Apartment,160,2,2
+"Jbeil, Jbeil, Mount Lebanon",60000                        ,Shop,300,1,N/A
+"Achrafieh, Beirut, Beirut",18000                        ,Office,125,1,N/A
+"Achrafieh, Beirut, Beirut",45000                        ,Office,210,2,N/A
+"Dekweneh, El Metn, Mount Lebanon",7200                        ,Office,115,1,N/A
+"Ouyoun Al Simen, Kesrouane, Mount Lebanon",24000                        ,Chalet,145,3,3
+"Antelias, El Metn, Mount Lebanon",80000                        ,Land,1200,N/A,N/A
+"Halat, Jbeil, Mount Lebanon",6000                        ,Chalet,60,1,N/A
+"Rabieh, El Metn, Mount Lebanon",55000                        ,Apartment,1000,4,7
+"Kaslik, Kesrouane, Mount Lebanon",10000                        ,Shop,60,1,N/A
+"Sin El Fil, El Metn, Mount Lebanon",25000                        ,Office,250,2,N/A
+"Nahr Ibrahim, Jbeil, Mount Lebanon",127000                        ,Commercial Building,2165,N/A,N/A
+"Zalka, El Metn, Mount Lebanon",15000                        ,Office,175,1,N/A
+"Zalka, El Metn, Mount Lebanon",95000                        ,Office,1000,3,N/A
+"Zalka, El Metn, Mount Lebanon",12000                        ,Office,138,1,N/A
+"Achrafieh, Beirut, Beirut",42000                        ,Apartment,385,4,4
+"Achrafieh, Beirut, Beirut",36000                        ,Apartment,365,4,4
+"Blat, Jbeil, Mount Lebanon",7200                        ,Apartment,150,3,3
+"Down Town, Beirut, Beirut",45000                        ,Office,190,2,N/A
+"Achrafieh, Beirut, Beirut",8400                        ,Office,70,1,N/A
+"Achrafieh, Beirut, Beirut",21250                        ,Office,170,2,N/A
+"Achrafieh, Beirut, Beirut",21250                        ,Office,170,2,N/A
+"Achrafieh, Beirut, Beirut",11250                        ,Office,90,1,N/A
+"Sahel Alma, Kesrouane, Mount Lebanon",18000                        ,Apartment,245,4,4
+"Bouchrieh, El Metn, Mount Lebanon",5400                        ,Office,70,1,N/A
+"Sad El Baouchriye, El Metn, Mount Lebanon",3600                        ,Office,52,1,N/A
+"Yarzeh, Baabda, Mount Lebanon",38000                        ,Apartment,400,4,4
+"Achrafieh, Beirut, Beirut",10200                        ,Apartment,90,1,2
+"Down Town, Beirut, Beirut",39600                        ,Shop,180,1,N/A
+"Down Town, Beirut, Beirut",39600                        ,Shop,180,1,N/A
+"Down Town, Beirut, Beirut",22000                        ,Office,100,1,N/A
+"Down Town, Beirut, Beirut",18700                        ,Office,85,1,N/A
+"Down Town, Beirut, Beirut",22000                        ,Office,100,1,N/A
+"Down Town, Beirut, Beirut",18700                        ,Office,85,1,N/A
+"Down Town, Beirut, Beirut",18700                        ,Office,85,1,N/A
+"Down Town, Beirut, Beirut",44000                        ,Office,200,2,N/A
+"Down Town, Beirut, Beirut",44000                        ,Office,200,2,N/A
+"Down Town, Beirut, Beirut",44000                        ,Office,200,2,N/A
+"Achrafieh, Beirut, Beirut",13200                        ,Apartment,165,2,2
+"Jbeil, Jbeil, Mount Lebanon",3600                        ,Office,65,1,N/A
+"Achrafieh, Beirut, Beirut",45000                        ,Apartment,500,4,5
+"Badaro, Beirut, Beirut",20000                        ,Apartment,334,3,3
+"Ras Beirut, Beirut, Beirut",12000                        ,Office,90,1,N/A
+"Kaslik, Kesrouane, Mount Lebanon",12000                        ,Apartment,60,1,1
+"Sahel Alma, Kesrouane, Mount Lebanon",30000                        ,Apartment,250,3,4
+"Jbeil, Jbeil, Mount Lebanon",3600                        ,Office,60,1,N/A
+"Fakra, Kesrouane, Mount Lebanon",7200                        ,Chalet,60,1,1
+"Jbeil, Jbeil, Mount Lebanon",6600                        ,Apartment,100,2,2
+"Blat, Jbeil, Mount Lebanon",6000                        ,Apartment,100,2,2
+"Faraya, Kesrouane, Mount Lebanon",30000                        ,Chalet,135,2,3
+"Fakra, Kesrouane, Mount Lebanon",35000                        ,Chalet,240,3,4
+"Kfarzebian, Kesrouane, Mount Lebanon",12000                        ,Chalet,114,3,3
+"Achrafieh, Beirut, Beirut",18000                        ,Apartment,150,1,N/A
+"Ouyoun Al Simen, Kesrouane, Mount Lebanon",20000                        ,Chalet,170,4,3
+"Ghazir, Kesrouane, Mount Lebanon",20000                        ,Warehouse,500,1,N/A
+"Blat, Jbeil, Mount Lebanon",60000                        ,Commercial Building,5000,N/A,N/A
+"Achrafieh, Beirut, Beirut",42000                        ,Office,220,3,N/A
+"Achrafieh, Beirut, Beirut",36000                        ,Apartment,230,3,4
+"Achrafieh, Beirut, Beirut",9000                        ,Apartment,110,2,2
+"Monteverde, El Metn, Mount Lebanon",24000                        ,Apartment,285,3,3
+"Clemenceau, Beirut, Beirut",60000                        ,Apartment,420,3,4
+"Aoukar, El Metn, Mount Lebanon",8400                        ,Apartment,135,2,3
+"Achrafieh, Beirut, Beirut",20000                        ,Apartment,200,3,3
+"Down Town, Beirut, Beirut",20000                        ,Office,136,1,N/A
+"Down Town, Beirut, Beirut",15900                        ,Shop,38,1,N/A
+"Down Town, Beirut, Beirut",15900                        ,Shop,34,1,N/A
+"Down Town, Beirut, Beirut",8700                        ,Shop,29,1,N/A
+"Down Town, Beirut, Beirut",45600                        ,Shop,152,1,N/A
+"Down Town, Beirut, Beirut",29000                        ,Office,195,1,N/A
+"Down Town, Beirut, Beirut",25500                        ,Office,170,1,N/A
+"Achrafieh, Beirut, Beirut",45000                        ,Office,220,2,N/A
+"Sin El Fil, El Metn, Mount Lebanon",15600                        ,Office,200,N/A,N/A
+"Achrafieh, Beirut, Beirut",18000                        ,Apartment,250,3,4
+"Blat, Jbeil, Mount Lebanon",50000                        ,Land,1890,N/A,N/A
+"Achrafieh, Beirut, Beirut",30000                        ,Apartment,200,2,3
+"Faraya, Kesrouane, Mount Lebanon",12000                        ,Chalet,110,3,3
+"Tabarja, Kesrouane, Mount Lebanon",8400                        ,Shop,60,1,N/A
+"Roumie, El Metn, Mount Lebanon",16800                        ,Shop,317,2,N/A
+"Jounieh, Kesrouane, Mount Lebanon",3600                        ,Office,80,1,N/A
+"Achrafieh, Beirut, Beirut",18000                        ,Apartment,220,3,4
+"Achrafieh, Beirut, Beirut",30000                        ,Shop,300,N/A,N/A
+"Kfarzebian, Kesrouane, Mount Lebanon",24000                        ,Land,1400,N/A,N/A
+"Rabweh, El Metn, Mount Lebanon",18000                        ,Apartment,300,4,4
+"Jbeil, Jbeil, Mount Lebanon",130000                        ,Commercial Building,1000,2,N/A
+"Achrafieh, Beirut, Beirut",18000                        ,Apartment,335,4,3
+"Fakra, Kesrouane, Mount Lebanon",24000                        ,Chalet,120,3,3
+"Tabarja, Kesrouane, Mount Lebanon",12000                        ,Apartment,120,2,2
+"Achrafieh, Beirut, Beirut",18000                        ,Apartment,200,2,2
+"Jdeideh, El Metn, Mount Lebanon",12000                        ,Office,135,2,N/A
+"Halat, Jbeil, Mount Lebanon",9600                        ,Apartment,310,4,4
+"Achrafieh, Beirut, Beirut",42000                        ,Apartment,380,3,4
+"Achrafieh, Beirut, Beirut",8400                        ,Apartment,90,2,1
+"Rabweh, El Metn, Mount Lebanon",24000                        ,Apartment,525,4,5
+"Mar Takla, Baabda, Mount Lebanon",22800                        ,Apartment,260,3,4
+"Dbayeh, El Metn, Mount Lebanon",18000                        ,Office,125,N/A,N/A
+"Dbayeh, El Metn, Mount Lebanon",36000                        ,Office,250,N/A,N/A
+"Achrafieh, Beirut, Beirut",10800                        ,Apartment,128,2,2
+"Achrafieh, Beirut, Beirut",13200                        ,Shop,126,1,N/A
+"Achrafieh, Beirut, Beirut",13200                        ,Apartment,140,3,3
+"Jbeil, Jbeil, Mount Lebanon",15000                        ,Apartment,180,3,3
+"Sahel Alma, Kesrouane, Mount Lebanon",24000                        ,Apartment,400,4,5
+"Achrafieh, Beirut, Beirut",24000                        ,Apartment,400,4,4
+"Achrafieh, Beirut, Beirut",30000                        ,Office,330,3,N/A
+"Down Town, Beirut, Beirut",550000                        ,Commercial Building,2400,9,N/A
+"Yarzeh, Baabda, Mount Lebanon",48000                        ,Apartment,400,4,6
+"Ouyoun Al Simen, Kesrouane, Mount Lebanon",18000                        ,Chalet,120,2,3
+"Furn El Chebbak, Baabda, Mount Lebanon",25000                        ,Shop,200,1,N/A
+"Achrafieh, Beirut, Beirut",60000                        ,Office,475,6,N/A
+"Jbeil, Jbeil, Mount Lebanon",6000                        ,Apartment,130,2,2
+"Ghazir, Kesrouane, Mount Lebanon",60000                        ,House/Villa,800,5,9
+"Ghazir, Kesrouane, Mount Lebanon",30000                        ,Warehouse,1300,1,N/A
+"Ghazir, Kesrouane, Mount Lebanon",24000                        ,Warehouse,1070,1,N/A
+"Ghazir, Kesrouane, Mount Lebanon",12000                        ,Warehouse,180,1,N/A
+"Ghazir, Kesrouane, Mount Lebanon",3600                        ,Warehouse,88,1,N/A
+"Jbeil, Jbeil, Mount Lebanon",30000                        ,Shop,200,1,N/A
+"Achkout, Kesrouane, Mount Lebanon",6000                        ,House/Villa,200,2,2
+"Jbeil, Jbeil, Mount Lebanon",24000                        ,Office,180,2,N/A
+"Jbeil, Jbeil, Mount Lebanon",9000                        ,Office,110,2,N/A
+"Jal el Dib, El Metn, Mount Lebanon",15000                        ,Apartment,300,2,3
+"Dekweneh, El Metn, Mount Lebanon",25000                        ,Office,260,2,N/A
+"Jbeil, Jbeil, Mount Lebanon",36000                        ,Office,500,2,N/A
+"Achrafieh, Beirut, Beirut",15000                        ,Shop,100,1,N/A
+"Fakra, Kesrouane, Mount Lebanon",12000                        ,Chalet,110,2,2
+"Fakra, Kesrouane, Mount Lebanon",18000                        ,Chalet,120,2,3
+"Achrafieh, Beirut, Beirut",42000                        ,Apartment,500,4,4
+"Mar Roukoz, El Metn, Mount Lebanon",7800                        ,Apartment,120,2,2
+"Dbayeh, El Metn, Mount Lebanon",9000                        ,Office,85,1,N/A
+"Kfarzebian, Kesrouane, Mount Lebanon",24000                        ,Chalet,180,3,3
+"Achrafieh, Beirut, Beirut",54000                        ,Office,180,N/A,N/A
+"Achrafieh, Beirut, Beirut",40000                        ,Apartment,417,3,4
+"Faraya, Kesrouane, Mount Lebanon",12000                        ,Chalet,120,3,2
+"Achrafieh, Beirut, Beirut",42000                        ,Apartment,350,3,4
+"Achrafieh, Beirut, Beirut",33000                        ,Apartment,335,4,4
+"Zouk Mosbeh, Kesrouane, Mount Lebanon",6000                        ,Office,110,1,N/A
+"Achrafieh, Beirut, Beirut",26400                        ,Apartment,265,3,4
+"Faraya, Kesrouane, Mount Lebanon",9600                        ,Chalet,100,2,2
+"Achrafieh, Beirut, Beirut",60000                        ,Office,420,3,N/A
+"Wata El Joz, Kesrouane, Mount Lebanon",18000                        ,House/Villa,450,4,4
+"Kfarzebian, Kesrouane, Mount Lebanon",15000                        ,Chalet,75,1,2
+"Achrafieh, Beirut, Beirut",15000                        ,Office,70,2,N/A
+"Broumana, El Metn, Mount Lebanon",18000                        ,Apartment,450,5,5
+"Achrafieh, Beirut, Beirut",24000                        ,Office,174,3,N/A
+"Safra, Kesrouane, Mount Lebanon",36000                        ,Shop,450,1,N/A
+"Achrafieh, Beirut, Beirut",30000                        ,Apartment,215,3,4
+"Achrafieh, Beirut, Beirut",9000                        ,Apartment,115,2,2
+"Fakra, Kesrouane, Mount Lebanon",57000                        ,Chalet,170,3,3
+"Fakra, Kesrouane, Mount Lebanon",64000                        ,Chalet,240,4,4
+"Fakra, Kesrouane, Mount Lebanon",50000                        ,Chalet,150,3,3
+"Fakra, Kesrouane, Mount Lebanon",24000                        ,Chalet,130,2,2
+"Fidar, Jbeil, Mount Lebanon",8400                        ,Chalet,100,2,2
+"Jounieh, Kesrouane, Mount Lebanon",4200                        ,Office,200,1,N/A
+"Achrafieh, Beirut, Beirut",14400                        ,Apartment,100,1,2
+"Achrafieh, Beirut, Beirut",13200                        ,Office,120,1,N/A
+"Faytroun, Kesrouane, Mount Lebanon",3000                         /Season,Chalet,70,2,2
+"Faraya, Kesrouane, Mount Lebanon",12000                        ,Chalet,120,2,3
+"Zouk Mosbeh, Kesrouane, Mount Lebanon",6000                        ,Apartment,120,2,2
+"Aamchit, Jbeil, Mount Lebanon",7200                        ,Shop,180,1,N/A
+"Sin El Fil, El Metn, Mount Lebanon",50000                        ,Office,440,4,N/A
+"Sin El Fil, El Metn, Mount Lebanon",20000                        ,Office,225,2,N/A
+"Achrafieh, Beirut, Beirut",36000                        ,Shop,120,1,N/A
+"Tabarja, Kesrouane, Mount Lebanon",12000                        ,Chalet,80,1,1
+"Achrafieh, Beirut, Beirut",7200                        ,Office,45,1,N/A
+"Zouk Mikael, Kesrouane, Mount Lebanon",12000                        ,Warehouse,780,N/A,N/A
+"Jbeil, Jbeil, Mount Lebanon",3600                        ,Office,40,1,N/A
+"Tabarja, Kesrouane, Mount Lebanon",12000                        ,Chalet,65,1,2
+"Antelias, El Metn, Mount Lebanon",9600                        ,Warehouse,400,1,N/A
+"Jbeil, Jbeil, Mount Lebanon",8400                        ,Office,95,2,N/A
+"Faraya, Kesrouane, Mount Lebanon",12000                        ,Chalet,80,2,1
+"Rabieh, El Metn, Mount Lebanon",30000                        ,Apartment,180,2,3
+"Baabdat, El Metn, Mount Lebanon",30000                        ,Apartment,400,4,5
+"Haret Sakher, Kesrouane, Mount Lebanon",19200                        ,Apartment,275,3,4
+"Dbayeh, El Metn, Mount Lebanon",32400                        ,Apartment,180,3,3
+"Adma, Kesrouane, Mount Lebanon",12000                        ,Apartment,270,2,4
+"Shayle, Kesrouane, Mount Lebanon",100000                        ,Shop,1500,4,N/A
+"Ghazir, Kesrouane, Mount Lebanon",15000                        ,Office,124,1,N/A
+"Sin El Fil, El Metn, Mount Lebanon",6600                        ,Office,80,1,N/A
+"Zouk Mosbeh, Kesrouane, Mount Lebanon",28000                        ,Land,1000,N/A,N/A
+"Achrafieh, Beirut, Beirut",19000                        ,Apartment,165,2,2
+"Jbeil, Jbeil, Mount Lebanon",12000                        ,Apartment,180,3,3
+"Achrafieh, Beirut, Beirut",27600                        ,Apartment,350,4,4
+"Halat, Jbeil, Mount Lebanon",30000                        ,Warehouse,600,1,N/A
+"Bouchrieh, El Metn, Mount Lebanon",6000                        ,Office,90,1,N/A
+"Bouchrieh, El Metn, Mount Lebanon",3750                        ,Office,45,1,N/A
+"Achrafieh, Beirut, Beirut",21600                        ,Apartment,123,2,2
+"Ouyoun Al Simen, Kesrouane, Mount Lebanon",10000                        ,Chalet,140,3,2
+"Zalka, El Metn, Mount Lebanon",14400                        ,Office,175,1,N/A
+"Smar Jbail, Batroun, North",6000                        ,Apartment,95,2,2
+"Monteverde, El Metn, Mount Lebanon",36000                        ,Apartment,450,3,5
+"Monteverde, El Metn, Mount Lebanon",18000                        ,Apartment,480,4,4
+"Deir Al Qamar, Chouf, Mount Lebanon",40000                        ,Residential Building,1000,N/A,N/A
+"Dbayeh, El Metn, Mount Lebanon",14400                        ,Office,85,1,N/A
+"Achrafieh, Beirut, Beirut",18000                        ,Apartment,240,3,3
+"Haret Sakher, Kesrouane, Mount Lebanon",9600                        ,Apartment,270,3,3
+"Kaslik, Kesrouane, Mount Lebanon",20000                        ,Apartment,300,3,4
+"Ghazir, Kesrouane, Mount Lebanon",6000                        ,Apartment,125,2,2
+"Jounieh, Kesrouane, Mount Lebanon",7000                        ,Office,70,1,N/A
+"Jounieh, Kesrouane, Mount Lebanon",15000                        ,Warehouse,750,1,N/A
+"Achrafieh, Beirut, Beirut",12000                        ,Apartment,250,3,3
+"kfarhbeib, Kesrouane, Mount Lebanon",30000                        ,Apartment,600,3,6
+"Horsh Tabet, El Metn, Mount Lebanon",24000                        ,Office,230,4,N/A
+"Jal el Dib, El Metn, Mount Lebanon",9600                        ,Office,120,1,N/A
+"Furn El Chebbak, Baabda, Mount Lebanon",7200                        ,Office,70,1,N/A
+"Jounieh, Kesrouane, Mount Lebanon",10200                        ,Apartment,70,1,1
+"Jounieh, Kesrouane, Mount Lebanon",11500                        ,Apartment,90,2,2
+"Jounieh, Kesrouane, Mount Lebanon",9000                        ,Apartment,40,1,N/A
+"Achrafieh, Beirut, Beirut",28000                        ,Apartment,306,3,4
+"Klayaat, Kesrouane, Mount Lebanon",4800                        ,Chalet,160,3,3
+"Achrafieh, Beirut, Beirut",15000                        ,Apartment,155,3,2
+"Fakra, Kesrouane, Mount Lebanon",12000                        ,Chalet,200,3,3
+"Zaarour, El Metn, Mount Lebanon",12000                        ,Chalet,70,1,1
+"Berj Hammoud, El Metn, Mount Lebanon",36000                        ,Office,220,3,N/A
+"Achrafieh, Beirut, Beirut",6000                        ,Office,100,1,N/A
+"Jbeil, Jbeil, Mount Lebanon",24000                        ,Land,2000,N/A,N/A
+"Ouyoun Al Simen, Kesrouane, Mount Lebanon",15000                        ,Chalet,80,2,1
+"Zalka, El Metn, Mount Lebanon",18000                        ,Apartment,185,3,3
+"Tabarja, Kesrouane, Mount Lebanon",30000                        ,Chalet,120,2,1
+"Tabarja, Kesrouane, Mount Lebanon",15000                        ,Chalet,42,1,N/A
+"Jbeil, Jbeil, Mount Lebanon",8400                        ,Apartment,150,3,2
+"Kfaryassine, Kesrouane, Mount Lebanon",14400                        ,Apartment,250,3,4
+"Dbayeh, El Metn, Mount Lebanon",24000                        ,Apartment,180,3,3
+"Batroun, Batroun, North",4800                        ,Apartment,46,1,1
+"Achrafieh, Beirut, Beirut",24000                        ,Apartment,185,3,2
+"Ain Saadeh, El Metn, Mount Lebanon",12000                        ,Apartment,200,3,3
+"Achrafieh, Beirut, Beirut",70000                        ,Office,550,4,N/A
+"Achrafieh, Beirut, Beirut",21600                        ,Apartment,245,3,3
+"Zouk Mosbeh, Kesrouane, Mount Lebanon",4200                        ,Apartment,130,2,2
+"Zouk Mosbeh, Kesrouane, Mount Lebanon",7200                        ,Office,80,2,N/A
+"Haret Sakher, Kesrouane, Mount Lebanon",4800                        ,Apartment,100,1,2
+"Koura, Koura, North",100000                        ,Land,4909,N/A,N/A
+"Adma, Kesrouane, Mount Lebanon",20000                        ,Apartment,300,4,5
+"Achrafieh, Beirut, Beirut",36000                        ,Office,370,4,N/A
+"Bsalim, El Metn, Mount Lebanon",70000                        ,Warehouse,1800,2,N/A
+"New Mar Takla, Baabda, Mount Lebanon",18000                        ,Apartment,225,3,4
+"Kfarzebian, Kesrouane, Mount Lebanon",9600                        ,Chalet,105,2,2
+"Achrafieh, Beirut, Beirut",28000                        ,Apartment,300,2,3
+"Achrafieh, Beirut, Beirut",18000                        ,Apartment,206,3,3
+"Laqlouq, Jbeil, Mount Lebanon",18000                        ,House/Villa,260,3,3
+"Arayia, Baabda, Mount Lebanon",45000                        ,House/Villa,600,4,4
+"Zalka, El Metn, Mount Lebanon",7800                        ,Apartment,180,3,2
+"Achrafieh, Beirut, Beirut",36000                        ,Apartment,450,4,5
+"Achrafieh, Beirut, Beirut",30000                        ,Apartment,350,3,4
+"Dbayeh, El Metn, Mount Lebanon",12000                        ,Apartment,77,1,1
+"Edde, Jbeil, Mount Lebanon",12000                        ,House/Villa,300,3,4
+"Mastita, Jbeil, Mount Lebanon",72000                        ,Commercial Building,1800,9,N/A
+"Zouk Mosbeh, Kesrouane, Mount Lebanon",6000                        ,Warehouse,230,1,N/A
+"Mansourieh, El Metn, Mount Lebanon",9600                        ,Apartment,185,3,3
+"Zouk Mosbeh, Kesrouane, Mount Lebanon",144000                        ,Commercial Building,6550,N/A,N/A
+"Sahel Alma, Kesrouane, Mount Lebanon",9600                        ,Apartment,230,3,4
+"Dbayeh, El Metn, Mount Lebanon",18000                        ,Apartment,175,3,3
+"Achrafieh, Beirut, Beirut",12000                        ,Apartment,180,3,3
+"Adma, Kesrouane, Mount Lebanon",18000                        ,Apartment,280,3,3
+"Zouk Mikael, Kesrouane, Mount Lebanon",11400                        ,Shop,86,1,N/A
+"Adma, Kesrouane, Mount Lebanon",20400                        ,Apartment,350,4,4
+"Achrafieh, Beirut, Beirut",16800                        ,Apartment,275,3,3
+"Horsh Tabet, El Metn, Mount Lebanon",24000                        ,Shop,325,2,N/A
+"Horsh Tabet, El Metn, Mount Lebanon",7200                        ,Office,125,1,N/A
+"Horsh Tabet, El Metn, Mount Lebanon",24000                        ,Shop,170,1,N/A
+"Naccache, El Metn, Mount Lebanon",20000                        ,House/Villa,217,2,3
+"Aoukar, El Metn, Mount Lebanon",8400                        ,Apartment,145,3,3
+"Dbayeh, El Metn, Mount Lebanon",22000                        ,Apartment,100,1,2
+"Antelias, El Metn, Mount Lebanon",6000                        ,Office,62,1,N/A
+"Achrafieh, Beirut, Beirut",24000                        ,Shop,120,1,N/A
+"Aoukar, El Metn, Mount Lebanon",10200                        ,Apartment,110,2,2
+"Achrafieh, Beirut, Beirut",40000                        ,Office,473,5,N/A
+"Sin El Fil, El Metn, Mount Lebanon",675000                        ,Commercial Building,4500,N/A,N/A
+"Qartaboun, Jbeil, Mount Lebanon",12000                        ,Apartment,193,2,3
+"Horsh Tabet, El Metn, Mount Lebanon",9000                        ,Office,125,1,N/A
+"Horsh Tabet, El Metn, Mount Lebanon",23000                        ,Office,220,1,N/A
+"Jbeil, Jbeil, Mount Lebanon",4000                        ,Office,60,1,N/A
+"Furn El Chebbak, Baabda, Mount Lebanon",30000                        ,Office,320,3,N/A
+"Mkalles, El Metn, Mount Lebanon",30000                        ,Warehouse,265,1,N/A
+"Mkalles, El Metn, Mount Lebanon",15000                        ,Warehouse,174,1,N/A
+"Jisr El Bacha, El Metn, Mount Lebanon",18000                        ,Office,200,3,N/A
+"Antelias, El Metn, Mount Lebanon",12000                        ,Apartment,180,3,2
+"Badaro, Beirut, Beirut",18000                        ,Shop,35,1,N/A
+"Mansourieh, El Metn, Mount Lebanon",70000                        ,Shop,900,4,N/A
+"Achrafieh, Beirut, Beirut",7200                        ,Shop,70,1,N/A
+"Elissar, El Metn, Mount Lebanon",140000                        ,Shop,530,2,N/A
+"Mkalles, El Metn, Mount Lebanon",12000                        ,Warehouse,100,1,N/A
+"Achrafieh, Beirut, Beirut",18000                        ,Apartment,170,3,3
+"Achrafieh, Beirut, Beirut",50000                        ,Office,300,N/A,N/A
+"Achrafieh, Beirut, Beirut",80000                        ,Office,400,N/A,N/A
+"Achrafieh, Beirut, Beirut",50000                        ,Office,700,N/A,N/A
+"Jbeil, Jbeil, Mount Lebanon",36000                        ,Commercial Building,480,N/A,N/A
+"Down Town, Beirut, Beirut",22000                        ,Office,150,1,N/A
+"Achrafieh, Beirut, Beirut",14400                        ,Apartment,200,3,2
+"Adlieh, Beirut, Beirut",12000                        ,Office,120,2,N/A
+"Antelias, El Metn, Mount Lebanon",60000                        ,Shop,250,1,N/A
+"Antelias, El Metn, Mount Lebanon",12000                        ,Office,100,1,N/A
+"Mtayleb, El Metn, Mount Lebanon",20000                        ,Apartment,250,4,3
+"Down Town, Beirut, Beirut",50000                        ,Office,250,N/A,N/A
+"Monteverde, El Metn, Mount Lebanon",9600                        ,Office,40,1,N/A
+"Zalka, El Metn, Mount Lebanon",9600                        ,Warehouse,280,1,N/A
+"Adonis, Kesrouane, Mount Lebanon",6000                        ,Apartment,140,3,2
+"Achrafieh, Beirut, Beirut",24000                        ,Apartment,140,2,3
+"Sin El Fil, El Metn, Mount Lebanon",9600                        ,Office,75,1,N/A
+"Jbeil, Jbeil, Mount Lebanon",9000                        ,Office,78,1,N/A
+"Achrafieh, Beirut, Beirut",30000                        ,Shop,331,2,N/A
+"Achrafieh, Beirut, Beirut",27600                        ,Apartment,325,2,3
+"Achrafieh, Beirut, Beirut",20000                        ,Apartment,144,2,3
+"Bouchrieh, El Metn, Mount Lebanon",12000                        ,Office,75,1,N/A
+"Yarzeh, Baabda, Mount Lebanon",30000                        ,Apartment,450,4,5
+"Aamchit, Jbeil, Mount Lebanon",18000                        ,Warehouse,750,N/A,N/A
+"Dekweneh, El Metn, Mount Lebanon",70000                        ,Warehouse,1000,N/A,N/A
+"Dekweneh, El Metn, Mount Lebanon",140000                        ,Warehouse,2000,N/A,N/A
+"Jal el Dib, El Metn, Mount Lebanon",11400                        ,Apartment,190,4,3
+"Qornet El Hamra, El Metn, Mount Lebanon",6000                        ,Shop,35,1,N/A
+"Achrafieh, Beirut, Beirut",20000                        ,Commercial Building,120,1,N/A
+"Dbayeh, El Metn, Mount Lebanon",24600                        ,Office,123,1,N/A
+"Ain Aar, El Metn, Mount Lebanon",13200                        ,Apartment,275,4,3
+"Furn El Chebbak, Baabda, Mount Lebanon",15000                        ,Shop,80,1,N/A
+"Achrafieh, Beirut, Beirut",24000                        ,Apartment,210,4,3
+"Zouk Mosbeh, Kesrouane, Mount Lebanon",12000                        ,Office,129,1,N/A
+"Zouk Mosbeh, Kesrouane, Mount Lebanon",6000                        ,Office,47,1,N/A
+"Naccache, El Metn, Mount Lebanon",12000                        ,Apartment,220,3,4
+"Achrafieh, Beirut, Beirut",15000                        ,Shop,156,1,N/A
+"Zouk Mosbeh, Kesrouane, Mount Lebanon",60000                        ,Warehouse,1700,2,N/A
+"Achrafieh, Beirut, Beirut",24000                        ,Warehouse,650,N/A,N/A
+"Lehfed, Jbeil, Mount Lebanon",19200                        ,House/Villa,175,4,4
+"Sin El Fil, El Metn, Mount Lebanon",75000                        ,Office,380,N/A,N/A
+"Sin El Fil, El Metn, Mount Lebanon",150000                        ,Office,760,N/A,N/A
+"Jbeil, Jbeil, Mount Lebanon",3600                        ,Office,40,1,N/A
+"Achrafieh, Beirut, Beirut",20000                        ,Office,240,2,N/A
+"Bsalim, El Metn, Mount Lebanon",10800                        ,Apartment,165,2,2
+"Zalka, El Metn, Mount Lebanon",10800                        ,Apartment,210,3,4
+"Achrafieh, Beirut, Beirut",24000                        ,Apartment,220,3,4
+"Achrafieh, Beirut, Beirut",9000                        ,Office,100,2,N/A
+"Achrafieh, Beirut, Beirut",160000                        ,House/Villa,170,1,N/A
+"Aamchit, Jbeil, Mount Lebanon",7200                        ,Apartment,110,1,1
+"Jounieh, Kesrouane, Mount Lebanon",48000                        ,Shop,200,1,N/A
+"Badaro, Beirut, Beirut",9600                        ,Office,100,1,N/A
+"Achrafieh, Beirut, Beirut",12000                        ,Apartment,120,2,2
+"Shayle, Kesrouane, Mount Lebanon",24000                        ,Apartment,400,5,3
+"Achrafieh, Beirut, Beirut",42000                        ,Shop,150,N/A,N/A
+"Down Town, Beirut, Beirut",50000                        ,Office,400,2,N/A
+"Down Town, Beirut, Beirut",31200                        ,Office,208,1,N/A
+"Down Town, Beirut, Beirut",90000                        ,Office,600,2,N/A
+"Down Town, Beirut, Beirut",150000                        ,Office,1000,3,N/A
+"Jbeil, Jbeil, Mount Lebanon",9000                        ,Warehouse,400,1,N/A
+"Down Town, Beirut, Beirut",29700                        ,Shop,67,1,N/A
+"Ain Saadeh, El Metn, Mount Lebanon",36000                        ,Apartment,600,6,6
+"Badaro, Beirut, Beirut",24000                        ,Office,175,2,N/A
+"Badaro, Beirut, Beirut",18000                        ,Office,160,2,N/A
+"Dbayeh, El Metn, Mount Lebanon",150000                        ,Office,1000,N/A,N/A
+"Dbayeh, El Metn, Mount Lebanon",140000                        ,Office,700,N/A,N/A
+"Achrafieh, Beirut, Beirut",36000                        ,Shop,260,N/A,N/A
+"Bikfaya, El Metn, Mount Lebanon",18000                        ,Land,1072,N/A,N/A
+"Achrafieh, Beirut, Beirut",80000                        ,Office,390,2,N/A
+"Achrafieh, Beirut, Beirut",195000                        ,Office,650,2,N/A
+"Halat, Jbeil, Mount Lebanon",9000                        ,Shop,100,1,N/A
+"Achrafieh, Beirut, Beirut",32000                        ,Apartment,350,4,4
+"Baabda, Baabda, Mount Lebanon",44000                        ,House/Villa,280,3,4
+"Haret Sakher, Kesrouane, Mount Lebanon",12000                        ,Office,200,2,N/A
+"Aamchit, Jbeil, Mount Lebanon",5200                        ,Apartment,150,2,2
+"kfarhbeib, Kesrouane, Mount Lebanon",9000                        ,Apartment,220,3,4
+"Haret Sakher, Kesrouane, Mount Lebanon",3600                        ,Chalet,50,1,1
+"Horsh Tabet, El Metn, Mount Lebanon",24000                        ,Office,70,N/A,N/A
+"Achrafieh, Beirut, Beirut",18000                        ,Apartment,218,3,3
+"Jounieh, Kesrouane, Mount Lebanon",75000                        ,Office,350,2,N/A
+"Down Town, Beirut, Beirut",15500                        ,Shop,34,1,N/A
+"Achrafieh, Beirut, Beirut",24000                        ,Office,200,3,N/A
+"Hazmieh, Baabda, Mount Lebanon",9000                        ,Apartment,250,3,3
+"Sarba, Kesrouane, Mount Lebanon",15000                        ,Apartment,400,4,5
+"Achrafieh, Beirut, Beirut",24000                        ,Apartment,100,1,2
+"Aamchit, Jbeil, Mount Lebanon",6500                        ,Apartment,160,3,3
+"Zouk Mosbeh, Kesrouane, Mount Lebanon",12000                        ,Shop,266,1,N/A
+"Zouk Mosbeh, Kesrouane, Mount Lebanon",9600                        ,Shop,175,1,N/A
+"Beit el Chaar, El Metn, Mount Lebanon",12000                        ,Apartment,250,3,3
+"Zouk Mikael, Kesrouane, Mount Lebanon",9000                        ,Apartment,210,3,3
+"Zouk Mosbeh, Kesrouane, Mount Lebanon",7200                        ,Office,58,1,N/A
+"Zouk Mosbeh, Kesrouane, Mount Lebanon",18000                        ,Office,250,2,N/A
+"Achrafieh, Beirut, Beirut",10000                        ,Office,130,1,N/A
+"Achrafieh, Beirut, Beirut",9000                        ,Office,90,2,N/A
+"Achrafieh, Beirut, Beirut",10000                        ,Office,120,1,N/A
+"Achrafieh, Beirut, Beirut",15000                        ,Apartment,150,3,3
+"Jdeideh, El Metn, Mount Lebanon",8400                        ,Office,55,1,N/A
+"Achrafieh, Beirut, Beirut",30000                        ,Apartment,500,4,4
+"Zouk Mosbeh, Kesrouane, Mount Lebanon",18000                        ,Shop,200,2,N/A
+"Jbeil, Jbeil, Mount Lebanon",4600                        ,Office,40,1,N/A
+"Mazraat Yachouh, El Metn, Mount Lebanon",12000                        ,Warehouse,400,1,N/A
+"Mazraat Yachouh, El Metn, Mount Lebanon",18000                        ,Apartment,330,3,3
+"Achrafieh, Beirut, Beirut",12000                        ,Apartment,100,2,2
+"Sahel Alma, Kesrouane, Mount Lebanon",14400                        ,Apartment,260,3,4
+"Jbeil, Jbeil, Mount Lebanon",6000                        ,Office,85,2,N/A
+"Horsh Tabet, El Metn, Mount Lebanon",48000                        ,Apartment,420,3,6
+"Achrafieh, Beirut, Beirut",7200                        ,Apartment,35,1,1
+"Aamchit, Jbeil, Mount Lebanon",7200                        ,Chalet,100,2,1
+"Ain Saadeh, El Metn, Mount Lebanon",11400                        ,Apartment,180,3,3
+"Achrafieh, Beirut, Beirut",18000                        ,Apartment,240,3,3
+"Antelias, El Metn, Mount Lebanon",120000                        ,Shop,940,2,N/A
+"Hboub, Jbeil, Mount Lebanon",7200                        ,Apartment,180,3,3
+"Nahr El Mot, El Metn, Mount Lebanon",9600                        ,Office,75,1,N/A
+"Nahr El Mot, El Metn, Mount Lebanon",60000                        ,Warehouse,1200,N/A,N/A
+"Kaslik, Kesrouane, Mount Lebanon",14400                        ,Shop,160,2,N/A
+"Sarba, Kesrouane, Mount Lebanon",24000                        ,Office,300,3,N/A
+"Mastita, Jbeil, Mount Lebanon",30000                        ,House/Villa,1000,5,6
+"Hazmieh, Baabda, Mount Lebanon",117000                        ,Office,650,N/A,N/A
+"Sin El Fil, El Metn, Mount Lebanon",36000                        ,Office,375,3,N/A
+"Hazmieh, Baabda, Mount Lebanon",78000                        ,Office,450,4,N/A
+"Jounieh, Kesrouane, Mount Lebanon",7500                        ,Office,75,1,N/A
+"Jounieh, Kesrouane, Mount Lebanon",6000                        ,Office,40,1,N/A
+"Antelias, El Metn, Mount Lebanon",5400                        ,Office,110,3,1
+"Antelias, El Metn, Mount Lebanon",4800                        ,Office,100,3,1
+"Jbeil, Jbeil, Mount Lebanon",9000                        ,Office,120,2,N/A
+"Jbeil, Jbeil, Mount Lebanon",75000                        ,Shop,1400,N/A,N/A
+"Zalka, El Metn, Mount Lebanon",9000                        ,Office,83,1,N/A
+"Zalka, El Metn, Mount Lebanon",4800                        ,Office,40,1,N/A
+"Zalka, El Metn, Mount Lebanon",8400                        ,Office,135,1,N/A
+"Berj Hammoud, El Metn, Mount Lebanon",75000                        ,Office,447,N/A,N/A
+"Bsalim, El Metn, Mount Lebanon",50000                        ,Warehouse,862,5,N/A
+"Zalka, El Metn, Mount Lebanon",60000                        ,Shop,588,2,N/A
+"Dbayeh, El Metn, Mount Lebanon",90000                        ,Land,980,N/A,N/A
+"Zalka, El Metn, Mount Lebanon",19000                        ,Land,942,N/A,N/A
+"Sarba, Kesrouane, Mount Lebanon",36000                        ,Shop,200,1,N/A
+"Kaslik, Kesrouane, Mount Lebanon",15000                        ,Shop,50,1,N/A
+"Sahel Alma, Kesrouane, Mount Lebanon",14400                        ,Apartment,230,3,4
+"Bsalim, El Metn, Mount Lebanon",70000                        ,House/Villa,900,4,6
+"Dora, El Metn, Mount Lebanon",60000                        ,Office,800,N/A,N/A
+"Mezher, El Metn, Mount Lebanon",12000                        ,Apartment,220,3,3
+"Zalka, El Metn, Mount Lebanon",12000                        ,Apartment,170,3,3
+"Aoukar, El Metn, Mount Lebanon",18000                        ,Apartment,175,3,3
+"Naccache, El Metn, Mount Lebanon",18000                        ,Apartment,170,3,3
+"Antelias, El Metn, Mount Lebanon",17400                        ,Apartment,230,3,3
+"Jdeideh, El Metn, Mount Lebanon",7200                        ,Office,171,2,N/A
+"Jbeil, Jbeil, Mount Lebanon",6000                        ,Apartment,135,2,2
+"Tabarja, Kesrouane, Mount Lebanon",7000                        ,Chalet,45,1,1
+"Antelias, El Metn, Mount Lebanon",30000                        ,Office,155,1,N/A
+"Rabweh, El Metn, Mount Lebanon",9600                        ,Apartment,170,3,3
+"Hazmieh, Baabda, Mount Lebanon",70000                        ,Office,500,N/A,N/A
+"Sahel Alma, Kesrouane, Mount Lebanon",9000                        ,Apartment,230,3,4
+"Bouchrieh, El Metn, Mount Lebanon",12000                        ,Office,120,1,N/A
+"Dekweneh, El Metn, Mount Lebanon",7500                        ,Office,75,1,N/A
+"Zalka, El Metn, Mount Lebanon",12000                        ,Apartment,153,3,3
+"Bouchrieh, El Metn, Mount Lebanon",11400                        ,Office,75,1,N/A
+"Sarba, Kesrouane, Mount Lebanon",42000                        ,Shop,425,1,N/A
+"Dbayeh, El Metn, Mount Lebanon",65000                        ,Office,425,6,N/A
+"Dbayeh, El Metn, Mount Lebanon",60000                        ,Warehouse,645,4,N/A
+"Rabieh, El Metn, Mount Lebanon",22000                        ,Apartment,330,3,5
+"Baabdat, El Metn, Mount Lebanon",60000                        ,House/Villa,600,4,6
+"Jal el Dib, El Metn, Mount Lebanon",20100                        ,Office,134,1,N/A
+"Jal el Dib, El Metn, Mount Lebanon",16500                        ,Office,110,1,N/A
+"Jal el Dib, El Metn, Mount Lebanon",13800                        ,Office,92,1,N/A
+"Mtayleb, El Metn, Mount Lebanon",22000                        ,Apartment,230,3,3
+"Sin El Fil, El Metn, Mount Lebanon",60000                        ,Office,350,2,N/A
+"Dbayeh, El Metn, Mount Lebanon",100000                        ,House/Villa,625,6,4
+"Bsalim, El Metn, Mount Lebanon",36000                        ,Apartment,240,3,3
+"Broumana, El Metn, Mount Lebanon",35000                        ,Apartment,450,4,6
+"Hazmieh, Baabda, Mount Lebanon",300000                        ,Residential Building,2250,N/A,N/A
+"Jal el Dib, El Metn, Mount Lebanon",63000                        ,Office,360,1,N/A
+"Naccache, El Metn, Mount Lebanon",120000                        ,Land,2127,N/A,N/A

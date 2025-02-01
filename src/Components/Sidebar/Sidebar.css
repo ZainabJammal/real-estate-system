@@ -1,0 +1,66 @@
+.sidebar {
+  flex: 0 0 200px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* background-color: var(--primary-deep-blue); */
+  background-image: linear-gradient(
+    to bottom,
+    var(--primary-deep-blue),
+    var(--primary-deep-blue-p)
+  );
+  margin: 0;
+  justify-content: space-between;
+  box-sizing: border-box;
+  box-shadow: 1px 0px 25px 5px rgba(128, 128, 128, 0.803);
+  z-index: 10;
+  transform: translateX(100);
+  transition: flex-basis 0.3s ease, transform 0.3s ease, minimized 0.3s ease;
+}
+
+.sidebar.minimized {
+  flex: 0 0 30px;
+}
+
+.navmenu {
+  flex: 3;
+  overflow: hidden;
+}
+
+.logout-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.logout {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: var(--background-light-gray-f);
+  &:hover {
+    cursor: pointer;
+    color: var(--background-soft-white);
+  }
+  transition: transform 0.3s ease-in-out;
+}
+
+.logout.minimized {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    position: absolute;
+    transition: transform 0.3s ease;
+  }
+
+  .sidebar.expanded {
+    transform: translateX(0);
+  }
+}

@@ -1,0 +1,28 @@
+.name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 28px 10px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+
+  h1 {
+    font-size: 1.5rem;
+    color: var(--background-light-gray-f);
+    transition: color 0.5s ease;
+    &:hover {
+      cursor: pointer;
+      color: var(--secondary-amber-gold);
+    }
+    transition: all 0.3s ease-in-out;
+  }
+
+  img {
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    box-sizing: border-box;
+  }
+}
