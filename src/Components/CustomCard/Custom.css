@@ -3,37 +3,17 @@
   display: flex;
   border-radius: 3px;
   background-color: var(--background-light-white-p);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 04ff9eb4cf35246afaacefd2a6e8b94cf9ac1c30
-  box-shadow: 0px 2px 8px 1px var(--background-light-gray-p);
   box-sizing: border-box;
+  box-shadow: 0px 2px 8px 1px var(--background-light-gray-p);
   width: 100%;
   max-width: 100%;
   &:hover {
     cursor: pointer;
-<<<<<<< HEAD
-    transform: scale(1.03);
-=======
-    transform: scale(1.01);
-<<<<<<< HEAD
-=======
-  box-shadow: 0px 2px 10px 5px var(--background-light-gray-p);
-=======
-  box-shadow: 0px 2px 8px 1px var(--background-light-gray-p);
->>>>>>> 85ec564 (4 - Modified and stylized PieCharts and LineCharts to fit correctly on the dashboard (with different screens))
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 100%;
-  &:hover {
-    cursor: pointer;
-    transform: scale(1.03);
->>>>>>> 6bb4543 (2 - Added and Stylized New Components (Sidebar, Menu, Charts, etc..))
-=======
->>>>>>> 0ec06ac (5 - Added New Pages (Explore Estates, Ask AI, Contact Agent) and added their corresponding styles)
->>>>>>> 04ff9eb4cf35246afaacefd2a6e8b94cf9ac1c30
+    transform: scale(1.02);
+    box-shadow: 0px 2px 8px 1px var(--background-light-gray-p);
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
   }
   transition: transform 0.225s ease-in-out;
 }
@@ -45,27 +25,12 @@
   }
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 85ec564 (4 - Modified and stylized PieCharts and LineCharts to fit correctly on the dashboard (with different screens))
->>>>>>> 04ff9eb4cf35246afaacefd2a6e8b94cf9ac1c30
 .card-main {
   width: 100%;
   height: 100%;
   margin: 0 auto;
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6bb4543 (2 - Added and Stylized New Components (Sidebar, Menu, Charts, etc..))
-=======
->>>>>>> 85ec564 (4 - Modified and stylized PieCharts and LineCharts to fit correctly on the dashboard (with different screens))
->>>>>>> 04ff9eb4cf35246afaacefd2a6e8b94cf9ac1c30
 .card-title {
   h3,
   p {
@@ -80,24 +45,19 @@
 .card-content {
   display: flex;
   flex-direction: column;
-<<<<<<< HEAD
+
   width: 100%;
   padding: 8px;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
+
   width: 100%;
   padding: 8px;
-=======
 
   width: 100%;
   padding: 15px;
->>>>>>> 6bb4543 (2 - Added and Stylized New Components (Sidebar, Menu, Charts, etc..))
-=======
+
   width: 100%;
   padding: 8px;
->>>>>>> 85ec564 (4 - Modified and stylized PieCharts and LineCharts to fit correctly on the dashboard (with different screens))
->>>>>>> 04ff9eb4cf35246afaacefd2a6e8b94cf9ac1c30
+
   img {
     max-width: 100%;
     max-height: 100%;

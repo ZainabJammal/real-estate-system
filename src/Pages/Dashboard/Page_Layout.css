@@ -9,10 +9,6 @@
   transition: flex-basis 0.3s ease;
 }
 
-.app.minimized .dashboard-layout {
-  flex: 1;
-}
-
 .dashboard-content {
   width: 100%;
   display: flex;

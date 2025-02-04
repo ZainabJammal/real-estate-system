@@ -1,12 +1,4 @@
 .sidebar {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 45d5ffb (Did some CSS modifications in the Sidebar.css)
->>>>>>> 04ff9eb4cf35246afaacefd2a6e8b94cf9ac1c30
   flex: 0 0 200px;
   display: flex;
   flex-direction: column;
@@ -23,15 +15,11 @@
   box-shadow: 1px 0px 25px 5px rgba(128, 128, 128, 0.803);
   z-index: 10;
   transform: translateX(100);
-  transition: flex-basis 0.3s ease, transform 0.3s ease, minimized 0.3s ease;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 04ff9eb4cf35246afaacefd2a6e8b94cf9ac1c30
+  transition: all 0.3s ease-in-out;
 }
 
 .sidebar.minimized {
-  flex: 0 0 30px;
+  flex: 0 0 20px;
 }
 
 .navmenu {
@@ -40,19 +28,11 @@
 }
 
 .logout-container {
-  flex: 1;
+  flex: 0 0 220px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px;
-<<<<<<< HEAD
-=======
-=======
-  flex: 1;
-=======
-  flex: 0 0 220px;
->>>>>>> 85ec564 (4 - Modified and stylized PieCharts and LineCharts to fit correctly on the dashboard (with different screens))
-  display: flex;
   flex-direction: column;
   height: 100%;
   /* background-color: var(--primary-deep-blue); */
@@ -62,31 +42,12 @@
     var(--primary-deep-blue-p)
   );
   margin: 0;
-  justify-content: space-between;
   box-sizing: border-box;
-  box-shadow: 1px 0px 25px 5px rgba(128, 128, 128, 0.803);
-  z-index: 10;
-<<<<<<< HEAD
->>>>>>> df94a0d (1 - Created Dashboard layout and Components (Sidebar, NameCard, MenuCard))
-=======
   transition: flex-basis 0.3s ease-in-out;
 }
 
-.sidebar.minimized {
-  flex: 0 0 50px;
->>>>>>> 85ec564 (4 - Modified and stylized PieCharts and LineCharts to fit correctly on the dashboard (with different screens))
-=======
-}
-
-.sidebar.minimized {
-  flex: 0 0 30px;
->>>>>>> 45d5ffb (Did some CSS modifications in the Sidebar.css)
-}
-
-<<<<<<< HEAD
 .logout {
   width: 100%;
-<<<<<<< HEAD
   display: flex;
   justify-content: center;
   align-items: center;
@@ -108,68 +69,5 @@
     transform: translateX(-100%);
     position: absolute;
     transition: transform 0.3s ease;
-  }
-
-  .sidebar.expanded {
-    transform: translateX(0);
-=======
-  margin-bottom: 50px;
-  font-size: 2rem;
-  color: var(--primary-deep-blue);
-=======
-.navmenu {
-  flex: 3;
-  overflow: hidden;
-}
-
-.logout-container {
-  flex: 1;
->>>>>>> 6bb4543 (2 - Added and Stylized New Components (Sidebar, Menu, Charts, etc..))
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
->>>>>>> 04ff9eb4cf35246afaacefd2a6e8b94cf9ac1c30
-}
-
-.logout {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2rem;
-  color: var(--background-light-gray-f);
-  &:hover {
-    cursor: pointer;
-<<<<<<< HEAD
-    color: var(--secondary-amber-gold);
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> df94a0d (1 - Created Dashboard layout and Components (Sidebar, NameCard, MenuCard))
-=======
-    color: var(--secondary-amber-gold);
->>>>>>> 6bb4543 (2 - Added and Stylized New Components (Sidebar, Menu, Charts, etc..))
-=======
-    color: var(--background-soft-white);
->>>>>>> 0ec06ac (5 - Added New Pages (Explore Estates, Ask AI, Contact Agent) and added their corresponding styles)
->>>>>>> 04ff9eb4cf35246afaacefd2a6e8b94cf9ac1c30
-  }
-  transition: transform 0.3s ease-in-out;
-}
-
-.logout.minimized {
-  transform: rotate(180deg);
-}
-
-@media (max-width: 768px) {
-  .sidebar {
-    transform: translateX(-100%);
-    position: absolute;
-    transition: transform 0.3s ease;
-  }
-
-  .sidebar.expanded {
-    transform: translateX(0);
   }
 }

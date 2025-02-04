@@ -38,6 +38,7 @@ properties_area = []
 properties_districtID = []
 properties_provinceID = []
 properties_furnished = []
+properties_communityID = []
 
 
 # Function to fetch data from a single page
@@ -70,9 +71,10 @@ def extract_data(result):
         properties_bathroom.append(property.get("bathroom_value", ""))
         properties_bedroom.append(property.get("bedroom_value", ""))
         properties_area.append(property.get("area", ""))
-        properties_districtID.append(property.get("district_id", ""))
         properties_furnished.append(property.get("furnished", ""))
+        properties_districtID.append(property.get("district_id", ""))
         properties_provinceID.append(property.get("province_id", ""))
+        properties_communityID.append(property.get("community_id", ""))
 
 
 # Main loop to fetch all pages
@@ -90,9 +92,10 @@ df = pd.DataFrame({
     "Bedroom": properties_bedroom,
     "Bathroom": properties_bathroom,
     "Area sqm": properties_area,
-    "DistrictID": properties_districtID,
     "Furnished": properties_furnished,
-    "ProvinceID": properties_provinceID
+    "DistrictID": properties_districtID,
+    "ProvinceID": properties_provinceID,
+    "CommunityID": properties_communityID
 })
 
 df.to_csv("realestate.csv", index=False)
