@@ -1,0 +1,361 @@
+Date,Transaction_Number,City,Transaction_Value
+01/2011,469,Beirut,179.672
+02/2011,422,Beirut,502.338
+03/2011,523,Beirut,220.017
+04/2011,540,Beirut,244.857
+05/2011,592,Beirut,400.56
+06/2011,611,Beirut,340.065
+07/2011,516,Beirut,312.436
+08/2011,559,Beirut,280.342
+09/2011,533,Beirut,373.544
+10/2011,717,Beirut,304.316
+11/2011,925,Beirut,23.992
+12/2011,1117,Beirut,599.198
+01/2012,409,Beirut,208.727
+02/2012,431,Beirut,284.376
+03/2012,542,Beirut,371.756
+04/2012,501,Beirut,239.474
+05/2012,557,Beirut,394.861
+06/2012,533,Beirut,447.222
+07/2012,469,Beirut,247.481
+08/2012,513,Beirut,286.88
+09/2012,553,Beirut,415.255
+10/2012,507,Beirut,444.624
+11/2012,570,Beirut,307.115
+12/2012,916,Beirut,492.86
+01/2013,364,Beirut,176.052
+02/2013,333,Beirut,174.326
+03/2013,299,Beirut,176.2
+04/2013,560,Beirut,296.167
+05/2013,515,Beirut,297.959
+06/2013,553,Beirut,324.049
+07/2013,533,Beirut,318.328
+08/2013,400,Beirut,245.108
+09/2013,471,Beirut,319.075
+10/2013,558,Beirut,492.046
+11/2013,547,Beirut,300.705
+12/2013,921,Beirut,582.023
+01/2014,395,Beirut,433.823
+02/2014,452,Beirut,226.236
+03/2014,529,Beirut,260.777
+04/2014,538,Beirut,340.665
+05/2014,521,Beirut,515.116
+06/2014,490,Beirut,238.155
+07/2014,441,Beirut,237.252
+08/2014,447,Beirut,243.356
+09/2014,530,Beirut,341.588
+10/2014,458,Beirut,284.168
+11/2014,449,Beirut,210.212
+12/2014,673,Beirut,348.164
+01/2015,254,Beirut,266.641
+02/2015,305,Beirut,164.716
+03/2015,416,Beirut,211.102
+04/2015,375,Beirut,233.454
+05/2015,414,Beirut,218.756
+06/2015,500,Beirut,235.809
+07/2015,395,Beirut,394.021
+08/2015,392,Beirut,20.98
+09/2015,418,Beirut,232.992
+10/2015,404,Beirut,222.747
+11/2015,446,Beirut,244.619
+12/2015,741,Beirut,371.27
+01/2016,303,Beirut,141.757
+02/2016,442,Beirut,500.932
+03/2016,405,Beirut,217.064
+04/2016,470,Beirut,297.91
+05/2016,400,Beirut,201.682
+06/2016,474,Beirut,270.022
+07/2016,378,Beirut,201.686
+08/2016,476,Beirut,282.233
+09/2016,417,Beirut,286.562
+10/2016,408,Beirut,168.748
+11/2016,507,Beirut,269.303
+12/2016,700,Beirut,515.327
+01/2011,1523,"Baabda, Aley, Chouf",168.093
+02/2011,1446,"Baabda, Aley, Chouf",228.751
+03/2011,1865,"Baabda, Aley, Chouf",214.211
+04/2011,1694,"Baabda, Aley, Chouf",229.316
+05/2011,1759,"Baabda, Aley, Chouf",218.475
+06/2011,1770,"Baabda, Aley, Chouf",202.401
+07/2011,1845,"Baabda, Aley, Chouf",228.702
+08/2011,1656,"Baabda, Aley, Chouf",218.573
+09/2011,1769,"Baabda, Aley, Chouf",237.509
+10/2011,2131,"Baabda, Aley, Chouf",286.039
+11/2011,1863,"Baabda, Aley, Chouf",232.493
+12/2011,2457,"Baabda, Aley, Chouf",439.213
+01/2012,1415,"Baabda, Aley, Chouf",214.832
+02/2012,1490,"Baabda, Aley, Chouf",206.183
+03/2012,1721,"Baabda, Aley, Chouf",239.016
+04/2012,1416,"Baabda, Aley, Chouf",239.95
+05/2012,1731,"Baabda, Aley, Chouf",221.967
+06/2012,1599,"Baabda, Aley, Chouf",237.799
+07/2012,1587,"Baabda, Aley, Chouf",240.391
+08/2012,1574,"Baabda, Aley, Chouf",213.099
+09/2012,1633,"Baabda, Aley, Chouf",231.778
+10/2012,1712,"Baabda, Aley, Chouf",250.794
+11/2012,1865,"Baabda, Aley, Chouf",273.368
+12/2012,2506,"Baabda, Aley, Chouf",349.004
+01/2013,1073,"Baabda, Aley, Chouf",159.996
+02/2013,908,"Baabda, Aley, Chouf",129.8
+03/2013,1292,"Baabda, Aley, Chouf",203.646
+04/2013,1714,"Baabda, Aley, Chouf",269.798
+05/2013,204,"Baabda, Aley, Chouf",240.185
+06/2013,1517,"Baabda, Aley, Chouf",280.453
+07/2013,1600,"Baabda, Aley, Chouf",277.169
+08/2013,1384,"Baabda, Aley, Chouf",213.521
+09/2013,1494,"Baabda, Aley, Chouf",226.951
+10/2013,1456,"Baabda, Aley, Chouf",220.468
+11/2013,1632,"Baabda, Aley, Chouf",253.519
+12/2013,2039,"Baabda, Aley, Chouf",339.551
+01/2014,1232,"Baabda, Aley, Chouf",204.443
+02/2014,1358,"Baabda, Aley, Chouf",220.955
+03/2014,1390,"Baabda, Aley, Chouf",239.542
+04/2014,1667,"Baabda, Aley, Chouf",257.938
+05/2014,1732,"Baabda, Aley, Chouf",309.496
+06/2014,1356,"Baabda, Aley, Chouf",214.841
+07/2014,129,"Baabda, Aley, Chouf",241.81
+08/2014,1492,"Baabda, Aley, Chouf",257.405
+09/2014,1574,"Baabda, Aley, Chouf",252.685
+10/2014,1611,"Baabda, Aley, Chouf",207.616
+11/2014,1330,"Baabda, Aley, Chouf",279.407
+12/2014,1795,"Baabda, Aley, Chouf",283.836
+01/2015,894,"Baabda, Aley, Chouf",152.301
+02/2015,882,"Baabda, Aley, Chouf",160.49
+03/2015,1385,"Baabda, Aley, Chouf",205.81
+04/2015,1161,"Baabda, Aley, Chouf",200.686
+05/2015,1256,"Baabda, Aley, Chouf",226.018
+06/2015,1318,"Baabda, Aley, Chouf",233.177
+07/2015,1330,"Baabda, Aley, Chouf",225.512
+08/2015,1401,"Baabda, Aley, Chouf",247.245
+09/2015,1336,"Baabda, Aley, Chouf",269.964
+10/2015,1371,"Baabda, Aley, Chouf",210.77
+11/2015,1258,"Baabda, Aley, Chouf",205.539
+12/2015,1646,"Baabda, Aley, Chouf",321.302
+01/2016,1041,"Baabda, Aley, Chouf",226.395
+02/2016,1213,"Baabda, Aley, Chouf",201.465
+03/2016,1440,"Baabda, Aley, Chouf",301.443
+04/2016,1358,"Baabda, Aley, Chouf",220.442
+05/2016,1166,"Baabda, Aley, Chouf",272.838
+06/2016,1276,"Baabda, Aley, Chouf",215.574
+07/2016,1140,"Baabda, Aley, Chouf",200.455
+08/2016,1340,"Baabda, Aley, Chouf",251.0
+09/2016,1259,"Baabda, Aley, Chouf",311.641
+10/2016,1415,"Baabda, Aley, Chouf",253.662
+11/2016,1506,"Baabda, Aley, Chouf",276.353
+12/2016,1539,"Baabda, Aley, Chouf",255.869
+01/2011,731,"Kesrouan, Jbeil",80.659
+02/2011,704,"Kesrouan, Jbeil",111.395
+03/2011,964,"Kesrouan, Jbeil",119.069
+04/2011,886,"Kesrouan, Jbeil",109.788
+05/2011,921,"Kesrouan, Jbeil",122.125
+06/2011,913,"Kesrouan, Jbeil",120.925
+07/2011,779,"Kesrouan, Jbeil",113.032
+08/2011,993,"Kesrouan, Jbeil",136.946
+09/2011,1024,"Kesrouan, Jbeil",133.319
+10/2011,1111,"Kesrouan, Jbeil",143.112
+11/2011,950,"Kesrouan, Jbeil",114.677
+12/2011,1272,"Kesrouan, Jbeil",182.054
+01/2012,689,"Kesrouan, Jbeil",109.852
+02/2012,654,"Kesrouan, Jbeil",95.146
+03/2012,823,"Kesrouan, Jbeil",131.82
+04/2012,618,"Kesrouan, Jbeil",101.247
+05/2012,793,"Kesrouan, Jbeil",126.152
+06/2012,785,"Kesrouan, Jbeil",142.168
+07/2012,818,"Kesrouan, Jbeil",124.262
+08/2012,807,"Kesrouan, Jbeil",116.81
+09/2012,792,"Kesrouan, Jbeil",125.813
+10/2012,840,"Kesrouan, Jbeil",165.411
+11/2012,777,"Kesrouan, Jbeil",104.1
+12/2012,1036,"Kesrouan, Jbeil",143.382
+01/2013,654,"Kesrouan, Jbeil",106.447
+02/2013,542,"Kesrouan, Jbeil",90.707
+03/2013,692,"Kesrouan, Jbeil",115.106
+04/2013,825,"Kesrouan, Jbeil",125.542
+05/2013,766,"Kesrouan, Jbeil",133.566
+06/2013,820,"Kesrouan, Jbeil",153.359
+07/2013,861,"Kesrouan, Jbeil",166.566
+08/2013,772,"Kesrouan, Jbeil",108.859
+09/2013,736,"Kesrouan, Jbeil",115.545
+10/2013,790,"Kesrouan, Jbeil",135.102
+11/2013,810,"Kesrouan, Jbeil",133.925
+12/2013,849,"Kesrouan, Jbeil",146.164
+01/2014,718,"Kesrouan, Jbeil",105.085
+02/2014,703,"Kesrouan, Jbeil",107.202
+03/2014,738,"Kesrouan, Jbeil",127.795
+04/2014,824,"Kesrouan, Jbeil",140.109
+05/2014,741,"Kesrouan, Jbeil",162.739
+06/2014,663,"Kesrouan, Jbeil",113.379
+07/2014,1141,"Kesrouan, Jbeil",105.27
+08/2014,809,"Kesrouan, Jbeil",117.323
+09/2014,783,"Kesrouan, Jbeil",130.766
+10/2014,849,"Kesrouan, Jbeil",126.206
+11/2014,713,"Kesrouan, Jbeil",145.347
+12/2014,884,"Kesrouan, Jbeil",174.539
+01/2015,481,"Kesrouan, Jbeil",82.792
+02/2015,512,"Kesrouan, Jbeil",79.493
+03/2015,623,"Kesrouan, Jbeil",107.413
+04/2015,625,"Kesrouan, Jbeil",125.46
+05/2015,692,"Kesrouan, Jbeil",147.168
+06/2015,753,"Kesrouan, Jbeil",157.722
+07/2015,665,"Kesrouan, Jbeil",120.439
+08/2015,797,"Kesrouan, Jbeil",128.261
+09/2015,683,"Kesrouan, Jbeil",141.926
+10/2015,773,"Kesrouan, Jbeil",171.997
+11/2015,170,"Kesrouan, Jbeil",106.886
+12/2015,826,"Kesrouan, Jbeil",145.92
+01/2016,579,"Kesrouan, Jbeil",90.79
+02/2016,624,"Kesrouan, Jbeil",106.494
+03/2016,692,"Kesrouan, Jbeil",115.288
+04/2016,593,"Kesrouan, Jbeil",106.945
+05/2016,543,"Kesrouan, Jbeil",101.911
+06/2016,619,"Kesrouan, Jbeil",103.639
+07/2016,606,"Kesrouan, Jbeil",103.101
+08/2016,91,"Kesrouan, Jbeil",107.929
+09/2016,639,"Kesrouan, Jbeil",89.194
+10/2016,748,"Kesrouan, Jbeil",116.232
+11/2016,662,"Kesrouan, Jbeil",114.592
+12/2016,815,"Kesrouan, Jbeil",166.404
+01/2011,621,"Tripoli, Akkar",34.869
+02/2011,595,"Tripoli, Akkar",30.049
+03/2011,739,"Tripoli, Akkar",32.345
+04/2011,633,"Tripoli, Akkar",34.863
+05/2011,721,"Tripoli, Akkar",38.696
+06/2011,666,"Tripoli, Akkar",32.268
+07/2011,686,"Tripoli, Akkar",34.383
+08/2011,573,"Tripoli, Akkar",37.597
+09/2011,683,"Tripoli, Akkar",35.774
+10/2011,755,"Tripoli, Akkar",40.423
+11/2011,603,"Tripoli, Akkar",33.097
+12/2011,968,"Tripoli, Akkar",42.233
+01/2012,633,"Tripoli, Akkar",34.57
+02/2012,627,"Tripoli, Akkar",26.729
+03/2012,630,"Tripoli, Akkar",43.045
+04/2012,546,"Tripoli, Akkar",34.217
+05/2012,561,"Tripoli, Akkar",37.216
+06/2012,556,"Tripoli, Akkar",37.2
+07/2012,543,"Tripoli, Akkar",33.045
+08/2012,391,"Tripoli, Akkar",23.344
+09/2012,653,"Tripoli, Akkar",50.2
+10/2012,629,"Tripoli, Akkar",35.759
+11/2012,550,"Tripoli, Akkar",29.975
+12/2012,674,"Tripoli, Akkar",52.28
+01/2013,460,"Tripoli, Akkar",23.928
+02/2013,422,"Tripoli, Akkar",32.194
+03/2013,492,"Tripoli, Akkar",37.806
+04/2013,603,"Tripoli, Akkar",26.529
+05/2013,521,"Tripoli, Akkar",53.196
+06/2013,490,"Tripoli, Akkar",28.844
+07/2013,515,"Tripoli, Akkar",36.804
+08/2013,454,"Tripoli, Akkar",29.439
+09/2013,550,"Tripoli, Akkar",28.541
+10/2013,466,"Tripoli, Akkar",41.914
+11/2013,499,"Tripoli, Akkar",33.148
+12/2013,561,"Tripoli, Akkar",29.285
+01/2014,453,"Tripoli, Akkar",29.553
+02/2014,537,"Tripoli, Akkar",35.601
+03/2014,497,"Tripoli, Akkar",24.077
+04/2014,597,"Tripoli, Akkar",38.162
+05/2014,590,"Tripoli, Akkar",41.57
+06/2014,548,"Tripoli, Akkar",36.204
+07/2014,607,"Tripoli, Akkar",33.634
+08/2014,545,"Tripoli, Akkar",44.526
+09/2014,590,"Tripoli, Akkar",39.738
+10/2014,445,"Tripoli, Akkar",40.437
+11/2014,468,"Tripoli, Akkar",28.159
+12/2014,556,"Tripoli, Akkar",32.312
+01/2015,400,"Tripoli, Akkar",33.171
+02/2015,415,"Tripoli, Akkar",25.535
+03/2015,509,"Tripoli, Akkar",26.992
+04/2015,471,"Tripoli, Akkar",23.727
+05/2015,543,"Tripoli, Akkar",36.065
+06/2015,519,"Tripoli, Akkar",27.172
+07/2015,447,"Tripoli, Akkar",33.856
+08/2015,611,"Tripoli, Akkar",32.35
+09/2015,384,"Tripoli, Akkar",34.319
+10/2015,514,"Tripoli, Akkar",36.33
+11/2015,527,"Tripoli, Akkar",36.712
+12/2015,555,"Tripoli, Akkar",32.538
+01/2016,429,"Tripoli, Akkar",28.713
+02/2016,507,"Tripoli, Akkar",34.828
+03/2016,520,"Tripoli, Akkar",39.424
+04/2016,489,"Tripoli, Akkar",39.705
+05/2016,458,"Tripoli, Akkar",29.661
+06/2016,475,"Tripoli, Akkar",30.813
+07/2016,429,"Tripoli, Akkar",37.235
+08/2016,530,"Tripoli, Akkar",33.724
+09/2016,461,"Tripoli, Akkar",25.447
+10/2016,548,"Tripoli, Akkar",32.385
+11/2016,581,"Tripoli, Akkar",39.532
+12/2016,586,"Tripoli, Akkar",42.618
+01/2011,539,Bekaa,18.988
+02/2011,608,Bekaa,15.206
+03/2011,915,Bekaa,38.896
+04/2011,704,Bekaa,32.465
+05/2011,799,Bekaa,37.688
+06/2011,924,Bekaa,35.716
+07/2011,762,Bekaa,36.784
+08/2011,731,Bekaa,35.262
+09/2011,753,Bekaa,33.596
+10/2011,839,Bekaa,43.517
+11/2011,752,Bekaa,37.012
+12/2011,1066,Bekaa,42.374
+01/2012,666,Bekaa,33.419
+02/2012,396,Bekaa,22.855
+03/2012,591,Bekaa,32.547
+04/2012,712,Bekaa,36.864
+05/2012,749,Bekaa,39.682
+06/2012,674,Bekaa,40.714
+07/2012,661,Bekaa,36.105
+08/2012,713,Bekaa,38.884
+09/2012,825,Bekaa,62.986
+10/2012,774,Bekaa,33.443
+11/2012,724,Bekaa,33.998
+12/2012,948,Bekaa,44.042
+01/2013,586,Bekaa,29.673
+02/2013,663,Bekaa,30.755
+03/2013,670,Bekaa,32.377
+04/2013,863,Bekaa,41.144
+05/2013,775,Bekaa,34.696
+06/2013,722,Bekaa,34.974
+07/2013,746,Bekaa,31.842
+08/2013,709,Bekaa,35.375
+09/2013,892,Bekaa,38.111
+10/2013,757,Bekaa,34.088
+11/2013,842,Bekaa,41.95
+12/2013,742,Bekaa,48.607
+01/2014,593,Bekaa,37.079
+02/2014,634,Bekaa,31.415
+03/2014,691,Bekaa,33.419
+04/2014,727,Bekaa,40.11
+05/2014,716,Bekaa,55.859
+06/2014,663,Bekaa,42.07
+07/2014,508,Bekaa,37.027
+08/2014,893,Bekaa,48.445
+09/2014,936,Bekaa,42.879
+10/2014,784,Bekaa,38.564
+11/2014,810,Bekaa,40.973
+12/2014,145,Bekaa,47.744
+01/2015,357,Bekaa,22.714
+02/2015,477,Bekaa,21.658
+03/2015,762,Bekaa,38.1
+04/2015,698,Bekaa,28.487
+05/2015,759,Bekaa,33.424
+06/2015,756,Bekaa,38.146
+07/2015,704,Bekaa,46.859
+08/2015,965,Bekaa,45.48
+09/2015,803,Bekaa,42.696
+10/2015,762,Bekaa,33.738
+11/2015,710,Bekaa,32.772
+12/2015,962,Bekaa,51.427
+01/2016,536,Bekaa,19.919
+02/2016,729,Bekaa,41.907
+03/2016,784,Bekaa,45.019
+04/2016,807,Bekaa,46.032
+05/2016,602,Bekaa,26.837
+06/2016,636,Bekaa,31.268
+07/2016,689,Bekaa,37.114
+08/2016,911,Bekaa,37.075
+09/2016,800,Bekaa,35.583
+10/2016,903,Bekaa,39.955
+11/2016,1030,Bekaa,64.784
+12/2016,837,Bekaa,38.119
