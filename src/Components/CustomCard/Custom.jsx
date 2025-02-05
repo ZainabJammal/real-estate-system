@@ -10,11 +10,13 @@ function Custom({ title, desc, Component, no_inflate = false }) {
           <p>{desc ? desc : "This card describes..."}</p>
         </div>
         <div className="card-main">
-          {Component ? (
-            <Component />
-          ) : (
-            <img src="../src/images/2.png" alt="chart.png" />
-          )}
+          <div className="component-layout">
+            {Component ? (
+              <Component />
+            ) : (
+              <img src="../src/images/2.png" alt="chart.png" />
+            )}
+          </div>
         </div>
       </div>
     </div>

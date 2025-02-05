@@ -20,7 +20,7 @@ function LineChartComponent() {
     { months: "Jun", Agent1: 35, Agent2: 27 },
   ];
   return (
-    <div className="component-layout">
+    <div className="linechart-content">
       <ResponsiveContainer width={"100%"} height={"100%"}>
         <LineChart
           data={data}

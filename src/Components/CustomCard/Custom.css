@@ -45,23 +45,28 @@
 .card-content {
   display: flex;
   flex-direction: column;
-
   width: 100%;
   padding: 8px;
+}
 
+.component-layout {
   width: 100%;
-  padding: 8px;
-
-  width: 100%;
-  padding: 15px;
-
-  width: 100%;
-  padding: 8px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 
   img {
     max-width: 100%;
     max-height: 100%;
     justify-content: center;
     border-radius: 3px;
+  }
+}
+
+@media (max-width: 550px) {
+  .component-layout {
+    width: 350px;
+    height: 250px;
   }
 }

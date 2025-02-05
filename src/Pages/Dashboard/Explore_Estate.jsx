@@ -1,18 +1,19 @@
 import React, { useState } from "react";
 import "./Page_Layout.css";
 import { useQuery } from "@tanstack/react-query";
+import { LuLoaderCircle } from "react-icons/lu";
 
 export const Explore_Estate = () => {
   const fetchData = async () => {
     try {
-      const res = await fetch("http://127.0.0.1:8000/user", {
+      const res = await fetch("http://127.0.0.1:8000/transactions", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
         },
       });
       if (!res.ok) {
-        const error = await res.json();
+        const { error } = await res.json();
         throw new Error(error.message || "Something went wrong");
       }
       return res.json();
@@ -33,11 +34,11 @@ export const Explore_Estate = () => {
           <h1>Explore Estate</h1>
         </div>
         <div className="dashboard-components">
-          {isLoading && <p>Loading data...</p>}
+          {isLoading && <LuLoaderCircle className="loader center" size={32} />}
           {error && <p>{error.message}</p>}
           {console.log(data)}
           {!isLoading &&
-            data.map((user, id) => (
+            data?.map((user, id) => (
               <div key={user.id}>
                 <p>{user.username}</p>
                 <p>{user.password}</p>

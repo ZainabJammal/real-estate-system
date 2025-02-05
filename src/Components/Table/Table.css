@@ -1,9 +1,9 @@
 .table-card {
-  max-height: 360px;
-  width: 100%;
+  max-height: 100%;
+  width: 90%;
   overflow-y: auto;
   border: 1px solid;
-  margin: 5px 0;
+  margin: 5px;
 }
 
 table {

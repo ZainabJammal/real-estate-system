@@ -5,6 +5,8 @@ import Table from "../../Components/Table/Table";
 import PieChart from "../../Components/PieChart/PieChartComponent";
 import LineChartComponent from "../../Components/LineChart/LineChartComponent";
 import Name from "../../Components/NameCard/Name";
+import { Bar } from "recharts";
+import BarChart from "../../Components/BarChart/BarChartComponent";
 
 function Dashboard() {
   return (
@@ -32,7 +34,7 @@ function Dashboard() {
             Component={LineChartComponent}
           />
 
-          <Custom />
+          <Custom Component={BarChart} />
           <Custom />
           <Custom />
         </div>

@@ -11,9 +11,7 @@ function Name({ isMinimized = false }) {
         ""
       ) : (
         <li>
-          <h1>
-            <i>Real Estate</i>
-          </h1>
+          <h1>Real Estate</h1>
         </li>
       )}
     </ul>

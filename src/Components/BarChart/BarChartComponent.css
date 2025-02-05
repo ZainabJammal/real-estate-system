@@ -1,13 +1,12 @@
-.linechart-content {
-  margin: 0 auto;
-  width: 550px;
-  height: 400px;
+.barchart-content {
   display: block;
-  align-self: center;
+  margin: 0;
+  width: 600px;
+  height: 400px;
 }
 
 @media (max-width: 500px) {
-  .linechart-content {
+  .barchart-content {
     width: 350px;
     height: 233px;
     margin: 0;
