@@ -13,7 +13,7 @@ import { useQuery } from "@tanstack/react-query";
 function Dashboard() {
   const fetchNumLists = async () => {
     try {
-      const res = await fetch("http://127.0.0.1:5000/list_num", {
+      const res = await fetch("http://127.0.0.1:8000/list_num", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -34,7 +34,7 @@ function Dashboard() {
 
   const fetchMaxPrice = async () => {
     try {
-      const res = await fetch("http://127.0.0.1:5000/max_price", {
+      const res = await fetch("http://127.0.0.1:8000/max_price", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -55,7 +55,7 @@ function Dashboard() {
 
   const fetchMinPrice = async () => {
     try {
-      const res = await fetch("http://127.0.0.1:5000/min_price", {
+      const res = await fetch("http://127.0.0.1:8000/min_price", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -131,6 +131,7 @@ function Dashboard() {
               title="Sales per Month"
               desc="This line chart shows the increasing amount of sales (in $) per each month"
               Component={LineChartComponent}
+              data={null}
             />
 
             <Custom
@@ -143,6 +144,7 @@ function Dashboard() {
               title="Sales per Month"
               desc="This line chart shows the increasing amount of sales (in $) per each month"
               Component={LineChartComponent}
+              data={null}
             />
             <Custom Component={BarChart} />
           </div>

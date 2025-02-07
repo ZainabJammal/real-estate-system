@@ -7,8 +7,8 @@ const menu_paths = [
     icon: FaHome,
   },
   {
-    name: "Explore Estates",
-    path: "/explore_estates",
+    name: "Transactions",
+    path: "/transactions",
     icon: FaList,
   },
   {

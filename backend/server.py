@@ -32,7 +32,7 @@ async def register():
 async def transactions():
     try:
         res = await supabase.from_("transactions").select().execute()
-        return jsonify(res.data), 200
+        return jsonify(res.data[0]), 200
     except Exception as e:
         return jsonify({"Error":str(e)}), 400
 

@@ -27,26 +27,28 @@ function Menu({ isMinimized = false }) {
   }, [path]);
 
   return (
-    <ul className={`item-list ${isMinimized ? "minimized" : ""}`}>
-      {menu_paths.map((path, _idx) => (
-        <Link
-          to={path.path}
-          key={_idx}
-          style={{ textDecoration: "none", color: "inherit" }}
-        >
-          <li
-            className={`item ${isMinimized ? "minimized" : ""} ${
-              activePage === path.path ? "clicked" : ""
-            }`}
-            aria-label={path.name}
-            onClick={() => handleClick(path.path)}
+    <div className="section">
+      <ul className={`item-list ${isMinimized ? "minimized" : ""}`}>
+        {menu_paths.map((path, _idx) => (
+          <Link
+            to={path.path}
+            key={_idx}
+            style={{ textDecoration: "none", color: "inherit" }}
           >
-            <path.icon size={"20px"} className="menu-icon" />
-            {!isMinimized && <span className="menu-text">{path.name}</span>}
-          </li>
-        </Link>
-      ))}
-    </ul>
+            <li
+              className={`item ${isMinimized ? "minimized" : ""} ${
+                activePage === path.path ? "clicked" : ""
+              }`}
+              aria-label={path.name}
+              onClick={() => handleClick(path.path)}
+            >
+              <path.icon size={"20px"} className="menu-icon" />
+              {!isMinimized && <span className="menu-text">{path.name}</span>}
+            </li>
+          </Link>
+        ))}
+      </ul>
+    </div>
   );
 }
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Custom.css";
 
-function Custom({ title, desc, Component, no_inflate = false }) {
+function Custom({ title, desc, Component, no_inflate = false, data }) {
   return (
     <div className={no_inflate ? "card-layout no-inflate" : "card-layout"}>
       <div className="card-content">
@@ -12,7 +12,7 @@ function Custom({ title, desc, Component, no_inflate = false }) {
         <div className="card-main">
           <div className="component-layout">
             {Component ? (
-              <Component />
+              <Component data={data} />
             ) : (
               <img src="../src/images/2.png" alt="chart.png" />
             )}
