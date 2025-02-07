@@ -19,6 +19,25 @@ const BarChartComponent = () => {
     { name: "c", value: 1 },
     { name: "d", value: 3 },
     { name: "e", value: 7 },
+    { name: "a", value: 12 },
+    { name: "b", value: 10 },
+    { name: "c", value: 1 },
+    { name: "d", value: 3 },
+    { name: "e", value: 7 },
+    { name: "a", value: 12 },
+    { name: "b", value: 10 },
+    { name: "c", value: 1 },
+    { name: "d", value: 3 },
+    { name: "e", value: 7 },
+    { name: "a", value: 12 },
+    { name: "b", value: 10 },
+    { name: "c", value: 1 },
+    { name: "d", value: 3 },
+    { name: "e", value: 7 },
+    { name: "a", value: 12 },
+    { name: "b", value: 10 },
+    { name: "c", value: 1 },
+    { name: "d", value: 3 },
   ];
 
   return (
@@ -26,7 +45,7 @@ const BarChartComponent = () => {
       <ResponsiveContainer width={"100%"} height={"100%"}>
         <BarChart
           data={data}
-          margin={{ top: 20, right: 20, left: 20, bottom: 20 }}
+          margin={{ top: 20, right: 20, left: 0, bottom: 0 }}
         >
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />

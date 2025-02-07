@@ -20,23 +20,21 @@ function LineChartComponent() {
     { months: "Jun", Agent1: 35, Agent2: 27 },
   ];
   return (
-    <div className="linechart-content">
-      <ResponsiveContainer width={"100%"} height={"100%"}>
-        <LineChart
-          data={data}
-          margin={{ top: 20, right: 30, left: 10, bottom: 20 }}
-        >
-          <CartesianGrid strokeDasharray="1 1" />
-          <XAxis dataKey="months" />
-          <YAxis />
-          <Tooltip />
-          <Legend />
+    <ResponsiveContainer width={"100%"} height={"100%"}>
+      <LineChart
+        data={data}
+        margin={{ top: 10, right: 50, left: 0, bottom: 10 }}
+      >
+        <CartesianGrid strokeDasharray="1 1" />
+        <XAxis dataKey="months" />
+        <YAxis />
+        <Tooltip />
+        <Legend />
 
-          <Line type="monotone" dataKey="Agent1" stroke="#82ca9d" />
-          <Line type="monotone" dataKey="Agent2" stroke="#da829d" />
-        </LineChart>
-      </ResponsiveContainer>
-    </div>
+        <Line type="monotone" dataKey="Agent1" stroke="#82ca9d" />
+        <Line type="monotone" dataKey="Agent2" stroke="#da829d" />
+      </LineChart>
+    </ResponsiveContainer>
   );
 }
 

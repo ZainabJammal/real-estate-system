@@ -1,9 +1,17 @@
 .linechart-content {
   margin: 0 auto;
-  width: 550px;
-  height: 400px;
+  width: 500px;
+  height: 350px;
   display: block;
   align-self: center;
+}
+
+@media (max-width: 960px) {
+  .linechart-content {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 500px) {

@@ -41,7 +41,7 @@ function PieChartComponent() {
             nameKey="name"
             cx="50%"
             cy="50%"
-            outerRadius={windowWidth < 500 ? 70 : 125}
+            outerRadius={windowWidth < 500 ? 70 : 110}
             fill="#8884d8"
           />
           <Pie
@@ -50,8 +50,8 @@ function PieChartComponent() {
             nameKey="name"
             cx="50%"
             cy="50%"
-            innerRadius={windowWidth < 500 ? 70 : 125}
-            outerRadius={windowWidth < 500 ? 90 : 160}
+            innerRadius={windowWidth < 500 ? 70 : 110}
+            outerRadius={windowWidth < 500 ? 90 : 130}
             fill="#84d888"
             label
           />

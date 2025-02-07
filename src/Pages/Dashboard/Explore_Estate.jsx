@@ -34,7 +34,7 @@ export const Explore_Estate = () => {
           <h1>Explore Estate</h1>
         </div>
         <div className="dashboard-components">
-          {isLoading && <LuLoaderCircle className="loader center" size={32} />}
+          {isLoading && <LuLoaderCircle className="loader center" size={25} />}
           {error && <p>{error.message}</p>}
           {console.log(data)}
           {!isLoading &&

@@ -87,13 +87,6 @@ function Table() {
       Address: "Address_1",
       Price: 50000,
     },
-    {
-      FirstName: "Mostafa",
-      LastName: "Dawi",
-      Phone: 12345678,
-      Address: "Address_1",
-      Price: 50000,
-    },
   ];
   return (
     <div className="table-card">

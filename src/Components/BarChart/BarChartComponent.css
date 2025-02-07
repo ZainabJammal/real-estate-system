@@ -2,13 +2,13 @@
   display: block;
   margin: 0;
   width: 600px;
-  height: 400px;
+  height: 450px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
   .barchart-content {
     width: 350px;
-    height: 233px;
+    height: 220px;
     margin: 0;
     padding: 10px;
   }
