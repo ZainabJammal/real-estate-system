@@ -5,6 +5,7 @@ import { LuLoaderCircle } from "react-icons/lu";
 import "../../Components/Table/Table.css";
 import Custom from "../../Components/CustomCard/Custom";
 import LineChartComponent from "../../Components/LineChart/LineChartComponent";
+import Table from "../../Components/Table/Table";
 
 export const Transactions = () => {
   const fetchData = async () => {
@@ -17,8 +18,7 @@ export const Transactions = () => {
       });
       const data = await res.json();
       if (!res.ok) {
-        const { error } = await res.json();
-        throw new Error(error.message || "Something went wrong");
+        throw new Error(res.error.message || "Something went wrong");
       }
       return data;
     } catch (error) {
@@ -31,6 +31,9 @@ export const Transactions = () => {
     queryKey: ["myData"],
     queryFn: fetchData,
   });
+
+  console.log(data);
+
   return (
     <div className="dashboard-layout">
       <div className="dashboard-content">
@@ -41,30 +44,19 @@ export const Transactions = () => {
           {console.log(data)}
         </div>
         <div className="section">
-          <h1>Transactions</h1>
-          <div className="dashboard-components">
-            <div className="table-card">
-              <table>
-                <thead>
-                  <th>Transaction ID</th>
-                  <th>Transaction Value</th>
-                  <th>Date</th>
-                </thead>
-                <tbody>
-                  {!isLoading &&
-                    data?.map((trans, id) => (
-                      <tr key={trans.id}>
-                        <td>{trans?.transaction_number}</td>
-                        <td>{trans?.transaction_value}</td>
-                        <td>{trans?.date}</td>
-                      </tr>
-                    ))}
-                </tbody>
-              </table>
-            </div>
+          <div className="dashboard-components grid-1">
+            <Custom
+              title={"Transactions made in real estates in Lebanon (2011-2016)"}
+              desc={
+                "This table represents the distribution of transactions per month/year across different regions"
+              }
+              Component={Table}
+              data={data}
+            />
+
             <Custom
               title={"Transactions per year"}
-              desc={"Variation of transactions as the years increase"}
+              desc={"Variation of transactions as the years pass"}
               Component={LineChartComponent}
               data={data}
             />

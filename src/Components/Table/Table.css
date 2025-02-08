@@ -9,7 +9,7 @@
 
 table {
   width: 100%;
-  padding: 20px 0;
+  padding: 20px;
   border-collapse: collapse;
   th {
     background-color: var(--primary-deep-blue);

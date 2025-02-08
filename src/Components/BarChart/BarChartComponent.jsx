@@ -12,50 +12,59 @@ import {
   YAxis,
 } from "recharts";
 
-const BarChartComponent = () => {
-  const data = [
-    { name: "a", value: 12 },
-    { name: "b", value: 10 },
-    { name: "c", value: 1 },
-    { name: "d", value: 3 },
-    { name: "e", value: 7 },
-    { name: "a", value: 12 },
-    { name: "b", value: 10 },
-    { name: "c", value: 1 },
-    { name: "d", value: 3 },
-    { name: "e", value: 7 },
-    { name: "a", value: 12 },
-    { name: "b", value: 10 },
-    { name: "c", value: 1 },
-    { name: "d", value: 3 },
-    { name: "e", value: 7 },
-    { name: "a", value: 12 },
-    { name: "b", value: 10 },
-    { name: "c", value: 1 },
-    { name: "d", value: 3 },
-    { name: "e", value: 7 },
-    { name: "a", value: 12 },
-    { name: "b", value: 10 },
-    { name: "c", value: 1 },
-    { name: "d", value: 3 },
-  ];
+const BarChartComponent = ({ data }) => {
+  // const data = [
+  //   { name: "a", value: 12 },
+  //   { name: "b", value: 10 },
+  //   { name: "c", value: 1 },
+  //   { name: "d", value: 3 },
+  //   { name: "e", value: 7 },
+  //   { name: "a", value: 12 },
+  //   { name: "b", value: 10 },
+  //   { name: "c", value: 1 },
+  //   { name: "d", value: 3 },
+  //   { name: "e", value: 7 },
+  //   { name: "a", value: 12 },
+  //   { name: "b", value: 10 },
+  //   { name: "c", value: 1 },
+  //   { name: "d", value: 3 },
+  //   { name: "e", value: 7 },
+  //   { name: "a", value: 12 },
+  //   { name: "b", value: 10 },
+  //   { name: "c", value: 1 },
+  //   { name: "d", value: 3 },
+  //   { name: "e", value: 7 },
+  //   { name: "a", value: 12 },
+  //   { name: "b", value: 10 },
+  //   { name: "c", value: 1 },
+  //   { name: "d", value: 3 },
+  // ];
+
+  const chartData = data?.map((province) => ({
+    name: province.province,
+    max_price: province.max_price_$,
+    min_price: province.min_price_$,
+    avg_price: province.avg_price_$,
+  }));
 
   return (
-    <div className="barchart-content">
-      <ResponsiveContainer width={"100%"} height={"100%"}>
+    <>
+      <ResponsiveContainer width={"100%"} height={400}>
         <BarChart
-          data={data}
+          data={chartData}
           margin={{ top: 20, right: 20, left: 0, bottom: 0 }}
         >
-          <CartesianGrid strokeDasharray="3 3" />
+          <CartesianGrid strokeDasharray="1 1" />
           <XAxis dataKey="name" />
           <YAxis />
           <Tooltip />
           <Legend />
-          <Bar dataKey="value" fill="#8884d8" />
+          <Bar dataKey="max_price" fill="#a83232" />
+          <Bar dataKey="avg_price" fill="#32a832" />
+          <Bar dataKey="min_price" fill="#3232d8" />
         </BarChart>
       </ResponsiveContainer>
-    </div>
+    </>
   );
 };
 

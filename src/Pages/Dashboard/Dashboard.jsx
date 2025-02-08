@@ -9,6 +9,7 @@ import { Bar } from "recharts";
 import BarChart from "../../Components/BarChart/BarChartComponent";
 import MainCard from "../../Components/MainCard/MainCard";
 import { useQuery } from "@tanstack/react-query";
+import { LuLoaderCircle } from "react-icons/lu";
 
 function Dashboard() {
   const fetchNumLists = async () => {
@@ -74,6 +75,66 @@ function Dashboard() {
     }
   };
 
+  const fetchAllLists = async () => {
+    try {
+      const res = await fetch("http://127.0.0.1:8000/all_lists", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      const data = await res.json();
+      if (!res.ok) {
+        throw new Error(res.error.message || "Something went wrong");
+      }
+
+      return data;
+    } catch (error) {
+      console.error("Cannot Fetch: ", error);
+      throw error;
+    }
+  };
+
+  const fetchProvLists = async () => {
+    try {
+      const res = await fetch("http://127.0.0.1:8000/provinces", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      const data = await res.json();
+      if (!res.ok) {
+        throw new Error(res.error.message || "Something went wrong");
+      }
+
+      return data;
+    } catch (error) {
+      console.error("Cannot Fetch: ", error);
+      throw error;
+    }
+  };
+
+  const {
+    data: province,
+    error: error_prov,
+    isLoading: isLoading_prov,
+  } = useQuery({
+    queryKey: ["myProvData"],
+    queryFn: fetchProvLists,
+  });
+
+  const {
+    data: all,
+    error: error_all,
+    isLoading: isLoading_all,
+  } = useQuery({
+    queryKey: ["myAllData"],
+    queryFn: fetchAllLists,
+  });
+
   const {
     data: sum,
     error: error_sum,
@@ -101,6 +162,16 @@ function Dashboard() {
     queryFn: fetchMinPrice,
   });
 
+  const max_listing_count = all?.reduce(
+    ([max, location], district) =>
+      district.listings_count > max
+        ? [district.listings_count, district.district]
+        : [max, location],
+    [0, ""]
+  );
+
+  console.log(all);
+
   return (
     <div className="dashboard-layout">
       <div className="dashboard-content">
@@ -126,53 +197,48 @@ function Dashboard() {
         </div>
         <div className="section">
           <h1>Stats</h1>
-          <div className="dashboard-components">
-            <Custom
-              title="Sales per Month"
-              desc="This line chart shows the increasing amount of sales (in $) per each month"
-              Component={LineChartComponent}
-              data={null}
-            />
+          <div className="dashboard-components grid-3">
+            {isLoading_all && <LuLoaderCircle className="loader" size={30} />}
+            {!isLoading_all && (
+              <Custom
+                title="Number of Highly Demanded Estates per District"
+                desc={`Hottest area in Lebanon would be ${
+                  !isLoading_all && max_listing_count[1]
+                }, having ${
+                  !isLoading_all && max_listing_count[0]
+                } estates available`}
+                Component={PieChart}
+                data={all}
+              />
+            )}
 
             <Custom
-              title="Percentage of Highly Demanded Estates"
-              desc="This chart represents the number of highly demanded estates according to locations"
-              Component={PieChart}
+              title="Prices/Provinces"
+              desc={
+                "This chart represent the average, max and min prices of estates per province"
+              }
+              Component={BarChart}
+              data={province}
             />
-
             <Custom
-              title="Sales per Month"
-              desc="This line chart shows the increasing amount of sales (in $) per each month"
-              Component={LineChartComponent}
-              data={null}
+              title="Prices/Districts"
+              desc={
+                "This chart represent the average, max and min prices of estates per district"
+              }
+              Component={BarChart}
+              data={all}
             />
-            <Custom Component={BarChart} />
           </div>
         </div>
         <div className="title">
           <h1>Tables</h1>
         </div>
-        <div className="dashboard-components">
+        <div className="dashboard-components grid-1">
           <Custom
-            type="table"
-            title="Table of availabe estates"
+            title="District Estates"
+            desc="Table of availabe estates per districts"
             Component={Table}
-          />
-          <Custom />
-          <Custom />
-          <Custom
-            title="Sales per Month"
-            desc="This line chart shows the increasing amount of sales (in $) per each month"
-            Component={LineChartComponent}
-          />
-          <Custom />
-          <Custom />
-
-          <Custom
-            type="table"
-            title="Table of availabe estates"
-            Component={Table}
-            no_inflate
+            data={all}
           />
         </div>
       </div>

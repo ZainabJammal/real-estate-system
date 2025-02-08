@@ -31,8 +31,9 @@ async def register():
 @app.route("/transactions", methods=["GET"])
 async def transactions():
     try:
-        res = await supabase.from_("transactions").select().execute()
-        return jsonify(res.data[0]), 200
+        res = await supabase.from_("transactions").select("*").execute()
+        print(res.data)
+        return jsonify(res.data), 200
     except Exception as e:
         return jsonify({"Error":str(e)}), 400
 
@@ -40,8 +41,8 @@ async def transactions():
 @app.route("/max_price", methods=["GET"])
 async def get_max_prices():
     try:
-        res = await supabase.from_("district_prices").select("city, max_price_$").order("max_price_$", desc=True).limit(1).execute()
-        return jsonify({"title": "Max Price", "num": res.data[0]["max_price_$"], "region": res.data[0]["city"]}), 200
+        res = await supabase.from_("district_prices").select("district, max_price_$").order("max_price_$", desc=True).limit(1).execute()
+        return jsonify({"title": "Max Price", "num": res.data[0]["max_price_$"], "region": res.data[0]["district"]}), 200
     except Exception as e:
         return jsonify({"Error":str(e)}), 400
     
@@ -49,8 +50,8 @@ async def get_max_prices():
 @app.route("/min_price", methods=["GET"])
 async def get_min_prices():
     try:
-        res = await supabase.from_("district_prices").select("city, min_price_$").order("min_price_$", desc=False).limit(1).execute()
-        return jsonify({"title": "Min Price", "num": res.data[0]["min_price_$"], "region": res.data[0]["city"]}), 200
+        res = await supabase.from_("district_prices").select("district, min_price_$").order("min_price_$", desc=False).limit(1).execute()
+        return jsonify({"title": "Min Price", "num": res.data[0]["min_price_$"], "region": res.data[0]["district"]}), 200
     except Exception as e:
         return jsonify({"Error":str(e)}), 400
     
@@ -61,6 +62,26 @@ async def get_list_num():
         res = await supabase.from_("district_prices").select("listings_count.sum()").execute()
         print(res.data)
         return jsonify({"title": "Number of Lists", "num": res.data[0]["sum"], "region": "All regions"}), 200
+    except Exception as e:
+        return jsonify({"Error":str(e)}), 400
+    
+# GET users to/from the server
+@app.route("/all_lists", methods=["GET"])
+async def get_all_lists():
+    try:
+        res = await supabase.from_("district_prices").select("district, listings_count, avg_price_$").limit(100).execute()
+        print(res.data)
+        return jsonify(res.data), 200
+    except Exception as e:
+        return jsonify({"Error":str(e)}), 400
+    
+# GET users to/from the server
+@app.route("/provinces", methods=["GET"])
+async def get_all_provinces():
+    try:
+        res = await supabase.from_("provinces").select().execute()
+        print(res.data)
+        return jsonify(res.data), 200
     except Exception as e:
         return jsonify({"Error":str(e)}), 400
 

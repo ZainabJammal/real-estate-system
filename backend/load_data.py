@@ -5,7 +5,9 @@ import asyncio
 # Open the csv files and save it into a DataFrame
 # df = pd.read_csv("../Transactions/merged_all_cities.csv")
 
-df = pd.read_csv("../sorting/buy/sorted_data/city_buysummary.csv")
+# df = pd.read_csv("../sorting/buy/sorted_data/city_buysummary.csv")
+
+df = pd.read_csv("../sorting/buy/sorted_data/province_buysummary.csv")
 
 supabase = None
 
@@ -35,17 +37,34 @@ async def establish_connection():
         
 #     print("Data inserted successfully!")
 
-async def insert_sorted_from_csv():
+# async def insert_districts_from_csv():
+#     data = None
+#     for i in range(len(df["City"])):
+#         object = { "city": df["City"][i],
+#                     "avg_price in $": int(df["Avg Price $"][i]),
+#                     "median_price in $": int(df["Median Price $"][i]),
+#                     "max_price in $": int(df["Max Price $"][i]),
+#                     "min_price in $": int(df["Min Price $"][i]),
+#                     "listings_count": int(df["Listings Count"][i]), }
+#         try:
+#             data = await supabase.from_("city_prices").upsert(object).execute()
+#             print(f"Inserted row {i}")
+#         except Exception as e:
+#             print(f"Error occured: {e}")
+#             return
+#     print("Inserted Data Successfully!")
+
+async def insert_province_from_csv():
     data = None
-    for i in range(len(df["City"])):
-        object = { "city": df["City"][i],
-                    "avg_price in $": int(df["Avg Price $"][i]),
-                    "median_price in $": int(df["Median Price $"][i]),
-                    "max_price in $": int(df["Max Price $"][i]),
-                    "min_price in $": int(df["Min Price $"][i]),
+    for i in range(len(df["Province"])):
+        object = { "province": df["Province"][i],
+                    "avg_price_$": int(df["Avg Price $"][i]),
+                    "median_price_$": int(df["Median Price $"][i]),
+                    "max_price_$": int(df["Max Price $"][i]),
+                    "min_price_$": int(df["Min Price $"][i]),
                     "listings_count": int(df["Listings Count"][i]), }
         try:
-            data = await supabase.from_("city_prices").upsert(object).execute()
+            data = await supabase.from_("provinces").upsert(object).execute()
             print(f"Inserted row {i}")
         except Exception as e:
             print(f"Error occured: {e}")
@@ -54,7 +73,7 @@ async def insert_sorted_from_csv():
 
 async def main():
     print("Main function is running")
-    results = await asyncio.gather(establish_connection(), insert_sorted_from_csv())
+    results = await asyncio.gather(establish_connection(), insert_province_from_csv())
     print("Main function is done")
     print(results)
 

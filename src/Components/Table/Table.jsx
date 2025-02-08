@@ -1,118 +1,29 @@
 import React from "react";
 import "./Table.css";
 
-function Table() {
-  const dummy = [
-    {
-      FirstName: "Mostafa",
-      LastName: "Dawi",
-      Phone: 12345678,
-      Address: "Address_1",
-      Price: 50000,
-    },
-    {
-      FirstName: "Mostafa",
-      LastName: "Dawi",
-      Phone: 12345678,
-      Address: "Address_1",
-      Price: 50000,
-    },
-    {
-      FirstName: "Mostafa",
-      LastName: "Dawi",
-      Phone: 12345678,
-      Address: "Address_1",
-      Price: 50000,
-    },
-    {
-      FirstName: "Mostafa",
-      LastName: "Dawi",
-      Phone: 12345678,
-      Address: "Address_1",
-      Price: 50000,
-    },
-    {
-      FirstName: "Mostafa",
-      LastName: "Dawi",
-      Phone: 12345678,
-      Address: "Address_1",
-      Price: 50000,
-    },
-    {
-      FirstName: "Mostafa",
-      LastName: "Dawi",
-      Phone: 12345678,
-      Address: "Address_1",
-      Price: 50000,
-    },
-    {
-      FirstName: "Mostafa",
-      LastName: "Dawi",
-      Phone: 12345678,
-      Address: "Address_1",
-      Price: 50000,
-    },
-    {
-      FirstName: "Mostafa",
-      LastName: "Dawi",
-      Phone: 12345678,
-      Address: "Address_1",
-      Price: 50000,
-    },
-    {
-      FirstName: "Mostafa",
-      LastName: "Dawi",
-      Phone: 12345678,
-      Address: "Address_1",
-      Price: 50000,
-    },
-    {
-      FirstName: "Mostafa",
-      LastName: "Dawi",
-      Phone: 12345678,
-      Address: "Address_1",
-      Price: 50000,
-    },
-    {
-      FirstName: "Mostafa",
-      LastName: "Dawi",
-      Phone: 12345678,
-      Address: "Address_1",
-      Price: 50000,
-    },
-    {
-      FirstName: "Mostafa",
-      LastName: "Dawi",
-      Phone: 12345678,
-      Address: "Address_1",
-      Price: 50000,
-    },
-  ];
+function Table({ data }) {
+  if (!data || data.length === 0) return <p>No data available</p>;
+
+  // Extract column names dynamically
+  const columns = Object.keys(data[0]);
   return (
     <div className="table-card">
-      <table>
+      <table border="1">
         <thead>
           <tr>
-            <th>FirstName</th>
-            <th>LastName</th>
-            <th>Phone</th>
-            <th>Address</th>
-            <th>Price</th>
+            {columns.map((col) => (
+              <th key={col}>{col}</th> // Render column names dynamically
+            ))}
           </tr>
         </thead>
-
         <tbody>
-          {dummy?.map((row, _idx) => {
-            return (
-              <tr key={_idx}>
-                <td>{row.FirstName}</td>
-                <td>{row.LastName}</td>
-                <td>{row.Phone}</td>
-                <td>{row.Address}</td>
-                <td>{row.Price}$</td>
-              </tr>
-            );
-          })}
+          {data.map((row, rowIndex) => (
+            <tr key={rowIndex}>
+              {columns.map((col) => (
+                <td key={col}>{row[col]}</td> // Render cell values dynamically
+              ))}
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>
