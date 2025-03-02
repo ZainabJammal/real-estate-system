@@ -1,15 +1,14 @@
 .table-card {
-  max-height: 100%;
-  height: 450px;
+  height: 400px;
   width: 100%;
   overflow-y: auto;
+  overflow-x: auto;
   border: 1px solid;
-  margin: 5px;
+  max-width: 100%;
 }
 
 table {
   width: 100%;
-  padding: 20px;
   border-collapse: collapse;
   th {
     background-color: var(--primary-deep-blue);
@@ -21,11 +20,5 @@ table {
     padding: 10px 30px;
     text-align: center;
     border-bottom: 1px solid var(--primary-deep-blue);
-  }
-}
-
-@media (max-width: 650px) {
-  .table-card {
-    width: 96%;
   }
 }

@@ -25,9 +25,10 @@
 
 .dashboard-components {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr; */
   gap: 20px;
-  padding: 25px;
+  /* padding: 25px; */
+  margin: 10px 25px;
   position: relative;
 }
 
@@ -61,14 +62,12 @@
   }
 }
 
-.section .main-cards {
+.main-cards {
   max-width: 100%;
-  /* width: 100%; */
   padding: 10px 35px 0px 15px;
   display: grid;
   gap: 20px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  /* overflow: hidden;/ */
   box-sizing: border-box;
 
   .card:nth-child(1) {
@@ -102,7 +101,7 @@
 }
 
 @media (max-width: 1024px) {
-  .section .main-cards {
+  .main-cards {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
   }

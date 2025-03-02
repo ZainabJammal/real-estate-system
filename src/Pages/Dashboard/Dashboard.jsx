@@ -10,6 +10,7 @@ import BarChart from "../../Components/BarChart/BarChartComponent";
 import MainCard from "../../Components/MainCard/MainCard";
 import { useQuery } from "@tanstack/react-query";
 import { LuLoaderCircle } from "react-icons/lu";
+import MapComponent from "../../Components/Map/MapComponent";
 
 function Dashboard() {
   const fetchNumLists = async () => {
@@ -171,6 +172,7 @@ function Dashboard() {
   );
 
   console.log(all);
+  console.log(province);
 
   return (
     <div className="dashboard-layout">
@@ -197,7 +199,7 @@ function Dashboard() {
         </div>
         <div className="section">
           <h1>Stats</h1>
-          <div className="dashboard-components grid-3">
+          <div className="dashboard-components grid-2">
             {isLoading_all && <LuLoaderCircle className="loader" size={30} />}
             {!isLoading_all && (
               <Custom
@@ -213,15 +215,22 @@ function Dashboard() {
             )}
 
             <Custom
-              title="Prices/Provinces"
+              title="Hotest areas (Map)"
+              desc={"Coming soon..."}
+              Component={MapComponent}
+            />
+
+            <Custom
+              title="Prices/Provinces in $"
               desc={
                 "This chart represent the average, max and min prices of estates per province"
               }
               Component={BarChart}
               data={province}
             />
+
             <Custom
-              title="Prices/Districts"
+              title="Prices/Districts in $"
               desc={
                 "This chart represent the average, max and min prices of estates per district"
               }
@@ -233,13 +242,15 @@ function Dashboard() {
         <div className="title">
           <h1>Tables</h1>
         </div>
-        <div className="dashboard-components grid-1">
-          <Custom
-            title="District Estates"
-            desc="Table of availabe estates per districts"
-            Component={Table}
-            data={all}
-          />
+        <div className="section">
+          <div className="dashboard-components grid-1">
+            <Custom
+              title="District Estates"
+              desc="Table of availabe estates per districts"
+              Component={Table}
+              data={all}
+            />
+          </div>
         </div>
       </div>
     </div>

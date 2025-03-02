@@ -4,8 +4,8 @@ import "./Table.css";
 function Table({ data }) {
   if (!data || data.length === 0) return <p>No data available</p>;
 
-  // Extract column names dynamically
-  const columns = Object.keys(data[0]);
+  const columns = Object.getOwnPropertyNames(data[0]);
+
   return (
     <div className="table-card">
       <table border="1">

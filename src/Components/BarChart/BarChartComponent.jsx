@@ -40,11 +40,11 @@ const BarChartComponent = ({ data }) => {
   //   { name: "d", value: 3 },
   // ];
 
-  const chartData = data?.map((province) => ({
-    name: province.province,
-    max_price: province.max_price_$,
-    min_price: province.min_price_$,
-    avg_price: province.avg_price_$,
+  const chartData = data?.map((prop) => ({
+    name: prop?.province ? prop?.province : prop?.district,
+    max_price: prop?.max_price_$,
+    min_price: prop?.min_price_$,
+    avg_price: prop?.avg_price_$,
   }));
 
   return (
@@ -52,7 +52,7 @@ const BarChartComponent = ({ data }) => {
       <ResponsiveContainer width={"100%"} height={400}>
         <BarChart
           data={chartData}
-          margin={{ top: 20, right: 20, left: 0, bottom: 0 }}
+          margin={{ top: 20, right: 20, left: 20, bottom: 0 }}
         >
           <CartesianGrid strokeDasharray="1 1" />
           <XAxis dataKey="name" />

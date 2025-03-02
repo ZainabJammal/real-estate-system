@@ -1,4 +1,5 @@
-from quart import Quart, request, jsonify
+import json
+from quart import Quart, Response, request, jsonify
 from quart_cors import cors
 from db_connect import create_supabase
 
@@ -42,7 +43,7 @@ async def transactions():
 async def get_max_prices():
     try:
         res = await supabase.from_("district_prices").select("district, max_price_$").order("max_price_$", desc=True).limit(1).execute()
-        return jsonify({"title": "Max Price", "num": res.data[0]["max_price_$"], "region": res.data[0]["district"]}), 200
+        return jsonify({"title": "Max Price", "num": res.data[0]["max_price_$"]/10, "region": res.data[0]["district"]}), 200
     except Exception as e:
         return jsonify({"Error":str(e)}), 400
     
@@ -69,9 +70,9 @@ async def get_list_num():
 @app.route("/all_lists", methods=["GET"])
 async def get_all_lists():
     try:
-        res = await supabase.from_("district_prices").select("district, listings_count, avg_price_$").limit(100).execute()
-        print(res.data)
-        return jsonify(res.data), 200
+        res = await supabase.from_("district_prices").select("id, district, avg_price_$, max_price_$, min_price_$, listings_count").limit(10).execute()
+        print(res.data[0])
+        return Response(json.dumps(res.data), status=200, mimetype='application/json')
     except Exception as e:
         return jsonify({"Error":str(e)}), 400
     
