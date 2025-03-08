@@ -118,6 +118,27 @@ function Dashboard() {
     }
   };
 
+  const fetchHotAreas = async () => {
+    try {
+      const res = await fetch("http://127.0.0.1:8000/hot_areas", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      const data = await res.json();
+      if (!res.ok) {
+        throw new Error(res.error.message || "Something went wrong");
+      }
+
+      return data;
+    } catch (error) {
+      console.error("Cannot Fetch: ", error);
+      throw error;
+    }
+  };
+
   const {
     data: province,
     error: error_prov,
@@ -163,6 +184,15 @@ function Dashboard() {
     queryFn: fetchMinPrice,
   });
 
+  const {
+    data: areas,
+    error: error_areas,
+    isLoading: isLoading_areas,
+  } = useQuery({
+    queryKey: ["myHotAreasData"],
+    queryFn: fetchHotAreas,
+  });
+
   const max_listing_count = all?.reduce(
     ([max, location], district) =>
       district.listings_count > max
@@ -173,6 +203,7 @@ function Dashboard() {
 
   console.log(all);
   console.log(province);
+  console.log(areas);
 
   return (
     <div className="dashboard-layout">
@@ -199,7 +230,7 @@ function Dashboard() {
         </div>
         <div className="section">
           <h1>Stats</h1>
-          <div className="dashboard-components grid-2">
+          <div className="dashboard-components grid-3">
             {isLoading_all && <LuLoaderCircle className="loader" size={30} />}
             {!isLoading_all && (
               <Custom
@@ -213,12 +244,6 @@ function Dashboard() {
                 data={all}
               />
             )}
-
-            <Custom
-              title="Hotest areas (Map)"
-              desc={"Coming soon..."}
-              Component={MapComponent}
-            />
 
             <Custom
               title="Prices/Provinces in $"
@@ -237,6 +262,20 @@ function Dashboard() {
               Component={BarChart}
               data={all}
             />
+          </div>
+        </div>
+        <div className="section">
+          <h1>Map</h1>
+          <div className="dashboard-components grid-1">
+            {isLoading_areas && <LuLoaderCircle className="loader" size={30} />}
+            {!isLoading_areas && (
+              <Custom
+                title="Hotest areas (Map)"
+                desc={"Coming soon..."}
+                Component={MapComponent}
+                data={areas}
+              />
+            )}
           </div>
         </div>
         <div className="title">

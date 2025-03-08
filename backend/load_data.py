@@ -65,8 +65,8 @@ async def insert_city_from_csv():
                     "max_price_$": int(df["Max Price $"][i]),
                     "min_price_$": int(df["Min Price $"][i]),
                     "listings_count": int(df["Listings Count"][i]),
-                    "latitude" : df["Latitude"],
-                    "longitude": df["Longitude"] }
+                    "latitude" : df["Latitude"][i],
+                    "longitude": df["Longitude"][i] }
         try:
             data = await supabase.from_("city_prices").upsert(object).execute()
             print(f"Inserted row {i}")

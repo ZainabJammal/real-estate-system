@@ -1,18 +1,21 @@
 import React from "react";
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 
-const MapComponent = () => {
+const MapComponent = ({ data }) => {
   return (
-    <MapContainer center={[33.893, 35.5]} zoom={11} style={{ height: "60vh" }}>
+    <MapContainer center={[33.893, 35.5]} zoom={9} style={{ height: "60vh" }}>
       <TileLayer
         // attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      <Marker position={[33.8938, 35.5018]}>
-        <Popup>
-          A pretty CSS3 popup. <br /> Easily customizable.
-        </Popup>
-      </Marker>
+      {console.log(data)}
+      {data?.map((row) => (
+        <Marker position={[row?.latitude, row?.longitude]}>
+          <Popup>
+            District: {row?.city} <br /> Listings: {row?.listings_count}
+          </Popup>
+        </Marker>
+      ))}
     </MapContainer>
   );
 };
