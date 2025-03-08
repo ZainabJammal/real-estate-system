@@ -41,7 +41,13 @@ city_summary[["Avg Rent $/year", "Median Rent $/year", "Max Rent $/year", "Min R
 
 
 province_summary.to_csv("province_rentsummary.csv", index=False)
+
+
 district_summary.to_csv("district_rentsummary.csv", index=False)
+dcoord = pd.read_csv("dcoord.csv")
+district_summary = district_summary.merge(dcoord, on="District", how="left")
+district_summary.to_csv("district_rentsummary.csv", index=False)
+
 city_summary.to_csv("city_rentsummary.csv", index=False)
 
 print("Sorting complete.")
