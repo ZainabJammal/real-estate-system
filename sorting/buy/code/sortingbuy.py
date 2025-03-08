@@ -1,11 +1,13 @@
 import pandas as pd
 
 
-file1 = "cleanrealestatebuy.csv"
-file2 = "cleanjskbuy.csv"
+file1 = "./scraping/realestate/clean_data/cleanrealestatebuy.csv"
+file2 = "./scraping/jsk/clean_data/cleanjskbuy.csv"
+file3 = "./sorting/dcoord.csv"
 
 df1 = pd.read_csv(file1)
 df2 = pd.read_csv(file2)
+df3 = pd.read_csv(file3)
 
 
 df = pd.concat([df1, df2], ignore_index=True)
@@ -38,7 +40,8 @@ province_summary[["Avg Price $", "Median Price $", "Max Price $", "Min Price $",
 
 
 district_summary = df.groupby("District")["Price $"].agg(["mean", "median", "max", "min", "count"]).reset_index()
-district_summary.columns = ["District", "Avg Price $", "Median Price $", "Max Price $", "Min Price $", "Listings Count"]
+district_summary = pd.merge(district_summary, df3, on="District", how="inner")
+district_summary.columns = ["District", "Avg Price $", "Median Price $", "Max Price $", "Min Price $", "Listings Count", "Latitude", "Longitude"]
 district_summary[["Avg Price $", "Median Price $", "Max Price $", "Min Price $", "Listings Count"]] = district_summary[["Avg Price $", "Median Price $", "Max Price $", "Min Price $", "Listings Count"]].astype(int)
 
 
@@ -47,8 +50,8 @@ city.columns = ["City", "Avg Price $", "Median Price $", "Max Price $", "Min Pri
 city[["Avg Price $", "Median Price $", "Max Price $", "Min Price $", "Listings Count"]] = city[["Avg Price $", "Median Price $", "Max Price $", "Min Price $", "Listings Count"]].astype(int)
 
 
-province_summary.to_csv("province_buysummary.csv", index=False)
-district_summary.to_csv("district_buysummary.csv", index=False)
-city.to_csv("city_buysummary.csv", index=False)
+province_summary.to_csv("./sorting/buy/sorted_data/province_buysummary.csv", index=False)
+district_summary.to_csv("./sorting/buy/sorted_data/district_buysummary.csv", index=False)
+city.to_csv("./sorting/buy/sorted_data/city_buysummary.csv", index=False)
 
 print("Sorting complete.")

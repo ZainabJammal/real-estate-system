@@ -19,8 +19,8 @@ def process_real_estate_data(realestate_path, location_data_path, output_csv_pat
     realestate_df['Address'] = realestate_df.apply(
         lambda row: get_address(row['ProvinceID'], row['DistrictID'], row['Community_id']), axis=1
     )
-    
-    
+
+
     for col in realestate_df.columns:
         if realestate_df[col].dtype == 'float64':
             realestate_df[col] = realestate_df[col].astype(object)
