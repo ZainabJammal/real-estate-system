@@ -9,7 +9,8 @@
   height: 100%;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
-  border-bottom: 5px solid var(--secondary-emerald-green);
+  border-bottom: 2px solid var(--secondary-light-navy);
+  border-left: 2px solid var(--secondary-light-navy);
 
   &:hover {
     cursor: pointer;
