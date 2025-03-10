@@ -42,7 +42,7 @@ function PieChartComponent({ data = null }) {
         // width={windowWidth < 650 ? 350 : 600}
         // height={windowWidth < 650 ? 233 : 400}
         width={"100%"}
-        height={400}
+        height={300}
       >
         <PieChart>
           <Pie
@@ -51,7 +51,7 @@ function PieChartComponent({ data = null }) {
             nameKey="district"
             cx="50%"
             cy="50%"
-            outerRadius={windowWidth < 500 ? 70 : 110}
+            outerRadius={windowWidth < 500 ? 50 : 70}
             fill="#8884d8"
           >
             {chartData.map((entry, index) => (
@@ -64,8 +64,8 @@ function PieChartComponent({ data = null }) {
             nameKey="district"
             cx="50%"
             cy="50%"
-            innerRadius={windowWidth < 500 ? 70 : 110}
-            outerRadius={windowWidth < 500 ? 90 : 130}
+            innerRadius={windowWidth < 500 ? 50 : 70}
+            outerRadius={windowWidth < 500 ? 70 : 90}
             fill="#84d888"
             label
           />

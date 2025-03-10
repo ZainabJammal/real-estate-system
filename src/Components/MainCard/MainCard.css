@@ -4,7 +4,7 @@
   background-color: var(--background-light-white-p);
   display: flex;
   flex-direction: column;
-  border-left: 4px solid var(--secondary-light-navy);
+  border-left: 3px solid var(--secondary-light-navy);
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   box-shadow: 0px 1px 8px 1px var(--background-light-gray-p);

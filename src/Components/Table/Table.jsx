@@ -12,13 +12,16 @@ function Table({ data }) {
         <thead>
           <tr>
             {columns.map((col) => (
-              <th key={col}>{col}</th> // Render column names dynamically
+              <th key={col}>{col.toUpperCase()}</th> // Render column names dynamically
             ))}
           </tr>
         </thead>
         <tbody>
           {data.map((row, rowIndex) => (
-            <tr key={rowIndex}>
+            <tr
+              key={rowIndex}
+              className={rowIndex % 2 == 0 ? "lightrow" : "darkrow"}
+            >
               {columns.map((col) => (
                 <td key={col}>{row[col]}</td> // Render cell values dynamically
               ))}

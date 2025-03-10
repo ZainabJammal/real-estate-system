@@ -30,6 +30,7 @@
   /* padding: 25px; */
   margin: 10px 25px;
   position: relative;
+  max-width: 100%;
 }
 
 .section {
@@ -98,12 +99,10 @@
 
 .grid-3 {
   grid-template-columns: 1fr 1fr 1fr;
-  font-size: 0.9;
 }
 
 .grid-4 {
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  font-size: 0.85rem;
 }
 
 @media (max-width: 1024px) {

@@ -1,24 +1,46 @@
 .table-card {
-  height: 400px;
-  width: 100%;
-  overflow-y: auto;
-  overflow-x: auto;
-  border: 1px solid;
-  max-width: 100%;
+  font-size: 0.8rem;
+  width: 100%; /* Ensure the table takes up full width of card-content */
+  overflow: auto; /* Enable scroll if content overflows */
+  margin: 0; /*Remove any extra margins */
 }
 
 table {
-  width: 100%;
+  width: 100%; /* Ensure table takes full width */
   border-collapse: collapse;
-  th {
-    background-color: var(--primary-deep-blue);
-    color: var(--background-light-white-p);
-    padding: 5px;
+  border: none;
+}
+
+th {
+  background-color: var(--primary-deep-blue);
+  color: var(--background-light-white-p);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.darkrow {
+  background-color: rgba(172, 190, 205, 0.401);
+}
+
+.lightrow {
+  background-color: rgba(172, 190, 205, 0.101);
+}
+
+td {
+  padding: 10px 0px;
+  text-align: center;
+  border-bottom: 1px solid var(--background-light-gray-p);
+  border-radius: 5px;
+}
+
+/* Make the table scrollable on small screens */
+@media (max-width: 600px) {
+  .table-card {
+    height: auto; /* Allow the height to adjust on smaller screens */
+    overflow-x: auto; /* Enable horizontal scrolling */
   }
 
-  td {
-    padding: 10px 30px;
-    text-align: center;
-    border-bottom: 1px solid var(--primary-deep-blue);
+  table {
+    min-width: 100%; /* Allow the table to be fully responsive */
   }
 }
