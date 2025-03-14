@@ -3,6 +3,7 @@
   width: 100%; /* Ensure the table takes up full width of card-content */
   overflow: auto; /* Enable scroll if content overflows */
   margin: 0; /*Remove any extra margins */
+  height: 430px;
 }
 
 table {

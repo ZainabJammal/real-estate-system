@@ -1,7 +1,6 @@
 .name {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   box-sizing: border-box;
   padding: 20px 5px 20px 8px;
   margin: 0;
@@ -27,13 +26,4 @@
     position: relative;
   }
   transition: all 0.3s ease-in-out;
-}
-
-.name.minimized h1 {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.name.minimized img {
-  position: relative;
 }

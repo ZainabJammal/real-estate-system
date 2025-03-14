@@ -1,22 +1,11 @@
 .card-layout {
   flex: 1;
   display: flex;
-  border-radius: 3px;
+  border-radius: 5px;
+  border: 1px solid var(--background-light-gray-f);
   background-color: var(--background-light-white-p);
   box-sizing: border-box;
-  box-shadow: 0px 2px 8px 1px var(--background-light-gray-p);
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  border-bottom: 3px solid var(--secondary-light-navy);
-  border-left: 3px solid var(--secondary-light-navy);
-
-  &:hover {
-    cursor: pointer;
-    transform: scale(1.005);
-    box-shadow: 0px 2px 8px 1px var(--background-light-gray-p);
-    box-sizing: border-box;
-    max-width: 100%;
-  }
+  box-shadow: 0px 1px 5px 1px var(--background-light-gray-p);
   transition: transform 0.225s ease-in-out;
 }
 

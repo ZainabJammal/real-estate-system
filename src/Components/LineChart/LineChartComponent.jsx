@@ -101,22 +101,27 @@ function LineChartComponent({ data = null }) {
   // }
   return (
     <>
-      <label>Select City: </label>
-      <select
-        onChange={(e) => setSelectedCity(e.target.value)}
-        value={selectedCity}
-      >
-        {[...new Set(data?.map((t) => t.city))].map((city) => (
-          <option key={city} value={city}>
-            {city}
-          </option>
-        ))}
-      </select>
+      <div style={{ display: "flex", marginTop: "20px", alignItems: "center" }}>
+        <label style={{ padding: "0px", marginLeft: "50px" }}>
+          Select City:{" "}
+        </label>
+        <select
+          onChange={(e) => setSelectedCity(e.target.value)}
+          value={selectedCity}
+          style={{ marginLeft: "20px", height: "30px" }}
+        >
+          {[...new Set(data?.map((t) => t.city))].map((city) => (
+            <option key={city} value={city}>
+              {city}
+            </option>
+          ))}
+        </select>
+      </div>
 
       <ResponsiveContainer width={"100%"} height={400}>
         <LineChart
           data={chartData}
-          margin={{ top: 50, right: 50, left: 0, bottom: 0 }}
+          margin={{ top: 30, right: 50, left: 0, bottom: 0 }}
         >
           <CartesianGrid strokeDasharray="1 1" />
           <XAxis dataKey="month" />

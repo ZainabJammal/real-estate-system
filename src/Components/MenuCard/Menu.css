@@ -9,6 +9,10 @@ ul {
   list-style-type: none;
   padding: 0;
   position: relative;
+
+  li {
+    align-items: center;
+  }
 }
 
 .item {
@@ -16,7 +20,7 @@ ul {
   border-bottom: 1px solid var(--background-light-gray-p);
   padding: 8px 15px;
   box-sizing: border-box;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   text-align: center;
   display: flex;
   &:hover {

@@ -54,6 +54,11 @@
   right: 50px;
 }
 
+.dashboard-flex {
+  margin: 0;
+  display: flex;
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -65,7 +70,7 @@
 
 .main-cards {
   max-width: 100%;
-  padding: 10px 35px 0px 15px;
+  padding: 0px 35px 0px 15px;
   display: grid;
   gap: 20px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
