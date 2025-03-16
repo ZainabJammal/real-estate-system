@@ -27,31 +27,38 @@ df["District"] = df["District"].where(df["District"].isin(valid_districts))
 
 df["City"] = df["Address"].str.split(",").str[0].str.strip()
 
-
 df = df.dropna(subset=["Province"])
-
 
 df["Price $"] = pd.to_numeric(df["Price $"], errors='coerce')
 
-
+# Create Province csv data with prices
 province_summary = df.groupby("Province")["Price $"].agg(["mean", "median", "max", "min", "count"]).reset_index()
 province_summary.columns = ["Province", "Avg Price $", "Median Price $", "Max Price $", "Min Price $", "Listings Count"]
 province_summary[["Avg Price $", "Median Price $", "Max Price $", "Min Price $", "Listings Count"]] = province_summary[["Avg Price $", "Median Price $", "Max Price $", "Min Price $", "Listings Count"]].astype(int)
 
-
+# Create District csv data with prices
 district_summary = df.groupby("District")["Price $"].agg(["mean", "median", "max", "min", "count"]).reset_index()
 district_summary = pd.merge(district_summary, df3, on="District", how="inner")
 district_summary.columns = ["District", "Avg Price $", "Median Price $", "Max Price $", "Min Price $", "Listings Count", "Latitude", "Longitude"]
 district_summary[["Avg Price $", "Median Price $", "Max Price $", "Min Price $", "Listings Count"]] = district_summary[["Avg Price $", "Median Price $", "Max Price $", "Min Price $", "Listings Count"]].astype(int)
 
-
+# Create City csv data with prices
 city = df.groupby("City")["Price $"].agg(["mean", "median", "max", "min", "count"]).reset_index()
 city.columns = ["City", "Avg Price $", "Median Price $", "Max Price $", "Min Price $", "Listings Count"]
 city[["Avg Price $", "Median Price $", "Max Price $", "Min Price $", "Listings Count"]] = city[["Avg Price $", "Median Price $", "Max Price $", "Min Price $", "Listings Count"]].astype(int)
 
+# Create Properties csv data with details
+properties_data_jsk = df[["City", "District", "Province", "Type", "Size m²", "Bedrooms","Bathrooms", "Price $"]]
+properties_data_jsk = pd.merge(properties_data_jsk, df3, on="District", how="inner")
+properties_data_jsk.columns = ["City", "District", "Province", "Type", "Size m²", "Bedrooms","Bathrooms", "Price $", "Latitude", "Longitude"]
+properties_data_jsk = properties_data_jsk.dropna(subset=["Type"])
+properties_data_jsk["Bedrooms"] = properties_data_jsk["Bedrooms"].fillna(0).astype(int)
+properties_data_jsk["Bathrooms"] = properties_data_jsk["Bathrooms"].fillna(0).astype(int)
 
+# Export into csv files ready to be used
 province_summary.to_csv("./sorting/buy/sorted_data/province_buysummary.csv", index=False)
 district_summary.to_csv("./sorting/buy/sorted_data/district_buysummary.csv", index=False)
 city.to_csv("./sorting/buy/sorted_data/city_buysummary.csv", index=False)
+properties_data_jsk.to_csv("./sorting/buy/sorted_data/properties_jsk.csv", index=False)
 
 print("Sorting complete.")

@@ -9,7 +9,9 @@ import asyncio
 
 # df = pd.read_csv("./sorting/buy/sorted_data/province_buysummary.csv")
 
-df = pd.read_csv("./sorting/buy/sorted_data/district_buysummary.csv")
+# df = pd.read_csv("./sorting/buy/sorted_data/district_buysummary.csv")
+
+df = pd.read_csv("./sorting/buy/sorted_data/properties_jsk.csv")
 
 supabase = None
 
@@ -18,7 +20,7 @@ async def establish_connection():
     supabase = await create_supabase()
     print("\nDatabase connection established...\n")
 
-# print(df)
+print(df)
     
 
 # async def insert_trans_from_csv():
@@ -56,24 +58,47 @@ async def establish_connection():
 #             return
 #     print("Inserted Data Successfully!")
 
-async def insert_city_from_csv():
-    data = None
-    for i in range(len(df["District"])):
-        object = { "city": df["District"][i],
-                    "avg_price_$": int(df["Avg Price $"][i]),
-                    "median_price_$": int(df["Median Price $"][i]),
-                    "max_price_$": int(df["Max Price $"][i]),
-                    "min_price_$": int(df["Min Price $"][i]),
-                    "listings_count": int(df["Listings Count"][i]),
-                    "latitude" : df["Latitude"][i],
-                    "longitude": df["Longitude"][i] }
-        try:
-            data = await supabase.from_("city_prices").upsert(object).execute()
-            print(f"Inserted row {i}")
-        except Exception as e:
-            print(f"Error occured: {e}")
-            return
-    print("Inserted Data Successfully!")
+# async def insert_city_from_csv():
+#     data = None
+#     for i in range(len(df["District"])):
+#         object = { "city": df["District"][i],
+#                     "avg_price_$": int(df["Avg Price $"][i]),
+#                     "median_price_$": int(df["Median Price $"][i]),
+#                     "max_price_$": int(df["Max Price $"][i]),
+#                     "min_price_$": int(df["Min Price $"][i]),
+#                     "listings_count": int(df["Listings Count"][i]),
+#                     "latitude" : df["Latitude"][i],
+#                     "longitude": df["Longitude"][i] }
+#         try:
+#             data = await supabase.from_("city_prices").upsert(object).execute()
+#             print(f"Inserted row {i}")
+#         except Exception as e:
+#             print(f"Error occured: {e}")
+#             return
+#     print("Inserted Data Successfully!")
+
+
+# async def insert_properties_from_csv():
+#     data = None
+#     for i in range(len(df["City"])):
+#         object = { "city": df["City"][i],
+#                     "district": df["District"][i],
+#                     "province": df["Province"][i],
+#                     "type": df["Type"][i],
+#                     "size_m2": int(df["Size m²"][i]),
+#                     "bedrooms": int(df["Bedrooms"][i]),
+#                     "bathrooms" : int(df["Bathrooms"][i]),
+#                     "price_$": int(df["Price $"][i]),
+#                     "latitude": float(df["Latitude"][i]),
+#                     "longitude": float(df["Longitude"][i])
+#                 }
+#         try:
+#             data = await supabase.from_("properties").upsert(object).execute()
+#             print(f"Inserted row {i}")
+#         except Exception as e:
+#             print(f"Error occured: {e}")
+#             return
+#     print("Inserted Data Successfully!")
 
 # async def insert_province_from_csv():
 #     data = None
@@ -94,7 +119,7 @@ async def insert_city_from_csv():
 
 async def main():
     print("Main function is running")
-    results = await asyncio.gather(establish_connection(), insert_city_from_csv())
+    results = await asyncio.gather(establish_connection(), insert_properties_from_csv())
     print("Main function is done")
     print(results)
 
