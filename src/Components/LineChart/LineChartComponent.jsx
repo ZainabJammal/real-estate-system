@@ -118,10 +118,11 @@ function LineChartComponent({ data = null }) {
         </select>
       </div>
 
-      <ResponsiveContainer width={"100%"} height={400}>
+      <ResponsiveContainer width={"100%"} height={420}>
         <LineChart
           data={chartData}
           margin={{ top: 30, right: 50, left: 0, bottom: 0 }}
+          style={{ fontSize: ".8rem" }}
         >
           <CartesianGrid strokeDasharray="1 1" />
           <XAxis dataKey="month" />

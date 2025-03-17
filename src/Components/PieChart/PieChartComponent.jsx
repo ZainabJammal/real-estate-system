@@ -34,7 +34,15 @@ function PieChartComponent({ data = null }) {
     listings: area.listings_count,
   }));
 
-  const colors = ["#8884d8", "#82ca9d", "#ffc658", "#ff7f50", "#0088FE"]; // Different colors for areas
+  const colors = [
+    "#8884d8",
+    "#82ca9d",
+    "#ffc658",
+    "#ff7f50",
+    "#225788",
+    "#FF2255",
+    "#7810FF",
+  ]; // Different colors for areas
 
   return (
     <>
@@ -42,7 +50,7 @@ function PieChartComponent({ data = null }) {
         // width={windowWidth < 650 ? 350 : 600}
         // height={windowWidth < 650 ? 233 : 400}
         width={"100%"}
-        height={300}
+        height={380}
       >
         <PieChart>
           <Pie
@@ -51,11 +59,11 @@ function PieChartComponent({ data = null }) {
             nameKey="district"
             cx="50%"
             cy="50%"
-            outerRadius={windowWidth < 500 ? 50 : 70}
+            outerRadius={windowWidth < 500 ? 50 : 110}
             fill="#8884d8"
           >
             {chartData.map((entry, index) => (
-              <Cell key={index} fill={colors[index % colors.length]} />
+              <Cell key={index} fill={colors[(index * 5) % colors.length]} />
             ))}
           </Pie>
           <Pie
@@ -64,11 +72,15 @@ function PieChartComponent({ data = null }) {
             nameKey="district"
             cx="50%"
             cy="50%"
-            innerRadius={windowWidth < 500 ? 50 : 70}
-            outerRadius={windowWidth < 500 ? 70 : 90}
+            innerRadius={windowWidth < 500 ? 50 : 110}
+            outerRadius={windowWidth < 500 ? 70 : 130}
             fill="#84d888"
             label
-          />
+          >
+            {chartData.map((entry, index) => (
+              <Cell key={index} fill={colors[(index * 5) % colors.length]} />
+            ))}
+          </Pie>
         </PieChart>
       </ResponsiveContainer>
     </>

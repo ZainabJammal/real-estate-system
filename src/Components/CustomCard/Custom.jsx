@@ -1,7 +1,14 @@
 import React, { useEffect, useState } from "react";
 import "./Custom.css";
 
-function Custom({ title, desc, Component, no_inflate = false, data }) {
+function Custom({
+  title,
+  desc,
+  Component,
+  no_inflate = false,
+  data,
+  isLoading = null,
+}) {
   return (
     <div className={no_inflate ? "card-layout no-inflate" : "card-layout"}>
       <div className="card-content">

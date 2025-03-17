@@ -1,5 +1,6 @@
 import pandas as pd
-
+from geopy.geocoders import Nominatim
+from geopy.exc import GeocoderTimedOut
 
 file1 = "./scraping/realestate/clean_data/cleanrealestatebuy.csv"
 file2 = "./scraping/jsk/clean_data/cleanjskbuy.csv"

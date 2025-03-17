@@ -9,6 +9,7 @@ const MainCard = ({
   price = false,
   max = false,
   min = false,
+  tran = false,
 }) => {
   const [values, setValues] = useState({ title: "", region: "", num: 0 });
 
@@ -22,12 +23,19 @@ const MainCard = ({
         num: data?.max_num,
       }));
       console.log("Values set, ", values);
-    } else if (!max && !min) {
+    } else if (!max && !min && !tran) {
       setValues((prev) => ({
         ...prev,
         title: data?.sum,
         region: data?.region_all,
         num: data?.sum_num,
+      }));
+    } else if (tran) {
+      setValues((prev) => ({
+        ...prev,
+        title: data?.ht,
+        region: data?.region_tran,
+        num: data?.high_num,
       }));
     } else {
       setValues((prev) => ({

@@ -48,3 +48,17 @@ export const useHotAreas = () => {
     queryFn: () => fetchData("hot_areas"),
   });
 };
+
+export const useProperties = () => {
+  return useQuery({
+    queryKey: ["Properties"],
+    queryFn: () => fetchData("properties"),
+  });
+};
+
+export const useTypeNums = () => {
+  return useQuery({
+    queryKey: ["TypeNums"],
+    queryFn: () => fetchData("lists_type"),
+  });
+};
