@@ -1,11 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Page_Layout.css";
 import Custom from "../../Components/CustomCard/Custom";
-import Table from "../../Components/Table/Table";
-import PieChart from "../../Components/PieChart/PieChartComponent";
-import LineChartComponent from "../../Components/LineChart/LineChartComponent";
-import Name from "../../Components/NameCard/Name";
-import { Bar } from "recharts";
 import BarChart from "../../Components/BarChart/BarChartComponent";
 import MainCard from "../../Components/MainCard/MainCard";
 import {
@@ -20,6 +15,11 @@ import { LuLoaderCircle } from "react-icons/lu";
 import MapComponent from "../../Components/Map/MapComponent";
 import PriceM2 from "../../Components/PriceM2";
 import ListsByTypes from "../../Components/ListsByTypes";
+import { BiLayout } from "react-icons/bi";
+import ScatterComp from "../../Components/Scatter";
+import LineChartComponent from "../../Components/LineChart/LineChartComponent";
+import LineC from "../../Components/LineC";
+import Heatmap from "../../Components/Heatmap";
 
 function Dashboard() {
   const [gridValue, setGridValue] = useState(0);
@@ -76,7 +76,9 @@ function Dashboard() {
       <div className="dashboard-content">
         <div className="title">
           <h1>Dashboard</h1>
-          <button onClick={() => handleGridChange()}>...</button>
+          <button onClick={() => handleGridChange()}>
+            <BiLayout />
+          </button>
         </div>
         <div className="section">
           <h1>For Sale</h1>
@@ -109,23 +111,23 @@ function Dashboard() {
         </div>
         {/* FIRST ANALYSIS SCTION */}
         <div className="section">
-          <h1>Stats</h1>
+          <h1>Prices</h1>
+
           <div
             className={`dashboard-components ${
               gridValue ? "grid-1" : "grid-2"
             }`}
           >
-            {isLoading_all && <LuLoaderCircle className="loader" size={30} />}
-            {!isLoading_all && (
+            {isLoading_prov && <LuLoaderCircle className="loader" size={30} />}
+            {!isLoading_prov && (
               <Custom
-                title="Number of Highly Demanded Estates per District"
-                desc={`Hottest area in Lebanon would be ${
-                  !isLoading_all && max_listing_count[1]
-                }, having ${
-                  !isLoading_all && max_listing_count[0]
-                } estates available`}
-                Component={PieChart}
-                data={all}
+                title="Prices, Areas and Price/Area in m²"
+                desc={
+                  "This chart represent the prices as a function of areas and the calculated price per meter square of the properties."
+                }
+                Component={ScatterComp}
+                data={properties}
+                isLoading={isLoading_prov}
               />
             )}
             {isLoading_prov && <LuLoaderCircle className="loader" size={30} />}
@@ -133,7 +135,7 @@ function Dashboard() {
               <Custom
                 title="Prices/Provinces in $"
                 desc={
-                  "This chart represent the average, max and min prices of estates per province"
+                  "This chart represent the average, max and min prices of estates per province."
                 }
                 Component={BarChart}
                 data={province}
@@ -145,12 +147,12 @@ function Dashboard() {
             {isLoading_all && <LuLoaderCircle className="loader" size={30} />}
             {!isLoading_all && (
               <Custom
-                title="Prices/Districts in $"
+                title="Expensive Regions"
                 desc={
-                  "This chart represent the average, max and min prices of estates per district"
+                  "This chart represent the increase of prices per cities, showing which cities are the least and most expensive."
                 }
-                Component={BarChart}
-                data={all}
+                Component={LineC}
+                data={properties}
                 isLoading={isLoading_all}
               />
             )}
@@ -161,41 +163,43 @@ function Dashboard() {
               <Custom
                 title="Prices/Squared Meter"
                 desc={
-                  "This chart shows the distribution of the prices per meter squared across different cities in Lebanon"
+                  "This chart shows the distribution of the prices per meter squared across different cities in Lebanon."
                 }
                 Component={PriceM2}
                 data={properties}
                 isLoading={isLoading_properties}
               />
             )}
+            {/* {isLoading_properties && (
+              <LuLoaderCircle className="loader" size={30} />
+            )}
+            {!isLoading_properties && (
+              <Custom
+                title="Prices/Squared Meter"
+                desc={
+                  "This chart shows the distribution of the prices per meter squared across different cities in Lebanon."
+                }
+                Component={Heatmap}
+                data={properties}
+                isLoading={isLoading_properties}
+              />
+            )} */}
           </div>
         </div>
         {/* SECOND ANALYSIS SECTION */}
         <div className="section">
+          <h1>Stats</h1>
           <div
             className={`dashboard-components ${
               gridValue ? "grid-1" : "grid-3"
             }`}
           >
-            {isLoading_prov && <LuLoaderCircle className="loader" size={30} />}
-            {!isLoading_prov && (
-              <Custom
-                title="Prices/Provinces in $"
-                desc={
-                  "This chart represent the average, max and min prices of estates per province"
-                }
-                Component={BarChart}
-                data={province}
-                isLoading={isLoading_prov}
-              />
-            )}
-
             {isLoading_type && <LuLoaderCircle className="loader" size={30} />}
             {!isLoading_type && (
               <Custom
                 title="Distribution by Types"
                 desc={
-                  "This chart shows the distribution of the prices per meter squared across different cities in Lebanon"
+                  "This chart shows the distribution of the prices per meter squared across different cities in Lebanon."
                 }
                 Component={ListsByTypes}
                 data={lists_type}
@@ -208,7 +212,7 @@ function Dashboard() {
               <Custom
                 title="Prices/Districts in $"
                 desc={
-                  "This chart represent the average, max and min prices of estates per district"
+                  "This chart represent the average, max and min prices of estates per district."
                 }
                 Component={BarChart}
                 data={all}
@@ -223,25 +227,11 @@ function Dashboard() {
             {isLoading_areas && <LuLoaderCircle className="loader" size={30} />}
             {!isLoading_areas && (
               <Custom
-                title="Hotest areas (Map)"
-                desc={"Coming soon..."}
+                title="Distribution of Listings on the Map"
                 Component={MapComponent}
-                data={areas}
+                data={{ areas, province }}
               />
             )}
-          </div>
-        </div>
-        <div className="title">
-          <h1>Tables</h1>
-        </div>
-        <div className="section">
-          <div className="dashboard-components grid-1">
-            <Custom
-              title="District Estates"
-              desc="Table of availabe estates per districts"
-              Component={Table}
-              data={all}
-            />
           </div>
         </div>
       </div>

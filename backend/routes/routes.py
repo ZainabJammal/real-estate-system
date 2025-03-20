@@ -42,7 +42,7 @@ async def get_max_prices():
 async def get_all_lists():
     supabase = await create_supabase()
     try:
-        res = await supabase.from_("district_prices").select("id, district, median_price_$, avg_price_$, max_price_$, min_price_$, listings_count").order("listings_count", desc=True).limit(15).execute()
+        res = await supabase.from_("district_prices").select("id, district, median_price_$, avg_price_$, max_price_$, min_price_$, listings_count").order("max_price_$", desc=True).limit(20).execute()
         
         print(res.data[0])
         return Response(json.dumps(res.data), status=200, mimetype='application/json')

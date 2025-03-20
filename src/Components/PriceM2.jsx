@@ -33,17 +33,17 @@ const PriceM2 = ({ data }) => {
 
   return (
     <>
-      <ResponsiveContainer width={"100%"} height={380}>
+      <ResponsiveContainer width={"100%"} height={420}>
         <BarChart
           style={{ fontSize: "12px" }}
           data={chartData}
-          margin={{ top: 20, right: 20, left: 0, bottom: 0 }}
+          margin={{ top: 30, right: 20, left: 0, bottom: 0 }}
         >
           <CartesianGrid strokeDasharray="1 1" />
           <YAxis domain={[0, maxPriceInM2]} />
           <XAxis dataKey="city" />
           <Tooltip />
-          <Bar dataKey="price_in_m2" fill="#ff8712" />
+          <Bar dataKey="price_in_m2" fill="#df9902" />
           <Legend />
         </BarChart>
       </ResponsiveContainer>

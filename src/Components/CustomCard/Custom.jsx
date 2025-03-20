@@ -3,7 +3,7 @@ import "./Custom.css";
 
 function Custom({
   title,
-  desc,
+  desc = "",
   Component,
   no_inflate = false,
   data,
@@ -14,7 +14,7 @@ function Custom({
       <div className="card-content">
         <div className="card-title">
           <h3>{title ? title : "Title"}</h3>
-          <p>{desc ? desc : "This card describes..."}</p>
+          {desc && <p>{desc}</p>}
         </div>
         <div className="card-main">
           <div className="component-layout">

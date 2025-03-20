@@ -24,16 +24,21 @@
     z-index: 99;
     font-size: 0.75rem;
     button {
-      height: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       outline: none;
-      border: none;
-      background-color: var(--background-light-gray-f);
-      box-shadow: 0px 0px 1px 0px;
-      padding: 10px;
+      border: 0px solid;
+      background-color: var(--primary-light-navy);
+      box-shadow: 0px 0px 2px 0.5px;
+      padding: 5px;
       margin-right: 10px;
+      font-size: 1.5rem;
       &:hover {
         cursor: pointer;
+        box-shadow: 0px 0px 5px 1px var(--primary-cool-gray);
       }
+      transition: 0.2s all ease;
     }
   }
 }
@@ -125,6 +130,76 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
+.form-card {
+  padding: 20px;
+  background-color: var(--background-light-white-p);
+  box-shadow: 0 0 1px 0px rgba(0, 0, 0, 0.563);
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  overflow: hidden;
+  form {
+    height: 100%;
+    width: 100%;
+    div {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      input {
+        outline: none;
+        border: 0;
+        border-radius: 5px;
+        box-shadow: 0 0 1px 0;
+        padding: 5px 15px;
+        font-family: Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+      select {
+        outline: none;
+        border: 0;
+        border-radius: 5px;
+        box-shadow: 0 0 1px 0;
+        padding: 5px 15px;
+        font-family: Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        font-weight: 700;
+      }
+    }
+    button {
+      margin: 15px 0px;
+      outline: none;
+      border: 0;
+      box-shadow: 0 0 1px 0.5px rgba(0, 0, 0, 0.325);
+      padding: 15px 30px;
+      border-radius: 3px;
+      font-family: Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      &:hover {
+        box-shadow: 0 0 1px 0.5px rgba(0, 0, 0, 0.586);
+        background-color: rgba(0, 255, 255, 0.207);
+      }
+      transition: 0.5s all ease;
+    }
+  }
+  .price-region {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s all ease;
+    margin: 50px;
+    border-radius: 15px;
+    background-color: rgba(244, 244, 244, 0.456);
+    h2 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 1s all ease;
+      width: 100%;
+      h3 {
+        padding: 0 12px;
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
 @media (max-width: 1024px) {
   .main-cards {
     grid-template-columns: 1fr 1fr;
@@ -136,6 +211,9 @@
 }
 
 @media (max-width: 550px) {
+  .form-card {
+    grid-template-columns: 1fr;
+  }
   .section .main-cards {
     grid-template-columns: 1fr;
     gap: 20px;

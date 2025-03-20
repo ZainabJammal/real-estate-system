@@ -6,59 +6,34 @@ import "../../Components/Table/Table.css";
 import Custom from "../../Components/CustomCard/Custom";
 import LineChartComponent from "../../Components/LineChart/LineChartComponent";
 import Table from "../../Components/Table/Table";
+import { useTransaction } from "../../Functions/apiLogic";
 
 export const Transactions = () => {
-  const fetchData = async () => {
-    try {
-      const res = await fetch("http://127.0.0.1:8000/transactions", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-      const data = await res.json();
-      if (!res.ok) {
-        throw new Error(res.error.message || "Something went wrong");
-      }
-      return data;
-    } catch (error) {
-      console.error("Cannot Fetch: ", error);
-      throw error;
-    }
-  };
-
-  const { data, error, isLoading } = useQuery({
-    queryKey: ["myData"],
-    queryFn: fetchData,
-  });
-
-  console.log(data);
+  const {
+    data: tran,
+    error: error_tran,
+    isLoading: isLoading_tran,
+  } = useTransaction();
+  console.log(tran);
 
   return (
     <div className="dashboard-layout">
       <div className="dashboard-content">
         <div className="title">
           <h1>Transactions</h1>
-          {isLoading && <LuLoaderCircle className="loader center" size={25} />}
-          {error && <p>{error.message}</p>}
-          {console.log(data)}
+          {isLoading_tran && (
+            <LuLoaderCircle className="loader center" size={25} />
+          )}
+          {error_tran && <p>{error_tran.message}</p>}
+          {console.log(tran)}
         </div>
         <div className="section">
           <div className="dashboard-components grid-1">
             <Custom
-              title={"Transactions made in real estates in Lebanon (2011-2016)"}
-              desc={
-                "This table represents the distribution of transactions per month/year across different regions"
-              }
-              Component={Table}
-              data={data}
-            />
-
-            <Custom
               title={"Transactions per year"}
               desc={"Variation of transactions as the years pass"}
               Component={LineChartComponent}
-              data={data}
+              data={tran}
             />
           </div>
         </div>
