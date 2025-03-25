@@ -12,6 +12,7 @@ This project is an end-to-end dashboard system built with **React** (via **Vite*
 4. [Folder Structure](#folder-structure)
 5. [Technologies Used](#technologies-used)
 6. [License](#license)
+7. [Contributors](#contributors)
 
 ## Installation
 
@@ -148,10 +149,10 @@ This open-source project is available for anyone to use, modify, and distribute 
 
 We would like to thank the following contributors who have helped make this project possible:
 
-- **Mostafa Dawi** – *Initial work* – [Your GitHub Profile Link](https://github.com/MostafaDawi)
-- **Mostafa Dawi** – *Initial work* – [Your GitHub Profile Link](https://github.com/MostafaDawi)
-- **Mostafa Dawi** – *Initial work* – [Your GitHub Profile Link](https://github.com/MostafaDawi)
-- **Mostafa Dawi** – *Initial work* – [Your GitHub Profile Link](https://github.com/MostafaDawi)
+- **Mostafa Dawi** – *Building Data Pipelines, Back-end and Front-end* – [Your GitHub Profile Link](https://github.com/MostafaDawi)
+- **Amanda Makdessi** – *Data Scraping and Cleaning* – [Your GitHub Profile Link](https://github.com/amandamakdessi)
+- **Yusuf Mazloum** – *Insights Extraction* – [Your GitHub Profile Link](https://github.com/Yusf4)
+- **Mohammad Rahal** – *Data Scraping*
 
 If you'd like to contribute to this project, feel free to fork the repository, make changes, and submit a pull request!
 
