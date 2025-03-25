@@ -149,9 +149,9 @@ This open-source project is available for anyone to use, modify, and distribute 
 
 We would like to thank the following contributors who have helped make this project possible:
 
-- **Mostafa Dawi** – *Building Data Pipelines, Back-end and Front-end* – [Your GitHub Profile Link](https://github.com/MostafaDawi)
-- **Amanda Makdessi** – *Data Scraping and Cleaning* – [Your GitHub Profile Link](https://github.com/amandamakdessi)
-- **Yusuf Mazloum** – *Insights Extraction* – [Your GitHub Profile Link](https://github.com/Yusf4)
+- **Mostafa Dawi** – *Building Data Pipelines, Back-end and Front-end* – [GitHub Profile Link](https://github.com/MostafaDawi)
+- **Amanda Makdessi** – *Data Scraping and Cleaning* – [GitHub Profile Link](https://github.com/amandamakdessi)
+- **Yusuf Mazloum** – *Insights Extraction* – [GitHub Profile Link](https://github.com/Yusf4)
 - **Mohammad Rahal** – *Data Scraping*
 
 If you'd like to contribute to this project, feel free to fork the repository, make changes, and submit a pull request!
