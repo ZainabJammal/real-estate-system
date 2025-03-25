@@ -1,0 +1,37 @@
+:root {
+  /* Primary Colors */
+  --primary-deep-blue: #2c3e50;
+  --primary-deep-blue-p: #1d364ef0;
+  --primary-cool-gray: #95a5a6;
+
+  /* Secondary Colors */
+  --secondary-emerald-green: #358f5a78;
+  --secondary-amber-gold: #f1c71e;
+  --secondary-light-navy: #2a67a4a1;
+
+  /* Background Colors */
+  --background-soft-white: #dde3e3;
+  --background-light-gray-f: #ccced0;
+  --background-light-gray-p: #bdc3c749;
+  --background-light-white-p: #eaeef6de;
+
+  /* Action Colors */
+  --action-cyan-blue: #1abc9c;
+  --action-crimson-red: #e74c3c;
+}
+
+body,
+html {
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: var(--primary-deep-blue);
+  font-family: Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+#root {
+  height: 100%;
+  box-sizing: border-box;
+}

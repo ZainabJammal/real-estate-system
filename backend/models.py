@@ -56,9 +56,11 @@ def download_model():
         else:
             print("Failed to download model:", response.json())
 
+# Return the models' paths
 def get_models_path():
     return (model_paths[0], model_paths[1])
 
+# Return the encoders' paths
 def get_enc_paths():
     return (encoders_paths[0], encoders_paths[1], encoders_paths[2], encoders_paths[3], encoders_paths[4])
 

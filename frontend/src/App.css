@@ -1,0 +1,12 @@
+.app {
+  height: 100%;
+  margin: auto;
+  box-sizing: border-box;
+  background-color: var(--background-soft-white);
+  position: relative;
+
+  display: flex;
+  h1 {
+    margin: 0;
+  }
+}

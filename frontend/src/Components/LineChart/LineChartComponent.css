@@ -1,0 +1,24 @@
+.linechart-content {
+  margin: 0 auto;
+  width: 500px;
+  height: 350px;
+  display: block;
+  align-self: center;
+}
+
+@media (max-width: 960px) {
+  .linechart-content {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .linechart-content {
+    width: 350px;
+    height: 233px;
+    margin: 0;
+    padding: 10px;
+  }
+}
