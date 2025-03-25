@@ -24,7 +24,7 @@ git clone https://github.com/your-username/real-estate-dashboard.git
 cd real-estate-dashboard
 ```
 
-## Set Up the Backend
+## Running the Backend
 
 ### **A. Install Dependencies**
 
@@ -64,23 +64,24 @@ cd real-estate-dashboard
    python -m hypercorn server:app
    ```
 
-## Set Up the Frontend
+## Running the Frontend
 
-### 1. Install Dependencies
+### A. Install Dependencies
 
 1. Navigate to the `src` directory (frontend):
+   using npm:
 
    ```bash
    cd frontend/src
    ```
-2. Install the required dependencies using npm or yarn:
+3. Install the required dependencies using npm or yarn:
 
    ```bash
    npm install
    ```
    This will install all necessary dependencies as specified in the package.json file for the frontend.
 
-### 2. Running the Frontend
+### B. Running the Frontend Server
 
    Once the dependencies are installed, start the frontend development server using npm:
 
