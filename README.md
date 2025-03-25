@@ -26,7 +26,7 @@ cd real-estate-dashboard
 
 ## Set Up the Backend
 
-### **a. Install Dependencies**
+### **A. Install Dependencies**
 
 1. Navigate to the `backend` directory:
 
@@ -47,19 +47,44 @@ cd real-estate-dashboard
    pip install -r requirements.txt
    ```
 
-### **b. Configure the Environment Variables**
+### **B. Configure the Environment Variables**
 
-In the backend folder, create a .env file and add your Supabase credentials. Replace the placeholders with your actual credentials.
+   In the backend folder, create a .env file and add your Supabase credentials. Replace the placeholders with your actual credentials.
 
    ```bash
    SUPABASE_URL=your-supabase-url
    SUPABASE_KEY=your-supabase-key
    ```
 
-### **b. Running the Backend Server**
+### **C. Running the Backend Server**
 
-After activating the virtual environment and installing dependencies, start the backend server using Hypercorn (the ASGI server):
+   After activating the virtual environment and installing dependencies, start the backend server using Hypercorn (the ASGI server):
 
    ```bash
    python -m hypercorn server:app
    ```
+
+## Set Up the Frontend
+
+### 1. Install Dependencies
+
+1. Navigate to the `src` directory (frontend):
+
+   ```bash
+   cd frontend/src
+   ```
+2. Install the required dependencies using npm or yarn:
+
+   ```bash
+   npm install
+   ```
+   This will install all necessary dependencies as specified in the package.json file for the frontend.
+
+### 2. Running the Frontend
+
+   Once the dependencies are installed, start the frontend development server using npm:
+
+   ```bash
+   npm run dev
+   ```
+The frontend will now be available at http://localhost:3000 (or the port specified in your .env file). Open this URL in your browser to see the real estate dashboard in action.
