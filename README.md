@@ -91,3 +91,50 @@ cd real-estate-dashboard
    ```
 
 The frontend will now be available at http://localhost:3000 (or the port specified in your .env file). Open this URL in your browser to see the real estate dashboard in action.
+
+## Folder Structure
+
+Here’s a high-level overview of the folder structure:
+
+```plaintext
+real-estate-dashboard/
+├── backend/                   # Backend-related files
+│   ├── .venv/                 # Virtual environment folder (inside backend)
+│   ├── server.py              # Backend entry point (Quart app)
+│   ├── scraping/              # Web scraping logic
+│   ├── sorting/               # Data sorting and cleaning logic
+│   ├── .env                   # Environment variables (Supabase URL & Key)
+│   └── requirements.txt       # Python dependencies
+├── src/                       # Frontend-related files (React + Vite)
+│   ├── public/                # Public assets (index.html, etc.)
+│   ├── src/                   # React app source code
+│   ├── components/            # Reusable React components
+│   ├── App.jsx                # Main React app file
+│   ├── .env                   # Frontend environment variables
+│   └── package.json           # Node.js dependencies
+└── README.md                  # Project documentation (this file)
+
+## Technologies Used
+
+### 1. Backend
+- **Quart**: A Python web framework for building asynchronous web apps. It is the core framework used for the backend server and API.
+- **Python**: The backend is built using Python for its powerful web scraping, data processing, and API functionalities.
+- **Supabase**: An open-source Firebase alternative that provides a backend-as-a-service solution. It is used for database management and authentication.
+- **Requests**: A simple HTTP library used for web scraping to fetch data from external websites.
+- **SQLAlchemy**: A Python ORM (Object-Relational Mapper) used to interact with the database in a more Pythonic way.
+
+### 2. Frontend
+- **React**: A JavaScript library for building user interfaces, used to create the frontend of the dashboard.
+- **Vite**: A build tool that provides a fast and optimized development environment for React apps.
+- **Recharts**: A charting library for React used to display various visualizations such as graphs and data plots.
+
+### 3. Development Tools
+- **Git**: A version control system used to manage the project’s source code and collaboration.
+
+### 4. Database
+- **Supabase Database**: A PostgreSQL database managed by Supabase, used to store and retrieve the data scraped and processed by the backend.
+
+### 5. Other Tools
+- **npm/yarn**: Package managers used to install and manage frontend dependencies for the React app.
+- **Python Virtual Environment**: Used for isolating and managing Python dependencies for the backend server.
+
