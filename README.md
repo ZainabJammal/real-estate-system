@@ -1,4 +1,4 @@
-# Real Estate Dashboard System![g](assets/demo-1.png)
+# Real Estate Dashboard & Prediction System
 
 ## Description
 
@@ -13,6 +13,11 @@ This project is an end-to-end dashboard system built with **React** (via **Vite*
 5. [Technologies Used](#technologies-used)
 6. [License](#license)
 7. [Contributors](#contributors)
+
+## Screenshots
+
+   ![screenshot-1](assets/demo-1.png)
+   ![screenshot-2](assets/demo-2.png)
 
 ## Installation
 
