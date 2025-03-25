@@ -123,6 +123,10 @@ real-estate-dashboard/
 └── README.md                  # Project documentation (this file)
 ```
 
+## Demo Video
+
+   ![Demo Video](assets/demo-video.mp4)
+
 ## Technologies Used
 
 ### 1. Backend
