@@ -113,6 +113,7 @@ real-estate-dashboard/
 │   ├── .env                   # Frontend environment variables
 │   └── package.json           # Node.js dependencies
 └── README.md                  # Project documentation (this file)
+```
 
 ## Technologies Used
 
@@ -121,7 +122,6 @@ real-estate-dashboard/
 - **Python**: The backend is built using Python for its powerful web scraping, data processing, and API functionalities.
 - **Supabase**: An open-source Firebase alternative that provides a backend-as-a-service solution. It is used for database management and authentication.
 - **Requests**: A simple HTTP library used for web scraping to fetch data from external websites.
-- **SQLAlchemy**: A Python ORM (Object-Relational Mapper) used to interact with the database in a more Pythonic way.
 
 ### 2. Frontend
 - **React**: A JavaScript library for building user interfaces, used to create the frontend of the dashboard.
@@ -137,4 +137,10 @@ real-estate-dashboard/
 ### 5. Other Tools
 - **npm/yarn**: Package managers used to install and manage frontend dependencies for the React app.
 - **Python Virtual Environment**: Used for isolating and managing Python dependencies for the backend server.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+### MIT License
 
