@@ -1,5 +1,7 @@
 # Real Estate Dashboard System
 
+![Project Screenshot](assets/screenshot.png)
+
 ## Description
 
 This project is an end-to-end dashboard system built with **React** (via **Vite**) for the frontend and **Quart** for the backend. It scrapes data from various websites, cleans and processes it, and stores it in a **Supabase** database. The frontend fetches the data via API calls and displays it using **Recharts.js**.
