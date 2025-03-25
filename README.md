@@ -1,6 +1,4 @@
-# Real Estate Dashboard System
-
-![Project Screenshot](assets/screenshot.png)
+# Real Estate Dashboard System![g](assets/demo-1.png)
 
 ## Description
 
