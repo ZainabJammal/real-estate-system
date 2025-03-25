@@ -69,8 +69,9 @@ cd real-estate-dashboard
 ### A. Install Dependencies
 
 1. Navigate to the `src` directory (frontend):
+   
    using npm:
-
+   
    ```bash
    cd frontend/src
    ```
@@ -88,4 +89,5 @@ cd real-estate-dashboard
    ```bash
    npm run dev
    ```
+
 The frontend will now be available at http://localhost:3000 (or the port specified in your .env file). Open this URL in your browser to see the real estate dashboard in action.
