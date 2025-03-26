@@ -132,21 +132,27 @@ real-estate-dashboard/
 - **Supabase**: An open-source Firebase alternative that provides a backend-as-a-service solution. It is used for database management and authentication.
 - **Requests**: A simple HTTP library used for web scraping to fetch data from external websites.
 
-### 2. Frontend
+### 2. Machine Learning:
+
+- **LightGBM (LGBM)** – Gradient boosting framework for training models
+- **XGBoost (XGB)** – Extreme Gradient Boosting for price prediction
+- **Scikit-Learn** – Used for preprocessing, model evaluation, and feature engineering
+
+### 3. Frontend
 
 - **React**: A JavaScript library for building user interfaces, used to create the frontend of the dashboard.
 - **Vite**: A build tool that provides a fast and optimized development environment for React apps.
 - **Recharts**: A charting library for React used to display various visualizations such as graphs and data plots.
 
-### 3. Development Tools
+### 4. Development Tools
 
 - **Git**: A version control system used to manage the project’s source code and collaboration.
 
-### 4. Database
+### 5. Database
 
 - **Supabase Database**: A PostgreSQL database managed by Supabase, used to store and retrieve the data scraped and processed by the backend.
 
-### 5. Other Tools
+### 6. Other Tools
 
 - **npm/yarn**: Package managers used to install and manage frontend dependencies for the React app.
 - **Python Virtual Environment**: Used for isolating and managing Python dependencies for the backend server.
