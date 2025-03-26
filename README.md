@@ -39,14 +39,12 @@ cd real-estate-dashboard
    ```bash
    cd backend
    ```
-
 2. Create and activate the virtual environment:
 
    ```bash
    python -m venv .venv  # Create a virtual environment
    .\.venv\Scripts\activate  # Activate the virtual environment (on Windows)
    ```
-
 3. Install the required Python dependencies by using the requirements.txt:
 
    ```bash
@@ -79,14 +77,9 @@ After activating the virtual environment and installing dependencies, start the 
    using npm:
 
    ```bash
-   cd frontend/src
+   cd frontend
    ```
-
-2. Install the required dependencies using npm or yarn:
-
-   ```bash
-   npm install
-   ```
+2. Install the required dependencies using npm or yarn:npm install
 
    This will install all necessary dependencies as specified in the package.json file for the frontend.
 
