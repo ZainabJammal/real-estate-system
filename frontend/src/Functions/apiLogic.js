@@ -10,8 +10,8 @@ const fetchData = async (endpoint, used_method = "GET") => {
     });
 
     const data = await res.json();
-    if (!res.ok) {
-      throw new Error(res.error.message || "Something went wrong");
+    if (!data) {
+      throw new Error(data?.message || data?.error || "Something went wrong");
     }
 
     return data;
@@ -23,7 +23,7 @@ const fetchData = async (endpoint, used_method = "GET") => {
 
 export const postData = async ({ endpoint, data = {} }) => {
   try {
-    const res = await fetch(`http://127.0.0.1:8000/api/${endpoint}`, {
+    const res = await fetch(`http://127.0.0.1:8000/${endpoint}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

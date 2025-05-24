@@ -70,6 +70,8 @@ function Dashboard() {
     setGridValue(!gridValue);
   };
 
+  console.log("Aggregated Values are: ", agg_values);
+
   return (
     <div className="dashboard-layout">
       <div className="dashboard-content">

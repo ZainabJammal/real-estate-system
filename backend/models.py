@@ -35,7 +35,7 @@ headers = {
 def download_model():
     i = 0
     while(i < len(model_paths)):
-        url = f"{SUPABASE_URL}/storage/v1/object/{SUPABASE_BUCKET}/{models[i]}"
+        url = f"{SUPABASE_URL}/storage/v1/object/public/{SUPABASE_BUCKET}/{models[i]}"
         response = requests.get(url, headers=headers)
         if response.status_code == 200:
             with open(model_paths[i], "wb") as f:
@@ -46,7 +46,7 @@ def download_model():
             print("Failed to download model:", response.json())
     i = 0
     while(i < len(encoders_paths)):
-        url = f"{SUPABASE_URL}/storage/v1/object/{SUPABASE_BUCKET}/{encoders[i]}"
+        url = f"{SUPABASE_URL}/storage/v1/object/public/{SUPABASE_BUCKET}/{encoders[i]}"
         response = requests.get(url, headers=headers)
         if response.status_code == 200:
             with open(encoders_paths[i], "wb") as f:

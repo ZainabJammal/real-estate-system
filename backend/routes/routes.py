@@ -28,6 +28,7 @@ async def get_max_prices():
         res_sum = await supabase.from_("district_prices").select("listings_count.sum()").execute()
         high_tran = await supabase.from_("transactions").select("city, transaction_number.sum()").order("city", desc=False).execute()
         
+        #print("Request is received")
         print(res_max.data[0]["max_price_$"], res_min.data[0]["min_price_$"], high_tran.data[0])
 
         return jsonify({"max": "Max Price", "max_num": res_max.data[0]["max_price_$"], "region_max": res_max.data[0]["district"],
