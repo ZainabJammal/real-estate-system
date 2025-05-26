@@ -1,52 +1,102 @@
-import React, { useState } from "react";
-import "./Page_Layout.css";
+import React, { useState, useRef, useEffect } from "react";
+import "./ChatAssistant.css";
 
 const ChatAssistant = () => {
-  const [userMessage, setUserMessage] = useState("");
-  const [response, setResponse] = useState("");
+  const initialSystemMessage = {
+    role: "system",
+    content: "You are a helpful real estate assistant."
+  };
+
+  const [messages, setMessages] = useState([initialSystemMessage]);
+  const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
+  const messagesEndRef = useRef(null);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
 
   const handleSubmit = async () => {
+    if(!input.trim()) 
+      {
+        alert("Please enter a message.");
+        return;
+      }
+    const userMessage = { role: "user", content: input };
+    setMessages((prev) => [...prev, userMessage]);
     setLoading(true);
-    setResponse("");
-     try {
-    const res = await fetch("/api/chat", {
+
+    try {
+    const res = await fetch("http://localhost:8000/api/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ message: userMessage }),
+      body: JSON.stringify({messages: [...messages, { role: "user", content: input }]})
     });
+
     const data = await res.json();
     if (data.error) {
-      setResponse(`Error: ${data.error}`);
-    } else {
-      setResponse(data.reply);
+        setMessages((prev) => [
+          ...prev,
+          { role: "assistant", content: `Error: ${data.error}` },
+        ]);
+      } else {
+        setMessages((prev) => [
+          ...prev,
+          { role: "assistant", content: data.reply },
+        ]);
+      }
+    } catch (err) {
+      setMessages(prev => [
+        ...prev,
+        { role: "assistant", content: "Network error, please try again." },
+      ]);
+    } finally {
+      setInput("");
+      setLoading(false);
     }
-  } catch (err) {
-    setResponse("Network error, please try again.");
-  }
-  setLoading(false);
-};  
+  };
+
+const handleReset = () => {
+    setMessages([initialSystemMessage]);
+    setInput("");
+  };
 
   return (
-    <div className="dashboard-layout">
-      <div className="dashboard-content">
-        <h1>Ask AI Assistant</h1>
+    <div className="chat-container">
+      <div className="chat-header">
+        <h1>Real Estate AI Assistant</h1>
+        <button onClick={handleReset}>Reset Conversation</button>
+      </div>
+
+      <div className="chat-messages">
+        {messages
+          .filter((msg) => msg.role !== "system")
+          .map((msg, idx) => (
+            <div
+              key={idx}
+              className={`message ${msg.role === "user" ? "user" : "assistant"}`}
+            >
+              <div className="bubble">{msg.content}</div>
+            </div>
+          ))}
+        <div ref={messagesEndRef} />
+      </div>
+
+      <div className="chat-input-container">
         <textarea
-          value={userMessage}
-          onChange={(e) => setUserMessage(e.target.value)}
+          rows={2}
           placeholder="Ask anything about real estate..."
-          rows="4"
-          className="chat-input"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          onKeyDown={(e) => e.key === "Enter" && !e.shiftKey && handleSubmit()}
         />
         <button onClick={handleSubmit} disabled={loading}>
-          {loading ? "Thinking..." : "Ask"}
+          {loading ? "Thinking..." : "Send"}
         </button>
-        {response && (
-          <div className="chat-response">
-            <h3>AI Assistant:</h3>
-            <p>{response}</p>
-          </div>
-        )}
       </div>
     </div>
   );
