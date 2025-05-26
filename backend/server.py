@@ -9,7 +9,7 @@ from routes.chat_routes import chat_routes
 
 
 app = Quart(__name__)
-app = cors(app)
+app = cors(app, allow_origin="http://localhost:3000")
 app.register_blueprint(main_routes)
 app.register_blueprint(ml_routes)
 app.register_blueprint(chat_routes, url_prefix="/api")
