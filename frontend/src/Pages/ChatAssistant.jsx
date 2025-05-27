@@ -1,75 +1,99 @@
 import React, { useState, useRef, useEffect } from "react";
+import { FaComment, FaPlus } from 'react-icons/fa';
 import "./ChatAssistant.css";
 
 const ChatAssistant = () => {
-  const initialSystemMessage = {
+  const REAL_ESTATE_PROMPT = {
     role: "system",
-    content: "You are a helpful real estate assistant."
+    content: "You are an expert Lebanese real estate assistant specializing in property prices, trends, and recommendations."
   };
 
-  const [messages, setMessages] = useState([initialSystemMessage]);
+  const [messages, setMessages] = useState([REAL_ESTATE_PROMPT]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const messagesEndRef = useRef(null);
 
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
+  // Load from localStorage on mount
   useEffect(() => {
-    scrollToBottom();
+    const saved = localStorage.getItem("chatHistory");
+    if (saved) {
+      setMessages(JSON.parse(saved));
+    }
+  }, []);
+
+  // Save to localStorage whenever messages change
+  useEffect(() => {
+    localStorage.setItem("chatHistory", JSON.stringify(messages));
+  }, [messages]);
+
+  // Scroll to bottom on new message
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
   const handleSubmit = async () => {
-    if(!input.trim()) 
-      {
-        alert("Please enter a message.");
-        return;
-      }
+    if(!input.trim()) return;
+
     const userMessage = { role: "user", content: input };
-    setMessages((prev) => [...prev, userMessage]);
+    const updatedMessages = [...messages, userMessage];
+    setMessages(updatedMessages);
+    setInput("");
     setLoading(true);
 
     try {
     const res = await fetch("http://localhost:8000/api/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({messages: [...messages, { role: "user", content: input }]})
+      body: JSON.stringify({ messages: updatedMessages }) // Include full history
     });
 
     const data = await res.json();
-    if (data.error) {
-        setMessages((prev) => [
-          ...prev,
-          { role: "assistant", content: `Error: ${data.error}` },
-        ]);
-      } else {
-        setMessages((prev) => [
-          ...prev,
-          { role: "assistant", content: data.reply },
-        ]);
-      }
+    
+    if (!res.ok) throw new Error(data.error || "Unknown error");
+      
+    setMessages((prev) => [
+      ...prev,
+      { 
+        role: "assistant", 
+        content: data.reply,
+        metadata: data.usage,  // Store token usage if needed
+      },
+    ]);
     } catch (err) {
-      setMessages(prev => [
+    setMessages((prev) => [
         ...prev,
-        { role: "assistant", content: "Network error, please try again." },
+        { 
+          role: "assistant", 
+          content: `⚠️ Error: ${err.message}`,
+          isError: true
+        }
       ]);
     } finally {
-      setInput("");
       setLoading(false);
     }
   };
 
-const handleReset = () => {
-    setMessages([initialSystemMessage]);
-    setInput("");
+  const handleKeyDown = (e) => {
+      if (e.key === "Enter" && !e.shiftKey) {
+        e.preventDefault();
+        handleSubmit();
+      }
+    };
+
+  const handleClear = () => {
+    setMessages([REAL_ESTATE_PROMPT]);
+    localStorage.removeItem("chatHistory");
   };
 
   return (
     <div className="chat-container">
       <div className="chat-header">
-        <h1>Real Estate AI Assistant</h1>
-        <button onClick={handleReset}>Reset Conversation</button>
+        <h2>
+          🏠 Lebanese Real Estate AI
+          <button className="new-chat-btn" onClick={handleClear} disabled={messages.length <= 1}>
+            <FaComment size={20} color= "white" />
+          </button>
+        </h2>
       </div>
 
       <div className="chat-messages">
@@ -78,24 +102,35 @@ const handleReset = () => {
           .map((msg, idx) => (
             <div
               key={idx}
-              className={`message ${msg.role === "user" ? "user" : "assistant"}`}
-            >
-              <div className="bubble">{msg.content}</div>
+              className={`message ${msg.role} ${msg.isError ? "error" : ""}`}>
+                
+              <div className="avatar">
+                {msg.role === "user" ? "🧑" : msg.isError ? "⚠️" : "🤖"}
+              </div>
+              <div className="message-content">
+                {msg.content}
+                {/* {msg.metadata && (
+                  <div className="message-meta">
+                    Tokens: {msg.metadata.total_tokens}
+                  </div>
+                  )} */}
+              </div>
             </div>
           ))}
         <div ref={messagesEndRef} />
       </div>
 
-      <div className="chat-input-container">
+      <div className="chat-input-area">
         <textarea
           rows={2}
-          placeholder="Ask anything about real estate..."
+          placeholder="Ask about properties, prices, or trends..."
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          onKeyDown={(e) => e.key === "Enter" && !e.shiftKey && handleSubmit()}
+          onKeyDown={handleKeyDown}
+          disabled={loading}
         />
-        <button onClick={handleSubmit} disabled={loading}>
-          {loading ? "Thinking..." : "Send"}
+        <button onClick={handleSubmit} disabled={loading || !input.trim()}>
+          {loading ? "⏳ Analyzing..." : "📩 Send"}
         </button>
       </div>
     </div>
