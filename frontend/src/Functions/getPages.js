@@ -1,4 +1,4 @@
-import { FaCloud, FaHome, FaChartLine, FaTable, FaChromecast } from "react-icons/fa";
+import { FaCloud, FaHome, FaChartLine, FaTable, FaChromecast, FaSnapchat } from "react-icons/fa";
 
 const menu_paths = [
   {
