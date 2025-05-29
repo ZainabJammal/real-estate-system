@@ -1,5 +1,6 @@
 import { FaCloud, FaHome, FaChartLine, FaTable } from "react-icons/fa";
 
+
 const menu_paths = [
   {
     name: "Dashboard",

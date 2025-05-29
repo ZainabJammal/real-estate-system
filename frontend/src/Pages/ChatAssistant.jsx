@@ -1,11 +1,11 @@
 import React, { useState, useRef, useEffect } from "react";
-import { FaComment, FaPlus } from 'react-icons/fa';
+import { FaComment } from "react-icons/fa";
 import "./ChatAssistant.css";
 
 const ChatAssistant = () => {
   const REAL_ESTATE_PROMPT = {
     role: "system",
-    content: "You are an expert Lebanese real estate assistant specializing in property prices, trends, and recommendations."
+    content: "You are an expert Lebanese real estate assistant specializing in property prices, trends, and recommendations.",
   };
 
   const [sessionId, setSessionId] = useState(() => {
@@ -20,9 +20,8 @@ const ChatAssistant = () => {
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const messagesEndRef = useRef(null);
-  
 
-  // Load chat from Supabase
+  // Load chat history from Supabase
   useEffect(() => {
     const fetchHistory = async () => {
       try {
@@ -35,16 +34,15 @@ const ChatAssistant = () => {
       }
     };
     fetchHistory();
-}, [sessionId]);
+  }, [sessionId]);
 
-
-  // Scroll to bottom on new message
+  // Scroll to latest message
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
   const handleSubmit = async () => {
-    if(!input.trim()) return;
+    if (!input.trim()) return;
 
     const userMessage = { role: "user", content: input };
     const updatedMessages = [...messages, userMessage];
@@ -53,16 +51,16 @@ const ChatAssistant = () => {
     setLoading(true);
 
     try {
-    const res = await fetch("http://localhost:8000/api/chat", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ messages: updatedMessages }) 
-    });
+      const res = await fetch("http://localhost:8000/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ messages: updatedMessages }),
+      });
 
-    const data = await res.json();
-    if (!res.ok) throw new Error(data.error || "Unknown error");
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Unknown error");
 
-    const finalMessages = [
+      const finalMessages = [
         ...updatedMessages,
         {
           role: "assistant",
@@ -70,26 +68,25 @@ const ChatAssistant = () => {
           metadata: data.usage,
         },
       ];
-      
-    setMessages(finalMessages);
+      setMessages(finalMessages);
 
-    // Save to Supabase
-    await fetch("http://localhost:8000/api/chat/save", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        session_id: sessionId,
-        messages: finalMessages,
-        })
+      // Save to Supabase
+      await fetch("http://localhost:8000/api/chat/save", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          session_id: sessionId,
+          messages: finalMessages,
+        }),
       });
     } catch (err) {
-    setMessages((prev) => [
+      setMessages((prev) => [
         ...prev,
-        { 
-          role: "assistant", 
+        {
+          role: "assistant",
           content: `⚠️ Error: ${err.message}`,
-          isError: true
-        }
+          isError: true,
+        },
       ]);
     } finally {
       setLoading(false);
@@ -97,11 +94,11 @@ const ChatAssistant = () => {
   };
 
   const handleKeyDown = (e) => {
-      if (e.key === "Enter" && !e.shiftKey) {
-        e.preventDefault();
-        handleSubmit();
-      }
-    };
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      handleSubmit();
+    }
+  };
 
   const handleClear = () => {
     setMessages([REAL_ESTATE_PROMPT]);
@@ -117,7 +114,7 @@ const ChatAssistant = () => {
         <h2>
           🏠 Lebanese Real Estate AI
           <button className="new-chat-btn" onClick={handleClear} disabled={messages.length <= 1}>
-            <FaComment size={20} color= "white" />
+            <FaComment size={20} color="white" />
           </button>
         </h2>
       </div>
@@ -128,13 +125,7 @@ const ChatAssistant = () => {
           .map((msg, idx) => (
             <div key={idx} className={`message ${msg.role} ${msg.isError ? "error" : ""}`}>
               <div className="avatar">{msg.role === "user" ? "🧑" : msg.isError ? "⚠️" : "🤖"}</div>
-              <div className="message-content">{msg.content}
-                {/* {msg.metadata && (
-                  <div className="message-meta">
-                    Tokens: {msg.metadata.total_tokens}
-                  </div>
-                  )} */}
-              </div>
+              <div className="message-content">{msg.content}</div>
             </div>
           ))}
         <div ref={messagesEndRef} />
