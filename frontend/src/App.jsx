@@ -5,7 +5,7 @@ import Sidebar from "./Components/Sidebar/Sidebar";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import Transactions from "./Pages/Dashboard/Transactions";
 import Tables from "./Pages/Dashboard/Tables";
-import Ask_AI from "./Pages/Dashboard/Ask_AI";
+// import Ask_AI from "./Pages/Dashboard/Ask_AI";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import ChatAssistant from "./Pages/ChatAssistant";
 
@@ -21,7 +21,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/transactions" element={<Transactions />} />
-            <Route path="/ask_ai" element={<Ask_AI />} />
+            {/* <Route path="/ask_ai" element={<Ask_AI />} /> */}
             <Route path="/chatbot" element={<ChatAssistant />} />
             <Route path="/tables" element={<Tables />} />
           </Routes>
