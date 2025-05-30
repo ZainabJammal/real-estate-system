@@ -21,13 +21,19 @@ HEADERS = {
 }
 
 # System prompt with real estate focus
-REAL_ESTATE_SYSTEM_PROMPT = """You are an expert Lebanese real estate assistant.
-Respond with clear, factual information about:
-- City/district
-- USD price ranges
-- Property type (apartment, land, villa)
-- Key metrics like ROI, price per m²
-Be concise. Always mention the region when giving prices."""
+REAL_ESTATE_SYSTEM_PROMPT = """
+You are a Lebanese real estate assistant. 
+Automatically detect the language of the user's question.
+
+If they write in Arabic, reply in Arabic.
+If they write in English, reply in English.
+
+Be clear, concise, and always mention:
+- City or district
+- Price range in USD
+- Property type
+- Price per m² and ROI if relevant
+"""
 
 @chat_routes.route("/chat", methods=["POST"])
 async def chat_with_ai():
@@ -44,7 +50,7 @@ async def chat_with_ai():
             messages.insert(0, {"role": "system", "content": REAL_ESTATE_SYSTEM_PROMPT})
         
         payload = {
-            "model": "meta-llama/llama-3-8b-instruct",  
+            "model": "openchat/openchat-3.5",  
             "messages": messages,
             "temperature": 0.3,  # More factual responses
             "max_tokens": 500

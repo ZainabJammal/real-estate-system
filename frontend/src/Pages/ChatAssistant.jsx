@@ -20,6 +20,8 @@ const ChatAssistant = () => {
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const messagesEndRef = useRef(null);
+  const textareaRef = useRef(null);
+
 
   // Load chat history from Supabase
   useEffect(() => {
@@ -40,6 +42,14 @@ const ChatAssistant = () => {
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
+
+  //Auto-focus the textarea
+  useEffect(() => {
+    if (textareaRef.current) {
+      textareaRef.current.focus();
+    }
+  }, []);
+
 
   const handleSubmit = async () => {
     if (!input.trim()) return;
@@ -90,6 +100,12 @@ const ChatAssistant = () => {
       ]);
     } finally {
       setLoading(false);
+      // ⏱ Wait for React to finish re-rendering before focusing
+      setTimeout(() => {
+        if (textareaRef.current) {
+          textareaRef.current.focus();
+        }
+      }, 0);
     }
   };
 
@@ -108,6 +124,12 @@ const ChatAssistant = () => {
     localStorage.setItem("chatSessionId", newId);
   };
 
+  const isArabic = (text) => {
+    const arabicRegex = /[\u0600-\u06FF]/;
+    return arabicRegex.test(text);
+  };
+
+
   return (
     <div className="chat-container">
       <div className="chat-header">
@@ -125,7 +147,11 @@ const ChatAssistant = () => {
           .map((msg, idx) => (
             <div key={idx} className={`message ${msg.role} ${msg.isError ? "error" : ""}`}>
               <div className="avatar">{msg.role === "user" ? "🧑" : msg.isError ? "⚠️" : "🤖"}</div>
-              <div className="message-content">{msg.content}</div>
+              <div className="message-content" 
+                    dir={isArabic(msg.content) ? "rtl" : "ltr"}
+                    style={{ textAlign: isArabic(msg.content) ? "right" : "left" }}>
+                {msg.content}
+              </div>
             </div>
           ))}
         <div ref={messagesEndRef} />
@@ -133,6 +159,7 @@ const ChatAssistant = () => {
 
       <div className="chat-input-area">
         <textarea
+          ref={textareaRef}
           rows={2}
           placeholder="Ask about properties, prices, or trends..."
           value={input}
