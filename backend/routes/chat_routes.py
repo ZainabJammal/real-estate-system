@@ -1,5 +1,4 @@
 # routes/chat_routes.py
-
 import asyncio
 from quart import Blueprint, request, jsonify
 from dotenv import load_dotenv

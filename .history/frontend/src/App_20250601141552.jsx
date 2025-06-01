@@ -8,7 +8,7 @@ import Tables from "./Pages/Dashboard/Tables";
 // import Ask_AI from "./Pages/Dashboard/Ask_AI";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import ChatAssistant from "./Pages/ChatAssistant";
-import TransactionsForecasting from "./Pages/TransactionsForecasting";
+import TransactionsForecasting from "./Pages/TimeSeriesForecasting";
 
 const queryClient = new QueryClient();
 
