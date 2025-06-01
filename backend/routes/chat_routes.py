@@ -50,7 +50,7 @@ async def chat_with_ai():
             messages.insert(0, {"role": "system", "content": REAL_ESTATE_SYSTEM_PROMPT})
         
         payload = {
-            "model": "openchat/openchat-3.5",  
+            "model": "meta-llama/llama-3-8b-instruct",  
             "messages": messages,
             "temperature": 0.3,  # More factual responses
             "max_tokens": 500
