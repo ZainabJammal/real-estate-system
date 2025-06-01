@@ -49,33 +49,33 @@ async def chat_with_ai():
             messages.insert(0, {"role": "system", "content": REAL_ESTATE_SYSTEM_PROMPT})
         
         payload = {
-            "model": "meta-llama/llama-3-8b-instruct",  
+            "model": "openchat/openchat-3.5",  
             "messages": messages,
             "temperature": 0.3,  # More factual responses
             "max_tokens": 500
         }
 
         try:
-                async with httpx.AsyncClient(timeout=30.0) as client:
-                    response = await client.post(
-                        "https://openrouter.ai/api/v1/chat/completions",
-                        headers=HEADERS,
-                        json=payload
-                    )
-                    response.raise_for_status()
-                    result = response.json()
-                    return jsonify({
-                        "reply": result["choices"][0]["message"]["content"],
-                        "usage": result.get("usage")
-                    })
+    async with httpx.AsyncClient(timeout=30.0) as client:
+        response = await client.post(
+            "https://openrouter.ai/api/v1/chat/completions",
+            headers=HEADERS,
+            json=payload
+        )
+        response.raise_for_status()
+        result = response.json()
+        return jsonify({
+            "reply": result["choices"][0]["message"]["content"],
+            "usage": result.get("usage")
+        })
 
-        except httpx.HTTPStatusError as e:
-            # 🔍 Log more about OpenRouter's response
-            error_content = e.response.text
-            return jsonify({
-                "error": f"OpenRouter HTTP error: {e.response.status_code}",
-                "details": error_content
-            }), 500
+except httpx.HTTPStatusError as e:
+    # 🔍 Log more about OpenRouter's response
+    error_content = e.response.text
+    return jsonify({
+        "error": f"OpenRouter HTTP error: {e.response.status_code}",
+        "details": error_content
+    }), 500
 
     except httpx.RequestError as e:
         return jsonify({"error": f"Network error: {str(e)}"}), 502
