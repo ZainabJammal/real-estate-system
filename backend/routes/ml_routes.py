@@ -136,16 +136,16 @@ async def get_transaction_filters():
     finally:
         if supabase:
             pass # Close client if needed
-
-
 @ml_routes.route("/api/predict_transaction_timeseries", methods=["POST"])
 async def predict_transaction_timeseries_route():
+    supabase = None  # Initialize for finally block
     try:
         data = await request.get_json()
         city_name = data.get('city_name')
         granularity = data.get('granularity', 'M')
 
         value_column_for_lstm = "value"
+
         supabase = await create_supabase()
 
         print(f"DEBUG: Calling fetch_and_prepare_transaction_data with city: {city_name}")
@@ -153,7 +153,6 @@ async def predict_transaction_timeseries_route():
             supabase_client=supabase,
             city_name=city_name
         )
-
         print(f"DEBUG: df_history_monthly empty: {df_history_monthly.empty}, length: {len(df_history_monthly)}")
 
         if df_history_monthly.empty:
@@ -168,6 +167,7 @@ async def predict_transaction_timeseries_route():
             return jsonify({"error": f"Insufficient monthly transaction data for LSTM. Need at least {look_back + 1} data points, got {len(df_history_monthly)}."}), 400
 
         lstm_predictor = LSTMPredictor(look_back=look_back)
+
         print(f"DEBUG: Training LSTM for Transactions: City='{city_name}'")
         lstm_predictor.train(df_history_monthly, value_column=value_column_for_lstm, epochs=epochs, batch_size=batch_size)
 
@@ -178,9 +178,11 @@ async def predict_transaction_timeseries_route():
             print("ERROR: No predictions returned by LSTM.")
             return jsonify({"error": "LSTM model failed to generate predictions."}), 500
 
-        if 'date' not in df_history_monthly.columns or df_history_monthly['date'].isnull().any():
-            print(f"CRITICAL ERROR: 'date' column invalid.")
-            return jsonify({"error": "Internal error: Invalid or missing 'date' column in historical data."}), 500
+        print(f"DEBUG: predictions_list_monthly (first 5): {predictions_list_monthly[:5]}")
+
+        if not isinstance(df_history_monthly, pd.DataFrame) or df_history_monthly.empty or 'date' not in df_history_monthly.columns:
+            print(f"CRITICAL ERROR: df_history_monthly is invalid.")
+            return jsonify({"error": "Internal error: Historical data became invalid before date generation."}), 500
 
         last_historical_date_monthly = df_history_monthly['date'].iloc[-1]
         future_dates_monthly = pd.date_range(start=last_historical_date_monthly + pd.DateOffset(months=1),
@@ -194,6 +196,7 @@ async def predict_transaction_timeseries_route():
             return jsonify({"error": f"Invalid granularity '{granularity}'. Choose 'M', or 'Y'."}), 400
 
         pandas_freq = granularity_map_pandas[granularity.upper()]
+
         df_history_agg = df_history_monthly.set_index('date')[value_column_for_lstm].resample(pandas_freq).mean().reset_index()
         df_forecast_agg = df_forecast_monthly.set_index('date')[value_column_for_lstm].resample(pandas_freq).mean().reset_index()
 
@@ -203,18 +206,24 @@ async def predict_transaction_timeseries_route():
         response_payload = {
             'historical': [
                 {'ds': r['date'].strftime('%Y-%m-%d'), 'y': r[value_column_for_lstm]}
-                for _, r in df_history_agg.iterrows() if pd.notnull(r[value_column_for_lstm])
+                for i, r in df_history_agg.iterrows() if pd.notnull(r[value_column_for_lstm])
             ],
             'forecast': [
                 {'ds': r['date'].strftime('%Y-%m-%d'), 'y': r[value_column_for_lstm]}
-                for _, r in df_forecast_agg.iterrows() if pd.notnull(r[value_column_for_lstm])
+                for i, r in df_forecast_agg.iterrows() if pd.notnull(r[value_column_for_lstm])
             ]
         }
-
         print("DEBUG: Final return triggered.")
         return jsonify(response_payload)
 
+
+        print(f"DEBUG: Successfully prepared response_payload. Returning to client.")
+        return jsonify(response_payload)
+
+    # except Exception as e:
+    #     print(f"Exception occurred in predict_transaction_timeseries_route: {e}")
+    #     return jsonify({"error": str(e)}), 500
     except Exception as e:
         print(f"Exception occurred in predict_transaction_timeseries_route: {e}")
-        traceback.print_exc()
-        return jsonify({"error": str(e)}), 500
+    traceback.print_exc()
+    return jsonify({"error": str(e)}), 500
