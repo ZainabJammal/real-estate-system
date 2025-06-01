@@ -12,8 +12,8 @@ const menu_paths = [
     icon: FaChartLine,
   },
   {
-    name: "Transactions Forecasting",
-    path: "/Transactions_Forecasting",
+    name: "TimeSeries Forecasting",
+    path: "/TimeSeries_forecasting",
     icon: FaCloud,
   },
   {

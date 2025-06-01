@@ -13,7 +13,7 @@ const menu_paths = [
   },
   {
     name: "Transactions Forecasting",
-    path: "/Transactions_Forecasting",
+    path: "/TransactionsForecasting",
     icon: FaCloud,
   },
   {

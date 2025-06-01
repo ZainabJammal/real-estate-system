@@ -22,8 +22,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/transactions" element={<Transactions />} />
+            <Route path="/Transactions_Forecasting" element={<TimeSeriesForecasting />} />
             {/* <Route path="/ask_ai" element={<Ask_AI />} /> */}
-            <Route path="/transactions_forecasting" element={<TransactionsForecasting />} />
             <Route path="/chatbot" element={<ChatAssistant />} />
             <Route path="/tables" element={<Tables />} />
           </Routes>

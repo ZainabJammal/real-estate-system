@@ -1,4 +1,6 @@
+
 import { FaCloud, FaHome, FaChartLine, FaTable } from "react-icons/fa";
+
 
 const menu_paths = [
   {
@@ -12,8 +14,8 @@ const menu_paths = [
     icon: FaChartLine,
   },
   {
-    name: "Transactions Forecasting",
-    path: "/Transactions_Forecasting",
+    name: "TimeSeries Forecasting",
+    path: "/TimeSeries_forecasting",
     icon: FaCloud,
   },
   {

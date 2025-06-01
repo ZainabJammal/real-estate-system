@@ -226,4 +226,4 @@ async def predict_transaction_timeseries_route():
     except Exception as e:
         print(f"Exception occurred in predict_transaction_timeseries_route: {e}")
     traceback.print_exc()
-    return jsonify({"error": str(e)}), 500
+    return jsonify({"error": str(e)}), 

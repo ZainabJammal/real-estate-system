@@ -1,4 +1,9 @@
+<<<<<<< HEAD
+import { FaCloud, FaHome, FaChartLine, FaTable, FaChromecast,  FaSnapchat } from "react-icons/fa";
+=======
 import { FaCloud, FaHome, FaChartLine, FaTable } from "react-icons/fa";
+
+>>>>>>> main
 
 const menu_paths = [
   {
@@ -11,13 +16,15 @@ const menu_paths = [
     path: "/transactions",
     icon: FaChartLine,
   },
-  {
-    name: "Transactions Forecasting",
-    path: "/Transactions_Forecasting",
-    icon: FaCloud,
+   {
+    name: "TimeSeries Forecasting",
+    path: "/TimeSeries_forecasting",
+   icon: FaCloud,
   },
   {
-    name: "Ask AI",
+    name: "Chatbot",
+=======
+>>>>>>> main
     path: "/chatbot",
     icon: FaCloud,
   },
