@@ -4,6 +4,10 @@ from quart import Blueprint, request, jsonify
 from dotenv import load_dotenv
 import httpx
 import os
+from uuid import uuid4
+import json
+from quart import current_app
+
 
 load_dotenv()
 
@@ -16,13 +20,19 @@ HEADERS = {
 }
 
 # System prompt with real estate focus
-REAL_ESTATE_SYSTEM_PROMPT = """You are an expert Lebanese real estate assistant. 
-Provide accurate, concise answers about property prices, trends, and recommendations. 
-When discussing prices, always mention:
-- City/district
-- Price range (USD)
+REAL_ESTATE_SYSTEM_PROMPT = """
+You are a Lebanese real estate assistant. 
+Automatically detect the language of the user's question.
+
+If they write in Arabic, reply in Arabic.
+If they write in English, reply in English.
+
+Be clear, concise, and always mention:
+- City or district
+- Price range in USD
 - Property type
-- Key metrics (price per m², ROI)"""
+- Price per m² and ROI if relevant
+"""
 
 @chat_routes.route("/chat", methods=["POST"])
 async def chat_with_ai():
@@ -39,7 +49,7 @@ async def chat_with_ai():
             messages.insert(0, {"role": "system", "content": REAL_ESTATE_SYSTEM_PROMPT})
         
         payload = {
-            "model": "mistralai/mistral-7b-instruct",  # Consider gpt-3.5-turbo for better quality
+            "model": "openchat/openchat-3.5",  
             "messages": messages,
             "temperature": 0.3,  # More factual responses
             "max_tokens": 500
@@ -62,3 +72,37 @@ async def chat_with_ai():
         return jsonify({"error": f"Network error: {str(e)}"}), 502
     except Exception as e:
         return jsonify({"error": f"Processing error: {str(e)}"}), 500
+    
+@chat_routes.route("/chat/save", methods=["POST"])
+async def save_chat_history():
+    supabase = current_app.supabase
+    data = await request.get_json()
+    session_id = data.get("session_id") or str(uuid4())
+    messages = data.get("messages", [])
+
+    try:
+        # Upsert chat session
+        await supabase.table("chat_sessions").upsert({
+            "id": session_id,
+            "messages": messages
+        }).execute()
+        return jsonify({"session_id": session_id})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+    
+@chat_routes.route("/chat/history/<session_id>", methods=["GET"])
+async def get_chat_history(session_id):
+    supabase = current_app.supabase
+    try:
+        print(f"[INFO] Loading history for session_id: {session_id}")
+        response = await supabase.table("chat_sessions").select("messages").eq("id", session_id).execute()
+        if response.data and len(response.data) > 0:
+            messages = response.data[0]["messages"]
+        else:
+            messages = []
+        return jsonify({"messages": messages})
+    except Exception as e:
+        print(f"[ERROR] Chat history fetch failed: {e}")
+        return jsonify({"messages": [], "error": str(e)}), 500
+
+

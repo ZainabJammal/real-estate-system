@@ -107,7 +107,9 @@
   margin-top: 4px;
 }
 
-.message-content {
+.message-content {  
+  font-size: medium;
+  font-family:Arial, Helvetica, sans-serif;
   max-width: 80%;
   padding: 12px 16px;
   border-radius: 10px;
