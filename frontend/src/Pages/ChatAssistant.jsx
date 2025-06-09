@@ -1,20 +1,52 @@
 import React, { useState, useRef, useEffect } from "react";
+import {useSearchParams, useNavigate} from "react-router-dom";
 import { FaComment } from "react-icons/fa";
 import "./ChatAssistant.css";
 
-const ChatAssistant = () => {
+const ChatAssistant = () => { 
   const REAL_ESTATE_PROMPT = {
     role: "system",
     content: "You are an expert Lebanese real estate assistant specializing in property prices, trends, and recommendations.",
   };
 
-  const [sessionId, setSessionId] = useState(() => {
-    const saved = localStorage.getItem("chatSessionId");
-    if (saved) return saved;
-    const newId = crypto.randomUUID();
-    localStorage.setItem("chatSessionId", newId);
-    return newId;
-  });
+  const [searchParams, setSearchParams] = useSearchParams();
+  const navigate = useNavigate();
+
+  const [sessionId, setSessionId] = useState(null);
+
+  // Ensure session ID exists (from URL or create new)
+  useEffect(() => {
+    const sessionFromUrl = searchParams.get("session");
+
+    if (sessionFromUrl) {
+      setSessionId(sessionFromUrl);
+    } else {
+      // No session in URL → fetch most recent session from Supabase
+      const loadLastSession = async () => {
+        try {
+          const res = await fetch("http://localhost:8000/api/chat/last");
+          const data = await res.json();
+
+          if (data.session_id) {
+            setSessionId(data.session_id);
+            setSearchParams({ session: data.session_id });
+          } else {
+            // No existing sessions → create new one
+            const newId = crypto.randomUUID();
+            setSessionId(newId);
+            setSearchParams({ session: newId });
+          }
+        } catch (err) {
+          console.error("Failed to load last session", err);
+          // Fallback: create new session
+          const newId = crypto.randomUUID();
+          setSessionId(newId);
+          setSearchParams({ session: newId });
+        }
+      };
+      loadLastSession();
+    }
+  }, []);
 
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
@@ -25,6 +57,8 @@ const ChatAssistant = () => {
 
   // Load chat history from Supabase
   useEffect(() => {
+    if (!sessionId) return; // wait for sessionId to be ready
+
     const fetchHistory = async () => {
       try {
         const res = await fetch(`http://localhost:8000/api/chat/history/${sessionId}`);
@@ -32,9 +66,10 @@ const ChatAssistant = () => {
         setMessages(data.messages.length ? data.messages : [REAL_ESTATE_PROMPT]);
       } catch (err) {
         console.error("History load failed", err);
-        setMessages([REAL_ESTATE_PROMPT]); // fallback
+        setMessages([REAL_ESTATE_PROMPT]);
       }
     };
+    
     fetchHistory();
   }, [sessionId]);
 
@@ -117,11 +152,10 @@ const ChatAssistant = () => {
   };
 
   const handleClear = () => {
-    setMessages([REAL_ESTATE_PROMPT]);
-    localStorage.removeItem("chatSessionId");
     const newId = crypto.randomUUID();
     setSessionId(newId);
-    localStorage.setItem("chatSessionId", newId);
+    setSearchParams({ session: newId });
+    setMessages([REAL_ESTATE_PROMPT]);
   };
 
   const isArabic = (text) => {

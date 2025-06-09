@@ -82,6 +82,24 @@ async def chat_with_ai():
     except Exception as e:
         return jsonify({"error": f"Processing error: {str(e)}"}), 500
     
+@chat_routes.route("/chat/last", methods=["GET"])
+async def get_last_session():
+    supabase = current_app.supabase
+    try:
+        response = await supabase.table("chat_sessions") \
+            .select("id") \
+            .order("created_at", desc=True) \
+            .limit(1) \
+            .execute()
+
+        if response.data and len(response.data) > 0:
+            return jsonify({"session_id": response.data[0]["id"]})
+        else:
+            return jsonify({"session_id": None})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+    
 @chat_routes.route("/chat/save", methods=["POST"])
 async def save_chat_history():
     supabase = current_app.supabase
