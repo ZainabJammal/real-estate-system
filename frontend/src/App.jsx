@@ -9,7 +9,6 @@ import Tables from "./Pages/Dashboard/Tables";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import ChatAssistant from "./Pages/ChatAssistant";
 import TransactionsForecasting from "./Pages/TransactionsForecasting";
-import PriceEstimation from "./Pages/PriceEstimation";
 
 const queryClient = new QueryClient();
 
@@ -25,7 +24,6 @@ function App() {
             <Route path="/transactions" element={<Transactions />} />
             {/* <Route path="/ask_ai" element={<Ask_AI />} /> */}
             <Route path="/transactions_forecasting" element={<TransactionsForecasting />} />
-            <Route path="/Current_Price_Estimation" element={<PriceEstimation />} />
             <Route path="/chatbot" element={<ChatAssistant />} />
             <Route path="/tables" element={<Tables />} />
           </Routes>
