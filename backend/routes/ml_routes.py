@@ -1,19 +1,21 @@
+import os
 import joblib
+from sklearn.preprocessing import MinMaxScaler
 import pandas as pd
+import numpy as np
+import traceback
+from supabase import create_client, Client
+from dotenv import load_dotenv
 
+from quart import Blueprint, jsonify, request
+from tensorflow.keras.models import load_model
+from db_connect import create_supabase
 from models import get_models_path, get_enc_paths
 
-from quart import Blueprint, jsonify, request, Response
-from db_connect import create_supabase # For connecting to Supabase
-from datetime import datetime # For date calculations
-from dateutil.relativedelta import relativedelta # For easy date arithmetic (e.g., 5 years ago)
-
-import traceback
-import asyncio
-from .forecasting_lstm import LSTMPredictor, fetch_and_prepare_transaction_data  # Import your LSTM predictor class
 
 # Create a Blueprint for your main routes
 ml_routes = Blueprint('ml', __name__)
+
 
 # Get models and encoders paths
 trans_path, prop_path = get_models_path()
@@ -46,7 +48,7 @@ async def predict_trans():
         prediction = trans_model.predict(input_data)
         print(prediction)
 
-        return jsonify({"prediction": float(prediction)})
+        return jsonify({"prediction": float(prediction[0])}) # Changed to prediction[0] for consistency
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
@@ -82,148 +84,157 @@ async def predict_prop():
         return jsonify({"error": str(e)}), 500
 
 
+ 
+# Mayssoun's bit
 
-# mayssoun's bit
-@ml_routes.route("/forecast_transaction", methods=["GET","POST"])
-async def forecasting_transaction():
+# --- 1. CONFIGURATION AND DATABASE CONNECTION ---
+# Load environment variables from .env file
+load_dotenv() 
+
+# Get Supabase credentials from environment variables
+SUPABASE_URL: str = os.environ.get("SUPABASE_URL")
+SUPABASE_KEY: str = os.environ.get("SUPABASE_KEY")
+
+if not SUPABASE_URL or not SUPABASE_KEY:
+    raise ValueError("FATAL ERROR: SUPABASE_URL and SUPABASE_KEY must be set in your .env file.")
+
+# Initialize the Supabase client
+supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
+print("-> Supabase client initialized.")
+
+# Define paths to local model artifacts
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(SCRIPT_DIR, 'forecast_model.joblib')
+MODEL_COLS_PATH = os.path.join(SCRIPT_DIR, 'model_columns.json')
+
+# Define global constants
+# GROUPING_KEY must match the column name in your training data AND your database
+GROUPING_KEY = 'city' 
+TARGET_COL = 'transaction_value'
+FORECAST_HORIZON_MONTHS = 60
+
+# --- 2. HELPER FUNCTIONS (These must mirror your final training script) ---
+
+def map_user_selection_to_city(selection_string: str) -> str:
+    """
+    Maps the user's dropdown selection to the specific custom region names
+    used in the database, ensuring it's lowercase for matching.
+    """
+    if "Tripoli, Akkar" in selection_string:
+        return "Tripoli"
+    if "Baabda, Aley, Chouf" in selection_string:
+        return "Baabda"
+    if "Kesrouan, Jbeil" in selection_string:
+        return "Kesrouan"
+    return selection_string.lower()
+
+def create_features(df):
+    """Optimal features for a small dataset with a long forecast horizon."""
+    df_features = df.copy()
+    df_features['year'] = df_features.index.year
+    df_features['month_sin'] = np.sin(2 * np.pi * df_features.index.month / 12.0)
+    df_features['month_cos'] = np.cos(2 * np.pi * df_features.index.month / 12.0)
+    df_features['is_december'] = (df_features.index.month == 12).astype(int)
+    df_features['is_summer_peak'] = (df_features.index.month.isin([7, 8])).astype(int)
+    return df_features
+
+# --- 3. LOAD MODEL ARTIFACTS AT STARTUP ---
+print("-> Loading local forecasting model artifacts...")
+XGB_MODEL = joblib.load(MODEL_PATH)
+XGB_MODEL_COLS = list(pd.read_json(MODEL_COLS_PATH, typ='series'))
+print("--- Forecasting API is ready (connected to Supabase). ---")
+
+# --- 4. API ENDPOINT (Simplified for "Best Guess" model) ---
+@ml_routes.route("/forecast/xgboost/<string:user_selection>", methods=["GET"])
+async def forecast_with_xgboost(user_selection: str):
+    """
+    Generates a 5-year 'Best Guess' forecast by predicting all future
+    months in a single batch.
+    """
+    print(f"\nReceived 'Best Guess' forecast request for: '{user_selection}'")
+
     try:
-        data = await request.get_json()
-        input_data = pd.DataFrame([data])
-        input_data["City"] = city_t_enc.transform([input_data["City"].iloc[0]])[0]
-        input_data = input_data.astype(float)
-        prediction = trans_model.predict(input_data)
-        return jsonify({"prediction": float(prediction[0])})
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
+        city_name = map_user_selection_to_city(user_selection)
+        print(f"-> Mapped to city: '{city_name}'")
 
-@ml_routes.route("/forecast_property", methods=["POST"])
-async def forecasting_property():
-    try:
-        data = await request.get_json()
-        input_data = pd.DataFrame([data])  
-        input_data["City"] = city_enc.transform([input_data["City"].iloc[0]])[0]
-        input_data = input_data.astype(float)
-        input_array = input_data.values.reshape(1, -1)
-        prediction = prop_model.predict(input_array)
-        return jsonify({"prediction": float(prediction[0])})
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
+        # step A: fetch histo data first
+        print(f"-> Querying Supabase for '{city_name}' historical data...")
+        response = supabase.table('agg_trans').select('*').ilike(GROUPING_KEY, city_name).order('date').execute()
+        
+          # --- START: NEW "SEE EVERYTHING" DEBUG BLOCK ---
+        print("\n--- RAW SUPABASE RESPONSE DEBUG ---")
+        print(f"Type of response object: {type(response)}")
+        print(f"Response has 'data' attribute: {'data' in dir(response)}")
+        
+        # Check if the response contains data and print it
+        if response.data:
+            print(f"Number of records returned: {len(response.data)}")
+            # Print the first record to see its structure
+            print(f"First record received from Supabase: {response.data[0]}") 
+        else:
+            print("!!! CRITICAL: `response.data` is EMPTY or does not exist.")
+            print(f"Full response object: {response}")
+        
+        print("-----------------------------------\n")
+        # --- END OF DEBUG BLOCK ---
 
-# --- Helper for fetching distinct values for filters (if needed for transactions) ---
-async def fetch_distinct_transaction_cities(supabase_client):
-    table_name = "transactions"
-    column_name = "city" # Assuming 'city' column in transactions table
-    res = await supabase_client.from_(table_name) \
-                        .select(column_name) \
-                        .neq(column_name, "is.null") \
-                        .neq(column_name, "") \
-                        .execute()
-    if res.data:
-        return sorted(list(set(item[column_name] for item in res.data if item[column_name])))
-    return []
+        if not response.data:
+            return jsonify({"error": f"No historical data found for city '{city_name}' in the database."}), 404
+        
+        # Prepare the historical data DataFrame
+        hist_df = pd.DataFrame(response.data)
 
-@ml_routes.route("/api/transaction_filters", methods=["GET"])
-async def get_transaction_filters():
-    supabase = await create_supabase()
-    try:
-        cities = await fetch_distinct_transaction_cities(supabase)
+        parts = hist_df['date'].str.split('-', expand=True)
+        hist_df['date'] = pd.to_datetime('01-' + parts[1] + '-' + parts[0], format='%d-%b-%y')
+        city_history_df = hist_df.set_index('date')
+
+        # Standardize the grouping key column to lowercase to prevent case-mismatch
+        city_history_df[GROUPING_KEY] = city_history_df[GROUPING_KEY].str.lower()
+
+
+        # Step B: Create a DataFrame for all 60 future months
+
+         # Find the last date from the historical data we just fetched.
+        last_historical_date = hist_df['date'].iloc[-1].year
+
+         # Start the forecast on the first day of the month AFTER the last historical date.
+        start_year = last_historical_date + 1
+        start_date = pd.to_datetime(f'{start_year}-01-01')
+        future_dates = pd.date_range(start=start_date, periods=FORECAST_HORIZON_MONTHS, freq='MS')
+
+        future_df = pd.DataFrame(index=future_dates)
+        # Create features for the future DataFrame
+        future_df[GROUPING_KEY] = city_name
+        features_for_pred = create_features(future_df)
+
+        
+        # Step 4: One-hot encode the city and align columns
+        features_encoded = pd.get_dummies(features_for_pred, columns=[GROUPING_KEY])
+        features_aligned = features_encoded.reindex(columns=XGB_MODEL_COLS, fill_value=0)
+        
+        # Step 5: Make predictions for ALL 60 months at once
+        predictions = XGB_MODEL.predict(features_aligned)
+        print(f"-> Generated {len(predictions)} future predictions in a single batch.")
+
+        # --- Part C: Format the Final JSON Response ---
+
+        historical_json = hist_df.to_dict(orient='records')
+        
+        monthly_forecast_df = pd.DataFrame({'date': future_dates, 'predicted_value': predictions})
+        yearly_forecast_df = monthly_forecast_df.resample('YE', on='date')['predicted_value'].sum().to_frame()
+
+        monthly_json = monthly_forecast_df.to_dict(orient='records')
+        yearly_json = yearly_forecast_df.reset_index().rename(columns={'date': 'year', 'predicted_value': 'total_value'}).to_dict(orient='records')
+        for item in yearly_json: item['year'] = item['year'].year
+
+        print(f"-> Successfully generated forecast for '{city_name}'.")
         return jsonify({
-            "cities": cities,
+            "city_forecasted": user_selection,
+            "historical_data": historical_json,
+            "monthly_forecast": monthly_json,
+            "yearly_forecast": yearly_json
         })
+
     except Exception as e:
-        print(f"Error in /api/transaction_filters: {e}")
-        return jsonify({"error": "Failed to fetch transaction filters: " + str(e)}), 500
-    finally:
-        if supabase:
-            pass # Close client if needed
-@ml_routes.route("/api/predict_transaction_timeseries", methods=["POST"])
-async def predict_transaction_timeseries_route():
-    supabase = None  # Initialize for finally block
-    try:
-        data = await request.get_json()
-        city_name = data.get('city_name')
-        granularity = data.get('granularity', 'M')
-
-        value_column_for_lstm = "value"
-
-        supabase = await create_supabase()
-
-        print(f"DEBUG: Calling fetch_and_prepare_transaction_data with city: {city_name}")
-        df_history_monthly = await fetch_and_prepare_transaction_data(
-            supabase_client=supabase,
-            city_name=city_name
-        )
-        print(f"DEBUG: df_history_monthly empty: {df_history_monthly.empty}, length: {len(df_history_monthly)}")
-
-        if df_history_monthly.empty:
-            return jsonify({"error": "No historical transaction data found for the specified city after preparation."}), 400
-
-        look_back = 12
-        epochs = 10
-        batch_size = 1
-        periods_to_predict_monthly = 60
-
-        if len(df_history_monthly) < look_back + 1:
-            return jsonify({"error": f"Insufficient monthly transaction data for LSTM. Need at least {look_back + 1} data points, got {len(df_history_monthly)}."}), 400
-
-        lstm_predictor = LSTMPredictor(look_back=look_back)
-
-        print(f"DEBUG: Training LSTM for Transactions: City='{city_name}'")
-        lstm_predictor.train(df_history_monthly, value_column=value_column_for_lstm, epochs=epochs, batch_size=batch_size)
-
-        print(f"DEBUG: Predicting with LSTM for {periods_to_predict_monthly} periods...")
-        predictions_list_monthly = lstm_predictor.predict(df_history_monthly, future_periods=periods_to_predict_monthly, value_column=value_column_for_lstm)
-
-        if not predictions_list_monthly:
-            print("ERROR: No predictions returned by LSTM.")
-            return jsonify({"error": "LSTM model failed to generate predictions."}), 500
-
-        print(f"DEBUG: predictions_list_monthly (first 5): {predictions_list_monthly[:5]}")
-
-        if not isinstance(df_history_monthly, pd.DataFrame) or df_history_monthly.empty or 'date' not in df_history_monthly.columns:
-            print(f"CRITICAL ERROR: df_history_monthly is invalid.")
-            return jsonify({"error": "Internal error: Historical data became invalid before date generation."}), 500
-
-        last_historical_date_monthly = df_history_monthly['date'].iloc[-1]
-        future_dates_monthly = pd.date_range(start=last_historical_date_monthly + pd.DateOffset(months=1),
-                                             periods=periods_to_predict_monthly,
-                                             freq='ME')
-
-        df_forecast_monthly = pd.DataFrame({'date': future_dates_monthly, value_column_for_lstm: predictions_list_monthly})
-
-        granularity_map_pandas = {'M': 'ME', 'Y': 'YE'}
-        if granularity.upper() not in granularity_map_pandas:
-            return jsonify({"error": f"Invalid granularity '{granularity}'. Choose 'M', or 'Y'."}), 400
-
-        pandas_freq = granularity_map_pandas[granularity.upper()]
-
-        df_history_agg = df_history_monthly.set_index('date')[value_column_for_lstm].resample(pandas_freq).mean().reset_index()
-        df_forecast_agg = df_forecast_monthly.set_index('date')[value_column_for_lstm].resample(pandas_freq).mean().reset_index()
-
-        if not isinstance(df_history_agg, pd.DataFrame) or not isinstance(df_forecast_agg, pd.DataFrame):
-            return jsonify({"error": "Internal error: Aggregation failed."}), 500
-
-        response_payload = {
-            'historical': [
-                {'ds': r['date'].strftime('%Y-%m-%d'), 'y': r[value_column_for_lstm]}
-                for i, r in df_history_agg.iterrows() if pd.notnull(r[value_column_for_lstm])
-            ],
-            'forecast': [
-                {'ds': r['date'].strftime('%Y-%m-%d'), 'y': r[value_column_for_lstm]}
-                for i, r in df_forecast_agg.iterrows() if pd.notnull(r[value_column_for_lstm])
-            ]
-        }
-        print("DEBUG: Final return triggered.")
-        return jsonify(response_payload)
-
-
-        print(f"DEBUG: Successfully prepared response_payload. Returning to client.")
-        return jsonify(response_payload)
-
-    # except Exception as e:
-    #     print(f"Exception occurred in predict_transaction_timeseries_route: {e}")
-    #     return jsonify({"error": str(e)}), 500
-    except Exception as e:
-        print(f"Exception occurred in predict_transaction_timeseries_route: {e}")
-    traceback.print_exc()
-    return jsonify({"error": str(e)}), 500
+        traceback.print_exc()
+        return jsonify({"error": "An internal server error occurred."}), 500

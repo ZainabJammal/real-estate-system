@@ -22,7 +22,16 @@ async def startup():
     global supabase
     current_app.supabase = await create_supabase()
     print("\n\nSupabase client created...\n\n")
-    
-if __name__ == "__main__":
-    app.run(debug=True)
-    
+    print("--- Registered API Routes ---")
+    for rule in app.url_map.iter_rules():
+        # Filter out the 'static' endpoint and OPTIONS method for clarity
+        if rule.endpoint != 'static':
+            methods = [method for method in rule.methods if method != 'OPTIONS']
+            print(f"Endpoint: {rule.endpoint}, Methods: {methods}, URL: {rule.rule}")
+    print("---------------------------")
+# --- END OF CORRECTED BLOCK ---
+# if __name__ == "__main__":
+#     app.run(debug=True)
+
+if __name__ == '__main__':
+    app.run(port=5000, debug=True)

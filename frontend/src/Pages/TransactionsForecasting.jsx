@@ -1,8 +1,8 @@
-// TimeSeriesForecasting.jsx (Updated for 5-Year Forecasting)
-
 import { useQuery } from '@tanstack/react-query';
 import { Line } from 'react-chartjs-2';
 import React, { useState } from "react";
+import "./TransactionsForecasting.css"; // Import the new "Dashboard-Style" CSS
+
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -24,22 +24,13 @@ ChartJS.register(
   Legend
 );
 
-const TimeSeriesForecasting = () => {
-  const predefinedCities = ["", "Baabda, Aley, Chouf", "Beirut", "Bekaa", "Kesrouan, Jbeil", "Tripoli, Akkar"];
-  const [selectedCity, setSelectedCity] = useState(predefinedCities[0]);
+const TransactionsForecasting = () => {
+  const predefinedCities = ["Baabda, Aley, Chouf", "Beirut", "Bekaa", "Kesrouan, Jbeil", "Tripoli, Akkar"];
+  const [selectedCity, setSelectedCity] = useState("");
   const [granularity, setGranularity] = useState('M');
 
-  const fetchTransactionPredictions = async (cityForApi, granularityForApi) => {
-    const params = {
-      city_name: cityForApi === "" ? null : cityForApi,
-      granularity: granularityForApi,
-    };
-    console.log("Attempting to fetch Transaction LSTM predictions with params:", params);
-    const response = await fetch('/api/predict_transaction_timeseries', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(params),
-    });
+  const fetchForecast = async (city) => {
+    const response = await fetch(`http://127.0.0.1:8000/forecast/xgboost/${city}`);
     if (!response.ok) {
       const errorData = await response.json().catch(() => ({ error: 'Failed to parse error response' }));
       throw new Error(errorData.error || `HTTP error! status: ${response.status}`);
@@ -48,151 +39,117 @@ const TimeSeriesForecasting = () => {
   };
 
   const {
-    data: predictionChartData,
-    isLoading: isLoadingPredictions,
-    error: predictionError,
-    refetch: refetchPredictions,
-    isFetching: isFetchingPredictions
+    data: forecastData,
+    isLoading,
+    error,
+    refetch,
+    isFetching
   } = useQuery({
-    queryKey: ['transaction_lstm_predictions', selectedCity, granularity],
-    queryFn: () => {
-      if (!selectedCity && selectedCity !== "") return;
-      return fetchTransactionPredictions(selectedCity, granularity);
-    },
+    queryKey: ['forecast', selectedCity],
+    queryFn: () => fetchForecast(selectedCity),
     enabled: false,
     retry: false,
-    onSuccess: (data) => console.log("✅ Forecast received (frontend):", data),
-    onError: (err) => console.error("Error fetching Transaction LSTM prediction data:", err.message)
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    refetchPredictions();
-  };
-
-  let chartData = { labels: [], datasets: [] };
-  if (predictionChartData?.historical && predictionChartData?.forecast) {
-    chartData = {
-      labels: [
-        ...predictionChartData.historical.map(item => item.ds),
-        ...predictionChartData.forecast.map(item => item.ds),
-      ],
-      datasets: [
-        {
-          label: 'Historical Transaction Value',
-          data: predictionChartData.historical.map(item => item.y),
-          borderColor: 'rgb(53, 162, 235)',
-          backgroundColor: 'rgba(53, 162, 235, 0.5)',
-          tension: 0.1
-        },
-        {
-          label: 'Predicted Transaction Value (5-Year Forecast)',
-          data: [
-            ...Array(predictionChartData.historical.length).fill(null),
-            ...predictionChartData.forecast.map(item => item.y)
-          ],
-          borderColor: 'rgb(255, 99, 132)',
-          backgroundColor: 'rgba(255, 99, 132, 0.5)',
-          tension: 0.1
-        },
-      ],
-    };
-  }
-
-  const chartOptions = {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      title: {
-        display: true,
-        text: 'Historical and 5-Year Forecasted Transaction Values',
-        font: { size: 18 }
-      },
-      legend: {
-        display: true,
-        position: 'top'
-      },
-      tooltip: {
-        mode: 'index',
-        intersect: false
-      }
-    },
-    scales: {
-      x: {
-        title: {
-          display: true,
-          text: 'Date'
-        },
-        ticks: {
-          maxRotation: 45,
-          minRotation: 30,
-          autoSkip: true,
-          maxTicksLimit: 25
-        }
-      },
-      y: {
-        title: {
-          display: true,
-          text: 'Transaction Value'
-        },
-        beginAtZero: false
-      }
+    if (selectedCity) {
+      refetch();
+    } else {
+      alert("Please select a city to get a forecast.");
     }
   };
 
+  const chartData = { labels: [], datasets: [] };
+  if (forecastData) {
+    const { historical_data: historical, monthly_forecast: monthly, yearly_forecast: yearly } = forecastData;
+    if (granularity === 'M') {
+      const hLabels = historical.map(item => new Date(item.date).toLocaleDateString('en-US', { month: 'short', year: '2-digit' }));
+      const fLabels = monthly.map(item => new Date(item.date).toLocaleDateString('en-US', { month: 'short', year: '2-digit' }));
+      chartData.labels = [...hLabels, ...fLabels];
+      chartData.datasets.push({
+        label: 'Historical', data: [...historical.map(h => h.transaction_value), ...new Array(monthly.length).fill(null)],
+        borderColor: 'rgb(54, 162, 235)', backgroundColor: 'rgba(54, 162, 235, 0.5)',
+      });
+      chartData.datasets.push({
+        label: 'Forecast', data: [...new Array(historical.length).fill(null), ...monthly.map(f => f.predicted_value)],
+        borderColor: 'rgb(255, 99, 132)', backgroundColor: 'rgba(255, 99, 132, 0.5)', borderDash: [5, 5],
+      });
+    } else {
+      const yearlyHist = historical.reduce((acc, item) => {
+        const year = new Date(item.date).getFullYear();
+        acc[year] = (acc[year] || 0) + item.transaction_value;
+        return acc;
+      }, {});
+      const allYrs = Array.from(new Set([...Object.keys(yearlyHist).map(Number), ...yearly.map(y => y.year)])).sort();
+      chartData.labels = allYrs;
+      chartData.datasets.push({
+        label: 'Historical Total', data: allYrs.map(y => yearlyHist[y] || null),
+        borderColor: 'rgb(54, 162, 235)', backgroundColor: 'rgba(54, 162, 235, 0.5)',
+      });
+      chartData.datasets.push({
+        label: 'Forecast Total', data: allYrs.map(y => { const f = yearly.find(i => i.year === y); return f ? f.total_value : null; }),
+        borderColor: 'rgb(255, 99, 132)', backgroundColor: 'rgba(255, 99, 132, 0.5)', borderDash: [5, 5],
+      });
+    }
+  }
+
+  const chartOptions = {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { position: 'top' }, title: { display: true, text: `Transaction Value Forecast for ${selectedCity}` } },
+    scales: { y: { beginAtZero: false } },
+    interaction: { intersect: false, mode: 'index' },
+  };
+
   return (
-    <div className="prediction-container" style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
-      <h2>Transaction Value Time Series Forecasting (LSTM)</h2>
-      <form onSubmit={handleSubmit} style={{ marginBottom: '20px', display: 'flex', flexWrap: 'wrap', gap: '15px', alignItems: 'center', padding: '10px', border: '1px solid #ccc', borderRadius: '5px' }}>
-        <div className="form-group">
-          <label htmlFor="selectedCity" style={{ marginRight: '5px' }}>City:</label>
-          <select
-            id="selectedCity"
-            value={selectedCity}
-            onChange={(e) => setSelectedCity(e.target.value)}
-          >
-            {predefinedCities.map((city) => (
-              <option key={city || 'all-cities-option'} value={city}>
-                {city || 'All Cities'}
-              </option>
-            ))}
-          </select>
+    <div className="forecasting-layout">
+      <div className="forecasting-content">
+        <div className="forecasting-title" style={{ fontSize: '20px !important' }}>
+          <h1>Transaction Value Forecasting</h1>
         </div>
-
-        <div className="form-group">
-          <label htmlFor="granularity" style={{ marginRight: '5px' }}>Time Unit:</label>
-          <select id="granularity" value={granularity} onChange={(e) => setGranularity(e.target.value)}>
-            <option value="M">Monthly</option>
-            <option value="Y">Yearly</option>
-          </select>
-        </div>
-
-        <button 
-          type="submit" 
-          disabled={isLoadingPredictions || isFetchingPredictions} 
-          style={{ padding: '8px 15px', cursor: (isLoadingPredictions || isFetchingPredictions) ? 'not-allowed' : 'pointer' }}
-        >
-          {isLoadingPredictions || isFetchingPredictions ? 'Predicting...' : 'Get Forecast'}
-        </button>
-      </form>
-
-      {(isLoadingPredictions || isFetchingPredictions) && <p>Loading predictions...</p>}
-      {predictionError && <p className="error" style={{ color: 'red' }}>Error fetching predictions: {predictionError.message}</p>}
-
-      {predictionChartData?.historical && predictionChartData?.forecast && (
-        <div className="results" style={{ marginTop: '20px' }}>
-          <p>Displaying chart for: City: <strong>{selectedCity || 'All'}</strong>, Granularity: <strong>{granularity === 'M' ? 'Monthly' : granularity === 'Y' ? 'Yearly' : granularity}</strong></p>
-          <div className="chart-container" style={{ position: 'relative', height: '600px', width: '100%', margin: 'auto' }}>
-            <Line options={chartOptions} data={chartData} />
+        
+        <div className="dashboard-components">
+          <div className="form-card">
+         
+            <form onSubmit={handleSubmit}>
+              <div className="form-group">
+                <label htmlFor="selectedCity">City</label>
+                <select id="selectedCity" value={selectedCity} onChange={(e) => setSelectedCity(e.target.value)}>
+                  <option  value=""> Select a City</option>
+                  {predefinedCities.map((city) => <option key={city} value={city}>{city}</option>)}
+                </select>
+              </div>
+              <div className="form-group">
+                <label htmlFor="granularity">View By</label>
+                <select id="granularity" value={granularity} onChange={(e) => setGranularity(e.target.value)}>
+                  <option value="M">Monthly</option>
+                  <option value="Y">Yearly</option>
+                </select>
+              </div>
+             
+              <div ><div className="form-group" style={{margingLeft:'50%'}}>
+              <button type="submit" disabled={isLoading || isFetching || !selectedCity}>
+                {isLoading || isFetching ? 'Loading...' : 'Get Forecast'}
+              </button>
+              </div>
+              </div>
+            </form>
           </div>
-        </div>
-      )}
 
-      {!predictionChartData && !isLoadingPredictions && !isFetchingPredictions && !predictionError && (
-        <p style={{ marginTop: '20px' }}>Please select parameters and click "Get Forecast" to view the time series prediction.</p>
-      )}
+          {isLoading || isFetching && <p className="status-message">Loading forecast...</p>}
+          {error && <p className="error-message">Error: {error.message}</p>}
+          
+          {forecastData && !isLoading && !isFetching && (
+            <div className="chart-card">
+              <div className="chart-wrapper">
+                <Line options={chartOptions} data={chartData} />
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
     </div>
   );
 };
 
-export default TimeSeriesForecasting;
+export default TransactionsForecasting;
