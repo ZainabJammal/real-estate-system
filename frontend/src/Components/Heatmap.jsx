@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import HeatMap from "react-heatmap-grid";
+
 const Heatmap = ({ data }) => {
   const [xLabels, setxLabels] = useState([]);
   const [yLabels, setyLabels] = useState([]);
@@ -8,6 +10,8 @@ const Heatmap = ({ data }) => {
       setyLabels(data?.map((row) => row.type));
     }
   }, []);
+
+
   return (
     <>
       <HeatMap
@@ -25,3 +29,5 @@ const Heatmap = ({ data }) => {
 };
 
 export default Heatmap;
+// Note: The Heatmap component is designed to visualize data in a grid format.
+// It uses the `react-heatmap-grid` library to create a heatmap based on the provided data.
