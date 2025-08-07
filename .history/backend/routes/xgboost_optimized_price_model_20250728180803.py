@@ -1,0 +1,219 @@
+import pandas as pd
+import numpy as np
+import xgboost as xgb
+import matplotlib.pyplot as plt
+import seaborn as sns 
+import joblib
+import warnings
+import os
+from geopy.distance import geodesic
+
+from sklearn.model_selection import train_test_split, GridSearchCV
+from sklearn.metrics import r2_score, mean_absolute_error
+from sklearn.pipeline import Pipeline
+from sklearn.compose import ColumnTransformer
+from sklearn.preprocessing import StandardScaler, OneHotEncoder
+from sklearn.impute import SimpleImputer
+
+# --- 1. SETUP & CONFIGURATION ---
+def setup_environment():
+    """Sets up directories and configurations for the script."""
+    warnings.filterwarnings('ignore', category=UserWarning)
+    pd.options.mode.chained_assignment = None
+
+    output_dir = os.path.join(os.getcwd(), 'final_model_output_v8_optimized')
+    data_path = os.path.join(os.getcwd(), 'properties.csv')
+    
+    os.makedirs(output_dir, exist_ok=True)
+    
+    print("="*60)
+    print("Environment Setup Complete")
+    print(f"-> Model artifacts will be saved to: '{os.path.abspath(output_dir)}'")
+    print("="*60)
+    return data_path, output_dir
+
+# --- 2. DATA PREPARATION & FEATURE ENGINEERING ---
+def prepare_apartment_data(df):
+    """Loads, cleans, and engineers advanced features for the apartment dataset."""
+    print("\n--- Step 2: Preparing Apartment Data with Advanced Features ---")
+    
+    df_apartments = df[df['type'] == 'Apartment'].copy()
+    print(f"   -> Found {len(df_apartments)} apartment listings.")
+    
+    df_apartments['bedrooms'].replace(0, np.nan, inplace=True)
+    df_apartments['bathrooms'].replace(0, np.nan, inplace=True)
+    df_apartments.dropna(subset=['price_$', 'size_m2'], inplace=True)
+    df_apartments = df_apartments[df_apartments['size_m2'] > 0]
+    df_apartments['price_per_m2'] = df_apartments['price_$'] / df_apartments['size_m2']
+    q_low = df_apartments['price_per_m2'].quantile(0.01)
+    q_high = df_apartments['price_per_m2'].quantile(0.99)
+    df_apartments_clean = df_apartments[(df_apartments['price_per_m2'] >= q_low) & (df_apartments['price_per_m2'] <= q_high)].copy()
+    
+    # ### --- NEW FEATURE ENGINEERING SECTION --- ###
+    print("   -> Engineering new advanced features...")
+    
+    # 1. Temporal Features
+    df_apartments_clean['created_at'] = pd.to_datetime(df_apartments_clean['created_at'])
+    df_apartments_clean['year'] = df_apartments_clean['created_at'].dt.year
+    df_apartments_clean['month'] = df_apartments_clean['created_at'].dt.month
+    print("      - Added 'year' and 'month' features.")
+
+    # 2. Geospatial Feature: Distance to Beirut CBD
+    beirut_cbd = (33.895, 35.509)
+    df_apartments_clean['dist_to_cbd_km'] = df_apartments_clean.apply(
+        lambda row: geodesic((row['latitude'], row['longitude']), beirut_cbd).km if pd.notnull(row['latitude']) else np.nan,
+        axis=1
+    )
+    print("      - Added 'dist_to_cbd_km' feature.")
+
+    # 3. Interaction Feature
+    df_apartments_clean['bed_bath_ratio'] = df_apartments_clean['bedrooms'] / df_apartments_clean['bathrooms']
+    df_apartments_clean['bed_bath_ratio'].replace([np.inf, -np.inf], np.nan, inplace=True)
+    print("      - Added 'bed_bath_ratio' feature.")
+    
+    # Consolidate rare categories
+    district_counts = df_apartments_clean['district'].value_counts()
+    THRESHOLD = 10 
+    rare_districts = district_counts[district_counts < THRESHOLD].index.tolist()
+    if rare_districts:
+        df_apartments_clean.loc[df_apartments_clean['district'].isin(rare_districts), 'district'] = 'Other'
+    
+    # Log transformations for target and key feature
+    df_apartments_clean['log_size_m2'] = np.log1p(df_apartments_clean['size_m2'])
+    df_apartments_clean['log_price'] = np.log1p(df_apartments_clean['price_$'])
+    
+    print(f"   -> Prepared final dataset with {len(df_apartments_clean)} rows.")
+    return df_apartments_clean
+
+# --- (Plotting functions remain unchanged) ---
+def plot_correlation_heatmap(df, output_dir):
+    print("\n--- Generating Correlation Heatmap (with new features) ---")
+    plt.figure(figsize=(12, 10))
+    corr_cols = ['price_$', 'size_m2', 'bedrooms', 'bathrooms', 'latitude', 'longitude', 'year', 'dist_to_cbd_km', 'bed_bath_ratio']
+    correlation_matrix = df[corr_cols].corr()
+    sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt=".2f", linewidths=.5)
+    plt.title('Correlation Matrix with New Engineered Features')
+    plt.tight_layout()
+    plot_path = os.path.join(output_dir, 'correlation_heatmap_optimized.png')
+    plt.savefig(plot_path)
+    plt.close()
+    print(f"   -> Correlation plot saved to '{plot_path}'")
+
+def plot_regression_results(y_true, y_pred, output_dir):
+    print(f"\n--- Generating Regression Plot for Optimized XGBoost ---")
+    plt.figure(figsize=(10, 8))
+    plt.scatter(y_true, y_pred, alpha=0.4)
+    perfect_line = np.linspace(min(y_true.min(), y_pred.min()), max(y_true.max(), y_pred.max()), 100)
+    plt.plot(perfect_line, perfect_line, color='red', linestyle='--', linewidth=2, label='Perfect Prediction')
+    plt.xlabel("Actual Price ($)"); plt.ylabel("Predicted Price ($)")
+    plt.title(f"Actual vs. Predicted Prices (Optimized XGBoost)")
+    plt.legend(); plt.gca().ticklabel_format(style='plain', axis='both'); plt.grid(True); plt.tight_layout()
+    plot_path = os.path.join(output_dir, f'regression_plot_optimized_xgb.png')
+    plt.savefig(plot_path)
+    plt.close()
+    print(f"   -> Regression plot saved to '{plot_path}'")
+
+def plot_feature_importance(pipeline, output_dir):
+    print(f"\n--- Generating Feature Importance Plot for Optimized XGBoost ---")
+    preprocessor = pipeline.named_steps['preprocessor']
+    regressor = pipeline.named_steps['regressor']
+    num_feature_names = preprocessor.transformers_[0][2]
+    cat_feature_names = preprocessor.named_transformers_['cat'].named_steps['onehot'].get_feature_names_out()
+    all_feature_names = np.concatenate([num_feature_names, cat_feature_names])
+    importances = pd.DataFrame({'feature': all_feature_names, 'importance': regressor.feature_importances_}).sort_values('importance', ascending=False).head(20)
+    plt.figure(figsize=(12, 8)); sns.barplot(x='importance', y='feature', data=importances, palette='viridis')
+    plt.xlabel(f"XGBoost Feature Importance"); plt.ylabel("Feature")
+    plt.title(f"Top 20 Feature Importances (Optimized XGBoost)"); plt.tight_layout()
+    plot_path = os.path.join(output_dir, f'feature_importance_optimized_xgb.png')
+    plt.savefig(plot_path)
+    plt.close()
+    print(f"   -> Feature importance plot saved to '{plot_path}'")
+    
+# --- 3. MAIN WORKFLOW ---
+def main():
+    try:
+        data_path, output_dir = setup_environment()
+        df_raw = pd.read_csv(data_path)
+    except FileNotFoundError:
+        print(f"\nERROR: 'properties.csv' not found. Please place it here: {os.getcwd()}")
+        return
+
+    df_raw.drop_duplicates(subset=['id'], inplace=True); df_raw.rename(columns={'type': 'property_type'}, inplace=True)
+    
+    df_featured = prepare_apartment_data(df_raw)
+    plot_correlation_heatmap(df_featured, output_dir)
+    
+    # ### --- UPDATED: Define Feature lists with new features --- ###
+    TARGET = 'log_price'
+    NUMERICAL_FEATURES = ['log_size_m2', 'bedrooms', 'bathrooms', 'latitude', 'longitude', 'year', 'month', 'dist_to_cbd_km', 'bed_bath_ratio']
+    CATEGORICAL_FEATURES = ['province', 'district', 'city']
+    FEATURES = NUMERICAL_FEATURES + CATEGORICAL_FEATURES
+    
+    X = df_featured[FEATURES]
+    y = df_featured[TARGET]
+    
+    print("\n--- Step 3: Splitting Data into Training (70%) and Testing (30%) Sets ---")
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+    print(f"   -> Training set size: {len(X_train)} rows\n   -> Testing set size:  {len(X_test)} rows")
+    
+    preprocessor = ColumnTransformer(
+        transformers=[
+            ('num', Pipeline(steps=[('imputer', SimpleImputer(strategy='median')), ('scaler', StandardScaler())]), NUMERICAL_FEATURES),
+            ('cat', Pipeline(steps=[('imputer', SimpleImputer(strategy='most_frequent')), ('onehot', OneHotEncoder(handle_unknown='ignore', sparse_output=False))]), CATEGORICAL_FEATURES)
+        ])
+    
+    pipeline_xgb = Pipeline(steps=[
+        ('preprocessor', preprocessor),
+        ('regressor', xgb.XGBRegressor(objective='reg:squarederror', eval_metric='mae', random_state=42, n_jobs=-1))
+    ])
+
+    # ### --- UPDATED: Refined Parameter Grid for Optimization --- ###
+    param_grid_xgb_refined = {
+        'regressor__n_estimators': [1500, 2000],
+        'regressor__learning_rate': [0.01, 0.015], # More focused search
+        'regressor__max_depth': [5, 6, 7],         # Centered around previous best
+        'regressor__subsample': [0.6, 0.7],
+        'regressor__colsample_bytree': [0.6, 0.7]
+    }
+
+    print("\n--- Step 4: Running Refined GridSearchCV for XGBoost (5-Fold CV) ---")
+    grid_search_xgb = GridSearchCV(pipeline_xgb, param_grid_xgb_refined, cv=5, scoring='r2', n_jobs=-1, verbose=2)
+    grid_search_xgb.fit(X_train, y_train)
+
+    best_xgb_model = grid_search_xgb.best_estimator_
+    
+    # --- Final Evaluation, Plotting, and Saving ---
+    y_pred_log = best_xgb_model.predict(X_test)
+    y_pred_actual = np.expm1(y_pred_log)
+    y_test_actual = np.expm1(y_test)
+    
+    test_r2 = r2_score(y_test, y_pred_log)
+    test_mae = mean_absolute_error(y_test_actual, y_pred_actual)
+    
+    plot_regression_results(y_test_actual, y_pred_actual, output_dir)
+    plot_feature_importance(best_xgb_model, output_dir)
+    
+    model_path = os.path.join(output_dir, 'model_apartment_xgb_optimized.joblib')
+    joblib.dump(best_xgb_model, model_path)
+    
+    # --- Final Summary ---
+    print("\n" + "="*60)
+    print("--- OPTIMIZED XGBOOST MODEL PERFORMANCE SUMMARY ---")
+    summary = {
+        'Model': 'Apartment Price Estimator (Optimized XGBoost)',
+        'Best CV R² on Training Data': f"{grid_search_xgb.best_score_:.4f}",
+        'Final Test Set R²': f"{test_r2:.4f}",
+        'Final Test Set MAE ($)': f"${test_mae:,.2f}",
+        'Number of Training Samples': len(X_train),
+        'Model Saved At': model_path
+    }
+    for key, value in summary.items():
+        print(f"   -> {key}: {value}")
+    print("\n   -> Best Hyperparameters Found:")
+    for param, value in grid_search_xgb.best_params_.items():
+        print(f"      - {param}: {value}")
+    print("="*60)
+    print("--- WORKFLOW COMPLETE ---")
+
+if __name__ == '__main__':
+    main()
