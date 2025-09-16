@@ -154,157 +154,150 @@ async def predict_prop():
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+    
 
 
 
 
- 
-# Mayssoun's bit
 
-# --- 1. CONFIGURATION AND DATABASE CONNECTION ---
-# Load environment variables from .env file
-load_dotenv() 
-SUPABASE_URL: str = os.environ.get("SUPABASE_URL")
-SUPABASE_KEY: str = os.environ.get("SUPABASE_KEY")
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+BACKEND_DIR = os.path.dirname(SCRIPT_DIR)
+OUTPUT_DIR = os.path.join(BACKEND_DIR, 'forecasting_models')
 
-if not SUPABASE_URL or not SUPABASE_KEY:
-    raise ValueError("FATAL ERROR: SUPABASE_URL and SUPABASE_KEY must be set in your .env file.")
+MODEL_FILE_PATH = os.path.join(OUTPUT_DIR, 'forecast_model.joblib')
+MODEL_COLS_PATH = os.path.join(OUTPUT_DIR, 'model_columns.json')
 
-# Initialize the Supabase client
-supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
-print("-> Supabase client initialized.")
-
-BACKEND_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-
-FORECAST_MODEL_DIR = os.path.join(BACKEND_DIR, 'forecasting_models')
-MODEL_PATH = os.path.join(FORECAST_MODEL_DIR, 'forecast_model.joblib')
-MODEL_COLS_PATH = os.path.join(FORECAST_MODEL_DIR, 'model_columns.json') 
-
-# Add a print statement to verify the path during startup.
-print(f"--- [DEBUG] Attempting to load model from: {MODEL_PATH}")
-
-# Define global constants
-# GROUPING_KEY must match the column name in your training data AND your database
-GROUPING_KEY = 'city' 
+GROUPING_KEY = 'city'
 TARGET_COL = 'transaction_value'
-FORECAST_HORIZON_MONTHS = 60
+FORECAST_YEARS = 4 
 
-# --- 2. HELPER FUNCTIONS (These must mirror your final training script) ---
+FORECAST_HORIZON_MONTHS = FORECAST_YEARS * 12
+
+# --- 2. LOAD MODEL ARTIFACTS AT STARTUP ---
+print("-> Loading forecasting model artifacts...")
+MODEL = None
+MODEL_COLS = None
+try:
+    if not os.path.exists(MODEL_FILE_PATH):
+        raise FileNotFoundError(f"Model file not found at: {MODEL_FILE_PATH}")
+    if not os.path.exists(MODEL_COLS_PATH):
+        raise FileNotFoundError(f"Model columns file not found at: {MODEL_COLS_PATH}")
+        
+    MODEL = joblib.load(MODEL_FILE_PATH)
+    MODEL_COLS = list(pd.read_json(MODEL_COLS_PATH, typ='series'))
+    print("-> Forecasting model and columns loaded successfully.")
+except Exception as e:
+    print(f"FATAL ERROR: Could not load model artifacts. {e}")
+
+# --- 3. DATABASE CONNECTION ---
+SUPABASE_URL = os.environ.get("SUPABASE_URL")
+SUPABASE_KEY = os.environ.get("SUPABASE_KEY")
+supabase = None
+
+if not all([SUPABASE_URL, SUPABASE_KEY, MODEL]):
+    print("FATAL: Supabase credentials or a loaded model is missing. API will not be functional.")
+else:
+    supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
+    print("--- Forecasting API is ready (connected to Supabase). ---")
+
+
 
 def map_user_selection_to_city(selection_string: str) -> str:
-    """
-    Maps the user's dropdown selection to the specific custom region names
-    used in the database, ensuring it's lowercase for matching.
-    """
-    if "Tripoli, Akkar" in selection_string:
-        return "Tripoli"
-    if "Baabda, Aley, Chouf" in selection_string:
-        return "Baabda"
-    if "Kesrouan, Jbeil" in selection_string:
-        return "Kesrouan"
-    return selection_string.lower()
+    selection_lower = selection_string.lower()
+    if "tripoli" in selection_lower: 
+        return "tripoli"
+    if "baabda" in selection_lower: 
+        return "baabda"
+    if "kesrouan" in selection_lower: 
+        return "kesrouan"
+    return selection_lower
 
-def create_features(df):
-    """Optimal features for a small dataset with a long forecast horizon."""
+def create_features_for_prediction(df, city_avg_value, monthly_avg_map, last_time_index):
     df_features = df.copy()
+   
+    df_features['time_index'] = range(last_time_index + 1, last_time_index + 1 + len(df_features))
     df_features['year'] = df_features.index.year
-    df_features['month_sin'] = np.sin(2 * np.pi * df_features.index.month / 12.0)
-    df_features['month_cos'] = np.cos(2 * np.pi * df_features.index.month / 12.0)
+    df_features['month'] = df_features.index.month
+    df_features['quarter'] = df_features.index.quarter
+    df_features['month_sin'] = np.sin(2 * np.pi * df_features.index.month/12)
+    df_features['month_cos'] = np.cos(2 * np.pi * df_features.index.month/12)
     df_features['is_december'] = (df_features.index.month == 12).astype(int)
-    df_features['is_summer_peak'] = (df_features.index.month.isin([7, 8])).astype(int)
+    df_features['is_summer'] = df_features.index.month.isin([6,7,8]).astype(int)
+    df_features['is_quarter_end'] = df_features.index.is_quarter_end.astype(int)
+    df_features['post_2013'] = (df_features.index.year > 2013).astype(int)
+    df_features['city_avg'] = city_avg_value
+    df_features['monthly_avg'] = df_features['month'].map(monthly_avg_map)
     return df_features
 
-# --- 3. LOAD MODEL ARTIFACTS AT STARTUP ---
-print("-> Loading local forecasting model artifacts...")   
-XGB_MODEL = joblib.load(MODEL_PATH)
-XGB_MODEL_COLS = list(pd.read_json(MODEL_COLS_PATH, typ='series'))
-print("--- Forecasting API is ready (connected to Supabase). ---")
-
-# --- 4. API ENDPOINT (Simplified for "Best Guess" model) ---
 @ml_routes.route("/forecast/xgboost/<string:user_selection>", methods=["GET"])
 async def forecast_with_xgboost(user_selection: str):
-    """
-    Generates a 5-year 'Best Guess' forecast by predicting all future
-    months in a single batch.
-    """
-    print(f"\nReceived 'Best Guess' forecast request for: '{user_selection}'")
-    # if 'forecast_model' not in ML_ARTIFACTS or not supabase:
-    #     return jsonify({"error": "Forecasting service or database is not available."}), 503
+    city_name = map_user_selection_to_city(user_selection)
+    print(f"\nReceived forecast request for: '{user_selection}', mapped to city: '{city_name}'")
 
+    if not supabase or not MODEL:
+        return jsonify({"error": "Server is not configured correctly. Check logs."}), 500
 
     try:
-        city_name = map_user_selection_to_city(user_selection)
-        print(f"-> Mapped to city: '{city_name}'")
-
-        # step A: fetch histo data first
-        print(f"-> Querying Supabase for '{city_name}' historical data...")
-        response = supabase.table('agg_trans').select('*').ilike(GROUPING_KEY, city_name).order('date').execute()
-  
-        print("\n--- RAW SUPABASE RESPONSE DEBUG ---")
-        print(f"Type of response object: {type(response)}")
-        print(f"Response has 'data' attribute: {'data' in dir(response)}")
         
-        # Check if the response contains data and print it
-        if response.data:
-            print(f"Number of records returned: {len(response.data)}")
-            print(f"First record received from Supabase: {response.data[0]}") 
-        else:
-            print("!!! CRITICAL: `response.data` is EMPTY or does not exist.")
-            print(f"Full response object: {response}")
+        print(f"-> Step 1: Querying Supabase for '{city_name}' historical data...")
+       
+        response = supabase.table('agg_trans').select(f'date, {TARGET_COL}, {GROUPING_KEY}').ilike(GROUPING_KEY, city_name).order('date').execute()
         
-        print("-----------------------------------\n")
-
         if not response.data:
-            return jsonify({"error": f"No historical data found for city '{city_name}' in the database."}), 404
-        
-        # Prepare the historical data DataFrame
-        hist_df = pd.DataFrame(response.data)
+            return jsonify({"error": f"No historical data found for city '{city_name}'."}), 404
 
+        
+        hist_df = pd.DataFrame(response.data)
+        
+        
         parts = hist_df['date'].str.split('-', expand=True)
         hist_df['date'] = pd.to_datetime('01-' + parts[1] + '-' + parts[0], format='%d-%b-%y')
-        city_history_df = hist_df.set_index('date')
+        hist_df.set_index('date', inplace=True)
+        hist_df.sort_index(inplace=True)
 
-        # Standardize the grouping key column to lowercase to prevent case-mismatch
-        city_history_df[GROUPING_KEY] = city_history_df[GROUPING_KEY].str.lower()
+        
+        hist_df[GROUPING_KEY] = hist_df[GROUPING_KEY].str.lower()
+        print(f"-> Found {len(hist_df)} historical records for '{city_name}'.")
 
+        hist_df_with_index = hist_df.copy()
+        hist_df_with_index['time_index'] = range(len(hist_df_with_index))
+        last_time_index = hist_df_with_index['time_index'].max()
+       
+        print("-> Step 2: Calculating historical averages...")
+        city_avg_value = hist_df[TARGET_COL].mean()
+        monthly_avg_map = hist_df.groupby(hist_df.index.month)[TARGET_COL].mean()
 
-        # Step B: Create a DataFrame for all 60 future months
+      
 
-         # Find the last date from the historical data we just fetched.
-        last_historical_date = hist_df['date'].iloc[-1].year
-
-         # Start the forecast on the first day of the month AFTER the last historical date.
-        start_year = last_historical_date + 1
-        start_date = pd.to_datetime(f'{start_year}-01-01')
-        future_dates = pd.date_range(start=start_date, periods=FORECAST_HORIZON_MONTHS, freq='MS')
-
+        print("-> Step 3: Creating future dataframe...")
+        last_historical_date = hist_df.index.max()
+        future_dates = pd.date_range(start=last_historical_date + pd.DateOffset(months=1), periods=FORECAST_HORIZON_MONTHS, freq='MS')
         future_df = pd.DataFrame(index=future_dates)
-        # Create features for the future DataFrame
         future_df[GROUPING_KEY] = city_name
-        features_for_pred = create_features(future_df)
 
+        print("-> Step 4: Engineering features for future dates...")
+        # features_for_pred = create_features_for_prediction(future_df, city_avg_value, monthly_avg_map)
+        features_for_pred = create_features_for_prediction(future_df, city_avg_value, monthly_avg_map, last_time_index)
         
-        # Step 4: One-hot encode the city and align columns
+        print("-> Step 5: One-hot encoding and aligning columns...")
         features_encoded = pd.get_dummies(features_for_pred, columns=[GROUPING_KEY])
-        features_aligned = features_encoded.reindex(columns=XGB_MODEL_COLS, fill_value=0)
+        features_aligned = features_encoded.reindex(columns=MODEL_COLS, fill_value=0)
         
-        # Step 5: Make predictions for ALL 60 months at once
-        predictions = XGB_MODEL.predict(features_aligned)
-        print(f"-> Generated {len(predictions)} future predictions in a single batch.")
+        print(f"-> Step 6: Generating predictions...")
+        predictions = MODEL.predict(features_aligned)
 
-        # --- Part C: Format the Final JSON Response ---
-
-        historical_json = hist_df.to_dict(orient='records')
-        
+        print("-> Step 7: Formatting final JSON response...")
+        historical_json = hist_df.reset_index().to_dict(orient='records')
         monthly_forecast_df = pd.DataFrame({'date': future_dates, 'predicted_value': predictions})
         yearly_forecast_df = monthly_forecast_df.resample('YE', on='date')['predicted_value'].sum().to_frame()
 
+        for record in historical_json: record['date'] = record['date'].strftime('%Y-%m-%d')
         monthly_json = monthly_forecast_df.to_dict(orient='records')
+        for record in monthly_json: record['date'] = record['date'].strftime('%Y-%m-%d')
         yearly_json = yearly_forecast_df.reset_index().rename(columns={'date': 'year', 'predicted_value': 'total_value'}).to_dict(orient='records')
         for item in yearly_json: item['year'] = item['year'].year
 
-        print(f"-> Successfully generated forecast for '{city_name}'.")
+        print(f"-> Successfully completed forecast for '{user_selection}'.")
         return jsonify({
             "city_forecasted": user_selection,
             "historical_data": historical_json,
@@ -313,6 +306,6 @@ async def forecast_with_xgboost(user_selection: str):
         })
 
     except Exception as e:
+        print(f"!!! AN ERROR OCCURRED for user selection '{user_selection}' !!!")
         traceback.print_exc()
-        return jsonify({"error": "An internal server error occurred."}), 500
-
+        return jsonify({"error": "An internal server error occurred.", "details": str(e)}), 500

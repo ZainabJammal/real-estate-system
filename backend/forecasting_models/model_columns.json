@@ -1,1 +1,1 @@
-{"0":"id","1":"transaction_number","2":"year","3":"month_sin","4":"month_cos","5":"is_december","6":"is_summer_peak","7":"city_baabda","8":"city_beirut","9":"city_bekaa","10":"city_kesrouan","11":"city_tripoli"}
+{"0":"time_index","1":"year","2":"month","3":"quarter","4":"month_sin","5":"month_cos","6":"is_december","7":"is_summer","8":"is_quarter_end","9":"monthly_avg","10":"city_avg","11":"post_2013","12":"city_baabda","13":"city_beirut","14":"city_bekaa","15":"city_kesrouan","16":"city_tripoli"}
