@@ -30,7 +30,7 @@ const TransactionsForecasting = () => {
   const [granularity, setGranularity] = useState('M');
 
   const fetchForecast = async (city) => {
-    const response = await fetch(`http://127.0.0.1:8000/forecast/xgboost/${city}`);
+    const response = await fetch(`http://127.0.0.1:5000/forecast/xgboost/${city}`);
     if (!response.ok) {
       const errorData = await response.json().catch(() => ({ error: 'Failed to parse error response' }));
       throw new Error(errorData.error || `HTTP error! status: ${response.status}`);

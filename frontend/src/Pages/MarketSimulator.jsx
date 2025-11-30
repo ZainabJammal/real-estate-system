@@ -40,7 +40,7 @@ const MarketSimulator = () => {
         setLoading(true);
         setError(null);
         try {
-            const url = `http://127.0.0.1:8000/api/market-simulator?selection=${encodeURIComponent(city)}`;
+            const url = `http://127.0.0.1:5000/api/market-simulator?selection=${encodeURIComponent(city)}`;
             console.log("-> Fetching data from URL:", url);
             const response = await fetch(url);
             if (!response.ok) {

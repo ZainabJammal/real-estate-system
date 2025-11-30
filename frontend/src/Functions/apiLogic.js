@@ -1,8 +1,10 @@
 import { useQuery, useMutation } from "@tanstack/react-query";
 
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000"; // ← USE ENV VARIABLE 
+
 const fetchData = async (endpoint, used_method = "GET") => {
   try {
-    const res = await fetch(`http://127.0.0.1:8000/${endpoint}`, {
+    const res = await fetch(`${API_BASE_URL}/${endpoint}`, {
       method: used_method,
       headers: {
         "Content-Type": "application/json",
@@ -23,7 +25,7 @@ const fetchData = async (endpoint, used_method = "GET") => {
 
 export const postData = async ({ endpoint, data = {} }) => {
   try {
-    const res = await fetch(`http://127.0.0.1:8000/${endpoint}`, {
+    const res = await fetch(`${API_BASE_URL}/${endpoint}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

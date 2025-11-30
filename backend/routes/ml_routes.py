@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 from models import get_models_path, get_enc_paths
 from quart import Blueprint, jsonify, request,  current_app
 from statsmodels.tsa.holtwinters import ExponentialSmoothing
-from tensorflow.keras.models import load_model
+# from tensorflow.keras.models import load_model
 from db_connect import create_supabase
 
 # Create a Blueprint for your main routes

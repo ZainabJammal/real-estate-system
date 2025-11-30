@@ -62,7 +62,7 @@ const MarketComparison = () => {
 
     try {
         // Use your actual backend URL
-        const response = await fetch(`http://127.0.0.1:8000/compare?${params.toString()}`);
+        const response = await fetch(`http://127.0.0.1:5000/compare?${params.toString()}`);
         const data = await response.json();
 
         if (!response.ok) {

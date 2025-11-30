@@ -24,7 +24,7 @@ const ChatAssistant = () => {
       // No session in URL → fetch most recent session from Supabase
       const loadLastSession = async () => {
         try {
-          const res = await fetch("http://localhost:8000/api/chat/last");
+          const res = await fetch("http://localhost:5000/api/chat/last");
           const data = await res.json();
 
           if (data.session_id) {
@@ -61,7 +61,7 @@ const ChatAssistant = () => {
 
     const fetchHistory = async () => {
       try {
-        const res = await fetch(`http://localhost:8000/api/chat/history/${sessionId}`);
+        const res = await fetch(`http://localhost:5000/api/chat/history/${sessionId}`);
         const data = await res.json();
         setMessages(data.messages.length ? data.messages : [REAL_ESTATE_PROMPT]);
       } catch (err) {
@@ -96,7 +96,7 @@ const ChatAssistant = () => {
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:8000/api/chat", {
+      const res = await fetch("http://localhost:5000/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ messages: updatedMessages }),
@@ -116,7 +116,7 @@ const ChatAssistant = () => {
       setMessages(finalMessages);
 
       // Save to Supabase
-      await fetch("http://localhost:8000/api/chat/save", {
+      await fetch("http://localhost:5000/api/chat/save", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
