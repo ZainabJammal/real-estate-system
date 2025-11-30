@@ -23,7 +23,7 @@ const MapComponent = ({ data }) => {
 
   // Fetch circle data
   useEffect(() => {
-    fetch("http://localhost:8000/ml/city_circles")
+    fetch("http://localhost:5000/ml/city_circles")
       .then((res) => res.json())
       .then((data) => {
         console.log("✅ API returned:", data);        
@@ -34,7 +34,7 @@ const MapComponent = ({ data }) => {
 
   //Fetch and render the trend arrows
   useEffect(() => {
-  fetch("http://localhost:8000/ml/city_price_trend")
+  fetch("http://localhost:5000/ml/city_price_trend")
     .then(res => res.json())
     .then(data => {
       console.log("📦 Trend data received:", data);

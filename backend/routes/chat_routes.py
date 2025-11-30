@@ -52,7 +52,7 @@ async def chat_with_ai():
             "model": "meta-llama/llama-3-8b-instruct",  
             "messages": messages,
             "temperature": 0.3,  # More factual responses
-            "max_tokens": 500
+            "max_tokens": 2048,
         }
 
         try:

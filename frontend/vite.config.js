@@ -26,7 +26,7 @@ export default defineConfig({
     // --- Modified Proxy Configuration ---
     proxy: {
       '/api': { // Any request path that starts with /api
-        target: 'http://localhost:8000', // Will be forwarded to your Quart backend
+        target: 'http://localhost:5000', // Will be forwarded to your Quart backend
         changeOrigin: true, // This is important for many backend setups
         // secure: false, // Usually not needed for http targets
         // rewrite: (path) => path.replace(/^\/api/, '') // Only if your backend routes DON'T start with /api
