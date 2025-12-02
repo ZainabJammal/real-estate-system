@@ -1,0 +1,17 @@
+.env
+.venv
+*.pyc
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.venv/
+
+
+
+# VS Code
+.vscode/
+.history/
